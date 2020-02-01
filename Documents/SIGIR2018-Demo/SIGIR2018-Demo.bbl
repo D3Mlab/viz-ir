@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{Baeza-Yates2010}
+R.~A. Baeza-Yates and B.~Ribeiro-Neto.
+\newblock {\em {Modern Information Retrieval}}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., 2 edition, 2010.
+
+\bibitem{Bouadjenek2018b}
+M.~R. Bouadjenek, Y.~Du, and S.~Sanner.
+\newblock {An Information Retrieval Perspective of Filter Selection for
+  Adaptive User Interfaces}.
+\newblock Technical report, University of Toronto, Department of Mechanical and
+  Industrial Engineering, 2018.
+\newblock http://people.eng.unimelb.edu.au/mbouadjenek/papers/bouadjenek2018b.pdf
+
+\bibitem{Iman2017}
+Z.~Iman, S.~Sanner, M.~R. Bouadjenek, and L.~Xie.
+\newblock A longitudinal study of topic classification on twitter.
+\newblock In {\em ICWSM}, pages 552--555, 2017.
+
+\bibitem{Liu2014}
+S.~Liu, W.~Cui, Y.~Wu, and M.~Liu.
+\newblock A survey on information visualization: recent advances and
+  challenges.
+\newblock {\em The Visual Computer}, 30(12):1373--1393, Dec 2014.
+
+\bibitem{McCandless2010}
+M.~McCandless, E.~Hatcher, and O.~Gospodnetic.
+\newblock {\em {Lucene in Action, Second Edition: Covers Apache Lucene 3.0}}.
+\newblock Manning Publications Co., Greenwich, CT, USA, 2010.
+
+\bibitem{Zhai2001}
+C.~Zhai and J.~Lafferty.
+\newblock A study of smoothing methods for language models applied to ad hoc
+  information retrieval.
+\newblock In {\em Proceedings of the 24th Annual International ACM SIGIR
+  Conference on Research and Development in Information Retrieval}, SIGIR '01,
+  pages 334--342, New York, NY, USA, 2001. ACM.
+
+\end{thebibliography}

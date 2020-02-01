@@ -1,0 +1,233 @@
+\documentclass{sigchi}
+
+% Use this section to set the ACM copyright statement (e.g. for
+% preprints).  Consult the conference website for the camera-ready
+% copyright statement.
+
+% Copyright
+\CopyrightYear{2019}
+%\setcopyright{acmcopyright}
+\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+% DOI
+\doi{http://dx.doi.org/10.475/123_4}
+% ISBN
+\isbn{123-4567-24-567/08/06}
+%Conference
+\conferenceinfo{CHI'19,}{March 17--20, 2019, Los Angeles, CA, USA}
+%Price
+\acmPrice{\$15.00}
+
+% Use this command to override the default ACM copyright statement
+% (e.g. for preprints).  Consult the conference website for the
+% camera-ready copyright statement.
+
+%% HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
+%% Please note you need to make sure the copy for your specific
+%% license is used here!
+% \toappear{
+% Permission to make digital or hard copies of all or part of this work
+% for personal or classroom use is granted without fee provided that
+% copies are not made or distributed for profit or commercial advantage
+% and that copies bear this notice and the full citation on the first
+% page. Copyrights for components of this work owned by others than ACM
+% must be honored. Abstracting with credit is permitted. To copy
+% otherwise, or republish, to post on servers or to redistribute to
+% lists, requires prior specific permission and/or a fee. Request
+% permissions from \href{mailto:Permissions@acm.org}{Permissions@acm.org}. \\
+% \emph{CHI '16},  May 07--12, 2016, San Jose, CA, USA \\
+% ACM xxx-x-xxxx-xxxx-x/xx/xx\ldots \$15.00 \\
+% DOI: \url{http://dx.doi.org/xx.xxxx/xxxxxxx.xxxxxxx}
+% }
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy
+% \pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}       % to better equalize the last page
+\usepackage{graphics}      % for EPS, load graphicx instead 
+\usepackage[T1]{fontenc}   % for umlauts and other diaeresis
+\usepackage{txfonts}
+\usepackage{mathptmx}
+\usepackage[pdflang={en-US},pdftex]{hyperref}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{subfiles}
+\usepackage{subfigure}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{float}
+\usepackage{array}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand{\subfour}[1]{\vspace*{3mm}{\noindent\bf #1}}  
+\newcommand{\subsubfour}[1]{\vspace*{1mm}{\noindent\bf #1}} 
+\newtheorem{problem}{\textbf{Problem}}
+
+\newcommand{\lyxdot}{.}
+
+
+% Some optional stuff you might like/need.
+\usepackage{microtype}        % Improved Tracking and Kerning
+% \usepackage[all]{hypcap}    % Fixes bug in hyperref caption linking
+\usepackage{ccicons}          % Cite your images correctly!
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+
+% If you want to use todo notes, marginpars etc. during creation of
+% your draft document, you have to enable the "chi_draft" option for
+% the document class. To do this, change the very first line to:
+% "\documentclass[chi_draft]{sigchi}". You can then place todo notes
+% by using the "\todo{...}"  command. Make sure to disable the draft
+% option again before submitting your final document.
+\usepackage{todonotes}
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{Relevance-driven Clustering for Interactive Visual Search}
+\def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author, Fifth Author, Sixth Author}
+\def\emptyauthor{}
+\def\plainkeywords{Visual Search Interfaces; Relevance-driven Clustering; Constrained Optimization.}
+\def\plaingeneralterms{Documentation, Standardization}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{
+    \def\UrlFont{\sf}
+  }{
+    \def\UrlFont{\small\bf\ttfamily}
+  }}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={\plaintitle},
+% Use \plainauthor for final version.
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  pdfdisplaydoctitle=true, % For Accessibility
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+  hypertexnames=false
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{\plaintitle}
+
+\numberofauthors{1}
+\author{%
+  \alignauthor{Anonymous Author(s)}\\}
+
+\maketitle
+
+\begin{abstract}
+
+Many search results are naturally displayed on a map or other interactive visual interface.  However, in many settings of interactive visual search,  
+it is time-consuming to individually examine all matching results.  This suggests the need to aggregate results, for example, via an unsupervised clustering method like K-means.  However, in this paper we note that (1)~K-means ignores relevance scores that can help with the extraction of highly relevant clusters, and (2)~K-means does not necessarily optimize search results for purposes of visual presentation to the user.  Consequently, in this paper we seek to develop novel clustering methods for interactive visual search  that can leverage relevance scores from standard information retrieval methods in addition to novel cluster definitions that reflect notions of spatial, temporal, and keyword coherence.  To this end, we design a novel relevance-driven clustering optimization objective and develop a fast greedy algorithm to approximately optimize it.  After comparatively benchmarking this new algorithm in offline experiments, we further undertake a user study with 24 subjects to evaluate whether this new relevance-driven clustering method improves human performance on visual search tasks in comparison to K-means clustering and a non-aggregation baseline.  Our results show that (a) our greedy optimization approach is fast, near-optimal, and (unsurprisingly) extracts higher-relevance clusters than K-means, and (b) these higher-relevance clusters result in faster search task completion and higher accuracy compared to K-means and a non-aggregation baseline.
+%Overall, this work underscores the importance of relevance-driven clustering optimization methods targeted for interactive visual search interfaces.
+
+%   Geo-temporal visualization of search results is a challenging
+% task since the simultaneous display of all matching elements would
+% result in a saturated and unreadable display.
+% Thus, the development of relevance-driven clustering methods for Visual Information Displays (VIDs) are required to help focus the user's attention by restricting the display to information relevant to their query using highly relevant clusters showing multiple information perspectives.  
+% In this paper, we make key contributions to the literature on relevance-driven clustering for VIDs: (1) Given that a VID will typically support many types of clustering parameters (spatial, temporal, and content), we provide a unified framework that abstracts presentation-specific details and facilitates an optimization perspective of clustering.  
+% (2) Within this optimization framework, we argue for the formulation of 
+% clustering as maximization of an expected F1-Score (EF1) objective subject to parameterized cluster constraints.
+% And (3) specifically for optimizing clusters w.r.t.\ EF1, we contribute two efficient greedy algorithms as well as an \emph{optimal} Mixed Integer Linear Programming (MILP) formulation intended to benchmark the performance of the greedy approximations on moderately sized datasets. 
+% We evaluate our algorithms by an off-line study and a user survey. In the off-line study, we experiment with a scenario related to searching natural disaster discussed in a collection of tweets under a variety of settings where we vary the amount of data, noise, and relevant vs. irrelevant class imbalance in the ground truth data.  We show that EF1 is a good surrogate for optimizing F1-Score and the proposed greedy algorithms are a good approximation of the optimal MILP solution, yet much more scalable.  In the user study, we analyze the feedback of 24 students asked to find the natural disasters using our algorithm and two different baselines.
+% In summary, this work provides the first formal and unified perspective of relevance-driven clustering for VIDs from an F1-Score optimization perspective along with scalable and robust algorithms that demonstrate strong performance when benchmarked against optimal results.
+
+%we hope this work helps better connect IR and AUI research, bringing a general and formal IR perspective to this important research area while opening new research directions for the application of IR methodology to AUIs.
+%the community to realize the potential of the information retrieval approach to address AUIs problems.
+
+\end{abstract}
+
+\category{H.5.m.}{Information Interfaces and Presentation
+  (e.g. HCI).}{}{} 
+
+\keywords{\plainkeywords}
+
+
+\section{Introduction}
+\subfile{Introduction}
+
+
+\section{Framework and background}
+\label{sec:Framework}
+\subfile{Framework}
+
+
+\section{Algorithms for Relevance-driven clustering }
+\label{sec:Algorithms}
+\subfile{Algorithms}
+
+
+
+\section{Experimental setup}
+\label{sec:setup}
+\subfile{Setup}
+
+
+\section{Offline evaluation}
+\label{sec:OfflineEval}
+\subfile{OfflineEval}
+
+\section{User study}
+\label{sec:UserStudy}
+\subfile{UserStudy}
+
+\section{Related work}
+\label{sec:RelatedWork}
+\subfile{RelatedWork}
+
+\section{Conclusions and Future work}
+\label{sec:Conclusions}
+\subfile{Conclusions}
+
+
+
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{biblio}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

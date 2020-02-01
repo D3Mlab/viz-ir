@@ -1,0 +1,150 @@
+%The ideal AUI provides users adaptive level of details to help them finish different tasks \cite{Inibhunu2016}. An information system \cite{Dumais2016} aims to re-use previously seen information on the purpose of helping user to finish the task involve history information. Additionally, another UI system \cite{Seiji2001} is implemented to improve web search based on evaluation of different Page Information Agents (PIA) by user's selection information. 
+
+%Despite of massive researches of user-interface system development, these papers focusing on different user-interface implementation has the same title but different content with our research. We aims to explore one an algorithm under IR framework to efficiently retrieve optimal UI elements set for users' further investigation on details in the interface.
+
+
+%There is a substantial body of research related to UI systems \cite{Dumais2016,Seiji2001,Inibhunu2016}. %The existing works may share the same title with our work, but have different content.
+There is a substantial body of research related to visual search and clustering. 
+Below, we review the major works related to clustering, filtering, optimization, and visualization in information retrieval (IR).  Because our research focus is not specifically on visual Twitter search or disaster informatics (this was simply a use case amenable to user experimentation as discussed previously), these topics are too narrowly focused to warrant an exhaustive discussion here, though many related citations occur in the topics discussed below.
+%Below, we review the major works related to clustering in IR, filtering in IR, and optimizing IR metrics.
+
+
+\subfour{Spatio-temporal clustering:} A lot of research has been done on the clustering of spatio-temporal data points~\cite{Kisilevich2010,Atluri2018}, and this has been done 
+for different applications including crime discovery~\cite{Eftelioglu2014}, Twitter data mining~\cite{Abdelhaq2013,Chierichetti2014,Walther2013,Chae2012}, geo-tagged photo exploration~\cite{Zheng2012,Xie2013}, traffic accident monitoring~\cite{Zheng2012}, and epidemiology monitoring~\cite{Glatman-Freedman2016}.
+Most proposed techniques are based on clustering methods such as $K$-means,  BIRCH~\cite{Zhang1996},  OPTICS~\cite{Ankerst1999}, or DBSCAN~\cite{Ester1996}. DBSCAN is a widely used method for finding arbitrarily shaped clusters of spatial points based on the density of points, which has been extended to temporal data in ST-DBSCAN~\cite{Birant2007}.  % by defining new distances metrics between points. 
+We note that all clustering methods described here ignore relevance signals (beyond the initial search) and/or ignore spatial, temporal, and keyword constraints
+relating to content display during cluster optimization, both of which are key jointly intertwined contributions in this work.  
+%on how they can be displayed, which makes them inapplicable for our relevance- and interface- visual search application without further extension.
+
+
+\subfour{Clustering in IR:}
+%Clustering in information retrieval is based on the following fundamental assumption~\cite{Manning2008}: \textit{``Elements in the same cluster behave similarly with respect to relevance to information needs''}. This hypothesis states that if there is an element from a cluster that is relevant to a search request, then it is likely that other documents from the same cluster are also relevant. This is because clustering puts together documents that share many terms.
+%However, in practice, in many applications such as social network posts, relevant elements are likely to not share always similar terms. 
+%Therefore, as the relevance signal is not considered, clusters obtained are not optimized with respect to IR metrics, and hence, irrelevant elements are inherently mixed with relevant ones in clusters.
+Clustering in IR has been used in a variety of applications, which differ in terms of the set of elements clustered and the overall aim of clustering. 
+Clustering of search results themselves has been investigated for more effective information presentation to users~\cite{Altingovde2008,Can2004,Toda2005,Levi2018}. For example, Kurland {\it et al}~\cite{Kurland2011,Kurland2009} use clustering of top search results to improve relevance scoring models for ranking.
+On the other hand, collection clustering has been used for effective information presentation and for exploratory browsing~\cite{McKeown2002,Hatzivassiloglou2000}, for improving search results~\cite{Liu2004,Altingovde2007}, and for speeding up search~\cite{Salton1971,Qumsiyeh2015,Dimond2015}.
+In yet another vein, Scatter-Gather, which consists of repetitively clustering and selecting clusters, has been proposed as an alternative user interface to explore elements without using explicit queries~\cite{Cutting1992,Pirolli2007}.
+
+What differentiates the relevance-driven clustering approach we propose in this paper from the clustering approaches in all of these other works is the following: (i) We explicitly use the relevance signal during cluster optimization to ensure high relevance of extracted clusters, and (ii) we specifically formulate clusters in terms of spatial, temporal, and content constraints to ensure coherence and succinct presentation in a visual search display.
+
+
+
+
+%A lot of work has been done for visualizing large-scale information graphs using clustering-based approaches  \cite{Liu2014}. The main difference with our work is that we have a ``supervised'' objective based on the relevance predictions, whereas clustering is inherently unsupervised.                                                                                                                                                                                                     
+
+
+%\subfour{Element scoring:} Different systems for managing information in visual interfaces rely on some method to score information for viewing.  In this work we assumed the scoring system was given and focused our contributions on novel filter optimization and evaluation criteria and supporting algorithms.  However, other works have focused primarily on the scoring method and could be integrated as the scoring component in our work.  For example, other approaches rely on machine learning methods for scoring, that range from decision trees \cite{Cui2008b}, k-NN \cite{Amershi2011}, rule learning \cite{Mezhoudi2013} to deep learning \cite{Harold2017}.  
+%Some approaches go one step further to leverage user interactions as a means of relevance feedback for refining the scoring system by interacting with the interface \cite{Harold2017,Schrier2008}  or by defining personalized re-ranking rules 
+%\cite{Fogarty2008}.
+%Finally, some recent advanced but very preliminary work has considered sequential optimization of interface adaptations based on user interactions \cite{Harold2017}.  While all of the above provided contributions orthogonal to this paper, they offer interesting potential for a tighter integration of the learning and user interaction loop in future extensions of this work.
+
+
+%- For "Filter selection": What do we focus on and what do others do?  What does L2R optimize?  What did Wang and Zhu optimize?  What did the MILP optimize?  How is it technically different from our criteria?
+
+\subfour{Filtering in IR:}
+% NOTE: First sentence doesn't help me and it comes after Belkin and Croft
+%Information filtering refers to a variety of processes involving the delivery of information to people who need it~\cite{Hanani2001}. 
+Belkin and Croft~\cite{Belkin1992} realized that information filtering is simply a counterpart to IR, albeit with a few key differences.  Namely,  
+information filtering often occurs in the context of a long-term standing interest (represented implicitly through a relevance measure), as well as continuing interaction with the filtering system over a long period of time.
+Most work on information filtering  displays has so far focused on \emph{unsupervised} approaches such as 
+dynamic adjustment of parameters~\cite{Ahlberg1995,Bennamane2012,Young1993},
+(hierarchical) clustering~\cite{Nocaj2012,Teitler2008,Smith2009}, 
+topic classification~\cite{Sankaranarayanan2009,Liu2012,Liu2009}, 
+and layout algorithms~\cite{Yifan2015,Jacomy2014,Sugiyama1981,Kamada1989}.
+
+Since our cluster definition is based on constraints, it may be natural to think of our clusters as information filters for interactive visual search.  However, the similarity more or less ends there.  In this work, we have an explicit query that drives construction of our filters.  Further, we directly optimize our filter settings w.r.t. a relevance-based objective to maximize the expected F1-Score given a probabilistic measure of relevance.  While these techniques may be used to extend work in information filtering, no existing information filtering work performs the same relevance-driven cluster (or filter) optimization that we propose in this work.
+%\emph{unsupervised} approaches such as (hierarchical) clustering~\cite{Liu2014}.
+
+
+
+
+\subfour{Explicit Optimization of IR Metrics:} %The filter selection algorithms we presented in this paper are based on the optimization of IR evaluation metrics. Given the trivial solution of optimizing the precision (singleton) and the recall (the whole collection), we considered in this work only the optimization of F1-Score (trade-off between precision and recall). However, 
+In this work, we focused on clustering as an explicit optimization of an IR-derived metric.  While no other existing work has proposed an expected F1-Score relevance-driven optimization approach to clustering as we did here, it is still worthwhile to explore what other explicit optimization approaches have been taken in IR. %, especially ones that may relate to possible future work.  
+In that context,  Wang and Zhu \cite{Wang2010} proposed to use an expected score approximation to optimize Average Precision, Discounted Cumulative Gain, and Reciprocal Rank. However, the authors did not propose a way to optimize Boolean metrics such as recall and F1-Score, which are critical for our cluster optimization objective. 
+Separately, machine learning has been explored to optimize different metrics such as NDCG or MAP through Learning to Rank (L2R) \cite{Baeza-Yates2010}. 
+However, L2R cannot be applied in our cluster optimization problem because we do not have labeled data to train with -- while we have a relevance signal, true cluster labels are not known for any data.  Second, the task we address is to find cluster settings that optimize an expected Boolean metric of expected F1-Score -- not to optimize metrics for ranking.
+%, although ranking metrics may be a possible direction for future work. -- This opens us to the question of why we didn't try ranking metrics.
+
+%As for using MILPs to optimize IR metrics, to the best of our knowledge, there is only one paper describing such a method proposed by Hansen et al~\cite{Hansen1991}. The drawback in this work is the need for ground truth relevance labels of all elements, which we do not have in our setting.
+
+%\subfour{Visualizing social media data:}
+%The visualization of social media data has been widely explored in the literature.
+
+%\cite{Marcus2011}
+
+
+
+
+
+
+%Finally, note that all the works described here are based on the optimization of IR metrics through textual content retrieval, whereas in our work we optimize the metrics through three  sub-filters.
+
+%- For "Evaluation": What do we focus on and what did others do?
+%\subfour{Evaluation:} Usually, visual information displays (VIDs) for search or exploration-oriented tasks are evaluated based on the system effectiveness of retrieving relevant elements, e.g., alarms \cite{Amershi2011}, images \cite{Cui2008b,Fogarty2008}, textual items \cite{Tsandilas2005}, news documents \cite{Schrier2008}, 
+%or based on the usability of the interface %\cite{Gajos2008,Gajos2010,Hartmann2008}.
+%Also, VIDs are usually evaluated through an off-line evaluation using specific benchmarks \cite{Amershi2011,Cui2008b,Harold2017}  or through a user study \cite{Amershi2011,Gajos2008,Hartmann2008,Fogarty2008,Tsandilas2005,Gajos2010}.
+%Instead, the purpose of this paper was to introduce  relevance-driven EF1 optimization algorithms to perform filter selection for VIDs; hence, our paper focuses on the evaluation of filter performance and computational time complexity for this difficult optimization problem.
+%% For now just need to defend what we did.  -Scott
+%with respect to a ground truth Boolean relevance criterion
+% Further evaluating our general approach through user studies in specific scenarios as done by the previously cited papers can help refine the novel information retrieval methodology introduced here for specific application use cases.
+%selected to focus on specific sets of elements. The filters are evaluated based on their ability to retrieve optimal sets of relevant elements.  
+%Although we performed mainly an offline evaluation of our algorithms, we plan to conduct a user study on natural disasters commented on Twitter to get real insight regarding the utility of the filters suggested.
+
+
+%In this paper, we are evaluating efficiency of system by investigating F1-Score of retrieval element set. The intuition is to provide user reasonable amount of possible elements to decrease their investigation time. This idea focusing on the retrieval set is employed in several papers. For example, standard accuracy of alarms in ticket system is tested in \cite{Amershi2011}. 
+
+
+
+%Meanwhile, other papers evaluated their system in terms of user study. For example, Hartmann et. al \cite{Hartmann2008} investigate users' hit ratio of total displayed elements. Krzysztof et al studied user's utility of adaptive tool in terms of time spent in finishing the task \cite{Gajos2008}. 
+
+
+
+%\subfour{Element retrieval in UI:} The major problem in AUI is to retrieve relevant UI elements, and this problem has been addressed as classification problem. 
+%Langley \cite{Langley1997} claimed that the use of an advisory system is the key component in both informative interface and generative interface. Therefore, Cui et al. \cite{Cui2008b} created an interactive system to retrieve images, then proposed to re-rank these images based on a C4.5 decision tree model. Mezhoudi \cite{Mezhoudi2013} described a system that uses ML in an adaptive UI. The author proposed a Rule Learner (RL) that learns based on user feedback (e.g., if recommendation was accepted or cancelled). 
+%Amershi et al. \cite{Amershi2011} proposed CueT, a system that allows  to group alarms into "tickets" that are to be resolved by network engineers. CueT provides recommendations on how to triage alarms; orders tickets according to relevance to incoming alarms (with a visualization showing degree of relevance).
+%On the other hand, to help the user in finding relevant content, Zha et al. proposed a joint text and image query suggestion for reranking \cite{Zha2009}. The search engine not only provides a textual query suggestion but also the representative images for each suggestion. % may not be relevant.
+
+%Generative interface which involves user's sequential interactions with the interface has also been investigated. 
+%Hence, Soh et al. \cite{Harold2017} applied a deep learning method  to model user's sequential decisions via a recurrent neural-network (RNN). Also, Soh et al. \cite{Harold2015} proposed a probabilistic approaches to estimate the user's next decision under uncertainty in a system with generative interface. 
+
+
+%Finally, Schrier et al. \cite{Schrier2008} proposed an interactive adaptive layout for documents in a \textquotedblleft newspaper\textquotedblright{} grid format. The system doesn't incorporate any machine learning algorithm but is rather based on rules specified. 
+
+
+
+
+%The UI is a key component in a recommender system.
+%It is necessary to review papers about recommendation model given its importance in informative interface. 
+%One of the key component in recommendation model is similarity matrix. 
+%SLIM \cite{Ning2011} proposed to learn the item similarity matrix, while 
+%Soh et al. \cite{Sanner2016} proposed LREC, which leverages deep learning models esp the gated recurrent units to learn user interaction pattern to improve recommendation for personalized adaptive user interfaces. 
+%Deep-learning based recommendation system is also developed. AutoSVD++ \cite{ZhangYX17} is designed by integrating deep autoencoder model in the classic SVD++ model.
+
+
+
+
+%It is easy to observe that great efforts are made on improvement of element-based recommendation in previous papers. However, poor explanation ability is associated with this recommendation, since the user may not immediately grasp the mechanism of recommendation. As a result, we aimed to develop a search algorithm to provide an optimal and a self-explainable filter query. 
+
+%\subfour{Metrics optimization in UI problem:}
+%Traditionally, learning-to-rank (L2R) methods are used to optimize metrics in conventional IR settings \cite{Baeza-Yates2010}. %In this method, a structure-SVM model is trained by pair-wised data transformed from ranklist data. 
+%However, L2R cannot be directly applied in our filter optimization problem, as the task we address is to find filters that fit optimal sets --- although this is may be part of our future work. 
+%different filters returning different sets of elements are aimed to be compared by the model. 
+%One obvious problem is unfixed size of elements sets, which leads to undetermined model complexity. 
+
+%Wang and Zhu \cite{Wang2010} proposed another statistical method to maximize expectation of several metrics based on the joint probability of document relevance. However, authors didn't propose a way to optimize recall and F1-Score, which is critical for our filtering problem. 
+%\textcolor{red}{[COMMENT: Actually, score approximation is used in this paper. So the next sentence may be taken place with its following description.]} The main reason is certainly the unknown real relevant document size. This problem is solved in our paper using score approximation.
+%Meanwhile, the authors intended to retrieve documents independently, which is not the case in our filtering problem.
+
+%As for using MILP to optimize IR metrics, to the best of our knowledge, there is only one paper describing such a method proposed by Hansen et al. \cite{Hansen1991}. The drawback in this work is also the need of real relevance label of all documents. %With our score approximation solution, the MILP method is able to be applied to optimize the metrics without any relevance label.
+
+
+
+
+
+
+
+
+
+
+

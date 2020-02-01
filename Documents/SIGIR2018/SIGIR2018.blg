@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: SIGIR2018.aux
+The style file: abbrv.bst
+Database file #1: biblio.bib
+Warning--to sort, need author or key in Bouadjenek2018
+Warning--empty author in Bouadjenek2018
+Warning--empty booktitle in Bouadjenek2018
+Warning--empty year in Bouadjenek2018
+Warning--empty year in Inibhunu2016
+Warning--empty institution in Shetty2004
+You've used 31 entries,
+            2118 wiz_defined-function locations,
+            722 strings with 9934 characters,
+and the built_in function-call counts, 12299 in all, are:
+= -- 1228
+> -- 586
+< -- 12
++ -- 235
+- -- 198
+* -- 889
+:= -- 1951
+add.period$ -- 100
+call.type$ -- 31
+change.case$ -- 191
+chr.to.int$ -- 0
+cite$ -- 37
+duplicate$ -- 486
+empty$ -- 950
+format.name$ -- 198
+if$ -- 2643
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 31
+newline$ -- 156
+num.names$ -- 62
+pop$ -- 200
+preamble$ -- 1
+purify$ -- 159
+quote$ -- 0
+skip$ -- 362
+stack$ -- 0
+substring$ -- 779
+swap$ -- 139
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 122
+warning$ -- 6
+while$ -- 114
+width$ -- 33
+write$ -- 357
+(There were 6 warnings)

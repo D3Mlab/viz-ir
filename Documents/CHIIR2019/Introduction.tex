@@ -1,0 +1,162 @@
+\textcolor{red}{Traditional search engines such as Google or Bing display search
+results in a vertical list of textual summaries, which is certainly not adapted for search results of geo-temporal data such as Twitter data or Foursquare Data. Moreover, given the massive volume of available
+information in many applications -- for instance social media such as Twitter, displaying all relevant elements for a given
+query prevents the visual extraction of relevant information as it
+would result in a saturated and unreadable display ~\cite{Landesberger2011,Liu2014,Sun2013}.}
+%In high information and cognitive load tasks such as real-time monitoring of network security, social media monitoring, or urban traffic congestion, it is common to have large-scale visual interfaces to display current system status, alerts, and events~\cite{Landesberger2011,Liu2014,Sun2013}. However, the massive volume of content to be presented on these Visual Information Displays (VIDs) prevents the simultaneous presentation of all information relevant to each alert or event~\cite{Liu2014}. 
+\textcolor{red}{Thus, clustering retrieved result search can help to scan a few coherent groups of elements than many individual elements. 
+Clusters represent different information perspectives related to a query and supply the user a clear and a quick overview of the search results without necessarily having to browse the matched elements.
+Clustering in Information Retrieval (IR) is based on the  assumption that if there is an element from a cluster that is relevant to a search request, then it is likely that other elements of the same cluster are also relevant~\cite{Manning2008,Jardine1971,Voorhees1985}. This is because clustering puts together elements that share many terms.
+%However, in practice, in many applications such as social network posts, relevant elements are likely to not share always similar terms. 
+However, in practice, because the relevance signal is ignored, irrelevant elements are inherently mixed with relevant ones in clusters, which impacts the quality of the results.}
+\textcolor{red}{Therefore, it is critical to develop relevance-driven clustering methods for Visual Information Displays (VIDs) that are capable of displaying highly relevant clusters for each query.}
+
+
+
+%Such filters allow the user to efficiently investigate the cause and implications of the alert or event, to identify critical properties of all the elements involved, and to initiate appropriate corrective actions in a timely manner.
+
+%Going back to 1992, Belkin and Croft~\citep{Belkin1992} realized that information filtering was simply a counterpart to information retrieval, albeit with a few key differences.  Namely, Belkin and Croft pointed out that 
+%In this work, we argue that this information-filtering task is central to a variety of AUIs. \textcolor{red}{Therefore, we expand on the information filtering paradigm of Belkin and Croft \citep{Belkin1992} where the key difference from standard Information Retrieval (IR) is that rather than focusing one-short query-driven interactions,
+%information filtering often occurs in the context of a long-term standing interest (represented implicitly through a relevance measure), as well as continuing interaction with the filtering system over a long period of time.  
+%While this accurately summarizes the filtering perspective we take in this paper, we remark that most work on information filtering displays has so far focused on \emph{unsupervised} approaches such as (hierarchical) clustering~\cite{Ahlberg1995,Liu2014,Sankaranarayanan2009,Teitler2008,Bennamane2012,Shneiderman2013,Yifan2015,Smith2009}.  However, returning to Belkin and Croft's initial motivation and information retrieval analogy to information filtering, we assume a task-specific relevance measure and ``supervised'' relevance objective in order to generically view information filtering in VIDs as an expected F1-Score optimization of a result set given filter constraints.
+
+%However, we work with a richer paradigm in that we incorporate multiple filters for different contexts including content, time, and geographical regions.  %Ultimately these filters often align with a visually coherent presentation.
+%Unlike clustering which is mainly unsupervised, filtering does have a notion of relevance.
+%Also, the main difference with clustering which is unsupervised, in this work, filtering does have a notion of relevance (or label).
+%}
+
+
+
+
+%Furthermore, we argue that the filtering task shares many common properties of a standard Information Retrieval (IR) setting as \textcolor{red}{summarized in \citep{Belkin1992}.  Also, Belkin and Croft \citep{Belkin1992} highlithed important differences between ranking documents in web search and filter selection} for AUIs, especially in the way that documents in the AUI can only be selected for a result set through filter settings.
+%However there is also substantial overlap and formal connection with many aspects of IR thus providing   
+%especially in the indirect selection of AUI results through filter %settings. Hence this unexplored field 
+%provides new possibilities for cross-pollination 
+%new opportunities and challenges of research in this IR setting for AUIs.
+
+
+
+%The key difference is that while information retrieval is ubiquitous in the lives of most humans in the form of web search, it has gone virtually unrecognize as an appropriate model for the filtering problem in AUIs \textcolor{red}{[REFERENCE IS NEEDED]}. 
+%Instead, machine learning methods have been widely used to address this problem.
+
+\begin{figure}[t]
+\begin{centering}
+\subfigure[Global display showing search results.]{\includegraphics[width=8cm]{imgs/baseline}\label{Fig:GlobalDisplay}}
+\subfigure[Relevance-driven clustered display of search results.]{\includegraphics[width=8cm]{imgs/bps}\label{Fig:FilteredDisplay}}
+\par\end{centering}
+\caption{(a) User interface showing all geolocated tweets that match the query ``tornado, blizzard, earthquake''. (b) A clustered version of the interface showing three clusters of tweets identified to have high coverage of relevant content: a cluster near Boston limited to data in Feb 2014 and having keyword ``Blizzard'' and other clusters centered on Oklahoma and California states.  This task is \emph{not} simply clustering since this paper assumes that a relevance measure has been provided for each element, which is used to directly optimize the F1-Score of content presented in each cluster.}
+\label{Fig:UseCase}
+\end{figure}
+
+%\begin{table*}[t]
+%\caption{Comparison between conventional Web Search and Filtering for AUIs.}
+%\label{tbl:Comparaison2IR}
+%\centering{}%
+%\begin{tabular}{|c|>{\centering}p{6cm}|>{\centering}p{6cm}|}
+%\hline 
+% & \textbf{Web Search} & \textbf{Filtering for AUIs}\tabularnewline
+%\hline 
+%\hline 
+%\textbf{Information Need} & Realized by query  & Selection of an event or alert\tabularnewline
+%\hline 
+%\textbf{Form of Results} & Ranked list of documents & Filter settings (bounding box in visual display, time ranges, property
+%filters) that select a subset of information elements to display\tabularnewline
+%\hline 
+%\textbf{Relevance Scoring} & Comparison of query and document content (and other relevant information)
+%to generate a relevance score, e.g., via TF-IDF or BM25 & Third party application-specific tool (e.g., a machine learning approach)
+%that predicts the probability that each information element is relevant
+%to the selected alert\tabularnewline
+%\hline 
+%\textbf{Test Data for Benchmarking} & A set of queries; human-labeled judgments of document relevance to
+%each query for a test corpus (i.e., ground truth relevance) & A set of alerts or events; human-labeled judgments of %information element relevance
+%to a selected alert (i.e., ground truth relevance)\tabularnewline
+%\hline 
+%\textbf{Evaluation} & Ranking metrics (P@k, AP, etc.) over documents given ground truth
+%relevance  & Boolean metrics (e.g., F1-score) and Ranking metrics (P@k, AP, etc.)
+%over information elements selected by the filter given ground truth
+%relevance \tabularnewline
+%\hline 
+%\end{tabular}
+%\end{table*}
+
+
+\textcolor{red}{ To make the task of VID clustering more concrete, we introduce an  example scenario.
+Consider the case of searching natural disasters that are discussed on Twitter, using the query ``tornado, blizzard, earthquake'' on a geo-temporal search engine. Typically, as shown in Figure~\ref{Fig:GlobalDisplay}, there would be a visual display of all tweets that match the query in the collection.}
+%We denote all displayed content (in this case individual tweets)
+%(such as user IP address, Tweet content, Tweet time, geographical coordinates, recent activity details) 
+%as an information element that could
+%be optionally shown or not.  
+Displaying all information elements simultaneously
+would result in a saturated and an unreadable display for any reasonably sized 
+ problem. To ease the search results browsing task, users could restrict the information displayed
+through a variety of cluster settings to get a clear overview of individual events as shown in Figure \ref{Fig:FilteredDisplay} \textendash{} by panning and
+zooming in the graph display, by restricting upper and lower bounds
+on a time filter, and/or by selecting properties (e.g., in a drop-down
+selection or fielded keyword search in fields).% such as Tweet content). 
+%\textcolor{red}{Such filter settings are expected to help a monitoring agent to efficiently investigate the cause and implications of the triggered alarm, to identify common properties of the elements involved in that alert, and to initiate appropriate corrective actions in a timely manner.}
+
+While the user would typically find it hard to manually set these
+cluster settings to optimally reveal different information  perspectives they are
+currently searching, a VID that is aware of the probability that each information element
+is relevant to the query could automatically suggest clusters
+that might display the relevant information element set with the least
+amount of irrelevant clutter. 
+\textcolor{red}{ Thus, the user could use these cluster settings to quickly get a clear overview of the different information perspective matching his query.
+%get carry out their investigation by identifying common properties of the elements involved in the alert, and eventually take a set of appropriate actions if warranted.
+It is critical to note in this work that we assume the prediction of content relevance to a user's information need is the relevance score of each element with the query, typically using an information retrieval probabilistic model.}
+%to be provided by a third-party since this prediction is highly specific
+%to each particular application setting and not the focus of this work (see Related Work in Section 6 for further discussion). }
+%In this work, we intend to
+%focus on the broader problem of AUI filtering in a range of visual
+%display applications assuming this relevance predictor is given. However,
+%in addition to scoring information elements of direct causal interest
+%to the alert, it is likely that the AUI will also contain other related material requiring
+%the concurrent display of information.  For example, such a material could be messages exchanged, the time at which these messages were exchanged, etc.
+%For example, such a rule could
+%be \textquotedblleft if a connection is shown, the IP addresses of
+%the two connected machines must also be shown\textquotedblright ,
+%which would trigger additional (soft) constraints for the filter optimization.
+
+Since ``retrieved'' information
+elements are not individually selected, \textcolor{red}{ but rather clustered using the relevance signal of each element, the problem is clearly 
+an optimization problem of how to restrict cluster settings to show
+the user the most relevant information to his query.}
+While this notably diverges from the standard information retrieval setting
+where ranked documents are chosen individually~\cite{Baeza-Yates2010}, these additional constraints
+do not change the overall objective to select
+relevant information given the user's information need as represented by the given relevance measure. 
+%Furthermore, standard information retrieval evaluation benchmarking
+%methodology (e.g., the Cranfield paradigm) and metrics such as precision@k
+%or average precision are also relevant here (assuming that visual
+%saliency can serve as a surrogate method for achieving a visual rank
+%ordering of selected information elements).  Unlike information retrieval
+%where Boolean metrics such as F-Score are not often used since ranked
+%lists are usually limited to the top-10, graphical displays can present
+%substantially more information of varying sizes that make precision-recall
+%trade-off metrics like F-Score also relevant for evaluation.\textcolor{red}{ [THIS SENCTENCE IS UNCLEAR]}
+
+%With the aim of assisting network monitoring agents in carrying out their daily tasks, we present in this paper a new visual search paradigm for AUIs. 
+\textcolor{red}{ To the best of our knowledge, this work is the first to address clustering in VIDs as a ``supervised'' optimization problem. In brief, we make the following contributions:}
+\begin{enumerate}
+\item We provide a unified framework that abstracts presentation-specific details of different information clusters (spatial, temporal, and content) for VIDs and facilitates an optimization perspective of clustering w.r.t. a provided relevance measure.  
+% NOTE: Should be some sort of property like monotonicity of result counts that somehow can be exploited in filter design.
+\item We propose new \emph{expected} metrics for optimization based on conventional information retrieval metrics, i.e., precision, recall, and F1-Score.  We argue that expected F1-Score (EF1) is the appropriate metric to optimize subject to parameterized cluster constraints.
+%\item We argue for the formulation of filtering as the optimization of an expected F1-Score (EF1) objective subject to parameterized filter constraints.
+%that can be maximized via mixed integer linear programming or efficient, approximately-optimal greedy algorithms.
+% In this work, we argue that information-filtering task is central to a variety of VSIs and well-suited to an Information Retrieval (IR) perspective where we argue that a good overall objective for filter selection is F1-Score; given the absence of known Boolean relevance labels for interface elements, we instead propose optimization of a surrogate metric of expected F1-Score denoted as EF1.  
+\item For scalability and efficiently optimizing clusters w.r.t.\ EF1, we contribute two greedy algorithms.
+%\item To benchmark the performance of the greedy algorithms for EF1 optimization on moderately sized datasets, we provide an \emph{optimal} Mixed Integer Linear Programming (MILP) formulation for EF1 derived from an initial fractional MILP formulation.
+%\item We propose a new theory of IR for adaptive visual user interfaces. 
+%\item We propose a relevance-driven F1-Score optimization approach to filter selection for AUIs.
+%\item We propose two new filter setting search algorithms based on greedy strategies. These algorithms are based on the optimization of EF1-Score.\item \textcolor{red}{We define an optimal Mixed Integer Linear Programming formulation for EF1 intended to benchmark the performance of the greedy approximations on moderately sized datasets.}
+\item \textcolor{red}{We present an off-line thorough evaluation on a twitter dataset to show that the greedy algorithms we propose are a good approximation of the optimal solution, are better than the state-of-the-art clustering method K-Means, and perform well in the presence of noise (i.e., corruption of the ground truth labels).}
+%can even perform better with a noisy classifier \textendash{} up to 42\% improvement for a classifier with an accuracy of 60\%. On the other hand, 
+We also experimentally demonstrate that the expected F1-Score metric is a good surrogate of F1-Score.
+%specifically with a highly accurate classifier \textendash{} for a classifier with 90\% accuracy, the RMSE is roughly 0.0111).
+\item \textcolor{red}{Finally, we analyze the feedback of 24 students asked to find different natural disasters discussed in our twitter dataset using one of our algorithms, and two different baselines.}
+\end{enumerate}
+
+%The rest of the paper is organized as follows: in Section \ref{sec:Framework},  presents the concepts and  the nation used throughout this paper;  Section \ref{sec:Algorithms} presents the new search algorithms of filter settings for AUIs; Sections \ref{sec:setup} and \ref{sec:Evaluation}  describe the evaluation setup and results respectively;  Section \ref{sec:RelatedWork}  discusses the related work; and Section \ref{sec:Conclusions} concludes with key observations and future research directions.
+
+
+

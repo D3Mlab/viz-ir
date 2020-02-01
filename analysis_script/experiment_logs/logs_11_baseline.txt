@@ -1,0 +1,56 @@
+1534894636035	START: 	baseline	pos1,pos7,pos6
+1534894645198	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534894645225	Query_Execution_Time	10
+1534894649236	clicking_tweet:68	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685	pos1
+1534894656404	answer_update_nd_1: 	flood
+1534894663784	answer_update_date_1: 	2013-09-07
+1534894669161	MouseDrag: New Center:(39.06827086963257, -99.087890625)	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685
+1534894669573	ZoomLevel:5	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685
+1534894671876	ZoomLevel:6	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685
+1534894680028	answer_update_location_1: 	Colorado
+1534894684522	final_answer1	ND:	flood	date:	2013-09-07	location:	Colorado
+1534894687340	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685
+1534894687362	Query_Execution_Time	10
+1534894698799	new_query: 	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:685
+1534894698827	Query_Execution_Time	8
+1534894701198	clicking_tweet:1037	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302	pos7
+1534894704471	clicking_tweet:1076	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302	pos7
+1534894706197	clicking_tweet:1001	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302	pos6
+1534894710030	clicking_tweet:1905	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302	neg
+1534894712149	clicking_tweet:1894	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302	neg
+1534894713806	clicking_tweet:914	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302	pos6
+1534894719916	answer_update_nd_2: 	blizzard
+1534894726361	answer_update_date_2: 	2014-06-02
+1534894726559	answer_update_date_2: 	2014-06-29
+1534894729558	ZoomLevel:5	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302
+1534894731213	ZoomLevel:6	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:302
+1534894737964	answer_update_location_2: 	North Carolina
+1534894738729	final_answer2	ND:	blizzard	date:	2014-06-29	location:	North Carolina
+1534894750293	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:302
+1534894750320	Query_Execution_Time	10
+1534894753280	clicking_tweet:17961	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894755817	clicking_tweet:3048	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894757359	clicking_tweet:2884	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894758183	clicking_tweet:3137	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894759033	clicking_tweet:3126	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894760927	clicking_tweet:3066	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894762359	clicking_tweet:2871	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894763056	clicking_tweet:3017	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894764503	clicking_tweet:1991	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894766639	clicking_tweet:2839	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894768271	clicking_tweet:2841	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894769126	clicking_tweet:3194	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894770110	clicking_tweet:2936	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894771463	clicking_tweet:3039	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894772238	clicking_tweet:2923	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894774310	clicking_tweet:2868	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894777238	clicking_tweet:2835	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894779623	clicking_tweet:2999	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1534894789452	answer_update_nd_3: 	drought
+1534894797161	answer_update_date_3: 	2014-07-02
+1534894797328	answer_update_date_3: 	2014-07-22
+1534894807983	ZoomLevel:5	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1534894808922	ZoomLevel:6	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1534894813973	answer_update_location_3: 	Arizona
+1534894815209	final_answer3	ND:	drought	date:	2014-07-22	location:	Arizona
+1534894815213	answers_baseline	ND1:	flood	date1:	2013-09-07	location1:	Colorado	ND2:	blizzard	date2:	2014-06-29	location2:	North Carolina	ND3:	drought	date3:	2014-07-22	location3:	Arizona

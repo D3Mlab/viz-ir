@@ -1,0 +1,41 @@
+1535408222619	START: 	filters	pos4,pos9,pos5
+1535408226612	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535408231629	Query_Execution_Time	5002
+1535408240656	new_query: 	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1535408245531	Query_Execution_Time	4860
+1535408247309	ZoomLevel:5	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10260
+1535408248059	ZoomLevel:6	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10260
+1535408250008	clicking_bbox:tweets_size:44,pos_tweets_size:44	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10260
+1535408251895	clicking_tweet:1470	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10260	pos9
+1535408259130	answer_update_nd_1: 	blizzard
+1535408264534	answer_update_date_1: 	2014-02-01
+1535408269490	answer_update_location_1: 	Massachusetts
+1535408270906	final_answer1	ND:	blizzard	date:	2014-02-01	location:	Massachusetts
+1535408275635	MouseDrag: New Center:(40.010153555672545, -79.42802810668945)	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10260
+1535408284612	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10260
+1535408289865	Query_Execution_Time	5239
+1535408292556	clicking_tweet:2969	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1535408294147	clicking_tweet:17185	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1535408295460	clicking_tweet:16873	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1535408296828	clicking_tweet:11985	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1535408304610	new_query: 	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550
+1535408309593	Query_Execution_Time	4968
+1535408311526	ZoomLevel:5	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:11211
+1535408313385	clicking_tweet:396	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:11211	pos4
+1535408319403	answer_update_nd_2: 	earthquake
+1535408325023	answer_update_date_2: 	2014-08-02
+1535408325150	answer_update_date_2: 	2014-08-21
+1535408330075	answer_update_location_2: 	California
+1535408330861	final_answer2	ND:	earthquake	date:	2014-08-21	location:	California
+1535408336955	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:11211
+1535408341982	Query_Execution_Time	5012
+1535408350109	new_query: 	CONTEXT:query:hurrican tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1535408355189	Query_Execution_Time	5070
+1535408356774	ZoomLevel:5	CONTEXT:query:hurrican tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:11183
+1535408357596	ZoomLevel:6	CONTEXT:query:hurrican tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:11183
+1535408358531	clicking_tweet:1407	CONTEXT:query:hurrican tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:11183	pos9
+1535408367059	answer_update_nd_3: 	hurricane
+1535408373391	answer_update_date_3: 	2014-02-04
+1535408379916	answer_update_location_3: 	Massachusetts
+1535408380906	final_answer3	ND:	hurricane	date:	2014-02-04	location:	Massachusetts
+1535408380906	answers_filters	ND1:	blizzard	date1:	2014-02-01	location1:	Massachusetts	ND2:	earthquake	date2:	2014-08-21	location2:	California	ND3:	hurricane	date3:	2014-02-04	location3:	Massachusetts

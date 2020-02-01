@@ -1,0 +1,53 @@
+1534966815698	START: 	filters	pos1,pos7,pos6
+1534966826359	new_query: 	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534966829179	new_query: 	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534966832062	Query_Execution_Time	5682
+1534966834725	Query_Execution_Time	5538
+1534966834962	new_query: 	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:12289
+1534966840475	removing_filter:    tweets_size:6,pos_tweets_size:2	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:12289
+1534966840497	Query_Execution_Time	5499
+1534966841511	removing_filter:    tweets_size:3,pos_tweets_size:3	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:12289
+1534966842918	removing_filter:    tweets_size:6,pos_tweets_size:2	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:12289
+1534966844401	clicking_tweet:97	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:12289	pos1
+1534966847534	clicking_tweet:12	CONTEXT:query:drought flood tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:12289	pos1
+1534966852117	answer_update_nd_1: 	flood
+1534966861045	answer_update_date_1: 	2013-09-07
+1534966866724	answer_update_location_1: 	Connecticut
+1534966869556	answer_update_location_1: 	Colorado
+1534966870259	final_answer1	ND:	flood	date:	2013-09-07	location:	Colorado
+1534966899477	new_query: 	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12289
+1534966905100	Query_Execution_Time	5606
+1534966908338	removing_filter:    tweets_size:7,pos_tweets_size:7	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966909166	removing_filter:    tweets_size:1,pos_tweets_size:1	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966910288	clicking_tweet:1215	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939	pos7
+1534966916645	ZoomLevel:5	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966917261	ZoomLevel:6	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966918726	MouseDrag: New Center:(40.1348146552068, -78.49951171875)	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966921861	answer_update_nd_2: 	blizzard
+1534966924070	clicking_tweet:1013	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939	pos7
+1534966929714	clicking_bbox:tweets_size:46,pos_tweets_size:46	CONTEXT:query:earthquake blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966939999	answer_update_date_2: 	2017-02-01
+1534966940301	answer_update_date_2: 	2017-02-10
+1534966946165	answer_update_location_2: 	New York
+1534966952608	answer_update_date_2: 	0002-02-10
+1534966952792	answer_update_date_2: 	0020-02-10
+1534966953592	answer_update_date_2: 	0201-02-10
+1534966954233	answer_update_date_2: 	2014-02-10
+1534966955612	final_answer2	ND:	blizzard	date:	2014-02-10	location:	New York
+1534966987966	new_query: 	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966992374	new_query: 	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:11939
+1534966993957	Query_Execution_Time	5975
+1534966998192	Query_Execution_Time	5808
+1534967001460	removing_filter:    tweets_size:220,pos_tweets_size:0	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12014
+1534967004304	clicking_tweet:904	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12014	pos6
+1534967007464	clicking_tweet:995	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12014	pos6
+1534967009208	clicking_tweet:990	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12014	pos6
+1534967013576	clicking_tweet:987	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12014	pos6
+1534967016806	clicking_tweet:904	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12014	pos6
+1534967019215	clicking_tweet:1000	CONTEXT:query:hurricane blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:12014	pos6
+1534967026294	answer_update_nd_3: 	hurricane
+1534967033959	answer_update_date_3: 	2014-06-02
+1534967034193	answer_update_date_3: 	2014-06-29
+1534967042166	answer_update_location_3: 	North Carolina
+1534967043492	final_answer3	ND:	hurricane	date:	2014-06-29	location:	North Carolina
+1534967043496	answers_filters	ND1:	flood	date1:	2013-09-07	location1:	Colorado	ND2:	blizzard	date2:	2014-02-10	location2:	New York	ND3:	hurricane	date3:	2014-06-29	location3:	North Carolina

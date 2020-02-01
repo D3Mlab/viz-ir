@@ -1,0 +1,321 @@
+First, we proceed to motivate and derive a new \emph{expected} F1-Score we use to optimize for cluster extraction.  % in this work. 
+Following this, we describe two efficient greedy algorithms to (approximately) optimize it.  %To this end, we describe in this section  two scalable and efficient  algorithms to optimize EF1.
+%used to build filters setting for querying large data graphs in order to retrieve relevant UI elements that are of interest to the users.  
+%Following this, we describe an optimization-based approach based on Mixed Integer Linear Programming (MILP) to benchmark the performance of the proposed greedy algorithms on moderate-sized problems.
+
+\subsection{Deriving Expected F1-Score (EF1)}
+
+We adopt the Boolean relevance framework in information retrieval~\cite{Baeza-Yates2010} and thus assume that any information element $j$ has a ground truth relevance assessment $B(j)$ available at evaluation time.  
+%%However, unlike previous document-based methods for estimating relevance at retrieval-time, we do not rely on text associated with information elements and instead rely on a third-party to supply an estimated probability (score) of relevance $S(j)$. 
+%Traditionally, Boolean labels indicate the relevance of documents is used to evaluate retrieval sets (e.g., precision). 
+%In practice, IR models are based on probabilistic scores to measure relevance of the elements, such as TF-IDF and cosine similarity.  
+%In practice, we are able to employ third-party technique to provide probabilistic scores to measure relevance of the document in IR system, such as TF-IDF and cosine similarity. Consequently,
+Because clustering implies a Boolean retrieval model (clusters either contain or do not contain elements) and we have a probabilistic estimate of relevance $S(j)$, we propose to evaluate
+\emph{expected} variants of standard precision, recall, and F1-score of these clusters.
+%Boolean retrieval evaluation metrics based on the relaxation of Boolean labels to probabilistic scores resulting in expected metrics, i.e., \emph{expected precision} (EP), \emph{expected recall} (ER) and \emph{expected F1-Score} (EF1).
+
+However, as standard for both precision and recall, we note that precision and recall alone can be trivially optimized through pathological solutions.  That is, the cluster that selects all information elements (i.e., all time, all space, no excluded keywords) would trivially maximize (expected) recall.  Similarly, the cluster that selects the highest probability singleton information element would maximize expected precision.  \emph{This leaves expected F1-score as the only of these three objectives commonly used in Boolean information retrieval that does not have a pathological solution.}
+%to balance expected precision and recall. % in a Boolean retrieval framework.
+
+To formally define expected F1-Score, we first begin with definitions of expected precision and recall.  Recalling our previous definitions, given a set of information elements  $E$  that match a user query and a relevant set $RS$, %the global information element collection $GC$ with size $m$, 
+the precision of $E$ is defined as follows:
+\begin{equation}
+   P(E) = \dfrac{\sum_{j \in E} B(j)}{|E|} = \dfrac{\sum_{j=1}^m B(j)I(j)}{\sum_{j=1}^m I(j)} 
+\end{equation}
+Given that $B(j)$ is a Boolean random variable, we can take the expectation of $P(E)$ leading to the following definition of 
+%Replacing the ground-truth Boolean relevance label $B(j)$ with the Boolean random variable $S(j)$ gives the following definition of 
+\emph{expected precision}: 
+\begin{equation}
+EP(E)=\mathbb{E_{S}}\left[\dfrac{{ \sum_{j=1}^{m}}B(j)I(j)}{{ \sum_{j=1}^{m}}I(j)}\right]=\dfrac{{ \sum_{j=1}^{m}}\mathbb{E_{S}}[B(j)]I(j)}{{ \sum_{j=1}^{m}}I(j)}=\dfrac{{ \sum_{j=1}^{m}}S(j)I(j)}{{ \sum_{j=1}^{m}}I(j)}
+\end{equation}
+Similarly the recall of a retrieved set $R(E)$ is defined as:
+\begin{equation}
+   R(E) = \dfrac{\sum_{j \in RS} B(j)}{|RS|} = \dfrac{\sum_{j=1}^m B(j)I(j)}{ \sum_{j=1}^m B(j)} 
+\end{equation}
+Taking a 1st order Taylor expansion, we have the following expectation approximation %$\mathbb{E}(X/Y)\approx\dfrac{\mathbb{E}(X)}{\mathbb{E}(Y)}$ 
+$\mathbb{E}(X/Y)\approx \mathbb{E}(X)/ \mathbb{E}(Y)$ for two dependent random variables $X$ and $Y$~\cite{Kempen2000}. Hence, 
+we can now define an \emph{approximated expected recall} as follows: 
+%Given a retrieved element set $E$  and a relevant element set $RS$ among a global element collection $GC$ with size $m$, we propose the following definition of \emph{expected precision} (EP), \emph{expected recall} (ER) and \emph{expected F1-Score} (EF1):
+\begin{equation}
+   \emph{ER(E)}=\mathbb{E_{S}}\left[\dfrac{{ \sum_{j=1}^{m}}B(j)I(j)}{|RS|}\right]\approx\dfrac{{ \sum_{j=1}^{m}}\mathbb{E_{S}}[B(j)]I(j)}{{ \sum_{j=1}^{m}}\mathbb{E_{S}}[B(j)]}=\dfrac{{ \sum_{j=1}^{m}}S(j)I(j)}{{ \sum_{j=1}^{m}}S(j)}
+\end{equation}
+Finally, we define the \emph{approximated expected F1-Score} (EF1) using the \emph{expected precision} and the \emph{approximated expected recall} as follows: 
+\begin{align}
+    \emph{EF1(E)}  \approx \dfrac{2\times EP\times ER}{EP+ER} = \dfrac{2\times\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j) + \sum_{j=1}^m S(j)}
+    \label{eq:EF1}
+\end{align}
+%Due to space limitations, we focus on F1-score in this paper, however expected F$_\beta$ scores follow directly from the above definitions. 
+  
+%Conventional metrics are based on Boolean relevance label $B(j)$ instead of probabilistic score $S(j)$. To link standard precision with our expected precision,  The definition of standard precision $P(RS)$ is as follows:
+
+
+%Now, we  derive expectation of precision $P(RS)$ as follows:
+%\begin{align}
+%	\mathbb{E_S}[P(E)] &= \mathbb{E_S}[\dfrac{\sum_{j=1}^m B(j)I(j)}{\sum_{j=1}^m I(j)}] = \dfrac{\sum_{j=1}^m %\mathbb{E_S}[B(j)]I(j)}{\sum_{j=1}^m I(j)} \notag \\
+%    &= \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j)} = EP(E)
+   	%\mathbb{E_S}[R(RS)] &= \dfrac{\sum_{j=1}^m \mathbb{E_S}[B(j)] I(j)}{\sum_{j=1}^m \mathbb{E_S}[B(j)]} = \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m S(j)} = ER(RS)  \\
+    %\mathbb{E_S}[F1(RS)] &= \dfrac{2*\sum_{j=1}^m \mathbb{E_S}[B(j)]I(j)}{\sum_{j=1}^m I(j) + \sum_{j=1}^m \mathbb{E_S}[B(j)]} \notag \\
+    %&= \dfrac{2*\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j) + \sum_{j=1}^m S(j)} = EF1(RS)
+%\end{align}
+
+
+
+
+%\begin{equation}
+%\emph{\ensuremath{EP(RS)}}=\dfrac{{\displaystyle \sum_{j\in RS}S(j)}}{|RS|} =  \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j)} 
+%\end{equation}
+
+%Analogously, we define the  \emph{expected recall} (ER) as follows:
+%\begin{equation}
+%\emph{\ensuremath{ER(RS)}}=\dfrac{{\displaystyle \sum_{j\in RS}S(j)}}{|RE|} = \dfrac{\sum_{i=1}^m S(i)I(i)}{\sum_{i=1}^m S(i)} = \dfrac{\sum_{i=1}^m S(i)I(i)}{C}  
+%\end{equation}
+
+%\noindent where $|RE|$ is the size of the entire relevant element set. Finally, we define the  \emph{expected F1-Score} (EF1) as follows:
+
+%\begin{equation}
+%\emph{\ensuremath{EF1(RS)}}=\dfrac{2\times EP\times ER}{EP+ER} = \dfrac{2*\sum_{i=1}^m S(i)I(i)}{\sum_{i=1}^m I(i) + C}
+%\end{equation}
+
+%In Figure \ref{fig:F1_vs_EF1}, we experimentally show that while EF1 is only an approximation of the true expectation, EF1 serves as an excellent surrogate for F1, which is our main concern when considering filter optimization.  That is, maximizing EF1 score with respect to a noisy classifier (noise decreases to 0 as $\lambda \to 1$) is strongly correlated with maximizing F1 score evaluated on the ground truth; we will further study the effect of a noisy classifier in Section~\ref{sec:Evaluation}.   Specifically, while the EF1 and F1 scores are not perfectly calibrated along the diagonal, there is a linear correlation in that as the EF1 score increases for a scenario, the F1-score proportionally increases on average (as shown by the best fit linear regression in the plots).
+
+
+
+%\begin{figure}[H]
+%\begin{centering}
+%\par\end{centering}
+%\begin{centering}
+%\includegraphics[width=8.5cm]{imgs/Enron_results/scatter_plot_EF1\lyxdot vs\lyxdot F1}
+%\par\end{centering}
+%\caption{Scatter plot showing EF1-Score vs. F1-Score.}
+%\label{fig:F1_vs_EF1}
+%\end{figure}
+
+
+
+
+\subsection{Greedy relevance-driven clustering}
+
+% Should discuss greedy algorithm generically as having a metric and at each step
+% a choice of k restrictions, which are each scored against the metric with the
+% highest score chosen at each step.  Then each individual filter only has to
+% specify what the choices are and how the choice restricts the set of emails
+% selected.  What is a good succinct notation for this?
+
+A single cluster $E^*$ is specified as all information elements $\{j \in E^* | I(j)=1, j \in E \}$ in the intersection of spatial bounding box, time interval, and keyword inclusion or exclusion constraints.  Given an estimated probability of relevance of each information element in the cluster $S(j)$, we can then compute the EF1 of the cluster given in~\eqref{eq:EF1}.  Through a series of transformations, this EF1 optimization problem can be reduced to a Mixed Integer Linear Program (MILP), which is NP-Hard and only practical for small element sets.  Hence, in the following, we describe how to \emph{greedily} optimize the parameters of each constraint to approximately optimize EF1.
+
+In greedy optimization, we would have the option to start with a singleton element cluster and expand, or start with a cluster including all elements and prune.  While the former has a non-deterministic choice of which singleton to start with, the latter has an unambiguous initial starting condition.  Thus we choose the latter pruning approach starting with initial spatial bounding box, time interval, and keyword constraints set to include \emph{all} of $E$.  
+% Each cluster has an associated EF1 score 
+% We assume that three types of clustering attributes are used to optimize clusters of relevant information according to spatial, temporal, and keyword content constraints.  A cluster is generated by \emph{conjoining} (i.e., intersecting) these three attribute constraints.  While it is possible to convert the problem of selecting joint settings of spatial, temporal, and keyword constraints to optimize EF1 to a mixed-integer linear programming (MILP) problem, optimizing MILPs is NP-Hard 
+
+\subsubsection{Greedy Keyword Selection algorithm}
+
+% TODO: there is some confusion here between elements matching a query and displayed information elements.  To be resolved later.
+Given a set of candidate information elements matching a query, this algorithm greedily selects a set of keywords to exclude (i.e., prune) to maximize EF1.
+
+Formally, the algorithm aims to select an
+optimal subset of $k$ terms $T_{k}^{*}\subset V$ (where $V$ is a vocabulary of keywords for the document corpus) to exclude elements containing these keywords to optimize EF1.  This is achieved by
+building $T_{k}^{*}$ in a greedy manner by choosing the next optimal
+term $t_{k}^{*}$ given the previous set of optimal term selections
+$T_{k-1}^{*}=\{t_{1}^{*},\ldots,t_{k-1}^{*}\}$ (assuming $T_{0}^{*}=\emptyset$)
+using the following selection criterion
+\begin{equation}
+t_{k}^{*}=\argmax_{t_{k}\notin T_{k-1}^{*}} [EF1(E^{*} \textrm{ that don't contain } \{t_{1}^{*},\dots t_{k}^{*}\})] 
+\end{equation}
+that terminates at $k$ when no $T_{k+1}^{*}$ can improve the EF1 of $E^*$. 
+%In order to reduce the keyword search space, we propose to use the top 100 terms ranked using Mutual Information to identify the keywords that are predictive of the ``supervised'' relevance measure.  We remark that other metrics like frequency would be more appropriate for unsupervised tasks.  
+%We further remark that we have chosen to use term exclusion as a means to effectively prune the content as more terms are selected.  
+%mainly for technical reasons as a negation query generates queries with much fewer terms. 
+%The best indexing strategy to support this greedy search is the inverted index data structure~\cite{Zobel2006}.
+
+\subsubsection{Greedy Time Selection algorithm}
+
+The idea behind the time-based greedy selection algorithm is to start with the maximal time range and greedily contract it to a sub-window of time $[t_{\tstart},t_{\tend}]$ such that $\{ j \in E^* | t_{\tstart} < t_j < t_{\tend}, j \in E \}$.  In this case, we propose two different greedy approaches to iteratively contract (i.e., prune) the time window in order to maximize EF1:
+
+\subfour{(a) Naive Greedy algorithm:} Let $t_{\min}$ and $t_{\max}$ respectively correspond to the current minimum and maximum timestamps in $E^*$.  If setting $t_{\tstart} = t_{\min}$ improves the EF1 of $E^*$ then this lower bound contraction is accepted.  Similarly if setting $t_{\tend} = t_{\max}$ improves the EF1 of $E^*$ then this upper bound contraction is accepted.  This repeats until no lower or upper bound contraction improves EF1. 
+
+\subfour{(b) Binary Partition Search (BPS) algorithm:} Large datasets will cause the previous Greedy algorithm to take a large number of iterations to terminate.  A more efficient way to address this problem is to use binary partitioning search (BPS).  Hence, instead of removing a single element $j$ at each iteration, BPS operates by selecting between the lower or upper half of the time interval. 
+
+%\begin{algorithm}[t]
+%%\scriptsize
+%\caption{Binary Partition Search (BPS) Algorithm}
+%\SetAlgoLined
+%\SetKwData{Left}{left}\SetKwData{This}{this}\SetKw%Data{Up}{up}
+%\SetKwFunction{Union}{Union}\SetKwFunction{FindCom%press}{FindCompress}
+%\SetKwInOut{Input}{input}\SetKwInOut{Output}{outpu%t}
+%\Input{A set of ordered elements $E=\{j_{v_1} %\dots j_{v_n}\}$ }
+%\Output{A timestamp $t$;}
+%\BlankLine
+%\label{alg:Dichotomy}
+
+%$v_{min}=v_1$; $v_{max}=v_n$;  %$v_{mid}=\tfrac{v_1+v_n}{2}$;
+
+%\While {$v_{min}!=v_{mid}!=v_{max}$}{
+
+%\eIf{$[EF1(\{j_{v_{min}} \dots  j_{v_n}\}) \geq %EF1(\{j_{v_{mid}} \dots  j_{v_n}\})]$}{
+%$v_{max}=v_{mid}$;
+%$v_{mid}=\tfrac{v_{min}+v_{mid}}{2}$;
+%}{
+%$v_{min}=v_{mid}$; 
+%$v_{mid}=\tfrac{v_{min}+v_{max}}{2}$;
+%}
+%}
+%\Return  $v_{mid}$;
+
+%\label{alg:return}
+%\end{algorithm} 
+
+
+%Therefore, the algorithm first sets the values $t_{min}=t_1$, $t_{max}=t_n$,  and $t_{mid}=\tfrac{t_1+t_n}{2}$. Then, for each iteration, if $[EF1(\{d_{t_{min}}\leq \dots \leq d_{t_n}\}) \geq EF1(\{d_{t_{mid}}\leq \dots \leq d_{t_n}\})]$, the algorithm sets $t_{max}=t_{mid}$, $t_{mid}=\tfrac{t_{min}+t_{mid}}{2}$ and makes a new iteration, else, the algorithm sets $t_{min}=t_{mid}$,  $t_{mid}=\tfrac{t_{min}+t_{max}}{2}$  and makes a new iteration. The algorithm keeps iterating until $t_{min}=t_{mid}=t_{max}$, where it assigns $t_{mid}$ to the lower time bound of the time query, i.e., $t_{start}=t_{mid}$.
+
+
+As an example of the BPS approach for time selection, the algorithm first sorts $E^*$ for the current $[t_{\tstart},t_{\tend}]$ according to time stamps.  From this, it is possible to extract $t_{\min}$, $t_{\tmedian}$, and $t_{\max}$, respectively the minimum, median, and maximum time stamps in $E^*$.
+BPS then selects the interval  $[t_{\tstart},t_{\tmedian}]$, $[t_{\tmedian},t_{\tend}]$, $[t_{\tstart},t_{\tend}]$ that minimizes EF1.  If either of the first two intervals are chosen, the process is repeated with the new $t_{\tstart}$ or $t_{\tend}$.  Once the third interval is chosen, no BPS contraction will improve EF1. 
+
+% in increasing order of time stamp. Then, it applies the BPS algorithm. This procedure will return  the lower time bound of the time window, i.e., $t_{start}=t_{mid}$. Next, the algorithm sorts $E$ in decreasing order of time stamp, and then, it applies again a Binary Partitioning Search to get the upper time bound of the time window, i.e., $t_{end}=t_i$. Lastly, the algorithm returns the  time window $[t_{\tstart},t_{\tend}]$, such that $EF1(E^{*} \in [t_{start},t_{end}]) \geq EF1(E)$. %Note that this algorithm proceeds in a total of $log(n)$ iterations in the best case, and $2\times log(n)$ iterations in the worst case.
+
+%For both the naive and time-based greedy algorithms, we use the red-black tree as the indexing data structure \cite{Guibas1978}.
+
+
+\subsubsection{Greedy Spatial Selection algorithm}
+
+The aim of this algorithm is to return coordinates $[(x_{min},y_{min}),(x_{max},y_{max})]$ representing the EF1 maximizing spatial bounding box represented by the lower and upper bound coordinates -- respectively $(x_{min},y_{min})$ and $(x_{max},y_{max})$. This 2D problem is similar to the previous 1D problem of finding the best time window. Therefore, the two algorithms described above (Greedy and BPS) can be adapted for this problem by first applying each algorithm on the x-axis to determine $(x_{min},x_{max})$, then on the y-axis to determine $(y_{min},y_{max})$. 
+% We need to ditch some citations and this removes the complaint that we did not provide all details -- we claim it is obvious.  -Scott
+%We omit the description of these two algorithms for lack of space, but a detailed description can be found in the technical report~\cite{Bouadjenek2018}.
+%We use the R-tree as a data structure for indexing multi-dimensional continuous data~\cite{Guttman1984}.
+
+
+\subsubsection{Relevance-driven clustering algorithm}
+\label{sec:relclustering}
+
+To obtain a cluster $E^*$ combining the above (i) keyword, (ii) time, and (iii) spatial constraints, we propose a greedy round-robin algorithm, which at each iteration applies the selection pruning algorithms for (i), (ii), and (iii) in order.  Iterations terminate when no selection algorithm can unilaterally improve EF1 and the final cluster is returned.
+%to, theselects the best sub-filter to apply (according to its reduction in EF1-Score), then checks if that filter improves the EF1-Score. If so, the algorithm continues with the updated filter settings, otherwise, it terminates. 
+% Don't get the following -- seems non-essential, at least for submission.  -Scott
+%Note that here, we use  $k=1$ for the keywords greedy algorithm.
+%The algorithm will then determine a sequence of filters to apply on the initial set, and the final query is then built by combining these filters by types.
+
+ %such as: $\{Keyword \to Time -> Position \to Time \to Keyword\} $
+
+% I don't follow this example, but I think the algorithm is intuitive enough and we need space.  -Scott
+% For example, let's suppose the algorithm determines the following filter sequence: $\{Q_{k_1}=\{ \neg natural\} \to Q_{t_1}=[50,2030] \to Q_{p_1}=[(10,60), (50,100)] \to Q_{t_2}=[60,1230] \to Q_{k_2}=\{ \neg fictive\}  \to  Q_{p_2}=[(10,60), (30,85)] \to  Q_{t_3}=[60,800] \}$. 
+% The final query is built by combining these filters by types as follows: $Q_k=Q_{k_1} \cup Q_{k_2}=\{\neg natural,\neg fictive\}$, $Q_t =Q_{t_1} \cap Q_{t_2} \cap Q_{t_3}=[60,800]$, and  $ Q_p=Q_{p_1}  \cap Q_{p_2}=[(10,60),$ $(30,85)]$, which gives $Q=[Q_k=\{\neg natural,\neg fictive\}\wedge Q_t=[60,800]\wedge Q_p = [(10,60),$ $(30,85)]]$.
+
+Finally, we note that our relevance-driven clustering algorithm can use the Greedy keyword selection algorithm with either the naive Greedy time and spatial selection algorithms, which we refer to experimentally as {\bf Greedy}, or the BPS time and BPS spatial variants, which we refer to experimentally as {\bf BPS}.  
+%time and position naive greedy algorithms to which we refer as Greedy Algorithm, or the keywords greedy algorithm with the time and position Binary Partition Search algorithms to which we refer as BPS Algorithm.
+
+
+
+%\subsection{Optimal MILP Solutions for Benchmarking}
+
+%Next, we propose an exact Mixed Integer Linear Progamming (MILP) optimization-based formulation to maximize EF1 and provide a benchmark for evaluating our two relevance-driven clustering algorithms (Greedy and BPS).  %Given the trivial solution of optimizing the expected precision (singleton) and expected recall (the whole collection), we consider in the following only the optimization of EF1.  
+
+%\subsubsection{Fractional MILP Formulation} \hfill \\
+%We begin by reformulating the EF1 objective to prepare for further optimization steps by replacing the global sum of scores of all information elements with a constant $C = \sum_{j=1}^m S(j)$:
+%\begin{equation}
+%\begin{aligned}
+%    \emph{$EF1$} &= \dfrac{2\times \sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j) + \sum_{j=1}^m S(j)} = \dfrac{2 \times \sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j) + C}
+%\end{aligned}
+%\end{equation}
+
+%In order to obtain the EF1-optimal cluster, we let binary variables $\emph{I\textsubscript{filter}}($j$) \in \{0, 1\}$ to indicate whether an information element $j$ is selected by each parameter of the cluster and constrain that to be selected in the cluster (i.e., $I(j)=1$), $j$ must be selected in all selection constrains (i.e., a conjunction).  This leads to the following fractional MILP formulation with selection constraints to be defined later:
+%intend to directly optimize the EF1 metric in terms of decision indication variables  for filter setting as follows:
+% Don't use I(i)... confusing!  
+%\begin{align}
+%\max_{\textit{filter vars}} \;\;
+%& \dfrac{\sum_{j=1}^m S(i)I(j)}{\sum_{j=1}^m I(j) + C} \nonumber \\
+%& \textrm{subject to constraints between {\it filter vars} and $I(j)$}   
+%\end{align}
+%\begin{equation}
+%\begin{aligned}
+%& \underset{I_{\mathit{filter}}(j)}{\text{maximize}}
+%& & \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j) + C} \\
+%& s.t
+%& & I(j) = \bigwedge I_{\mathit{filter}}(j) \\
+%\end{aligned} \label{eq:frac_milp}
+%\end{equation}
+
+% Not necessary.  -Scott
+%Note that our goal is to optimize the element set in terms of \emph{filters settings}. This means elements in the interface sharing the same property needs to be simultaneously added to the selected set. This is a unique property of our filter-based UI problem, which is different from the independent retrieval of each document in standard IR system.
+
+%\subsubsection{Transformation to a MILP} \hfill \\
+%While there are no direct solvers for fractional MILPs, we can transform~\eqref{eq:frac_milp} into a pure MILP form for which we have efficient and optimal solvers.  To do this, we use the Charnes-Cooper method \cite{Charnes1962} and Glover linearization method \cite{Glover1975} with big-M constraints, where auxiliary variables \emph{w(j)} and \emph{u} are  introduced\footnote{https://optimization.mccormick.northwestern.edu/index.php/Mixed-integer\_linear\_fractional\_programming\_(MILFP)}. Here, $w(j)$ is defined as $w(j)=I(j)\times u$ with $u$ defined as follows:
+%\begin{equation}
+%u = \dfrac{1}{\sum_{j=1}^m I(j) + C}
+%\end{equation}
+
+%Then, the EF1 optimization problem is able to be transformed into the following MILP problem:
+%\begin{equation}
+%\begin{aligned}
+%& \underset{w,u}{\text{maximize}}
+%& & \sum_{j=1}^m S(j)w(j) \\
+%& s.t
+%& & \sum_{j=1}^m w(j) + uC = 1 \\
+%& & & w(j) \leqslant u, \quad w(j) \leqslant M\times I(j)  \\
+%& & & w(j) \geqslant u - M\times [1-I(j)] \\
+%& & & u > 0,  \quad I(j) \in \{0, 1\}, \quad w(j) \geqslant 0 \label{eq:milp}
+%\end{aligned}
+%\end{equation}
+
+%\subsubsection{Constraints} \hfill \\
+%As our goal is to select elements through three clustering parameters, we add three constraints to the above optimization.
+%\begin{enumerate}
+%\item {\bf Time Parameter Constraint:} a two-element tuple ($t_{start}$, $t_{end}$) indicating respectively the start and the end of the time window.
+%\begin{equation}
+%\begin{aligned}
+%  I_{\mathit{time}}(j) &=
+%   \begin{cases}
+%     1, & \text{if $(t_{start} \leqslant t(j)) \land (t(j) \leqslant t_{end})$}  \\
+%     0, & \text{otherwise}
+%  \end{cases} \label{eq:cons1}
+%\end{aligned}
+%\end{equation}
+
+%\item {\bf Spatial Parameter Constraint:} a four-element tuple ($x_{min}$, $y_{min}$, $x_{max}$, $y_{max}$) to create a bounding box selection in visualization interface.
+%\begin{equation}
+%\begin{aligned}
+%I_{\mathit{pos}}(j) & =\begin{cases}
+%1, & \text{if \ensuremath{(x_{min}\leqslant x(j))\land(x(j)\leqslant x_{max})\land}}\\
+% & (y_{min}\leqslant y(j))\land(y(j)\leqslant %y_{max})\\
+%0, & \text{otherwise}
+%\end{cases} \label{eq:cons2}
+%\end{aligned}
+%\end{equation}
+
+%\item {\bf Keyword Parameter Constraint:} a boolean vector of terms $t^*_k$ with size $m$ - the size of the dictionary of $GC$.
+%\begin{equation}
+%  I_{\mathit{term}}(j) = \bigwedge_{t^*_k \in j} t^*_k \qquad \textnormal{for s = 1, 2, $\cdots$, m} \label{eq:cons3}
+%\end{equation}
+%All terms with $I_{\mathit{term}}=0$ are included in the negation query.
+
+
+%\item {\bf Clustering Selection Constraints:} for information element $j$ to be selected globally, it must be simultaneously selected by the three selection constrains.
+%, all filter constraints have to be satisfied in this element. In others words, an AND operator is required between all the sub-filter constraints.
+%{\bf TODO: mention how to apply to all filters... need to say an email j is selected if \emph{all} filters say it is selected, so an AND constraint.  \textcolor{red}{[PLEASE COMPLETE YIHAO]}.
+%} 
+%\begin{equation}
+%  I(j) = I_{\mathit{time}}(j) \land I_{\mathit{pos}}(j) \land I_{\mathit{keyword}}(j) \label{eq:cons4}
+%\end{equation}
+
+%\end{enumerate}
+%We refer to the above MILP formulation in~\eqref{eq:milp} with all selection parameter constraints~\eqref{eq:cons1}--\eqref{eq:cons4} as the {\bf Optimal} cluster.
+
+\subsection{Multiple Cluster Selection Wrapper}
+
+%The Global Filter selects a single best filter setting.  However, what if we want to display multiple possible Global Filters.  
+In practice, a single cluster of information elements $E^*$ chosen by the previously described algorithms will provide the user with one temporal, spatial, and content coherent cluster covering one information perspective.  However, there will likely be additional coherent clusters covering other perspectives.  
+Consider Figure~\ref{Fig:BPS_FilteredDisplay} which shows three different spatial bounding boxes corresponding to three topically coherent clusters.
+Here, we provide a greedy approach for providing a ranked list of such clusters that works with any of the previously defined algorithms -- Greedy or BPS.%); we leave it to future work to develop improved filtering and ranking methods for multiple filters.
+
+The algorithm itself is quite simple and simply wraps the algorithm of Section~\ref{sec:relclustering}.  
+After the first cluster is produced, all selected elements in that cluster have their scores $S(j)$ zeroed out.  The relevance-driven clustering algorithm is then run again, where it will inherently focus on a different content set.  As each cluster is added, coverage of high relevance content monotonically improves.
+%This procedure is repeated until the desired number of filters is reached, or a metric / coverage score for high scoring content is reached.  
+%The user should then be able to choose among the multiple filters in the VID. 	
+
+
+
+
+
+
+
+
+
+

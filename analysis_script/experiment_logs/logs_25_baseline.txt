@@ -1,0 +1,221 @@
+1535224142845	START: 	baseline	pos1,pos7,pos6
+1535224151399	ZoomLevel:5	CONTEXT:query:	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224151744	ZoomLevel:6	CONTEXT:query:	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224152441	ZoomLevel:5	CONTEXT:query:	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224154020	ZoomLevel:6	CONTEXT:query:	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224155271	MouseDrag: New Center:(32.47199714319994, -84.849609375)	CONTEXT:query:	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224155868	ZoomLevel:5	CONTEXT:query:	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224155987	ZoomLevel:4	CONTEXT:query:	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224161815	answer_update_nd_1: 	tornado
+1535224170879	answer_update_location_1: 	Mississippi
+1535224182871	new_query: 	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224182896	Query_Execution_Time	3
+1535224186444	clicking_tweet:2989	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224189637	clicking_tweet:30899	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224195938	clicking_tweet:4197	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224198892	clicking_tweet:1911	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224200884	clicking_tweet:3137	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224202412	clicking_tweet:23585	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224204932	clicking_tweet:6656	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224207285	clicking_tweet:11676	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224208916	clicking_tweet:9101	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224210828	clicking_tweet:953	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	pos6
+1535224221072	ZoomLevel:5	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224221459	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224221654	ZoomLevel:7	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224222560	ZoomLevel:8	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224223292	ZoomLevel:7	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224234895	answer_update_nd_1: 	hurricane
+1535224244183	answer_update_date_1: 	2014-06-28
+1535224258421	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224258520	ZoomLevel:5	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224259036	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224259237	ZoomLevel:7	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224259473	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224259554	ZoomLevel:5	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224260260	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224274343	answer_update_location_1: 	North Carolina
+1535224275799	final_answer1	ND:	hurricane	date:	2014-06-28	location:	North Carolina
+1535224283854	clicking_tweet:16915	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224286263	ZoomLevel:7	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224288036	clicking_tweet:16915	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224292250	clicking_tweet:32299	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224293788	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224294144	ZoomLevel:5	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224295220	clicking_tweet:20544	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224297060	clicking_tweet:6656	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224299884	clicking_tweet:23585	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224303010	clicking_tweet:3137	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224306773	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224307070	ZoomLevel:7	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224308754	clicking_tweet:6656	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224311898	clicking_tweet:11676	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224315256	MouseDrag: New Center:(28.796227492705306, -82.9670974260564)	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224315718	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224319035	clicking_tweet:9101	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224320108	clicking_tweet:9101	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224323467	clicking_tweet:11676	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224324053	clicking_tweet:11676	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224326172	ZoomLevel:7	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224326560	ZoomLevel:6	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224326969	ZoomLevel:5	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224327540	ZoomLevel:4	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224328592	MouseDrag: New Center:(35.94776971516264, -100.22409528944297)	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224330578	clicking_tweet:1821	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224334434	clicking_tweet:29400	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224337114	clicking_tweet:1018	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	pos7
+1535224349752	answer_update_nd_2: 	blizzard
+1535224356363	answer_update_date_2: 	2014-02-10
+1535224362688	answer_update_location_2: 	New York
+1535224363591	final_answer2	ND:	blizzard	date:	2014-02-10	location:	New York
+1535224369571	clicking_tweet:7912	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224370750	clicking_tweet:7912	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224373643	clicking_tweet:1821	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224376746	clicking_tweet:29400	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224380083	clicking_tweet:23585	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:20	neg
+1535224395856	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:20
+1535224395885	Query_Execution_Time	9
+1535224398737	ZoomLevel:5	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224399145	ZoomLevel:6	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224401410	MouseDrag: New Center:(37.371997817129994, -115.71204642458434)	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224401958	ZoomLevel:7	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224405252	clicking_tweet:2790	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224407406	clicking_tweet:2790	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224409288	clicking_tweet:2830	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224411440	clicking_tweet:2962	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224413231	clicking_tweet:3077	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224415855	clicking_tweet:2758	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224416903	clicking_tweet:2758	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224417952	clicking_tweet:17961	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224420600	clicking_tweet:2985	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224421991	clicking_tweet:2911	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224423163	MouseDrag: New Center:(38.72328585005878, -119.07351015391282)	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224424679	clicking_tweet:2781	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224426159	clicking_tweet:2816	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224427592	clicking_tweet:2995	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224429212	MouseDrag: New Center:(40.47541853642113, -119.06252382578782)	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224431144	clicking_tweet:3013	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224432241	ZoomLevel:6	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224433519	MouseDrag: New Center:(39.98731298323272, -115.39309023203782)	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224434711	clicking_tweet:2933	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224436503	clicking_tweet:2917	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224438303	clicking_tweet:2854	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224440078	clicking_tweet:2854	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224443258	MouseDrag: New Center:(34.39069051287091, -104.78029726328782)	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224445135	clicking_tweet:2987	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224446240	MouseDrag: New Center:(39.12333427135982, -110.05373476328782)	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224447625	clicking_tweet:3157	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224449328	clicking_tweet:3136	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224451316	clicking_tweet:2946	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224452208	clicking_tweet:2781	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224453136	clicking_tweet:2816	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224454208	clicking_tweet:3058	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224455112	clicking_tweet:2913	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224455921	clicking_tweet:3061	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224456984	clicking_tweet:2870	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224458892	clicking_tweet:17961	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224459851	ZoomLevel:7	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224460257	ZoomLevel:8	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224460895	ZoomLevel:9	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224461186	ZoomLevel:10	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224462376	MouseDrag: New Center:(37.86318079546297, -121.65454544833642)	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224463944	clicking_tweet:2758	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224466224	clicking_tweet:3017	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224467760	clicking_tweet:17961	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535224489745	new_query: 	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535224489772	Query_Execution_Time	14
+1535224492974	ZoomLevel:5	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224493730	ZoomLevel:6	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224494540	ZoomLevel:7	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224497748	MouseDrag: New Center:(32.52940106530357, -89.947265625)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224501519	clicking_tweet:6665	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224503525	clicking_tweet:1835	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224505895	clicking_tweet:2087	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224509209	clicking_tweet:6674	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224511400	clicking_tweet:6551	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224513024	clicking_tweet:5926	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224516205	clicking_tweet:6384	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224518889	MouseDrag: New Center:(30.78073121540984, -85.79443359375)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224520333	clicking_tweet:6198	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224522163	clicking_tweet:5943	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224523402	clicking_tweet:6349	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224525779	ZoomLevel:8	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224526482	clicking_tweet:1805	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224528249	MouseDrag: New Center:(28.96698714732945, -82.98193359375)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224530092	clicking_tweet:6743	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224532732	clicking_tweet:1837	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224534661	MouseDrag: New Center:(29.775989596434123, -83.02587890625)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224536467	clicking_tweet:6441	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224538630	clicking_tweet:6442	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224541094	clicking_tweet:6103	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224543636	clicking_tweet:5817	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224581185	MouseDrag: New Center:(29.780757404528483, -83.02587890625)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224581915	clicking_tweet:6704	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224585059	MouseDrag: New Center:(31.15012513525681, -84.2838134765625)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224587319	clicking_tweet:25631	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224589883	clicking_tweet:5995	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224591992	MouseDrag: New Center:(31.614299276316025, -84.0970458984375)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224593924	clicking_tweet:6097	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224597844	clicking_tweet:6008	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224599572	MouseDrag: New Center:(32.442741766242584, -84.08056640625)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224601111	clicking_tweet:6583	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224605118	clicking_tweet:6425	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224607261	clicking_tweet:6692	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224610180	clicking_tweet:6656	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224612901	clicking_tweet:6552	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224614524	MouseDrag: New Center:(32.91598017072049, -84.72168000497169)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224620277	clicking_tweet:6544	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224623269	clicking_tweet:6433	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224625620	MouseDrag: New Center:(33.21302460087316, -85.72856096837688)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224630564	clicking_tweet:6674	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224634492	clicking_tweet:6665	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224637812	clicking_tweet:1835	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224639973	clicking_tweet:6384	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224643260	MouseDrag: New Center:(33.17768261285347, -87.78470089832001)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224645317	clicking_tweet:2087	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224648592	clicking_tweet:5967	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224652619	clicking_tweet:5899	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224655253	clicking_tweet:6207	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224658021	clicking_tweet:6357	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224661893	clicking_tweet:6300	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224664782	clicking_tweet:6316	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224667692	clicking_tweet:6015	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224669830	clicking_tweet:5821	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224673997	clicking_tweet:6022	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224677277	clicking_tweet:5914	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224680599	clicking_tweet:6594	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224682100	MouseDrag: New Center:(33.17768261285347, -95.92764511524695)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224684613	clicking_tweet:6085	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224687350	clicking_tweet:6262	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224690916	clicking_tweet:6695	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224693751	clicking_tweet:6290	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224696230	clicking_tweet:1807	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224700173	clicking_tweet:6414	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224702204	clicking_tweet:6738	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224704421	MouseDrag: New Center:(33.30632233033096, -99.65984837382916)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224707198	MouseDrag: New Center:(33.30632233033096, -99.65984837382916)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224709503	clicking_tweet:6073	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224711390	MouseDrag: New Center:(33.23283709901491, -100.50030247539166)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224716301	ZoomLevel:7	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224717011	ZoomLevel:6	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224723103	clicking_tweet:5838	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224725429	clicking_tweet:15566	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224727805	clicking_tweet:1795	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083	neg
+1535224730387	MouseDrag: New Center:(37.48177205591058, -94.22253392678164)	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224734795	new_query: 	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1535224734819	Query_Execution_Time	4
+1535224738863	clicking_tweet:17229	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26	neg
+1535224740905	clicking_tweet:32582	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26	neg
+1535224743605	ZoomLevel:5	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26
+1535224743715	ZoomLevel:6	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26
+1535224745367	clicking_tweet:18071	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26	neg
+1535224749638	clicking_tweet:24096	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26	neg
+1535224754603	MouseDrag: New Center:(34.746158108145885, -107.12586713668446)	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26
+1535224755065	ZoomLevel:5	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26
+1535224757438	clicking_tweet:29865	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26	neg
+1535224761582	clicking_tweet:79	CONTEXT:query:alert	time_range (01-01-2013,31-12-2014)	slider_topK_range:26	pos1
+1535224774955	answer_update_nd_3: 	flood
+1535224785210	answer_update_date_3: 	2013-09-07
+1535224790877	answer_update_location_3: 	Colorado
+1535224791788	final_answer3	ND:	flood	date:	2013-09-07	location:	Colorado
+1535224791794	answers_baseline	ND1:	hurricane	date1:	2014-06-28	location1:	North Carolina	ND2:	blizzard	date2:	2014-02-10	location2:	New York	ND3:	flood	date3:	2013-09-07	location3:	Colorado

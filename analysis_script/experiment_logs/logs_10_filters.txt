@@ -1,0 +1,116 @@
+1534886483484	START: 	filters	pos2,pos3,pos8
+1534886491532	answer_update_nd_1: 	tornado
+1534886497115	new_query: 	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534886503151	Query_Execution_Time	6015
+1534886506708	removing_filter:    tweets_size:78,pos_tweets_size:1	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11076
+1534886507752	removing_filter:    tweets_size:20,pos_tweets_size:0	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11076
+1534886508450	removing_filter:    tweets_size:233,pos_tweets_size:0	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11076
+1534886515098	slider_start_change: 	CONTEXT:query:tornado	time_range (27-04-2013,31-12-2014)	slider_topK_range:11076
+1534886518356	slider_end_change: 	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886520482	answer_update_nd_1: 	tornado
+1534886521414	clicking_bbox:tweets_size:135,pos_tweets_size:0	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886521977	clicking_tweet:6035	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886524037	clicking_tweet:6633	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886526742	clicking_tweet:6210	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886529277	clicking_bbox:tweets_size:135,pos_tweets_size:0	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886531194	MouseDrag: New Center:(38.99999999999999, -99.087890625)	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886531695	clicking_tweet:18047	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886535470	clicking_tweet:6026	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886539168	clicking_bbox:tweets_size:135,pos_tweets_size:0	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886540934	clicking_tweet:6019	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886544086	clicking_tweet:6030	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886549118	clicking_tweet:6713	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886554814	clicking_tweet:6691	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886557230	clicking_tweet:5928	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886560937	clicking_tweet:6260	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886567349	ZoomLevel:5	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886568058	clicking_bbox:tweets_size:135,pos_tweets_size:0	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886569137	clicking_tweet:6261	CONTEXT:query:tornado	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076	neg
+1534886573285	answer_update_nd_1: 	hurricane
+1534886579187	new_query: 	CONTEXT:query:Tropical storm	time_range (27-04-2013,20-05-2013)	slider_topK_range:11076
+1534886583801	Query_Execution_Time	4570
+1534886584989	ZoomLevel:5	CONTEXT:query:Tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10224
+1534886585529	ZoomLevel:6	CONTEXT:query:Tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10224
+1534886586753	MouseDrag: New Center:(30.097147345946237, -84.32856278121471)	CONTEXT:query:Tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10224
+1534886589907	answer_update_nd_1: 	hurricane
+1534886594747	answer_update_location_1: 	Florida
+1534886600128	slider_end_change: 	CONTEXT:query:Tropical storm	time_range (01-01-2013,27-06-2013)	slider_topK_range:10224
+1534886602731	slider_start_change: 	CONTEXT:query:Tropical storm	time_range (19-05-2013,27-06-2013)	slider_topK_range:10224
+1534886609807	answer_update_date_1: 	2013-05-01
+1534886610108	answer_update_date_1: 	2013-05-19
+1534886612627	clicking_bbox:tweets_size:98,pos_tweets_size:98	CONTEXT:query:Tropical storm	time_range (19-05-2013,27-06-2013)	slider_topK_range:10224
+1534886615403	clicking_tweet:108	CONTEXT:query:Tropical storm	time_range (19-05-2013,27-06-2013)	slider_topK_range:10224	pos2
+1534886628847	answer_update_date_1: 	
+1534886629184	answer_update_date_1: 	2013-06-19
+1534886629608	answer_update_date_1: 	
+1534886629839	answer_update_date_1: 	2013-06-06
+1534886630993	final_answer1	ND:	hurricane	date:	2013-06-06	location:	Florida
+1534886635139	answer_update_nd_2: 	tornado
+1534886637930	answer_update_nd_2: 	flood
+1534886646993	new_query: 	CONTEXT:query:flood	time_range (19-05-2013,27-06-2013)	slider_topK_range:10224
+1534886649628	new_query: 	CONTEXT:query:flood	time_range (19-05-2013,27-06-2013)	slider_topK_range:10224
+1534886652078	Query_Execution_Time	5070
+1534886654795	Query_Execution_Time	5131
+1534886687768	removing_filter:    tweets_size:51,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593
+1534886688232	removing_filter:    tweets_size:81,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593
+1534886690127	clicking_tweet:153	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593	pos2
+1534886691269	clicking_tweet:256	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593	pos2
+1534886700994	answer_update_nd_2: 	flood
+1534886704888	answer_update_date_2: 	2013-06-05
+1534886707383	MouseDrag: New Center:(39, -99)	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593
+1534886707908	clicking_tweet:256	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593	pos2
+1534886708772	clicking_tweet:266	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593	pos2
+1534886711549	clicking_tweet:229	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593	pos2
+1534886719462	answer_update_location_2: 	Florida
+1534886721343	final_answer2	ND:	flood	date:	2013-06-05	location:	Florida
+1534886739414	answer_update_nd_3: 	drought
+1534886744596	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10593
+1534886749894	Query_Execution_Time	5272
+1534886756207	clicking_bbox:tweets_size:24,pos_tweets_size:0	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550
+1534886758834	clicking_bbox:tweets_size:24,pos_tweets_size:0	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550
+1534886760683	clicking_tweet:3184	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534886765414	ZoomLevel:5	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550
+1534886780894	clicking_tweet:12074	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534886784372	clicking_tweet:11235	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534886791197	slider_start_change: 	CONTEXT:query:drought	time_range (20-07-2014,31-12-2014)	slider_topK_range:10550
+1534886794715	slider_end_change: 	CONTEXT:query:drought	time_range (20-07-2014,24-11-2014)	slider_topK_range:10550
+1534886797092	slider_start_change: 	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886798250	clicking_bbox:tweets_size:24,pos_tweets_size:0	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886798989	clicking_tweet:17185	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886801945	ZoomLevel:6	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886803306	clicking_bbox:tweets_size:24,pos_tweets_size:0	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886804548	clicking_tweet:3180	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886807824	clicking_tweet:11681	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886812359	clicking_tweet:16872	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886814128	clicking_tweet:16723	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886818192	clicking_tweet:17320	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886824066	clicking_tweet:2004	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886828496	clicking_tweet:17240	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886831787	clicking_bbox:tweets_size:24,pos_tweets_size:0	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886832368	clicking_tweet:3184	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886836615	clicking_tweet:3184	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886839932	ZoomLevel:7	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886840028	clicking_bbox:tweets_size:24,pos_tweets_size:0	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886845603	clicking_tweet:11715	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886847300	ZoomLevel:6	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886847828	ZoomLevel:5	CONTEXT:query:drought	time_range (08-09-2014,24-11-2014)	slider_topK_range:10550
+1534886853077	slider_start_change: 	CONTEXT:query:drought	time_range (04-06-2014,24-11-2014)	slider_topK_range:10550
+1534886854265	clicking_tweet:16321	CONTEXT:query:drought	time_range (04-06-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886857042	clicking_tweet:2740	CONTEXT:query:drought	time_range (04-06-2014,24-11-2014)	slider_topK_range:10550	neg
+1534886865951	slider_start_change: 	CONTEXT:query:drought	time_range (22-07-2014,24-11-2014)	slider_topK_range:10550
+1534886875373	slider_end_change: 	CONTEXT:query:drought	time_range (22-07-2014,19-09-2014)	slider_topK_range:10550
+1534886876739	clicking_tweet:11354	CONTEXT:query:drought	time_range (22-07-2014,19-09-2014)	slider_topK_range:10550	neg
+1534886883064	clicking_tweet:2861	CONTEXT:query:drought	time_range (22-07-2014,19-09-2014)	slider_topK_range:10550	neg
+1534886889758	answer_update_nd_3: 	earthquake
+1534886894170	new_query: 	CONTEXT:query:earthquake	time_range (22-07-2014,19-09-2014)	slider_topK_range:10550
+1534886899213	Query_Execution_Time	5019
+1534886903461	removing_filter:    tweets_size:7,pos_tweets_size:7	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:11137
+1534886904250	removing_filter:    tweets_size:6,pos_tweets_size:5	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:11137
+1534886905561	removing_filter:    tweets_size:14,pos_tweets_size:13	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:11137
+1534886911126	slider_start_change: 	CONTEXT:query:earthquake	time_range (19-02-2014,31-12-2014)	slider_topK_range:11137
+1534886913112	answer_update_nd_3: 	earthquake
+1534886916922	answer_update_date_3: 	2014-02-01
+1534886917089	answer_update_date_3: 	2014-02-19
+1534886922023	answer_update_location_3: 	California
+1534886922804	final_answer3	ND:	earthquake	date:	2014-02-19	location:	California
+1534886922810	answers_filters	ND1:	hurricane	date1:	2013-06-06	location1:	Florida	ND2:	flood	date2:	2013-06-05	location2:	Florida	ND3:	earthquake	date3:	2014-02-19	location3:	California

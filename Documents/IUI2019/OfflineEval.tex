@@ -1,0 +1,282 @@
+%\subsection{Experiments}
+
+%\subsection{Evaluation methodology}
+
+%\textcolor{red}{ In the off-line study we assume that  we have a third party application-specific tool that predicts the probability score $S(i)$ that each tweet $i$}  is relevant, i.e., the tweet is related to a natural disaster. This probability scoring function is assumed to be given. 
+
+Before we proceed to our online user study, we first wish to benchmark the performance of our greedy algorithms and K-means w.r.t.\ clusters obtained via the optimal solution of EF1 defined by our MILP through an offline empirical evaluation.
+
+Because it is critical to explicitly control noise levels of relevance predictions in these experiments in order to evaluate a range of scenarios, we use a noisy corruption of ground truth.
+% in terms of predicted relevance noise level.
+We also explicitly vary the number of relevant information elements in our ground truth to assess performance variation as a function of class imbalance. Hence, to setup a scenario of 100 tweets with only 20\% of relevant tweets, we randomly select 20 tweets from the set of relevant tweets and 80 tweets from the set of irrelevant tweets. Then, for each tweet $j$, we assign the probability $S(j)$ to that tweet to indicate its relevance probability by introducing a random noise signal as follows:
+\begin{equation}
+S(j) = \lambda\times rel+(1-\lambda)\times rand()  ,
+\end{equation}
+%we propose to simply randomly select an element $j$, 
+%To simulate the 
+%Finally, we propose to compute a global element score value $S(i)$ by introducing a noise signal ratio as follows:
+where $rel$ is a boolean value indicating the real relevance, $rand()$ is a random noise value chosen with uniform distribution in the range $[0,1]$, and $\lambda$ is a weighting parameter  that satisfies $0.5 \leq \lambda \leq 1$, which controls the signal-to-noise ratio in the final probability value. Note that for $\lambda=1$, $S(j)$ gives the ground truth probability value (perfect classifier), whereas for $\lambda=0.5$, $S(j)$ is extremely noisy.
+
+
+Note that the evaluation was carried out by averaging over 10 independent runs that each select random relevant documents according to the designated proportion.  We report the average ground truth F1-Score (i.e., ground truth is known in the experimental setting) for the EF1-maximizing cluster produced by each method, with 95\% of confidence intervals. 
+We report and discuss the main results of the experimental evaluation, considering both the accuracy and the effectiveness of the described algorithms. The configuration options that we have evaluated are the following: F1-Score vs. $\#data \in \{10,\dots, 150,\dots, 10^3\}$ $\times$ $ \lambda \in \{  0.6,0.7,0.8,0.9,1.0 \}$ $\times$ Rate of positive date $\in \{0.5\%, 1\%, 2\%, 3\%,$ $ 4\%, 5\%, 10\%, 20\%, 30\%, 50\%\}$. %All algorithm have been implemented with Java while using 
+We used the Gurobi Optimizer solver through its Java interface for the comparisons to the optimal MILP method~\cite{gurobi2017gurobi}.
+
+In our experimental comparison, we only  %only the most significant and interesting results
+evaluate the optimization method up to \#data=150 as the MILP could not scale to a larger data set. In the results shown below, {\bf Initial} refers to the performance of the initial global set of retrieved elements matching the query before applying any clustering (which effectively constraints this global set).  We note that by definition, Initial is a recall-maximizing baseline.  
+
+%How does F1 compare to Ef1 as Size of the data?
+%How does F1 compare to Ef1 as amount of positive data changes?
+%Under what conditions is EF1 is a good surrogate for F1?
+
+%Result set size?  Discuss  F-beta later?  If user thinks result sets are too big, just adjust beta.
+
+
+%\subsection{Performance analysis}
+%We first report the experimental results in terms of F1-Score.
+
+
+
+\subfour{Varying \#data:} Here we aim to understand how the different F1-Score optimization algorithms perform as the amount of data varies.  This analysis is provided in Figure  \ref{fig:F1_vs_Data_Twitter} while fixing the rate of positive data to 2\% and $\lambda \in \{0.6,0.9,1.0\}$, and  varying the size of the data.
+
+
+%(Show for lambda=0.6, 0.9 for 2\% malicious Fig 55(a,d,e) X 3 domains.)  Add lambda=1 if fits.
+
+
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+{\includegraphics[width=8.75cm]{imgs/Twitter_results/f1_performance_posrate_2\lyxdot 0}}
+\par\end{centering}
+\caption{Performance with 2\% of positive data.}
+\label{fig:F1_vs_Data_Twitter}
+\end{figure}
+
+
+
+
+%At first glance, all curves of the same algorithm with the same parameters have the same shape. This indicates that the algorithms are consistent across different datasets while varying the size of the data. 
+% Omit peak discussion for now... reasons are not completely clear from explanation.  -Scott
+%We explain the apparent peak in all figures as a statistical anomaly as small datasets often don't have enough positive data (for low positive data rate), so this is just a statistical artefact  and can be ignored.  It does disappear as the rate of positive data increases. %\textcolor{red}{[Figures not shown]}  
+%Also, 
+We observe that beyond a certain \#data threshold, it generally becomes harder to optimize F1 as the size of the data grows as it is harder for any clustering method to separate signal from noise.
+%with existing filters.  
+We also notice that in general, the BPS and greedy algorithms are a good approximation of the optimal solution, with the BPS method doing better for some cases ($\lambda=0.6$ and \#data$\in [10,100]$) since the coarse splits of BPS serve as a guard against ``overfitting'' to noise seen in Optimal.  K-means does not perform as well in the low data regime.
+%, but performs comparable to BPS with more data.
+%since X-means produces a larger $K$ and more (but smaller) clusters to choose from for optimizing EF1.
+%, e.g.,  we observe up to 42\% improvement of Greedy w.r.t Optimal for a classifier with an accuracy of 60\%.
+
+
+\subfour{Varying relevance noise ($\lambda$):}  Here we aim to understand how the different F1-Score optimization algorithms perform as the amount of noise $\lambda$ (defined previously) in the relevance prediction varies.
+The results of this analysis are shown in Figure \ref{fig:F1_vs_Lambda} while having the rate of positive data in \{1\%,10\%,50\%\}, a data size of 150, and varying the amount of noise $\lambda \in [0.6,1.0]$.
+
+%Again, all curves of the same algorithm have roughly the same shape across the different datasets, which indicates that the algorithms are consistent. 
+We observe that for low rate of positive data the problem becomes easier (higher F1-Score value) as $\lambda$ increases because EF1 becomes closer to the ground truth F1-Score.  
+%We also note that the BPS algorithm does better for high noise since it does not overfit to singletons as easily as Greedy; in contrast Greedy does overfit which is better for low noise since it can optimize small details that are actually valid. 
+We also note that for a high rate of positive data, the quality of the classifier has no impact on the accuracy of the algorithms as they tend to return the entire collection -- the performance is almost similar to the Initial performance.  We conclude by observing that K-Means clearly does a poor job of optimizing the F1-Score of its clusters since relevance scores do not play a part in its optimization objective.
+%is worse than the Initial set of tweets as it does not consider the relevance signal during clustering.
+
+
+%We conclude by observing that for low noise, the BPS algorithm is a good approximation of the optimal method.
+%(\#data=150,10\% malicious = Fig 69f X 3 domains.)}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+{\includegraphics[width=8.75cm]{imgs/Twitter_results/f1_performance_posrate_Data_150}}\par\end{centering}
+\caption{Performance: \#data=150.}
+\label{fig:F1_vs_Lambda}
+\end{figure}
+
+
+
+
+\subfour{Varying rate of positive data:} Here we aim to understand how the different F1-Score optimization algorithms perform as we vary the proportion of positively labeled ground truth data.
+Figure \ref{fig:F1_vs_Pos_Twitter} shows the results of this analysis while fixing the size of the data to 150 and $\lambda\in \{0.6,0.9\}$, and varying the rate of positive data in $[0.5\%,50\%]$.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+{\includegraphics[width=7.75cm]{imgs/Twitter_results/f1_performance_Data_150}}
+\par\end{centering}
+\caption{Performance with \#data=150.}
+\label{fig:F1_vs_Pos_Twitter}
+\end{figure}
+
+%Briefly, we note again that all curves of the same algorithm with the same parameters have the same shape across the different datasets.
+
+Briefly, we observe that the problem becomes easier as the number of positive examples increases as well as the value of $\lambda$ increases (i.e., noise decreases). 
+This is explained by the fact that a high rate of positive examples allows the algorithms to be able to select a subset of elements with a large number of positive examples thus maximizing F1-Score. However, a low value of $\lambda$ tends to lead the algorithms to select all content (close to Initial set) due to the level of noise, while a high value of $\lambda$ tends to lead the algorithms to select the actual positive examples and thus maximize F1-Score. This is shown through the increasing separation of all curves from the Initial curve as $\lambda$ increases.  K-means does not outperform Initial.
+
+%(Fig 78a,d = \#data=150, lambda=0.6/0.9 X 3 domains).  Add lambda=1 if fits.
+
+
+
+
+
+
+
+
+\subfour{F1-Score vs. EF1-Score:} This analysis aims to answer the following question: \textquotedblleft \textit{Under what conditions is EF1 is a good surrogate for F1?}\textquotedblright{}. The results of this analysis are shown in Figure \ref{fig:F1_vs_EF1_Enron} using a set of four scatter plots.
+We show a comparison of the results obtained when optimizing the real F-Score vs. those obtained when optimizing expected F1-Score with different values for $\lambda$.
+To provide more clarity, the line $y = x$ is included to convey whether the optimization of a particular set gave the same F1-Score using the different optimization strategies or not. A point above the line corresponds to a set for which the optimization with EF1-Score gave a higher F1-Score, while a point below the line refers to a set for which the optimization with EF1-Score  hurts the F1-Score. We also include the plot of the function that fits the data points to show how far is the expected F1-Score with respect to the real F1-Score. In addition, we provide a global Root Mean Square Error (RMSE) value to get an overview of the approximation.
+
+Briefly, it is clear that for high values of $\lambda$ (e.g., 0.9), the optimization with EF1 gives a good approximation of the real F1-Score, with RMSE=0.01 for $\lambda=0.9$. For a lower $\lambda=0.8$ and $\lambda=0.6$ we do observe significantly more noise (as expected), but we also note from the assymetry that EF1 effectively lower bounds the true F1 score indicating the desirable optimization property that high EF1 implies high F1-score.
+%, the RMSE is respectively multiplied by 3 and 8, indicating that for high noise, the approximation may completely be reduced to a random value. Hence, we conclude that for a classifier with a high accuracy (say 80-90\%), the expected F1-Score is a good approximation for the real F1-Score.
+
+\begin{figure}[H]
+\begin{centering}
+\par\end{centering}
+\begin{centering}
+{\includegraphics[width=8cm]{imgs/scatter_plot2_EF1\lyxdot vs\lyxdot F1}}
+\par\end{centering}
+\caption{Scatter plot showing EF1-Score vs. F1-Score.}
+\label{fig:F1_vs_EF1_Enron}
+\end{figure}
+
+
+%\begin{figure}[H]
+%\begin{centering}
+%\par\end{centering}
+%\begin{centering}
+%\includegraphics[width=9cm]{imgs/boxplot2_EF1\lyxdot vs\lyxdot F1}
+%\par\end{centering}
+%\caption{EF1-Score vs. F1-Score.}
+%\label{fig:Time_vs_Pos_Reddit}
+%\end{figure}
+
+
+
+
+%\subfour{Analysis of the multiple filter selection wrapper strategy:} Figure~\ref{fig:FilterWrapperStrategy} shows how many filters it takes (x-axis) to reduce the number of non-filtered emails above the score threshold of $S(j)=0.6$ to zero (y-axis).  A faster reduction to zero indicates better coverage with fewer filters.  We observe the following: (1) for higher relevance noise, fewer filters are needed since all methods tend to return most elements in the first filter, (2) BPS tends to return the highest number of filters, followed by the Optimal MILP method, then the Greedy method, and (3) all methods tend to quickly return filters (at most 5 filters) that cover the relevant elements with a probability score higher than 0.6.
+
+
+
+%\begin{figure}[H]
+%\begin{centering}
+%\includegraphics[width=8.5cm]{imgs/legend2}
+%\par\end{centering}
+%\begin{centering}
+%\subfigure[$\lambda=0.8$.]{\includegraphics[height=2.24cm]{imgs/wrapper/wrapper_posrate_30\lyxdot 0_lambda_0\lyxdot 8_rate_data_150}}
+%\subfigure[$\lambda=0.9$.]{\includegraphics[height=2.24cm]{imgs/wrapper/wrapper_posrate_30\lyxdot 0_lambda_0\lyxdot 9_rate_data_150}}
+%\subfigure[$\lambda=1.0$.]{\includegraphics[height=2.24cm]{imgs/wrapper/wrapper_posrate_30\lyxdot 0_lambda_1\lyxdot 0_rate_data_150}}
+%\par\end{centering}
+%\caption{Effect of the filter wrapper strategy on the Twitter dataset with 30\% of positive data and \#data=150.}
+%\label{fig:FilterWrapperStrategy}
+%\end{figure}
+
+
+
+%\subsection{Computational time complexity analysis}
+%We now report experimental results under the previous settings in terms of time complexity for  scalability analysis.
+
+
+%\subfour{Time  vs. \#data:} A critical question for scalability is how time complexity of cluster optimization scales vs. the amount of data.  Figure \ref{fig:Time_vs_Data} reports the results of this analysis on the three datasets while fixing the rate of positive data to 2\% and $\lambda=0.9$, and varying the size of the data.
+%Naturally, the problem becomes harder as the size of the data increases.  
+%We also observe that Enron has highest time complexity followed by the Reddit dataset, and then the Twitter dataset. This is certainly due to the fact that the size of the text associated with each entity in each dataset is different, ranging from dozens of thousands of characters for emails in Enron to 144 characters for tweets in Twitter. Hence, more words increase the time complexity. 
+%Overall, we critically notice that the BPS algorithm tends to have a lower time complexity than the greedy algorithm making it the most scalable of those compared.
+
+%More complex case for \%malicious.  High noise makes for a hard problem, but increasing \%malicious just causes it to select everything (easy).  Low noise, not much to select for low \%mal, but have to work hard to select the right 50\% for high \%mal.  For moderate noise see both effects! 
+
+
+%\subsection{[Last] Computational time performance (Fig 107d, 117f, 130a,c,e.)  For all 3 domains if space, but not necessary.}
+
+%\begin{figure}
+%\begin{centering}
+%\includegraphics[width=8.5cm]{imgs/legend2}
+%\par\end{centering}
+%\begin{centering}
+%{\includegraphics[width=6.0cm]{imgs/Twitter_results/time_posrate_2\lyxdot 0_0\lyxdot 9}}
+%\par\end{centering}
+%\caption{Time complexity: 2\% positive data and  $\lambda=0.9$.}
+%\label{fig:Time_vs_Data}
+%\end{figure}
+
+
+
+%\subfour{Time vs. $\lambda$:}  Another question is how noise levels in relevance prediction affect the time complexity of cluster optimization.  The results of this analysis are shown in Figure \ref{fig:Time_vs_Lambda} while fixing the rate of positive data in  \{3\%,20\%,30\%\} and the size of the data to 150, and varying the amount of noise of the classifier $\lambda \in [0.6,1.0]$.
+
+%In brief, we first notice that clearly, for low rate of positive data (3\%) and with $\lambda=0.6$, the optimization algorithm has a high time complexity (up to 30 second to find the optimal solution). Hence, the optimal solution is clearly not scalable. Moreover, we observe that this time complexity reduces as the value of $\lambda$ increases. We explain that by the fact that the algorithms need to make a large number of iterations to find the best solution with high noise (low $\lambda$). \textcolor{red}{However, we observe an inverse effect for a high rate of positive data. Indeed, with 50\% of positive data the highest is the value of $\lambda$ the highest is the time complexity due to the fact that the optimal solution is hard to compute. For moderate rate of positive data we observe a stable time complexity as we vary  $\lambda$.}
+
+
+
+%\begin{figure}
+%\begin{centering}
+%\includegraphics[width=8.5cm]{imgs/legend2}
+%\par\end{centering}
+%\begin{centering}
+%{\includegraphics[width=8.75cm]{imgs/Twitter_results/time_posrate_Data_150}}
+%\par\end{centering}
+%\caption{Time complexity:\#data = 150.}
+%\label{fig:Time_vs_Lambda}
+%\end{figure}
+
+%\subfour{Time vs. rate of positive data:} Finally we ask how changes in the proportion of positive data affect the time complexity of filter optimization.  Figure \ref{fig:Time_vs_Pos_Twitter} shows the results of this analysis while fixing the  the size of the data to 150 and $\lambda\in \{0.6,0.8,1.0\}$, and varying the rate of positive data in $[0.5,50]$.
+
+
+
+
+%\begin{figure}[H]
+%\begin{centering}
+%\includegraphics[width=8.5cm]{imgs/legend2}
+%\par\end{centering}
+%\begin{centering}
+%{\includegraphics[width=8.75cm]{imgs/Twitter_results/time_Data_150}}
+%\par\end{centering}
+%\caption{Time complexity on Twitter with \#data=150.}
+%\label{fig:Time_vs_Pos_Twitter}
+%\end{figure}
+
+
+
+%Here again we observe that the results are consistent across the different datasets. 
+%At first glance, we observe that high noise (low $\lambda$) makes a hard problem for the optimization algorithm, but increasing the rate of positive examples causes it to select everything (making the problem easier).  For low noise (high $\lambda$), only a few elements are selected for a low rate of positive data, but the optimization algorithm has to work hard to select the right 50\% for high rate of positive data.  For moderate noise we observe both effects.
+
+
+
+%At first glance, we observe that for small values of $\lambda$ the time complexity for the optimization algorithm tends to increase while decreasing rate of positive data. However, for high values of $\lambda$ the time complexity for the optimization algorithm tends to increase while increasing  the rate of positive data. 
+
+
+
+
+
+%In both cases, we explain that by the fact that This is probably because the optimization algorithm fails in discrimination positive from negative examples.
+
+
+%\subsection{Summary of findings}
+%In conclusion, the evaluations have shown that the BPS and Greedy algorithms are a good approximation of the Optimal MILP formulation and may outperform the MILP in high noise settings (especially the BPS approach which tends to overfit  less to noise). We have also shown that the BPS performs well in terms of objective optimization and is most efficient for scaling to large datasets. Finally, we have demonstrated that the expected F1-Score metric is a good surrogate of the F1-Score metric.
+%specifically when using an accurate classifier (roughly 80-90\% accuracy). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

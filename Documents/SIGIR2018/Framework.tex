@@ -1,0 +1,179 @@
+In this section, we first define the problem we address, then the mathematical notation we use, and finally our  evaluation metrics.
+
+%In this section, we will define our addressing problem with the notation. Also, the background about this paper will be provided.
+
+
+\subsection{Problem definition}
+
+The problem we address in this paper is related to the need of an AUI 
+to ease the task of monitoring alerts in
+large-scale displayed networks. The new interface is expected
+to filter irrelevant information to provide localized context for
+each event or alert (defined loosely as a relevant related content localized in time, space, and/or keyword usage). Hence, we define the problem we are addressing in this
+paper as a problem of filter optimization.
+We assume that selection of information elements to display in visual interface is obtained via settings of three filters that can jointly express a global filter. These three sub-filters are the following:
+
+
+%The problem we address in this paper is the proper display of portion in the network for user's easy to investigate large-scale network elements. The new system is expected to filter information to provide localized and relevant element in the interface. This problem is able to be defined as a filter search/recommendation problem, We expect to employ standard IR theory to solve this problem based on our argument about the similarity of AUI and IR system. We assume that display of the elements in the network is obtained via three filters that can jointly express a global filter. These three sub-filters are:
+\begin{itemize}
+\item Time: expresses the time window of a retrieved set. 
+\item Keyword: expresses a set of keyword to include or exclude from a retrieved set.
+\item Location: expresses a bounding box of a retrieved set. The location can be expressed as longitude/latitude values, or pure coordinates obtained using a given display layout. 
+\end{itemize}
+
+The problem we study is how to optimize one or multiple filter selection settings to maximize retrieval of relevant content. 
+%best set of elements that is assessed using one of the metrics described above, i.e., expected precision, expected recall, or expected F1-score
+
+\subsection{Mathematical Notation}
+Throughout this paper, we present all algorithms for Greedy and Optimal search using the following mathematical notation:
+
+\begin{itemize}
+\item An element $j$, for which three types of metadata are associated: (i) a textual content, which is composed of a set of terms of size $n$, (ii) a timestamp $t_e$, which may represent the creation date of $j$, and (iii) a position coordinates $(x_{e},y_{e})$.
+\item Three variables $I(j)$, $B(j)$ and $S(j)$ are associated to each element $j$. $I(j)$ refers to whether element $j$ is in the retrieved set (E). $B(j)$ is the boolean variable about relevance of element $j$. $S(j)$ is a probabilistic score of  element $j$ being relevant. Note that $I(j)$ is correlated with the UI system. $B(j)$ and $S(j)$ are independent of the system. %$\emph{I(j), B(j)} \in \{0, 1\}$, $\emph{S(j)} \in \left[0, 1\right]$. 
+Also, $B(j)$ follows a \emph{Bernoulli} distribution with parameter $S(j)$, and hence, the expectation of $B(j)$ is $S(j)$, i.e., 
+  $\mathbb{E_S}[B(j)] = S(i)$.
+
+
+
+
+%which allows to derive the expectation of \emph{B(j)} as follows:
+%\begin{equation}
+ % \mathbb{E_S}[B(j)] = 0*(1 - S(i))+ 1*S(i) = S(i)
+%\end{equation}
+
+\item A global collection of elements $GC$ with size $m$. %Two subsets of $GC$ are particularly important in this research: retrieved set $E$ and relevant set $RS$.  
+\item A retrieved set $E$ with $E \subseteq  GC$, for which we use $E^*$ to refer to any subset, i.e., $E^*\subseteq E$. This variable depends on our user-interface filter system. Note that size of $E$ can be represented the sum of $I(j)$ among the global collection. Therefore, we have $|E| = \sum_{j=1}^m I(j)$.
+\item A relevant set $RS$ of $|RS|$ elements, which contains all relevant elements. This is independent of the UI-filter system. Note that size of $RS$ is equal to the sum of $B(j)$ among the global collection. Therefore, we have $|RS| = \sum_{j=1}^m B(j)$. %However, $B(j)$ is not available for our estimation of $RS$ size in practice. We have to use expected $RS$ size $|RS|$, $\mathbb{E_S}|RS|$, to approximate $|RS|$.
+%\begin{equation}
+  %|RS| \approx \mathbb{E_S}|RS| = \sum_{j=1}^m \mathbb{E_S}[B(j)] = \sum_{j=1}^m S(j)
+%\end{equation}
+
+\item A keyword query $Q_k=\{\neg t_{1}^{*},\dots \neg t_{k}^{*}\}$, which expresses query term exclusion, i.e., find elements that don't contain the terms $t_{1}^{*},\dots t_{k}^{*}$.
+\item  A time query $Q_t=[t_{start},t_{end}]$, which expresses the search for elements in the time window $[t_{start},t_{end}]$.
+\item A position query $Q_p=[(x_{min},y_{min}),(x_{max},y_{max})]$, which expresses the search of elements falling in the bounding box represented by the  lower and upper bound coordinates -- respectively $(x_{min},y_{min})$ and $(x_{max},y_{max})$.
+\item A query filter $Q$, which combines the three sub-filters $Q_k$, $Q_t$, and $Q_p$ in a conjunction, i.e., $Q=[Q_k\wedge Q_t\wedge Q_p]$. 
+
+\end{itemize}
+
+
+
+
+
+
+
+%The goal is to explore an algorithm to obtain an optimal filter setting to retrieve a set of elements with maximum score of the specific metric.
+
+
+
+%\subsection{Comparison to standard IR search}
+%The comparison between information retrieval for web search and information retrieval for filtering in AUIs can be summarized in Table \ref{tbl:Comparaison2IR}. Obviously , there are important differences between web search and filtering for AUIs, especially in the indirect selection of results through filter settings. This unexplored field provides new possibilities and challenges of research in this novel information retrieval setting:
+%\begin{itemize}
+%\item Evaluation metrics and human factors: Are there new evaluation metrics specific to this AUI filtering setting? What evaluation metrics correlate with AUI user performance? 
+%\item Optimization and algorithms: How do we optimally select filter settings to maximize evaluation metrics in expectation? How can we interpret simple heuristics like average and cumulative relevance? (Answer: expected precision.) How do MILPs, relaxed LP approximations with guarantees, or greedy approaches compare in terms of time and metric quality? Are there properties of different filters (1D for time, 2D for bounding box, or discrete choices for property selection) that lend themselves to specialized greedy approaches? 
+%\item Robustness: As the signal-to-noise ratio varied in the quality of the relevance scoring, how do various algorithms perform? 
+%\item Explanation: Can we provide explanations for filter settings to allow users to understand the reasons for the suggestions? 
+%\item Personalization and learning: Can we learn from observations of manual adaption of the suggested filter settings to understand how to improve the third-party scoring systems? 
+%\item Collaborative filtering: Can we generalize learning across multiple
+%users in a collaborative filtering approach? 
+%\item Learning from implicit feedback: How can we leverage implicit user
+%feedback such as clicks and dwell time to indirectly measure the relevance
+%of filtered content and improve system performance.
+%\end{itemize}
+
+%\subsection{Optimization technique definition}
+
+%The \emph{greedy algorithm} is an algorithmic paradigm that aims to obtain a global optimum of a problem in terms of making the locally optimal decision at each step \cite{Black2005}. In a search problem, a greedy algorithm does not in general produce an optimal solution, but it still yields locally optimal solutions that approximate a global optimum in a reasonable time.
+
+%The greedy algorithms described in this paper are coupled with a \emph{Top-down} search strategy, which basically begins with the whole search space, and then partition into several sub-spaces in a lower level for the local optimization search heuristic.
+
+%An \emph{optimization-based} search is the problem of finding the best solution from all feasible solutions. Usually, the standard form of an optimization problem is defined as the minimization/maximization of a given objective function subject to a set of constraints. 
+
+%The search problem will be transformed into Mixed integer linear programming (MILP), which involves problems in which only some of the variables, $x_{i}$, are constrained to be integers, while other variables are allowed to be non-integers.
+
+
+
+\subsection{Evaluation metrics}
+
+We adopt the Boolean relevance framework of IR and thus assume that all information elements $j$ have a ground truth relevance assessment $B(j)$ available at evaluation time.  
+%%However, unlike previous document-based methods for estimating relevance at retrieval-time, we do not rely on text associated with information elements and instead rely on a third-party to supply an estimated probability (score) of relevance $S(j)$. 
+%Traditionally, Boolean labels indicate the relevance of documents is used to evaluate retrieval sets (e.g., precision). 
+%In practice, IR models are based on probabilistic scores to measure relevance of the elements, such as TF-IDF and cosine similarity.  
+%In practice, we are able to employ third-party technique to provide probabilistic scores to measure relevance of the document in IR system, such as TF-IDF and cosine similarity. Consequently,
+Because filters are equivalent to Boolean retrieval (they either select or do not select content as relevant) and we have a probabilistic estimate of relevance $S(j)$, we propose to evaluate
+expected variants of standard precision, recall, and F1-score.
+%Boolean retrieval evaluation metrics based on the relaxation of Boolean labels to probabilistic scores resulting in expected metrics, i.e., \emph{expected precision} (EP), \emph{expected recall} (ER) and \emph{expected F1-Score} (EF1).
+Specifically because the filter that selects all information elements would maximize expected recall, the filter that selects the highest probability singleton information element would maximize expected precision, we focus on expected F1-score as a trade-off to balance expected precision and recall.
+
+Given a retrieved information element set $E$, a relevant element set $RS$ selected by a filter setting, the global information element collection $GC$ with size $m$, the precision of a retrieved set $P(E)$ is defined as follows:
+\begin{equation}
+   P(E) = \dfrac{\sum_{j \in RS} B(j)}{|E|} = \dfrac{\sum_{j=1}^m B(j)I(j)}{\sum_{j=1}^m I(j)} 
+\end{equation}
+The relaxation of the Boolean label $B(j)$ to probabilistic score $S(j)$ gives the following definition of \emph{expected precision}: 
+\begin{equation}
+EP(E)=\mathbb{E_{S}}[\dfrac{\sum_{j=1}^{m}B(j)I(j)}{\sum_{j=1}^{m}I(j)}]=\dfrac{\sum_{j=1}^{m}\mathbb{E_{S}}[B(j)]I(j)}{\sum_{j=1}^{m}I(j)}=\dfrac{\sum_{j=1}^{m}S(j)I(j)}{\sum_{j=1}^{m}I(j)}
+\end{equation}
+Similarly the recall of a retrieved set $R(E)$ is defined as:
+\begin{equation}
+   R(E) = \dfrac{\sum_{j \in RS} B(j)}{|RS|} = \dfrac{\sum_{j=1}^m B(j)I(j)}{|RS|} 
+\end{equation}
+Taking a 1st order Taylor expansion, we have the following expectation approximation %$\mathbb{E}(X/Y)\approx\dfrac{\mathbb{E}(X)}{\mathbb{E}(Y)}$ 
+$\mathbb{E}(X/Y)\approx \mathbb{E}(X)/ \mathbb{E}(Y)$ for two dependent random variables $X$ and $Y$~\cite{Kempen2000}. Hence, 
+we can now define an \emph{approximated expected recall}: 
+%Given a retrieved element set $E$  and a relevant element set $RS$ among a global element collection $GC$ with size $m$, we propose the following definition of \emph{expected precision} (EP), \emph{expected recall} (ER) and \emph{expected F1-Score} (EF1):
+\begin{equation}
+   	\emph{ER(E)}=\mathbb{E_{S}}[\dfrac{\sum_{j=1}^{m}B(j)I(j)}{|RS|}] \approx \dfrac{\sum_{j=1}^{m}\mathbb{E_{S}}[B(j)]I(j)}{\mathbb{E_{S}}[|RS|]} = \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m S(j)} 
+\end{equation}
+Finally, we define the \emph{approximated expected F1-Score} using the \emph{expected precision} and the \emph{approximated expected recall} as follows: 
+\begin{align}
+    \emph{EF1(E)}  \approx \dfrac{2\times EP\times ER}{EP+ER} = \dfrac{2\times\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j) + \sum_{j=1}^m S(j)}
+\end{align}
+  
+  
+%Conventional metrics are based on Boolean relevance label $B(j)$ instead of probabilistic score $S(j)$. To link standard precision with our expected precision,  The definition of standard precision $P(RS)$ is as follows:
+
+
+%Now, we  derive expectation of precision $P(RS)$ as follows:
+%\begin{align}
+%	\mathbb{E_S}[P(E)] &= \mathbb{E_S}[\dfrac{\sum_{j=1}^m B(j)I(j)}{\sum_{j=1}^m I(j)}] = \dfrac{\sum_{j=1}^m %\mathbb{E_S}[B(j)]I(j)}{\sum_{j=1}^m I(j)} \notag \\
+%    &= \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j)} = EP(E)
+   	%\mathbb{E_S}[R(RS)] &= \dfrac{\sum_{j=1}^m \mathbb{E_S}[B(j)] I(j)}{\sum_{j=1}^m \mathbb{E_S}[B(j)]} = \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m S(j)} = ER(RS)  \\
+    %\mathbb{E_S}[F1(RS)] &= \dfrac{2*\sum_{j=1}^m \mathbb{E_S}[B(j)]I(j)}{\sum_{j=1}^m I(j) + \sum_{j=1}^m \mathbb{E_S}[B(j)]} \notag \\
+    %&= \dfrac{2*\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j) + \sum_{j=1}^m S(j)} = EF1(RS)
+%\end{align}
+
+
+
+
+%\begin{equation}
+%\emph{\ensuremath{EP(RS)}}=\dfrac{{\displaystyle \sum_{j\in RS}S(j)}}{|RS|} =  \dfrac{\sum_{j=1}^m S(j)I(j)}{\sum_{j=1}^m I(j)} 
+%\end{equation}
+
+%Analogously, we define the  \emph{expected recall} (ER) as follows:
+%\begin{equation}
+%\emph{\ensuremath{ER(RS)}}=\dfrac{{\displaystyle \sum_{j\in RS}S(j)}}{|RE|} = \dfrac{\sum_{i=1}^m S(i)I(i)}{\sum_{i=1}^m S(i)} = \dfrac{\sum_{i=1}^m S(i)I(i)}{C}  
+%\end{equation}
+
+%\noindent where $|RE|$ is the size of the entire relevant element set. Finally, we define the  \emph{expected F1-Score} (EF1) as follows:
+
+%\begin{equation}
+%\emph{\ensuremath{EF1(RS)}}=\dfrac{2\times EP\times ER}{EP+ER} = \dfrac{2*\sum_{i=1}^m S(i)I(i)}{\sum_{i=1}^m I(i) + C}
+%\end{equation}
+
+In Figure \ref{fig:F1_vs_EF1}, we experimentally show that while EF1 is only an approximation of the true expectation, EF1 serves as an excellent surrogate for F1, which is our main concern when considering filter optimization.  That is, maximizing EF1 score with respect to a noisy classifier (noise decreases to 0 as $\lambda \to 1$) is strongly correlated with maximizing F1 score evaluated on the ground truth.   Specifically, while the EF1 and F1 scores are not perfectly calibrated along the diagonal, there is a linear correlation in that as the EF1 score increases for a scenario, the F1-score proportionally increases on average (as shown by the best fit linear regression in the plots).
+
+
+
+\begin{figure}[H]
+\begin{centering}
+\par\end{centering}
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/Enron_results/scatter_plot_EF1\lyxdot vs\lyxdot F1}
+\par\end{centering}
+\caption{Scatter plot showing EF1-Score vs. F1-Score.}
+\label{fig:F1_vs_EF1}
+\end{figure}
+
+
+
+
+

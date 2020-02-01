@@ -1,0 +1,217 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[sigconf,anonymous=true,authordraft=true]{acmart}
+\usepackage[latin9]{inputenc}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{balance}
+\setlist{leftmargin=6.5mm}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newlength{\lyxlabelwidth}      % auxiliary length 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
+
+
+%\makeatletter
+%\renewcommand\@formatdoi[1]{\ignorespaces}
+%\makeatother
+
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{amstext}
+\usepackage{graphicx}
+\usepackage{booktabs} % For formal tables
+
+
+\usepackage{subfiles}
+
+\usepackage{subfigure}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand\varlist{,\makebox[0.8em][c]{.\hfil.\hfil.},} 
+
+\setlength\belowcaptionskip{-1ex}
+\addtolength{\abovecaptionskip}{-3ex}
+\setlength{\intextsep}{1mm}
+
+
+
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\acmDOI{10.475/123_4}
+
+% ISBN
+\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+\acmConference[WOODSTOCK'97]{ACM Woodstock conference}{July 1997}{El
+  Paso, Texas USA} 
+\acmYear{1997}
+\copyrightyear{2016}
+
+\acmPrice{15.00}
+
+%\fancyhead{}
+\settopmatter{printacmref=false, printfolios=false}
+
+\makeatother
+
+\begin{document}
+
+\title[Relevance- and Interface-driven Clustering for Visual Information Retrieval]{Relevance- and Interface-driven Clustering for\\Visual Information Retrieval}
+%\title{Relevance-driven Clustering for Interactive Visual Search }
+%\title{Relevance-driven Clustering for Visual Information Retrieval}
+%\title{Optimizing F1-Score for Relevance-driven Clustering in   Visual Information Retrieval }
+%\title{Relevance-driven Clustering by Optimizing F1-Score  for   Visual Information Retrieval}
+%\title{Relevance-driven Clustering Via  F1-Score Optimization for   Visual Information Retrieval}
+
+
+\author{Mohamed Reda Bouadjenek}
+%\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{The University of Toronto}
+  \streetaddress{Department of Mechanical and\\ Industrial Engineering}
+  \city{Toronto} 
+  \state{Ontario} 
+   \postcode{M5S 3G8}
+  \country{Canada}
+}
+\email{mrb@mie.utoronto.ca}
+
+\author{Scott Sanner}
+\affiliation{%
+  \institution{The University of Toronto}
+  \streetaddress{Department of Mechanical and\\ Industrial Engineering}
+  \city{Toronto} 
+  \state{Ontario} 
+   \postcode{M5S 3G8}
+  \country{Canada}
+}
+\email{ssanner@mie.utoronto.ca }
+
+
+\author{Yihao Du}
+\affiliation{%
+  \institution{The University of Toronto}
+ \streetaddress{Department of Mechanical and\\ Industrial Engineering}
+  \city{Toronto} 
+  \state{Ontario} 
+   \postcode{M5S 3G8}
+  \country{Canada}
+ }
+\email{duyihao@mie.utoronto.ca }
+
+\newcommand{\tstart}{\textrm{start}}
+\newcommand{\tend}{\textrm{end}}
+\newcommand{\tmedian}{\textrm{median}}
+
+\newcommand{\subfour}[1]{\vspace*{1mm}{\noindent\bf #1}}  
+\newcommand{\subsubfour}[1]{\vspace*{1mm}{\noindent\bf #1}} 
+\newtheorem{problem}{\textbf{Problem}}
+
+
+\begin{abstract}
+Many search results are naturally displayed on a map or other visual interface.  However, when the number of matching search results is large, it can be time-consuming to individually examine all relevant results.  This suggests the need to aggregate results via a clustering method.  However, standard unsupervised clustering algorithms like $K$-means (1) ignore relevance scores that can help with the extraction of highly relevant clusters, and (2) do not necessarily optimize search results for purposes of visual presentation in the user interface.  In this paper, we address both deficiencies by framing the clustering problem for search-driven user interfaces in a novel optimization framework that (1) aims to maximize the relevance of aggregated content according to cluster-based extensions of standard information retrieval metrics and (2) defines clusters via constraints that naturally reflect interface-driven desiderata of spatial, temporal, and keyword coherence that do not require complex ad-hoc distance metric specifications as in $K$-means.  While a globally optimal solution to this novel clustering optimization problem is NP-Hard, we develop fast greedy algorithms that can approximately optimize this objective for real-time search.  After comparatively benchmarking this new algorithm in offline experiments, we undertake a user study with 24 subjects to evaluate whether this new relevance-driven clustering method improves human performance on visual search tasks in comparison to $K$-means clustering and a non-aggregation baseline.  Our results show that (a) our greedy optimization approach is fast, near-optimal, and extracts higher-relevance clusters than $K$-means, and (b) these higher-relevance clusters that have been optimized w.r.t. user interface display constraints result in faster search task completion and higher task accuracy than the comparison methods.
+%Overall, this work underscores the importance of relevance-driven clustering optimization methods targeted for interactive visual search interfaces.
+
+%   Geo-temporal visualization of search results is a challenging
+% task since the simultaneous display of all matching elements would
+% result in a saturated and unreadable display.
+% Thus, the development of relevance-driven clustering methods for Visual Information Displays (VIDs) are required to help focus the user's attention by restricting the display to information relevant to their query using highly relevant clusters showing multiple information perspectives.  
+% In this paper, we make key contributions to the literature on relevance-driven clustering for VIDs: (1) Given that a VID will typically support many types of clustering parameters (spatial, temporal, and content), we provide a unified framework that abstracts presentation-specific details and facilitates an optimization perspective of clustering.  
+% (2) Within this optimization framework, we argue for the formulation of 
+% clustering as maximization of an expected F1-Score (EF1) objective subject to parameterized cluster constraints.
+% And (3) specifically for optimizing clusters w.r.t.\ EF1, we contribute two efficient greedy algorithms as well as an \emph{optimal} Mixed Integer Linear Programming (MILP) formulation intended to benchmark the performance of the greedy approximations on moderately sized datasets. 
+% We evaluate our algorithms by an off-line study and a user survey. In the off-line study, we experiment with a scenario related to searching natural disaster discussed in a collection of tweets under a variety of settings where we vary the amount of data, noise, and relevant vs. irrelevant class imbalance in the ground truth data.  We show that EF1 is a good surrogate for optimizing F1-Score and the proposed greedy algorithms are a good approximation of the optimal MILP solution, yet much more scalable.  In the user study, we analyze the feedback of 24 students asked to find the natural disasters using our algorithm and two different baselines.
+% In summary, this work provides the first formal and unified perspective of relevance-driven clustering for VIDs from an F1-Score optimization perspective along with scalable and robust algorithms that demonstrate strong performance when benchmarked against optimal results.
+
+%we hope this work helps better connect IR and AUI research, bringing a general and formal IR perspective to this important research area while opening new research directions for the application of IR methodology to AUIs.
+%the community to realize the potential of the information retrieval approach to address AUIs problems.
+
+\noindent
+{\bf Keywords:} Visual Search Interfaces; Relevance-driven Clustering; Constrained Optimization.
+
+\end{abstract}
+
+%\category{H.5.m.}{Information Interfaces and Presentation
+%  (e.g. HCI).}{}{} 
+
+%\keywords{\plainkeywords}
+\maketitle
+
+\section{Introduction}
+\subfile{Introduction}
+
+
+\section{Framework and background}
+\label{sec:Framework}
+\subfile{Framework}
+
+
+\section{Relevance-driven clustering}
+\label{sec:Algorithms}
+\subfile{Algorithms}
+
+
+
+\section{Experimental setup}
+\label{sec:setup}
+\subfile{Setup}
+
+
+\section{Offline evaluation}
+\label{sec:OfflineEval}
+\subfile{OfflineEval}
+
+\section{User study}
+\label{sec:UserStudy}
+\subfile{UserStudy}
+
+\section{Related work}
+\label{sec:RelatedWork}
+\subfile{RelatedWork}
+
+\section{Concluding Remarks}% and Future work}
+\label{sec:Conclusions}
+\subfile{Conclusions}
+
+
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+\bibliographystyle{unsrt}
+\balance
+\bibliography{biblio}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

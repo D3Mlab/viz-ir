@@ -1,0 +1,23 @@
+1535224942694	START: 	filters	pos4,pos9,pos5
+1535224953240	new_query: 	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535224957922	Query_Execution_Time	4662
+1535224958080	new_query: 	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:10025
+1535224961254	ZoomLevel:5	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:10025
+1535224962627	Query_Execution_Time	4518
+1535224963862	ZoomLevel:5	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:10025
+1535224965626	clicking_tweet:442	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:10025	pos4
+1535224983289	answer_update_nd_1: 	earthquake
+1535225001296	answer_update_date_1: 	2014-08-22
+1535225003326	answer_update_location_1: 	California
+1535225003872	final_answer1	ND:	earthquake	date:	2014-08-22	location:	California
+1535225007749	clicking_tweet:706	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:10025	pos5
+1535225020974	answer_update_nd_2: 	tornado
+1535225432846	answer_update_date_2: 	2013-05-17
+1535225453349	answer_update_location_2: 	Oklahoma
+1535225454181	final_answer2	ND:	tornado	date:	2013-05-17	location:	Oklahoma
+1535225456608	clicking_tweet:1538	CONTEXT:query:emergency	time_range (01-01-2013,31-12-2014)	slider_topK_range:10025	pos9
+1535225464273	answer_update_nd_3: 	blizzard
+1535225472386	answer_update_date_3: 	2014-02-03
+1535225486193	answer_update_location_3: 	Massachusetts
+1535225487222	final_answer3	ND:	blizzard	date:	2014-02-03	location:	Massachusetts
+1535225487228	answers_filters	ND1:	earthquake	date1:	2014-08-22	location1:	California	ND2:	tornado	date2:	2013-05-17	location2:	Oklahoma	ND3:	blizzard	date3:	2014-02-03	location3:	Massachusetts

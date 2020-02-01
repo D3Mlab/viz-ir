@@ -1,0 +1,24 @@
+%Overall, we aim for this work to bring a formal IR perspective to the important research area of AUIs while opening new research directions for the application of IR methodology.  As information
+%retrieval has transformed our web experience, we believe there is
+%a similar opportunity to transform the present nascent state of AUIs
+%through optimization and information retrieval principles to make
+%them more ubiquitous in our daily lives. 
+
+
+
+%In this paper, we have expanded on the information filtering paradigm of Belkin and Croft \citep{Belkin1992}, by  
+
+In this paper, we have noted that while unsupervised clustering methods like K-means have often been used to aggregate data in interactive visual search interfaces, unsupervised methods do not make effective use of query relevance signals during this aggregation task.  To address these deficiencies, we have introduced a cluster definition intended for spatial, temporal, and content coherence for visual presentation.  We have further introduced a novel formulation of relevance-driven clustering for interactive visual search as an optimization problem given a probabilistic measure of relevance for each search result.  We have motivated and derived the expected F1-Score as an objective criteria for relevance-driven cluster optimization and we have experimentally demonstrated that the proposed expected F1-Score metric is a good surrogate of the ground truth F1-Score.
+
+We introduced novel relevance-driven clustering optimization algorithms for expected F1-Score based on two different greedy strategies (Greedy and BPS).  We have also proposed a method for optimization of expected F1-score using a MILP approach that has critically allowed us to benchmark the greedy algorithms on moderate-sized datasets. The offline evaluations we have performed on a Twitter dataset have shown that the Greedy and BPS algorithms we have proposed are relatively efficient, outperform K-Means (specifically, the X-Means variant that automatically determines $K$) and provide a good approximation of the optimal MILP solution.  Somewhat surprisingly, we remark that greedy methods like BPS may even do better than exact expected F1-score optimization in high noise cases for relevance estimation due to the more restricted search space of BPS, which effectively prevents ``overfitting'' to this noise. 
+
+The user study we carried out on 24 users confirmed the outcome of the offline evaluation and have demonstrated that our novel relevance-driven clustering based approach is highly effective for our search scenario.  Users achieved faster search task completion and higher accuracy using relevance-driven clustering compared to K-means and a non-aggregation baseline and ultimately indicated a strong preference for the relevance-driven clustering approach.
+
+Overall, we believe this work underscores the importance of relevance-driven clustering optimization methods specifically targeted for presentation in interactive visual search interfaces.  However, there is still much more work to be done to fully explore the space of optimization objectives and algorithms for interactive visual search.  Important areas of future work include (i) consideration of the role of pseudo-relevance feedback in a visual search and clustering setting, (ii) investigation of expected ranking metrics in place of expected Boolean metrics in combination with how to visually display ranks within clusters, and (iii) exploration of novel application-specific objectives that take into account physical constraints of the display device as well as user cognitive constraints and preferences for cluster display.
+
+% Important areas of future work include enhanced indexing strategies and scalability in filter selection algorithms along with the 
+%Important areas of future work include consideration of the role of (pseudo-)relevance and other explicit or implicit feedback methods. % to create a tighter and more responsive user interaction loop.
+%Furthermore, we should also consider novel application-specific objectives, e.g.,  in specific visualization frameworks. % or based on a ranking theory of results presentation (e.g., using size or color for visual ranking emphasis).  
+
+
+% For future work, we are currently integrating these algorithms into our existing user interface of graph exploration and mining. We also plan to conduct a user study in the context of natural disasters discussed on twitter to analysis our algorithms and get a real insight of their accuracy. Finally, we plan to investigate new optimization metrics based on visual rendering.

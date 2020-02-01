@@ -1,0 +1,67 @@
+1534876422314	START: 	filters	pos4,pos9,pos5
+1534876425580	answer_update_nd_1: 	flood
+1534876430882	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534876436024	Query_Execution_Time	5120
+1534876438758	clicking_tweet:4512	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579	neg
+1534876439584	clicking_tweet:4276	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579	neg
+1534876440824	clicking_tweet:29905	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579	neg
+1534876451130	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1534876456431	Query_Execution_Time	5280
+1534876458459	clicking_tweet:3007	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876460263	clicking_tweet:16873	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876461414	clicking_tweet:17240	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876462710	clicking_tweet:11715	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876463679	clicking_tweet:3180	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876464422	clicking_tweet:2877	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876465903	clicking_tweet:16593	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876466637	clicking_tweet:11252	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876467413	clicking_tweet:11354	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550	neg
+1534876469128	clicking_bbox:tweets_size:28,pos_tweets_size:0	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550
+1534876479354	new_query: 	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10550
+1534876484186	Query_Execution_Time	4812
+1534876485961	clicking_tweet:1379	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137	pos9
+1534876495381	ZoomLevel:5	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876495562	ZoomLevel:6	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876496736	ZoomLevel:7	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876496917	ZoomLevel:8	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876498466	MouseDrag: New Center:(41.38679551831148, -71.09833091367614)	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876502042	answer_update_nd_1: 	blizzard
+1534876507430	answer_update_date_1: 	2014-02-03
+1534876512671	ZoomLevel:9	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876514441	ZoomLevel:8	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876517240	ZoomLevel:7	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876520442	answer_update_location_1: 	Massachusetts
+1534876521130	final_answer1	ND:	blizzard	date:	2014-02-03	location:	Massachusetts
+1534876529466	new_query: 	CONTEXT:query:earth	time_range (01-01-2013,31-12-2014)	slider_topK_range:10137
+1534876534039	Query_Execution_Time	4561
+1534876537648	clicking_tweet:2048	CONTEXT:query:earth	time_range (01-01-2013,31-12-2014)	slider_topK_range:10024	neg
+1534876540012	clicking_tweet:535	CONTEXT:query:earth	time_range (01-01-2013,31-12-2014)	slider_topK_range:10024	pos4
+1534876542753	ZoomLevel:5	CONTEXT:query:earth	time_range (01-01-2013,31-12-2014)	slider_topK_range:10024
+1534876543316	ZoomLevel:6	CONTEXT:query:earth	time_range (01-01-2013,31-12-2014)	slider_topK_range:10024
+1534876546747	answer_update_nd_2: 	earthquake
+1534876551421	answer_update_date_2: 	2014-08-02
+1534876551590	answer_update_date_2: 	2014-08-20
+1534876555515	answer_update_location_2: 	California
+1534876556423	final_answer2	ND:	earthquake	date:	2014-08-20	location:	California
+1534876565923	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10024
+1534876570942	Query_Execution_Time	5006
+1534876573578	clicking_bbox:tweets_size:42,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1534876574289	clicking_bbox:tweets_size:42,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1534876575288	clicking_bbox:tweets_size:42,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1534876575824	clicking_bbox:tweets_size:42,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1534876576226	clicking_tweet:4440	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579	neg
+1534876577805	clicking_tweet:4963	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579	neg
+1534876579289	clicking_tweet:4410	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579	neg
+1534876586443	new_query: 	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:10579
+1534876591623	Query_Execution_Time	5166
+1534876596902	removing_filter:    tweets_size:134,pos_tweets_size:0	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11393
+1534876599400	removing_filter:    tweets_size:30,pos_tweets_size:27	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11393
+1534876600788	clicking_tweet:618	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11393	pos5
+1534876604121	ZoomLevel:5	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11393
+1534876604349	ZoomLevel:6	CONTEXT:query:tornado	time_range (01-01-2013,31-12-2014)	slider_topK_range:11393
+1534876620059	answer_update_location_3: 	Oklahoma
+1534876623179	answer_update_nd_3: 	tornado
+1534876628511	answer_update_date_3: 	2013-05-01
+1534876628655	answer_update_date_3: 	2013-05-16
+1534876629783	final_answer3	ND:	tornado	date:	2013-05-16	location:	Oklahoma
+1534876629789	answers_filters	ND1:	blizzard	date1:	2014-02-03	location1:	Massachusetts	ND2:	earthquake	date2:	2014-08-20	location2:	California	ND3:	tornado	date3:	2013-05-16	location3:	Oklahoma

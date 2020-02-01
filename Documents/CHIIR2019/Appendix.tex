@@ -1,0 +1,130 @@
+\section{Dataset description}
+\subsection{Email example (Malware detection)}
+The second scenario evaluated in this article is related to the detection and analysis of malicious emails and therefore the detection of compromised user accounts. We assume having multiple emails, a spam classifier, and a display showing the graph of emails. We used ForceAtlas2, a Continuous Graph Layout Algorithm \cite{Jacomy2014} to get the locations of emails in the display (See Figure \ref{Fig:EnronData}).
+We use the Enron email dataset, which has been made public by Cohen  \cite{Klimt2004}, and for which Shetty and Adibi \cite{Shetty2004} performed a set of
+cleansing tasks, mainly by removing a large number of duplicate emails.  The final Enron dataset contains 252,759 emails sent from 17,527 users\footnote{http://www.ahschulz.de/enron-email-data/}.
+
+
+\subsection{Reddit example (Detection of illegal transactions)}
+The third scenario is related to the detection and monitoring of discussions related to deals of illegal merchandise on SilkRoad via Reddit. Here, we assume again having a monitoring agent, a classifier to classify discussions as being related to illegal transactions or not, and a display showing all discussions (we also use the ForceAtlas2 algorithm as shown in Figure \ref{Fig:RedditData}).
+The Reddit dataset we used was crawled between October 2013 and January 2014, and contains 98,777 discussions.
+%We provide more detailed statistics about the datasets described in
+%Table~\ref{table:featureStatistics}. 
+
+We assume that for each of the considered scenario,  we have a third party application-specific tool that predicts the probability score $S(i)$ that each information element is relevant in the context of that scenario, i.e., an email being malicious, a tweet being related to a natural disaster, or a discussion being related to an illegal transaction. This probability scoring function is task-specific and assumed to be given. 
+
+For relevance prediction in our experiments, we use a noisy corruption of ground truth in order to synthetically evaluate a range of scenarios in terms of predicted relevance noise level.
+We also explicitly vary the number of relevant information elements in our ground truth to assess performance variation as a function of class imbalance.  Hence, to setup a scenario with 20\% of relevant elements, we randomly select 20\% of the dataset and we assign a label value $l=1$ for each element in that set, and $l=0$ for each element out of that set. Then, for each element $j$, we assign the probability $S(j)$ of that element being relevant for scenario by introducing a random noise signal ratio as follows:
+\begin{equation}
+S(i) = \lambda*l+(1-\lambda)*r \; ,
+\end{equation}
+%we propose to simply randomly select an element $j$, 
+%To simulate the 
+%Finally, we propose to compute a global element score value $S(i)$ by introducing a noise signal ratio as follows:
+where $r$ is a random noise value chosen with uniform distribution in the range $[0,1]$, and $\lambda$ is a weighting parameter  that satisfies $0.5 \leq \lambda \leq 1$, which controls the signal-to-noise ratio in the final probability value. Note that for $\lambda=1$, $S(j)$ gives the ground truth probability value (perfect classifier), whereas for $\lambda=0.5$, $S(j)$ returns a complete random probability value (random classifier).
+
+
+For each dataset and given proportion of positive examples, the evaluation was carried out by averaging over 10 independent runs that each select random relevant documents according to the designated proportion.  We report the average ground truth F1-Score (i.e., ground truth is known in the experimental setting).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+\subfigure[$\lambda=0.6$.]{\includegraphics[width=2.9cm]{imgs/Enron_results/f1_performance_posrate_2\lyxdot 0_0\lyxdot 6}}\subfigure[$\lambda=0.9$.]{\includegraphics[width=2.9cm]{imgs/Enron_results/f1_performance_posrate_2\lyxdot 0_0\lyxdot 9}}\subfigure[$\lambda=1$.]{\includegraphics[width=2.9cm]{imgs/Enron_results/f1_performance_posrate_2\lyxdot 0_1\lyxdot 0}}
+\par\end{centering}
+\caption{Performance on  Enron  with 2\% of positive data.}
+\label{fig:F1_vs_Data_Enron}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+\subfigure[$\lambda=0.6$.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/f1_performance_posrate_2\lyxdot 0_0\lyxdot 6}}\subfigure[$\lambda=0.9$.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/f1_performance_posrate_2\lyxdot 0_0\lyxdot 9}}\subfigure[$\lambda=1$.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/f1_performance_posrate_2\lyxdot 0_1\lyxdot 0}}
+\par\end{centering}
+\caption{Performance on Reddit with 2\% of positive data.}
+\label{fig:F1_vs_Data_Reddit}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+\subfigure[Enron dataset.]{\includegraphics[width=2.9cm]{imgs/Enron_results/f1_performance_posrate_10\lyxdot 0_Data_150}}\subfigure[Reddit dataset.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/f1_performance_posrate_10\lyxdot 0_Data_150}}
+\par\end{centering}
+\caption{Performance: 10.0\% of positive data and \#data=150.}
+\label{fig:F1_vs_Lambda}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+\subfigure[$\lambda=0.6$.]{\includegraphics[width=4.2cm]{imgs/Enron_results/f1_performance_lambda_0\lyxdot 6_Data_150}}\subfigure[$\lambda=0.9$.]{\includegraphics[width=4.2cm]{imgs/Enron_results/f1_performance_lambda_0\lyxdot 9_Data_150}}
+\par\end{centering}
+\caption{Performance on Enron dataset with \#data=150.}
+\label{fig:F1_vs_Pos_Enron}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend1}
+\par\end{centering}
+\begin{centering}
+\subfigure[$\lambda=0.6$.]{\includegraphics[width=4.25cm]{imgs/Reddit_results/f1_performance_lambda_0\lyxdot 6_Data_150}}\subfigure[$\lambda=0.9$.]{\includegraphics[width=4.25cm]{imgs/Reddit_results/f1_performance_lambda_0\lyxdot 9_Data_150}}
+\par\end{centering}
+\caption{Performance on Reddit dataset with \#data=150.}
+\label{fig:F1_vs_Pos_Reddit}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend2}
+\par\end{centering}
+\begin{centering}
+\subfigure[Enron dataset.]{\includegraphics[width=2.9cm]{imgs/Enron_results/time_posrate_2\lyxdot 0_0\lyxdot 9}}\subfigure[Reddit dataset.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/time_posrate_2\lyxdot 0_0\lyxdot 9}}
+\par\end{centering}
+\caption{Time complexity: 2\% positive data and  $\lambda=0.9$.}
+\label{fig:Time_vs_Data}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend2}
+\par\end{centering}
+\begin{centering}
+\subfigure[Enron dataset.]{\includegraphics[width=2.9cm]{imgs/Enron_results/time_posrate_2\lyxdot 0_Data_150}}\subfigure[Reddit dataset.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/time_posrate_2\lyxdot 0_Data_150}}
+\par\end{centering}
+\caption{Time complexity: 2\% positive data and  \#data = 150.}
+\label{fig:Time_vs_Lambda}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend2}
+\par\end{centering}
+\begin{centering}
+\subfigure[$\lambda=0.6$.]{\includegraphics[width=2.9cm]{imgs/Enron_results/time_lambda_0\lyxdot 6_Data_150}}\subfigure[$\lambda=0.8$.]{\includegraphics[width=2.9cm]{imgs/Enron_results/time_lambda_0\lyxdot 8_Data_150}}\subfigure[$\lambda=1$.]{\includegraphics[width=2.9cm]{imgs/Enron_results/time_lambda_1\lyxdot 0_Data_150}}
+\par\end{centering}
+\caption{Time complexity on Enron with \#data=150.}
+\label{fig:Time_vs_Pos_Enron}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=8.5cm]{imgs/legend2}
+\par\end{centering}
+\begin{centering}
+\subfigure[$\lambda=0.6$.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/time_lambda_0\lyxdot 6_Data_150}}\subfigure[$\lambda=0.8$.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/time_lambda_0\lyxdot 8_Data_150}}\subfigure[$\lambda=1$.]{\includegraphics[width=2.9cm]{imgs/Reddit_results/time_lambda_1\lyxdot 0_Data_150}}
+\par\end{centering}
+\caption{Time complexity on Reddit with \#data=150.}
+\label{fig:Time_vs_Pos_Reddit}
+\end{figure}

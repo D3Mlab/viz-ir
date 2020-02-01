@@ -1,0 +1,60 @@
+1534886131883	START: 	kmeans	pos1,pos7,pos6
+1534886142449	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534886142687	Query_Execution_Time	215
+1534886144251	ZoomLevel:5	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1534886145370	ZoomLevel:4	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1534886148576	slider_end_change: 	CONTEXT:query:drought	time_range (01-01-2013,29-11-2014)	slider_topK_range:558
+1534886153760	slider_start_change: 	CONTEXT:query:drought	time_range (14-03-2014,29-11-2014)	slider_topK_range:558
+1534886156407	slider_end_change: 	CONTEXT:query:drought	time_range (14-03-2014,03-05-2014)	slider_topK_range:558
+1534886158591	slider_start_change: 	CONTEXT:query:drought	time_range (27-12-2013,03-05-2014)	slider_topK_range:558
+1534886165071	slider_end_change: 	CONTEXT:query:drought	time_range (27-12-2013,29-05-2014)	slider_topK_range:558
+1534886166523	clicking_tweet:2911	CONTEXT:query:drought	time_range (27-12-2013,29-05-2014)	slider_topK_range:558	neg
+1534886180512	answer_update_nd_1: 	drought
+1534886182976	answer_update_location_1: 	California
+1534886188244	answer_update_date_1: 	2014-02-01
+1534886189688	final_answer1	ND:	drought	date:	2014-02-01	location:	California
+1534886198544	answer_update_nd_2: 	blizzard
+1534886204616	new_query: 	CONTEXT:query:snow storm blizzard	time_range (27-12-2013,29-05-2014)	slider_topK_range:558
+1534886205192	Query_Execution_Time	570
+1534886209289	slider_start_change: 	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,31-12-2014)	slider_topK_range:1152
+1534886209532	ZoomLevel:5	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,31-12-2014)	slider_topK_range:1152
+1534886209763	ZoomLevel:6	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,31-12-2014)	slider_topK_range:1152
+1534886210515	ZoomLevel:5	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,31-12-2014)	slider_topK_range:1152
+1534886210740	ZoomLevel:4	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,31-12-2014)	slider_topK_range:1152
+1534886212193	MouseDrag: New Center:(31.511643165512663, -60.72128807661329)	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,31-12-2014)	slider_topK_range:1152
+1534886212576	ZoomLevel:5	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,31-12-2014)	slider_topK_range:1152
+1534886216168	slider_end_change: 	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152
+1534886216705	clicking_tweet:1231	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152	pos7
+1534886223140	clicking_tweet:1021	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152	pos7
+1534886225470	ZoomLevel:6	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152
+1534886225654	ZoomLevel:7	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152
+1534886228257	clicking_tweet:1186	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152	pos7
+1534886236490	clicking_tweet:1022	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152	pos7
+1534886241018	clicking_tweet:1113	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152	pos7
+1534886249089	clicking_bbox:tweets_size:244,pos_tweets_size:150	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152
+1534886251456	clicking_tweet:1035	CONTEXT:query:snow storm blizzard	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152	pos7
+1534886261192	answer_update_nd_2: 	blizzard
+1534886266769	answer_update_date_2: 	2014-02-07
+1534886271400	answer_update_location_2: 	New York
+1534886275828	answer_update_date_2: 	
+1534886276012	answer_update_date_2: 	2014-02-05
+1534886277311	final_answer2	ND:	blizzard	date:	2014-02-05	location:	New York
+1534886282041	answer_update_nd_3: 	flood
+1534886286601	new_query: 	CONTEXT:query:flood	time_range (25-01-2014,16-02-2014)	slider_topK_range:1152
+1534886286777	Query_Execution_Time	159
+1534886291817	slider_end_change: 	CONTEXT:query:flood	time_range (01-01-2013,28-09-2013)	slider_topK_range:685
+1534886296328	slider_start_change: 	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886296748	ZoomLevel:5	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886297008	ZoomLevel:6	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886298175	clicking_bbox:tweets_size:120,pos_tweets_size:100	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886300678	clicking_bbox:tweets_size:120,pos_tweets_size:100	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886301278	clicking_bbox:tweets_size:120,pos_tweets_size:100	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886305832	ZoomLevel:5	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886307127	ZoomLevel:6	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886310681	answer_update_nd_3: 	flood
+1534886314025	answer_update_location_3: 	Colorado
+1534886318734	clicking_bbox:tweets_size:120,pos_tweets_size:100	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685
+1534886320800	clicking_tweet:70	CONTEXT:query:flood	time_range (31-08-2013,28-09-2013)	slider_topK_range:685	pos1
+1534886332877	answer_update_date_3: 	2013-09-08
+1534886335489	final_answer3	ND:	flood	date:	2013-09-08	location:	Colorado
+1534886335492	answers_kmeans	ND1:	drought	date1:	2014-02-01	location1:	California	ND2:	blizzard	date2:	2014-02-05	location2:	New York	ND3:	flood	date3:	2013-09-08	location3:	Colorado

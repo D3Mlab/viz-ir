@@ -1,0 +1,10 @@
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.93.63:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.92.76:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.93.19:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.92.208:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.93.60:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.92.180:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.93.71:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.93.74:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.93.72:AUI4IR/reddit_results/*.txt reddit_results/data/
+scp -r -o StrictHostKeyChecking=no -i ~/.ssh/imac_nectar_key.pem  ubuntu@115.146.93.55:AUI4IR/reddit_results/*.txt reddit_results/data/

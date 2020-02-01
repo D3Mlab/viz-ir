@@ -1,0 +1,3896 @@
+
+
+*******************************************************************************
+Wed Jan 17 21:56:26 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + m12*x*x + m13*x*x*x + m14*x*x*x*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           m12           m13           m14           b1           
+   0 1.4658344147e+03   0.00e+00  5.35e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.1258913837e+00  -1.77e-01  5.35e-05    1.934999e-01   2.524621e+00  -4.536015e+00   2.622887e+00   1.189327e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 4.12589
+rel. change during last iteration : -1.76773e-06
+
+degrees of freedom    (FIT_NDF)                        : 535
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0878177
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00771195
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.1935           +/- 0.2405       (124.3%)
+m12             = 2.52462          +/- 1.077        (42.68%)
+m13             = -4.53602         +/- 1.75         (38.59%)
+m14             = 2.62289          +/- 0.9289       (35.41%)
+b1              = 0.118933         +/- 0.01489      (12.52%)
+
+correlation matrix of the fit parameters:
+                m11    m12    m13    m14    b1     
+m11             1.000 
+m12            -0.967  1.000 
+m13             0.912 -0.985  1.000 
+m14            -0.858  0.955 -0.991  1.000 
+b1             -0.870  0.755 -0.672  0.609  1.000 
+
+
+*******************************************************************************
+Wed Jan 17 21:56:26 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + m22*x*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           m22           b2           
+   0 7.2739268175e+02   0.00e+00  6.47e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   3 1.5250856968e+00  -6.97e-03  6.47e-04    5.052736e-01   1.398548e-01   1.910207e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.52509
+rel. change during last iteration : -6.97225e-08
+
+degrees of freedom    (FIT_NDF)                        : 537
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0532917
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00284001
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.505274         +/- 0.02982      (5.902%)
+m22             = 0.139855         +/- 0.03482      (24.9%)
+b2              = 0.191021         +/- 0.00462      (2.419%)
+
+correlation matrix of the fit parameters:
+                m21    m22    b2     
+m21             1.000 
+m22            -0.959  1.000 
+b2             -0.786  0.649  1.000 
+
+
+*******************************************************************************
+Wed Jan 17 21:56:26 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + m32*x*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           m32           b3           
+   0 5.9818537362e+02   0.00e+00  6.34e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   3 4.7029065642e-01  -3.12e-02  6.34e-04    4.888619e-01   5.871318e-02   2.701882e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.470291
+rel. change during last iteration : -3.11516e-07
+
+degrees of freedom    (FIT_NDF)                        : 537
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0295935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000875774
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.488862         +/- 0.01685      (3.447%)
+m32             = 0.0587132        +/- 0.02042      (34.77%)
+b3              = 0.270188         +/- 0.002337     (0.8651%)
+
+correlation matrix of the fit parameters:
+                m31    m32    b3     
+m31             1.000 
+m32            -0.957  1.000 
+b3             -0.761  0.626  1.000 
+
+
+*******************************************************************************
+Wed Jan 17 21:56:26 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + m42*x*x + m43*x*x*x + m44*x*x*x*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           m42           m43           m44           b4           
+   0 7.4185648617e+02   0.00e+00  4.92e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   4 2.1877795276e-01  -7.43e-02  4.92e-05    4.772363e-01  -3.884391e-01   8.118856e-01  -4.136451e-01   3.450149e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.218778
+rel. change during last iteration : -7.43107e-07
+
+degrees of freedom    (FIT_NDF)                        : 535
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.020222
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000408931
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.477236         +/- 0.04765      (9.985%)
+m42             = -0.388439        +/- 0.2386       (61.42%)
+m43             = 0.811886         +/- 0.4168       (51.33%)
+m44             = -0.413645        +/- 0.2322       (56.12%)
+b4              = 0.345015         +/- 0.002327     (0.6745%)
+
+correlation matrix of the fit parameters:
+                m41    m42    m43    m44    b4     
+m41             1.000 
+m42            -0.956  1.000 
+m43             0.889 -0.982  1.000 
+m44            -0.826  0.947 -0.990  1.000 
+b4             -0.841  0.717 -0.627  0.562  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:40:44 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 5.6986358547e+02   0.00e+00  7.80e-01    1.000000e+00   1.000000e+00
+   3 4.2397281881e+00  -2.81e-08  7.80e-04    7.001677e-01   9.264522e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : -2.80716e-13
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:40:44 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 4.8462026844e+02   0.00e+00  7.65e-01    1.000000e+00   1.000000e+00
+   3 1.5708925588e+00  -1.59e-07  7.65e-04    6.200853e-01   1.789755e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -1.58566e-12
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:40:44 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.0626499586e+02   0.00e+00  7.55e-01    1.000000e+00   1.000000e+00
+   3 4.7753311010e-01  -3.22e-06  7.55e-04    5.352527e-01   2.659822e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -3.22238e-11
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:40:44 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 3.4371510375e+02   0.00e+00  7.47e-01    1.000000e+00   1.000000e+00
+   3 2.4037931385e-01  -1.83e-05  7.47e-04    4.581368e-01   3.423402e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : -1.83341e-10
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:08 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + m12*x*x + m13*x*x*x + m14*x*x*x*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           m12           m13           m14           b1           
+   0 1.4658344147e+03   0.00e+00  5.35e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.1258913837e+00  -1.77e-01  5.35e-05    1.934999e-01   2.524621e+00  -4.536015e+00   2.622887e+00   1.189327e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 4.12589
+rel. change during last iteration : -1.76773e-06
+
+degrees of freedom    (FIT_NDF)                        : 535
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0878177
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00771195
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.1935           +/- 0.2405       (124.3%)
+m12             = 2.52462          +/- 1.077        (42.68%)
+m13             = -4.53602         +/- 1.75         (38.59%)
+m14             = 2.62289          +/- 0.9289       (35.41%)
+b1              = 0.118933         +/- 0.01489      (12.52%)
+
+correlation matrix of the fit parameters:
+                m11    m12    m13    m14    b1     
+m11             1.000 
+m12            -0.967  1.000 
+m13             0.912 -0.985  1.000 
+m14            -0.858  0.955 -0.991  1.000 
+b1             -0.870  0.755 -0.672  0.609  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:08 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + m22*x*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           m22           b2           
+   0 7.2739268175e+02   0.00e+00  6.47e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   3 1.5250856968e+00  -6.97e-03  6.47e-04    5.052736e-01   1.398548e-01   1.910207e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.52509
+rel. change during last iteration : -6.97225e-08
+
+degrees of freedom    (FIT_NDF)                        : 537
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0532917
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00284001
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.505274         +/- 0.02982      (5.902%)
+m22             = 0.139855         +/- 0.03482      (24.9%)
+b2              = 0.191021         +/- 0.00462      (2.419%)
+
+correlation matrix of the fit parameters:
+                m21    m22    b2     
+m21             1.000 
+m22            -0.959  1.000 
+b2             -0.786  0.649  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:08 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + m32*x*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           m32           b3           
+   0 5.9818537362e+02   0.00e+00  6.34e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   3 4.7029065642e-01  -3.12e-02  6.34e-04    4.888619e-01   5.871318e-02   2.701882e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.470291
+rel. change during last iteration : -3.11516e-07
+
+degrees of freedom    (FIT_NDF)                        : 537
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0295935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000875774
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.488862         +/- 0.01685      (3.447%)
+m32             = 0.0587132        +/- 0.02042      (34.77%)
+b3              = 0.270188         +/- 0.002337     (0.8651%)
+
+correlation matrix of the fit parameters:
+                m31    m32    b3     
+m31             1.000 
+m32            -0.957  1.000 
+b3             -0.761  0.626  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:08 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + m42*x*x + m43*x*x*x + m44*x*x*x*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           m42           m43           m44           b4           
+   0 7.4185648617e+02   0.00e+00  4.92e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   4 2.1877795276e-01  -7.43e-02  4.92e-05    4.772363e-01  -3.884391e-01   8.118856e-01  -4.136451e-01   3.450149e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.218778
+rel. change during last iteration : -7.43107e-07
+
+degrees of freedom    (FIT_NDF)                        : 535
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.020222
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000408931
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.477236         +/- 0.04765      (9.985%)
+m42             = -0.388439        +/- 0.2386       (61.42%)
+m43             = 0.811886         +/- 0.4168       (51.33%)
+m44             = -0.413645        +/- 0.2322       (56.12%)
+b4              = 0.345015         +/- 0.002327     (0.6745%)
+
+correlation matrix of the fit parameters:
+                m41    m42    m43    m44    b4     
+m41             1.000 
+m42            -0.956  1.000 
+m43             0.889 -0.982  1.000 
+m44            -0.826  0.947 -0.990  1.000 
+b4             -0.841  0.717 -0.627  0.562  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:09 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 2.9132597744e+01   0.00e+00  1.05e-01    1.934999e-01   1.189327e-01
+   3 4.2397281881e+00  -1.57e-07  1.05e-04    7.001677e-01   9.264522e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : -1.57054e-12
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:09 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 2.4008569204e+00   0.00e+00  2.00e-01    5.052736e-01   1.910207e-01
+   2 1.5708925588e+00  -8.05e-01  2.00e-03    6.200852e-01   1.789755e-01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -8.04761e-06
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:09 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 5.9308339414e-01   0.00e+00  2.31e-01    4.888619e-01   2.701882e-01
+   2 4.7753311010e-01  -7.00e-01  2.31e-03    5.352527e-01   2.659822e-01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -6.99714e-06
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 01:45:09 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 2.8026322016e-01   0.00e+00  2.70e-01    4.772363e-01   3.450149e-01
+   2 2.4037931385e-01  -4.14e-01  2.70e-03    4.581368e-01   3.423402e-01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : -4.13656e-06
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:55 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + m12*x*x + m13*x*x*x + m14*x*x*x*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           m12           m13           m14           b1           
+   0 1.4658344147e+03   0.00e+00  5.35e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.1258913837e+00  -1.77e-01  5.35e-05    1.934999e-01   2.524621e+00  -4.536015e+00   2.622887e+00   1.189327e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 4.12589
+rel. change during last iteration : -1.76773e-06
+
+degrees of freedom    (FIT_NDF)                        : 535
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0878177
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00771195
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.1935           +/- 0.2405       (124.3%)
+m12             = 2.52462          +/- 1.077        (42.68%)
+m13             = -4.53602         +/- 1.75         (38.59%)
+m14             = 2.62289          +/- 0.9289       (35.41%)
+b1              = 0.118933         +/- 0.01489      (12.52%)
+
+correlation matrix of the fit parameters:
+                m11    m12    m13    m14    b1     
+m11             1.000 
+m12            -0.967  1.000 
+m13             0.912 -0.985  1.000 
+m14            -0.858  0.955 -0.991  1.000 
+b1             -0.870  0.755 -0.672  0.609  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:56 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + m22*x*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           m22           b2           
+   0 7.2739268175e+02   0.00e+00  6.47e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   3 1.5250856968e+00  -6.97e-03  6.47e-04    5.052736e-01   1.398548e-01   1.910207e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.52509
+rel. change during last iteration : -6.97225e-08
+
+degrees of freedom    (FIT_NDF)                        : 537
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0532917
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00284001
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.505274         +/- 0.02982      (5.902%)
+m22             = 0.139855         +/- 0.03482      (24.9%)
+b2              = 0.191021         +/- 0.00462      (2.419%)
+
+correlation matrix of the fit parameters:
+                m21    m22    b2     
+m21             1.000 
+m22            -0.959  1.000 
+b2             -0.786  0.649  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:56 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + m32*x*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           m32           b3           
+   0 5.9818537362e+02   0.00e+00  6.34e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   3 4.7029065642e-01  -3.12e-02  6.34e-04    4.888619e-01   5.871318e-02   2.701882e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.470291
+rel. change during last iteration : -3.11516e-07
+
+degrees of freedom    (FIT_NDF)                        : 537
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0295935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000875774
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.488862         +/- 0.01685      (3.447%)
+m32             = 0.0587132        +/- 0.02042      (34.77%)
+b3              = 0.270188         +/- 0.002337     (0.8651%)
+
+correlation matrix of the fit parameters:
+                m31    m32    b3     
+m31             1.000 
+m32            -0.957  1.000 
+b3             -0.761  0.626  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:56 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + m42*x*x + m43*x*x*x + m44*x*x*x*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           m42           m43           m44           b4           
+   0 7.4185648617e+02   0.00e+00  4.92e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   4 2.1877795276e-01  -7.43e-02  4.92e-05    4.772363e-01  -3.884391e-01   8.118856e-01  -4.136451e-01   3.450149e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.218778
+rel. change during last iteration : -7.43107e-07
+
+degrees of freedom    (FIT_NDF)                        : 535
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.020222
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000408931
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.477236         +/- 0.04765      (9.985%)
+m42             = -0.388439        +/- 0.2386       (61.42%)
+m43             = 0.811886         +/- 0.4168       (51.33%)
+m44             = -0.413645        +/- 0.2322       (56.12%)
+b4              = 0.345015         +/- 0.002327     (0.6745%)
+
+correlation matrix of the fit parameters:
+                m41    m42    m43    m44    b4     
+m41             1.000 
+m42            -0.956  1.000 
+m43             0.889 -0.982  1.000 
+m44            -0.826  0.947 -0.990  1.000 
+b4             -0.841  0.717 -0.627  0.562  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:56 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 2.9132597744e+01   0.00e+00  1.05e-01    1.934999e-01   1.189327e-01
+   3 4.2397281881e+00  -1.57e-07  1.05e-04    7.001677e-01   9.264522e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : -1.57054e-12
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:56 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 2.4008569204e+00   0.00e+00  2.00e-01    5.052736e-01   1.910207e-01
+   2 1.5708925588e+00  -8.05e-01  2.00e-03    6.200852e-01   1.789755e-01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -8.04761e-06
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:56 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 5.9308339414e-01   0.00e+00  2.31e-01    4.888619e-01   2.701882e-01
+   2 4.7753311010e-01  -7.00e-01  2.31e-03    5.352527e-01   2.659822e-01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -6.99714e-06
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:22:56 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 2.8026322016e-01   0.00e+00  2.70e-01    4.772363e-01   3.450149e-01
+   2 2.4037931385e-01  -4.14e-01  2.70e-03    4.581368e-01   3.423402e-01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : -4.13656e-06
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:46 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 5.6986358547e+02   0.00e+00  7.80e-01    1.000000e+00   1.000000e+00
+   3 4.2397281881e+00  -2.81e-08  7.80e-04    7.001677e-01   9.264522e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : -2.80716e-13
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:46 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 4.8462026844e+02   0.00e+00  7.65e-01    1.000000e+00   1.000000e+00
+   3 1.5708925588e+00  -1.59e-07  7.65e-04    6.200853e-01   1.789755e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -1.58566e-12
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:46 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.0626499586e+02   0.00e+00  7.55e-01    1.000000e+00   1.000000e+00
+   3 4.7753311010e-01  -3.22e-06  7.55e-04    5.352527e-01   2.659822e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -3.22238e-11
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:47 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 3.4371510375e+02   0.00e+00  7.47e-01    1.000000e+00   1.000000e+00
+   3 2.4037931385e-01  -1.83e-05  7.47e-04    4.581368e-01   3.423402e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : -1.83341e-10
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:47 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 4.2397281881e+00   0.00e+00  2.39e-01    7.001677e-01   9.264522e-02
+   1 4.2397281881e+00   0.00e+00  2.39e-02    7.001677e-01   9.264522e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:47 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 1.5708925588e+00   0.00e+00  2.21e-01    6.200853e-01   1.789755e-01
+   1 1.5708925588e+00  -1.41e-11  2.21e-02    6.200853e-01   1.789755e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -1.41349e-16
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:47 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.7753311010e-01   0.00e+00  2.35e-01    5.352527e-01   2.659822e-01
+   1 4.7753311010e-01  -2.32e-11  2.35e-02    5.352527e-01   2.659822e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -2.32491e-16
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:33:47 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 2.4037931385e-01   0.00e+00  2.66e-01    4.581368e-01   3.423402e-01
+   1 2.4037931385e-01   0.00e+00  2.66e-02    4.581368e-01   3.423402e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:35:38 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 1.3143796334e+01   0.00e+00  2.15e-01    7.001677e-01   9.264522e-02
+   3 7.1151835751e+00  -1.08e-05  2.15e-04    1.175033e+00  -4.215115e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 7.11518
+rel. change during last iteration : -1.07669e-10
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115001
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.17503          +/- 0.02352      (2.001%)
+b1              = -0.0421511       +/- 0.009727     (23.08%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.861  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:35:38 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 2.0603300237e+01   0.00e+00  2.21e-01    6.200853e-01   1.789755e-01
+   3 3.7018146279e+00  -9.71e-06  2.21e-04    1.461233e+00  -2.320629e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 3.70181
+rel. change during last iteration : -9.70799e-11
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.08295
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0068807
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 1.46123          +/- 0.02028      (1.388%)
+b2              = -0.232063        +/- 0.008374     (3.609%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.905  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:35:38 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.4419225901e+01   0.00e+00  2.50e-01    5.352527e-01   2.659822e-01
+   3 1.5945982985e+00  -1.79e-04  2.50e-04    1.787338e+00  -4.638117e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.5946
+rel. change during last iteration : -1.78661e-09
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0544421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00296394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 1.78734          +/- 0.0164       (0.9175%)
+b3              = -0.463812        +/- 0.007107     (1.532%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.944  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:35:39 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 7.2563508039e+01   0.00e+00  2.85e-01    4.581368e-01   3.423402e-01
+   3 1.1060340904e+00  -6.04e-03  2.85e-04    2.107981e+00  -7.135042e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.10603
+rel. change during last iteration : -6.03716e-08
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0453412
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00205583
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 2.10798          +/- 0.01712      (0.812%)
+b4              = -0.713504        +/- 0.007966     (1.116%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.970  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:36:39 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 7.1151835751e+00   0.00e+00  3.45e-01    1.175033e+00  -4.215115e-02
+   1 7.1151835751e+00   0.00e+00  3.45e-02    1.175033e+00  -4.215115e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.11518
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115001
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.17503          +/- 0.02352      (2.001%)
+b1              = -0.0421511       +/- 0.009727     (23.08%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.861  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:36:39 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 3.7018146279e+00   0.00e+00  4.57e-01    1.461233e+00  -2.320629e-01
+   1 3.7018146279e+00   0.00e+00  4.57e+01    1.461233e+00  -2.320629e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.70181
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.08295
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0068807
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 1.46123          +/- 0.02028      (1.388%)
+b2              = -0.232063        +/- 0.008374     (3.609%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.905  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:36:39 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.5945982985e+00   0.00e+00  6.38e-01    1.787338e+00  -4.638117e-01
+   1 1.5945982985e+00   0.00e+00  6.38e-02    1.787338e+00  -4.638117e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.5946
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0544421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00296394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 1.78734          +/- 0.0164       (0.9175%)
+b3              = -0.463812        +/- 0.007107     (1.532%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.944  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:36:39 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.1060340904e+00   0.00e+00  8.58e-01    2.107981e+00  -7.135042e-01
+   1 1.1060340904e+00   0.00e+00  8.58e-02    2.107981e+00  -7.135042e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.10603
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0453412
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00205583
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 2.10798          +/- 0.01712      (0.812%)
+b4              = -0.713504        +/- 0.007966     (1.116%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.970  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:37:22 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 7.1151835751e+00   0.00e+00  3.45e-01    1.175033e+00  -4.215115e-02
+   1 7.1151835751e+00   0.00e+00  3.45e-02    1.175033e+00  -4.215115e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.11518
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115001
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.17503          +/- 0.02352      (2.001%)
+b1              = -0.0421511       +/- 0.009727     (23.08%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.861  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:37:22 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 3.7018146279e+00   0.00e+00  4.57e-01    1.461233e+00  -2.320629e-01
+   1 3.7018146279e+00  -1.20e-11  4.57e-01    1.461233e+00  -2.320629e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.70181
+rel. change during last iteration : -1.19965e-16
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.08295
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0068807
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 1.46123          +/- 0.02028      (1.388%)
+b2              = -0.232063        +/- 0.008374     (3.609%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.905  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:37:22 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.5945982985e+00   0.00e+00  6.38e-01    1.787338e+00  -4.638117e-01
+   1 1.5945982985e+00  -1.39e-11  6.38e-01    1.787338e+00  -4.638117e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.5946
+rel. change during last iteration : -1.39248e-16
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0544421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00296394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 1.78734          +/- 0.0164       (0.9175%)
+b3              = -0.463812        +/- 0.007107     (1.532%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.944  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:37:22 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.1060340904e+00   0.00e+00  8.58e-01    2.107981e+00  -7.135042e-01
+   1 1.1060340904e+00   0.00e+00  8.58e-02    2.107981e+00  -7.135042e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.10603
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0453412
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00205583
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 2.10798          +/- 0.01712      (0.812%)
+b4              = -0.713504        +/- 0.007966     (1.116%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.970  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:38:18 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 7.1151835751e+00   0.00e+00  3.45e-01    1.175033e+00  -4.215115e-02
+   1 7.1151835751e+00   0.00e+00  3.45e-02    1.175033e+00  -4.215115e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.11518
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115001
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.17503          +/- 0.02352      (2.001%)
+b1              = -0.0421511       +/- 0.009727     (23.08%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.861  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:38:18 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 3.7018146279e+00   0.00e+00  4.57e-01    1.461233e+00  -2.320629e-01
+   1 3.7018146279e+00   0.00e+00  4.57e+02    1.461233e+00  -2.320629e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.70181
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.08295
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0068807
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 1.46123          +/- 0.02028      (1.388%)
+b2              = -0.232063        +/- 0.008374     (3.609%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.905  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:38:18 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.5945982985e+00   0.00e+00  6.38e-01    1.787338e+00  -4.638117e-01
+   1 1.5945982985e+00   0.00e+00  6.38e-02    1.787338e+00  -4.638117e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.5946
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0544421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00296394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 1.78734          +/- 0.0164       (0.9175%)
+b3              = -0.463812        +/- 0.007107     (1.532%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.944  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:38:18 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.1060340904e+00   0.00e+00  8.58e-01    2.107981e+00  -7.135042e-01
+   1 1.1060340904e+00  -2.01e-11  8.58e-02    2.107981e+00  -7.135042e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.10603
+rel. change during last iteration : -2.00757e-16
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0453412
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00205583
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 2.10798          +/- 0.01712      (0.812%)
+b4              = -0.713504        +/- 0.007966     (1.116%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.970  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:39:36 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 7.1151835751e+00   0.00e+00  3.45e-01    1.175033e+00  -4.215115e-02
+   1 7.1151835751e+00  -1.25e-11  3.45e-02    1.175033e+00  -4.215115e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.11518
+rel. change during last iteration : -1.24829e-16
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115001
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.17503          +/- 0.02352      (2.001%)
+b1              = -0.0421511       +/- 0.009727     (23.08%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.861  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:39:36 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 3.7018146279e+00   0.00e+00  4.57e-01    1.461233e+00  -2.320629e-01
+   1 3.7018146279e+00   0.00e+00  4.57e+02    1.461233e+00  -2.320629e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.70181
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.08295
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0068807
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 1.46123          +/- 0.02028      (1.388%)
+b2              = -0.232063        +/- 0.008374     (3.609%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.905  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:39:36 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.5945982985e+00   0.00e+00  6.38e-01    1.787338e+00  -4.638117e-01
+   1 1.5945982985e+00   0.00e+00  6.38e-02    1.787338e+00  -4.638117e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.5946
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0544421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00296394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 1.78734          +/- 0.0164       (0.9175%)
+b3              = -0.463812        +/- 0.007107     (1.532%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.944  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:39:36 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.1060340904e+00   0.00e+00  8.58e-01    2.107981e+00  -7.135042e-01
+   1 1.1060340904e+00   0.00e+00  8.58e+01    2.107981e+00  -7.135042e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.10603
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0453412
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00205583
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 2.10798          +/- 0.01712      (0.812%)
+b4              = -0.713504        +/- 0.007966     (1.116%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.970  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:40:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 7.1151835751e+00   0.00e+00  3.45e-01    1.175033e+00  -4.215115e-02
+   1 7.1151835751e+00   0.00e+00  3.45e+00    1.175033e+00  -4.215115e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.11518
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115001
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.17503          +/- 0.02352      (2.001%)
+b1              = -0.0421511       +/- 0.009727     (23.08%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.861  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:40:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 3.7018146279e+00   0.00e+00  4.57e-01    1.461233e+00  -2.320629e-01
+   1 3.7018146279e+00   0.00e+00  4.57e+02    1.461233e+00  -2.320629e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.70181
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.08295
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0068807
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 1.46123          +/- 0.02028      (1.388%)
+b2              = -0.232063        +/- 0.008374     (3.609%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.905  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:40:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.5945982985e+00   0.00e+00  6.38e-01    1.787338e+00  -4.638117e-01
+   1 1.5945982985e+00   0.00e+00  6.38e-02    1.787338e+00  -4.638117e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.5946
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0544421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00296394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 1.78734          +/- 0.0164       (0.9175%)
+b3              = -0.463812        +/- 0.007107     (1.532%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.944  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:40:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.1060340904e+00   0.00e+00  8.58e-01    2.107981e+00  -7.135042e-01
+   1 1.1060340904e+00   0.00e+00  8.58e+01    2.107981e+00  -7.135042e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.10603
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0453412
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00205583
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 2.10798          +/- 0.01712      (0.812%)
+b4              = -0.713504        +/- 0.007966     (1.116%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.970  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:55:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 7.1151835751e+00   0.00e+00  3.45e-01    1.175033e+00  -4.215115e-02
+   1 7.1151835751e+00   0.00e+00  3.45e-01    1.175033e+00  -4.215115e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.11518
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115001
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132252
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.17503          +/- 0.02352      (2.001%)
+b1              = -0.0421511       +/- 0.009727     (23.08%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.861  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:55:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 3.7018146279e+00   0.00e+00  4.57e-01    1.461233e+00  -2.320629e-01
+   1 3.7018146279e+00   0.00e+00  4.57e+02    1.461233e+00  -2.320629e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.70181
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.08295
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0068807
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 1.46123          +/- 0.02028      (1.388%)
+b2              = -0.232063        +/- 0.008374     (3.609%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.905  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:55:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.5945982985e+00   0.00e+00  6.38e-01    1.787338e+00  -4.638117e-01
+   1 1.5945982985e+00   0.00e+00  6.38e-01    1.787338e+00  -4.638117e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.5946
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0544421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00296394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 1.78734          +/- 0.0164       (0.9175%)
+b3              = -0.463812        +/- 0.007107     (1.532%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.944  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 02:55:06 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.1060340904e+00   0.00e+00  8.58e-01    2.107981e+00  -7.135042e-01
+   1 1.1060340904e+00   0.00e+00  8.58e+01    2.107981e+00  -7.135042e-01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.10603
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0453412
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00205583
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 2.10798          +/- 0.01712      (0.812%)
+b4              = -0.713504        +/- 0.007966     (1.116%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.970  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 6.2529365400e+00   0.00e+00  4.01e-01    1.175033e+00  -4.215115e-02
+   3 3.4396476722e+00  -2.08e-03  4.01e-04    1.008554e+00  -3.260500e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : -2.0753e-08
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 2.5559310972e+01   0.00e+00  5.24e-01    1.461233e+00  -2.320629e-01
+   3 1.1950893397e+01  -7.99e-06  5.24e-04    8.728152e-01  -4.019142e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : -7.99111e-11
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 5.4721545546e+01   0.00e+00  6.92e-01    1.787338e+00  -4.638117e-01
+   3 1.6385241532e+01  -1.79e-06  6.92e-04    7.526637e-01  -3.771604e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : -1.793e-11
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 9.6934793805e+01   0.00e+00  8.78e-01    2.107981e+00  -7.135042e-01
+   3 1.6735846440e+01  -1.59e-06  8.78e-04    6.567057e-01  -2.859276e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : -1.58649e-11
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 3.4396476722e+00   0.00e+00  3.44e-01    1.008554e+00  -3.260500e-02
+   1 3.4396476722e+00  -1.29e-11  3.44e-02    1.008554e+00  -3.260500e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : -1.29109e-16
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 1.1950893397e+01   0.00e+00  2.99e-01    8.728152e-01  -4.019142e-02
+   1 1.1950893397e+01   0.00e+00  2.99e-02    8.728152e-01  -4.019142e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.6385241532e+01   0.00e+00  2.58e-01    7.526637e-01  -3.771604e-02
+   1 1.6385241532e+01   0.00e+00  2.58e-02    7.526637e-01  -3.771604e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:47:14 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.6735846440e+01   0.00e+00  2.25e-01    6.567057e-01  -2.859276e-02
+   1 1.6735846440e+01   0.00e+00  2.25e-02    6.567057e-01  -2.859276e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:32 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 5.6986358547e+02   0.00e+00  7.80e-01    1.000000e+00   1.000000e+00
+   3 4.2397281881e+00  -2.81e-08  7.80e-04    7.001677e-01   9.264522e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : -2.80716e-13
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:32 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 4.8462026844e+02   0.00e+00  7.65e-01    1.000000e+00   1.000000e+00
+   3 1.5708925588e+00  -1.59e-07  7.65e-04    6.200853e-01   1.789755e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -1.58566e-12
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:32 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.0626499586e+02   0.00e+00  7.55e-01    1.000000e+00   1.000000e+00
+   3 4.7753311010e-01  -3.22e-06  7.55e-04    5.352527e-01   2.659822e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -3.22238e-11
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:32 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 3.4371510375e+02   0.00e+00  7.47e-01    1.000000e+00   1.000000e+00
+   3 2.4037931385e-01  -1.83e-05  7.47e-04    4.581368e-01   3.423402e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : -1.83341e-10
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:32 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 6.8439869662e+00   0.00e+00  2.47e-01    7.001677e-01   9.264522e-02
+   3 3.4396476722e+00  -3.75e-05  2.47e-04    1.008554e+00  -3.260500e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : -3.75444e-10
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:32 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 2.1520458251e+01   0.00e+00  2.46e-01    6.200853e-01   1.789755e-01
+   3 1.1950893397e+01  -3.06e-07  2.46e-04    8.728152e-01  -4.019142e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : -3.05674e-12
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:32 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.3004283884e+01   0.00e+00  2.62e-01    5.352527e-01   2.659822e-01
+   3 1.6385241532e+01  -8.25e-08  2.62e-04    7.526637e-01  -3.771604e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : -8.25232e-13
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:33 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 6.3440099587e+01   0.00e+00  2.88e-01    4.581368e-01   3.423402e-01
+   3 1.6735846440e+01  -1.30e-07  2.88e-04    6.567057e-01  -2.859276e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : -1.30023e-12
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:33 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 3.4396476722e+00   0.00e+00  3.44e-01    1.008554e+00  -3.260500e-02
+   1 3.4396476722e+00   0.00e+00  3.44e-02    1.008554e+00  -3.260500e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:33 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 1.1950893397e+01   0.00e+00  2.99e-01    8.728152e-01  -4.019142e-02
+   1 1.1950893397e+01   0.00e+00  2.99e-02    8.728152e-01  -4.019142e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:33 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.6385241532e+01   0.00e+00  2.58e-01    7.526637e-01  -3.771604e-02
+   1 1.6385241532e+01   0.00e+00  2.58e-02    7.526637e-01  -3.771604e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:33 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.6735846440e+01   0.00e+00  2.25e-01    6.567057e-01  -2.859276e-02
+   1 1.6735846440e+01   0.00e+00  2.25e-02    6.567057e-01  -2.859276e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 5.6986358547e+02   0.00e+00  7.80e-01    1.000000e+00   1.000000e+00
+   3 4.2397281881e+00  -2.81e-08  7.80e-04    7.001677e-01   9.264522e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : -2.80716e-13
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 4.8462026844e+02   0.00e+00  7.65e-01    1.000000e+00   1.000000e+00
+   3 1.5708925588e+00  -1.59e-07  7.65e-04    6.200853e-01   1.789755e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -1.58566e-12
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.0626499586e+02   0.00e+00  7.55e-01    1.000000e+00   1.000000e+00
+   3 4.7753311010e-01  -3.22e-06  7.55e-04    5.352527e-01   2.659822e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -3.22238e-11
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 3.4371510375e+02   0.00e+00  7.47e-01    1.000000e+00   1.000000e+00
+   3 2.4037931385e-01  -1.83e-05  7.47e-04    4.581368e-01   3.423402e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : -1.83341e-10
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 6.8439869662e+00   0.00e+00  2.47e-01    7.001677e-01   9.264522e-02
+   3 3.4396476722e+00  -3.75e-05  2.47e-04    1.008554e+00  -3.260500e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : -3.75444e-10
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 2.1520458251e+01   0.00e+00  2.46e-01    6.200853e-01   1.789755e-01
+   3 1.1950893397e+01  -3.06e-07  2.46e-04    8.728152e-01  -4.019142e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : -3.05674e-12
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.3004283884e+01   0.00e+00  2.62e-01    5.352527e-01   2.659822e-01
+   3 1.6385241532e+01  -8.25e-08  2.62e-04    7.526637e-01  -3.771604e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : -8.25232e-13
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 6.3440099587e+01   0.00e+00  2.88e-01    4.581368e-01   3.423402e-01
+   3 1.6735846440e+01  -1.30e-07  2.88e-04    6.567057e-01  -2.859276e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : -1.30023e-12
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 3.4396476722e+00   0.00e+00  3.44e-01    1.008554e+00  -3.260500e-02
+   1 3.4396476722e+00   0.00e+00  3.44e-02    1.008554e+00  -3.260500e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 1.1950893397e+01   0.00e+00  2.99e-01    8.728152e-01  -4.019142e-02
+   1 1.1950893397e+01   0.00e+00  2.99e-02    8.728152e-01  -4.019142e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.6385241532e+01   0.00e+00  2.58e-01    7.526637e-01  -3.771604e-02
+   1 1.6385241532e+01   0.00e+00  2.58e-02    7.526637e-01  -3.771604e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Thu Jan 18 23:50:48 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.6735846440e+01   0.00e+00  2.25e-01    6.567057e-01  -2.859276e-02
+   1 1.6735846440e+01   0.00e+00  2.25e-02    6.567057e-01  -2.859276e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 5.6986358547e+02   0.00e+00  7.80e-01    1.000000e+00   1.000000e+00
+   3 4.2397281881e+00  -2.81e-08  7.80e-04    7.001677e-01   9.264522e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.23973
+rel. change during last iteration : -2.80716e-13
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0887724
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00788054
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 0.700168         +/- 0.01401      (2.001%)
+b1              = 0.0926452        +/- 0.006511     (7.028%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.810  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 4.8462026844e+02   0.00e+00  7.65e-01    1.000000e+00   1.000000e+00
+   3 1.5708925588e+00  -1.59e-07  7.65e-04    6.200853e-01   1.789755e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.57089
+rel. change during last iteration : -1.58566e-12
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0540359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00291987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.620085         +/- 0.008607     (1.388%)
+b2              = 0.178975         +/- 0.003563     (1.991%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.758  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.0626499586e+02   0.00e+00  7.55e-01    1.000000e+00   1.000000e+00
+   3 4.7753311010e-01  -3.22e-06  7.55e-04    5.352527e-01   2.659822e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.477533
+rel. change during last iteration : -3.22238e-11
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0297928
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000887608
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.535253         +/- 0.004911     (0.9175%)
+b3              = 0.265982         +/- 0.001836     (0.6901%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.716  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 540
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 3.4371510375e+02   0.00e+00  7.47e-01    1.000000e+00   1.000000e+00
+   3 2.4037931385e-01  -1.83e-05  7.47e-04    4.581368e-01   3.423402e-01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.240379
+rel. change during last iteration : -1.83341e-10
+
+degrees of freedom    (FIT_NDF)                        : 538
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0211377
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000446802
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.458137         +/- 0.00372      (0.812%)
+b4              = 0.34234          +/- 0.001269     (0.3706%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.697  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 6.8439869662e+00   0.00e+00  2.47e-01    7.001677e-01   9.264522e-02
+   3 3.4396476722e+00  -3.75e-05  2.47e-04    1.008554e+00  -3.260500e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : -3.75444e-10
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 2.1520458251e+01   0.00e+00  2.46e-01    6.200853e-01   1.789755e-01
+   3 1.1950893397e+01  -3.06e-07  2.46e-04    8.728152e-01  -4.019142e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : -3.05674e-12
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 4.3004283884e+01   0.00e+00  2.62e-01    5.352527e-01   2.659822e-01
+   3 1.6385241532e+01  -8.25e-08  2.62e-04    7.526637e-01  -3.771604e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : -8.25232e-13
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 6.3440099587e+01   0.00e+00  2.88e-01    4.581368e-01   3.423402e-01
+   3 1.6735846440e+01  -1.30e-07  2.88e-04    6.567057e-01  -2.859276e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : -1.30023e-12
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.9.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+	f1(x) = m11*x + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m11           b1           
+   0 3.4396476722e+00   0.00e+00  3.44e-01    1.008554e+00  -3.260500e-02
+   1 3.4396476722e+00   0.00e+00  3.44e-02    1.008554e+00  -3.260500e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.43965
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0801078
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00641725
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m11             = 1.00855          +/- 0.01339      (1.328%)
+b1              = -0.032605        +/- 0.00645      (19.78%)
+
+correlation matrix of the fit parameters:
+                m11    b1     
+m11             1.000 
+b1             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.8.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = m21*x + b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m21           b2           
+   0 1.1950893397e+01   0.00e+00  2.99e-01    8.728152e-01  -4.019142e-02
+   1 1.1950893397e+01   0.00e+00  2.99e-02    8.728152e-01  -4.019142e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 11.9509
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.14932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0222964
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m21             = 0.872815         +/- 0.02496      (2.859%)
+b2              = -0.0401914       +/- 0.01202      (29.91%)
+
+correlation matrix of the fit parameters:
+                m21    b2     
+m21             1.000 
+b2             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.7.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+	f3(x) = m31*x + b3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m31           b3           
+   0 1.6385241532e+01   0.00e+00  2.58e-01    7.526637e-01  -3.771604e-02
+   1 1.6385241532e+01   0.00e+00  2.58e-02    7.526637e-01  -3.771604e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.3852
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.174841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0305695
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m31             = 0.752664         +/- 0.02922      (3.883%)
+b3              = -0.037716        +/- 0.01408      (37.32%)
+
+correlation matrix of the fit parameters:
+                m31    b3     
+m31             1.000 
+b3             -0.845  1.000 
+
+
+*******************************************************************************
+Fri Jan 19 00:07:35 2018
+
+
+FIT:    data read from "AUI4IR_results/scatter_plot2_lambda_0.6.txt" using 2:1
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+        #datapoints = 538
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f4(x)
+	f4(x) = m41*x + b4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m41           b4           
+   0 1.6735846440e+01   0.00e+00  2.25e-01    6.567057e-01  -2.859276e-02
+   1 1.6735846440e+01   0.00e+00  2.25e-02    6.567057e-01  -2.859276e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.7358
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 536
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.176702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0312236
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m41             = 0.656706         +/- 0.02953      (4.497%)
+b4              = -0.0285928       +/- 0.01423      (49.76%)
+
+correlation matrix of the fit parameters:
+                m41    b4     
+m41             1.000 
+b4             -0.845  1.000 

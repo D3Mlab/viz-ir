@@ -1,0 +1,810 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass acmart
+\begin_preamble
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
+
+
+%\makeatletter
+%\renewcommand\@formatdoi[1]{\ignorespaces}
+%\makeatother
+
+
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{amstext}
+\usepackage{graphicx}
+\usepackage{booktabs} % For formal tables
+
+
+
+\usepackage{subfigure}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\newcommand\varlist{,\makebox[0.8em][c]{.\hfil.\hfil.},} 
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\acmDOI{10.475/123_4}
+
+% ISBN
+\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+\acmConference[WOODSTOCK'97]{ACM Woodstock conference}{July 1997}{El
+  Paso, Texas USA} 
+\acmYear{1997}
+\copyrightyear{2016}
+
+\acmPrice{15.00}
+
+\fancyhead{}
+\settopmatter{printacmref=false, printfolios=false}
+\end_preamble
+\options sigconf,anonymous=true,authordraft=false
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{An Information Retrieval Perspective of  Filtering for 
+\backslash
+
+\backslash
+Adaptive User Interfaces } 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+subfour}[1]{
+\backslash
+vspace*{3mm}{
+\backslash
+noindent
+\backslash
+bf #1}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+subsubfour}[1]{
+\backslash
+vspace*{1mm}{
+\backslash
+noindent
+\backslash
+bf #1}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{problem}{
+\backslash
+textbf{Problem}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+In high information and cognitive load tasks such as real-time monitoring
+ of network security, industrial plants, or urban traffic congestion, it
+ is common to have large-scale visual interfaces that display current system
+ status and alerts.
+ However, the volume of information in any of these scenarios prevents the
+ simultaneous presentation of all information leading to the need for adaptive
+ user interfaces (AUIs) that filter this information to provide localized
+ and relevant context for each alert.
+ Such AUIs allow the human user to efficiently investigate the cause and
+ implications of the alert and to initiate corrective actions in a timely
+ manner.
+\end_layout
+
+\begin_layout Abstract
+In this work we argue that this information filtering task is central to
+ a variety of AUIs.
+ Furthermore, we argue that the filtering task shares many common properties
+ of the information retrieval setting that we use daily in the form of web
+ search.
+ The key difference is that while information retrieval is ubiquitous in
+ the lives of most humans in the form of web search, it has gone virtually
+ unrecognized as an appropriate model for the filtering problem in AUIs.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+keywords{Adaptive User Interfaces, Indexing, Search Algorithms.}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction (Scott)
+\end_layout
+
+\begin_layout Standard
+In high information and cognitive load tasks such as real-time monitoring
+ of network security, industrial plants, or urban traffic congestion, it
+ is common to have large-scale visual interfaces that display current system
+ status and alerts.
+ However, the volume of information in any of these scenarios prevents the
+ simultaneous presentation of all information leading to the need for adaptive
+ user interfaces (AUIs) that filter this information to provide localized
+ and relevant context for each alert.
+ Such AUIs allow the human user to efficiently investigate the cause and
+ implications of the alert and to initiate corrective actions in a timely
+ manner.
+\end_layout
+
+\begin_layout Standard
+In this work we argue that this information filtering task is central to
+ a variety of AUIs.
+ Furthermore, we argue that the filtering task shares many common properties
+ of the information retrieval setting that we use daily in the form of web
+ search.
+ The key difference is that while information retrieval is ubiquitous in
+ the lives of most humans in the form of web search, it has gone virtually
+ unrecognized as an appropriate model for the filtering problem in AUIs.
+ 
+\end_layout
+
+\begin_layout Standard
+To make the task of AUI filtering more concrete and to link it clearly to
+ information retrieval, we first introduce an example filtering scenario
+ for AUIs.
+\end_layout
+
+\begin_layout Standard
+Consider the case of network security monitoring.
+ Typically, there would be some graph-based display of all information in
+ the network along with relevant anomalies.
+ We denote any information displayed (such as node IP address, attempted
+ logins, software installed, port connections between machines) as an informatio
+n element that could be optionally displayed.
+ Displaying all information elements simultaneously would result in an unreadabl
+e display for any reasonably sized network security problem; hence users
+ could restrict the information displayed through a variety of filter settings
+ – by panning and zooming in the graph display, by restricting upper and
+ lower bounds on a time filter, and/or by selecting properties (perhaps
+ in a drop-down selection or fielded keyword search in fields such as nodes
+ or connections).
+\end_layout
+
+\begin_layout Standard
+While the user would typically find it hard to manually set these filters
+ to optimally reveal information about an anomaly they are currently investigati
+ng, an AUI that was aware of the alert of interest to the user and aware
+ of the probability that each information element is relevant to the alert
+ could automatically suggest filter settings that might display the relevant
+ information element set with the least amount of irrelevant clutter.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contrast between conventional Web Search and Filtering for AUIs.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="6cm">
+<column alignment="center" valignment="top" width="6cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Web Search
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Filtering for AUIs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Information Need
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Realized by query 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Selection of an alert
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Form of Results
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ranked list of documents
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Filter settings (bounding box in visual display, time ranges, property filters)
+ that select a subset of information elements to display
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Relevance Scoring
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comparison of query and document content (and other relevant information)
+ to generate a relevance score, e.g., via TF-IDF or BM25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Third party application-specific tool (e.g., a machine learning approach)
+ that predicts the probability that each information element is relevant
+ to the selected alert
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Test Data for Benchmarking
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A set of queries; human-labeled judgments of document relevance to each
+ query for a test corpus (i.e., ground truth relevance)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A set of alerts; human-labeled judgments of information element relevance
+ to a selected alert (i.e., ground truth relevance)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Evaluation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ranking metrics (P@k, AP, etc.) over documents given ground truth relevance
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Boolean metrics (e.g., F-score) and Ranking metrics (P@k, AP, etc.) over informatio
+n elements selected by the filter given ground truth relevance 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We assume the prediction of information element relevance to an alert to
+ be provided by a third-party since this prediction is highly specific to
+ each particular application setting.
+ In this work, we intend to focus on the broader problem of AUI filtering
+ in a range of visual display applications assuming this relevance predictor
+ is given.
+ However, in addition to scoring information elements of direct causal interest
+ to the alert, it is likely that the AUI will also contain rules requiring
+ the concurrent display of information.
+ For example, such a rule could be “if a connection is shown, the IP addresses
+ of the two connected machines must also be shown”, which would trigger
+ additional (soft) constraints for the filter optimization.
+\end_layout
+
+\begin_layout Standard
+Since “retrieved” information elements are not individually selected, but
+ rather chosen through a filter setting (that the user can further modify),
+ we clearly have an optimization problem of how to restrict filter settings
+ to show the user the most relevant information to the alert they have selected.
+ While this diverges from the standard information retrieval setting where
+ ranked documents are chosen individually, these additional constraints
+ do not change the overall information retrieval objective to select relevant
+ information given the user’s information need.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, standard information retrieval evaluation benchmarking methodology
+ (e.g., the Cranfield paradigm) and metrics such as precision@k or average
+ precision are also relevant here (assuming that visual saliency can serve
+ as a surrogate method for achieving a visual rank ordering of selected
+ information elements).
+ Unlike information retrieval where Boolean metrics such as F-Score are
+ not often used since ranked lists are usually limited to the top-10, graphical
+ displays can present substantially more information of varying sizes that
+ make precision-recall trade-off metrics like F-Score also relevant for
+ evaluation.
+\end_layout
+
+\begin_layout Standard
+The contributions of this paper are as follows: 
+\backslash
+begin{enumerate} 
+\end_layout
+
+\begin_layout Enumerate
+A new theory of IR for visual interfaces.
+ 
+\end_layout
+
+\begin_layout Enumerate
+New metrics for evaluations.
+\end_layout
+
+\begin_layout Enumerate
+Greedy and optimal solutions for ...
+\end_layout
+
+\begin_layout Section
+Framework (Scott)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbb{E_{S}}[P(E)]=\mathbb{E_{S}}[\dfrac{\sum_{j=1}^{m}B(j)I(j)}{\sum_{j=1}^{m}I(j)}]=\dfrac{\sum_{j=1}^{m}\mathbb{E_{S}}[B(j)]I(j)}{\sum_{j=1}^{m}I(j)}=\dfrac{\sum_{j=1}^{m}S(j)I(j)}{\sum_{j=1}^{m}I(j)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E_{S}}[P(E)]=\mathbb{E_{S}}[\dfrac{\sum_{j=1}^{m}B(j)I(j)}{\sum_{j=1}^{m}I(j)}]=\dfrac{\sum_{j=1}^{m}\mathbb{E_{S}}[B(j)]I(j)}{\sum_{j=1}^{m}I(j)}=\dfrac{\sum_{j=1}^{m}S(j)I(j)}{\sum_{j=1}^{m}I(j)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Introduce notation
+\end_layout
+
+\begin_layout Enumerate
+Comparison to standard IR search
+\end_layout
+
+\begin_layout Enumerate
+Description of scoring functions (DetNoisyGroundTruth and NoisyGroundTruth)
+\end_layout
+
+\begin_layout Enumerate
+Metrics (EP, ER, EF1-Score)
+\end_layout
+
+\begin_layout Standard
+To summarize from the above example, the parallels between information retrieval
+ for web search and information retrieval for filtering in AUIs can be outlined
+ as follows: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Baeza-Yates2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Novel challenges
+\end_layout
+
+\begin_layout Standard
+Obviously despite much overlap, there are importance differences between
+ web search and filtering for AUIs (especially in the indirect selection
+ of results through filter settings) and these open up new possibilities
+ and challenges for research in this novel information retrieval setting:
+\end_layout
+
+\begin_layout Itemize
+Evaluation metrics and human factors: Are there new evaluation metrics specific
+ to this AUI filtering setting? What evaluation metrics correlate with human
+ performance using AUIs? Optimization and algorithms: How do we optimally
+ select filter settings to maximize evaluation metrics in expectation? How
+ can we interpret simple heuristics like average and cumulative relevance?
+ (Answer: expected precision and recall.) How do MILPs, relaxed LP approximations
+ with guarantees, or greedy approaches compare in terms of time and metric
+ quality? Are there properties of different filters (1D for time, 2D for
+ bounding box, or discrete choices for property selection) that lend themselves
+ to specialized greedy approaches? 
+\end_layout
+
+\begin_layout Itemize
+Robustness: As we vary the signal-to-noise ratio in the quality of the relevance
+ scoring (from pure noise to ground truth), how do various algorithms perform?
+ 
+\end_layout
+
+\begin_layout Itemize
+Explanation: Can we provide explanations for filter settings to allow the
+ user to understand the reasons for the various suggestions? 
+\end_layout
+
+\begin_layout Itemize
+Personalization and learning: Can we learn from observations of manual adaptions
+ of the suggested filter settings to understand how to improve the third-party
+ scoring systems? 
+\end_layout
+
+\begin_layout Itemize
+Collaborative filtering: Can we generalize learning across multiple users
+ in a collaborative filtering approach? 
+\end_layout
+
+\begin_layout Itemize
+Learning from implicit feedback: How can we leverage implicit user feedback
+ such as clicks and dwell time to indirectly measure the relevance of filtered
+ content and improve system performance.
+\end_layout
+
+\begin_layout Section
+Algorithms (Reda + Yihao)
+\end_layout
+
+\begin_layout Subsection
+Greedy search (Indexing?) (Reda)
+\end_layout
+
+\begin_layout Subsubsection
+Keyword
+\end_layout
+
+\begin_layout Subsubsection
+Time
+\end_layout
+
+\begin_layout Subsubsection
+Space
+\end_layout
+
+\begin_layout Subsubsection
+Combined
+\end_layout
+
+\begin_layout Subsection
+Optimal (for baseline optimal comparison) (Yihao)
+\end_layout
+
+\begin_layout Subsubsection
+Original intuitive formulation
+\end_layout
+
+\begin_layout Subsubsection
+Transformation MILP
+\end_layout
+
+\begin_layout Section
+Evaluation (Reda)
+\end_layout
+
+\begin_layout Subsection
+Dataset (basics, statistics, graph layout)
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsubsection
+Email example (Malware detection)
+\end_layout
+
+\begin_layout Subsubsection
+Twitter example (robot detection)
+\end_layout
+
+\begin_layout Subsubsection
+Reddit example (?)
+\end_layout
+
+\begin_layout Subsection
+Experiments
+\end_layout
+
+\begin_layout Section
+Related work (Yihao)
+\end_layout
+
+\begin_layout Section
+Conclusions (Scott)
+\end_layout
+
+\begin_layout Standard
+(Main directions for improments)
+\end_layout
+
+\begin_layout Standard
+We intend that this work helps awaken the community to the potential of
+ an information retrieval approach to filtering for AUIs.
+ As information retrieval has transformed our web experience, we believe
+ there is a similar opportunity to transform the present nascent state of
+ AUIs through optimization and information retrieval principles to make
+ them more ubiquitous in our daily lives.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "biblio"
+options "abbrv"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

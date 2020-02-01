@@ -1,0 +1,250 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ahlberg1995}
+C.~Ahlberg and B.~Shneiderman.
+\newblock Visual information seeking: Tight coupling of dynamic query filters
+  with starfield displays.
+\newblock In R.~M. Baecker, J.~Grudin, W.~A. Buxton, and S.~Greenberg, editors,
+  {\em Readings in Human-Computer Interaction (Second Edition)}, Interactive
+  Technologies, pages 450 -- 456. Morgan Kaufmann, second edition edition,
+  1995.
+
+\bibitem{Amershi2011}
+S.~Amershi, B.~Lee, A.~Kapoor, R.~Mahajan, and B.~Christian.
+\newblock Human-guided machine learning for fast and accurate network alarm
+  triage.
+\newblock In {\em Proceedings of the Twenty-Second International Joint
+  Conference on Artificial Intelligence - Volume Volume Three}, IJCAI'11, pages
+  2564--2569. AAAI Press, 2011.
+
+\bibitem{Baeza-Yates2010}
+R.~A. Baeza-Yates and B.~Ribeiro-Neto.
+\newblock {\em {Modern Information Retrieval}}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., 2 edition, 2010.
+
+\bibitem{Belkin1992}
+N.~J. Belkin and W.~B. Croft.
+\newblock Information filtering and information retrieval: Two sides of the
+  same coin?
+\newblock {\em Commun. ACM}, 35(12):29--38, Dec. 1992.
+
+\bibitem{Bennamane2012}
+A.~Bennamane, H.~Hacid, A.~Ansiaux, and A.~Cagnati.
+\newblock Vizpicious: A visual user-adaptive tool for communication logs
+  analysis and suspicious behavior detection.
+\newblock In {\em 2012 IEEE/WIC/ACM International Conferences on Web
+  Intelligence and Intelligent Agent Technology}, volume~1, pages 641--642, Dec
+  2012.
+
+\bibitem{Charnes1962}
+A.~Charnes and W.~W. Cooper.
+\newblock Programming with linear fractional functionals.
+\newblock {\em Naval Research Logistics Quarterly}, 9(3-4):181--186, 1962.
+
+\bibitem{Cui2008b}
+J.~Cui, F.~Wen, and X.~Tang.
+\newblock Intentsearch: Interactive on-line image search re-ranking.
+\newblock In {\em Proceedings of the 16th ACM International Conference on
+  Multimedia}, MM '08, pages 997--998, New York, NY, USA, 2008. ACM.
+
+\bibitem{Dumais2016}
+S.~Dumais, E.~Cutrell, J.~J. Cadiz, G.~Jancke, R.~Sarin, and D.~C. Robbins.
+\newblock {Stuff I'Ve Seen: A System for Personal Information Retrieval and
+  Re-Use}.
+\newblock {\em SIGIR Forum}, 49(2):28--35, Jan. 2016.
+
+\bibitem{Fogarty2008}
+J.~Fogarty, D.~Tan, A.~Kapoor, and S.~Winder.
+\newblock Cueflik: Interactive concept learning in image search.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '08, pages 29--38, New York, NY, USA, 2008. ACM.
+
+\bibitem{Gajos2008}
+K.~Z. Gajos, K.~Everitt, D.~S. Tan, M.~Czerwinski, and D.~S. Weld.
+\newblock Predictability and accuracy in adaptive user interfaces.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '08, pages 1271--1274, New York, NY, USA, 2008. ACM.
+
+\bibitem{Gajos2010}
+K.~Z. Gajos, D.~S. Weld, and J.~O. Wobbrock.
+\newblock Automatically generating personalized user interfaces with supple.
+\newblock {\em Artificial Intelligence}, 174(12):910 -- 950, 2010.
+
+\bibitem{Glover1975}
+F.~Glover.
+\newblock Improved linear integer programming formulations of nonlinear integer
+  problems.
+\newblock {\em Management Science}, 22(4):455--460, 1975.
+
+\bibitem{Guibas1978}
+L.~J. Guibas and R.~Sedgewick.
+\newblock A dichromatic framework for balanced trees.
+\newblock In {\em 19th Annual Symposium on Foundations of Computer Science
+  (sfcs 1978)}, pages 8--21, Oct 1978.
+
+\bibitem{gurobi2017gurobi}
+I.~Gurobi~Optimization.
+\newblock Gurobi optimizer reference manual; 2017.
+\newblock {\em http://www.gurobi.com/documentation/7.5/refman/refman.html},
+  2017.
+
+\bibitem{Guttman1984}
+A.~Guttman.
+\newblock R-trees: A dynamic index structure for spatial searching.
+\newblock In {\em Proceedings of the 1984 ACM SIGMOD International Conference
+  on Management of Data}, SIGMOD '84, pages 47--57, New York, NY, USA, 1984.
+  ACM.
+
+\bibitem{Hansen1991}
+P.~Hansen, M.~V. Poggi~de Arag{\~a}o, and C.~C. Ribeiro.
+\newblock Hyperbolic 0--1 programming and query optimization in information
+  retrieval.
+\newblock {\em Mathematical Programming}, 52(1):255--263, May 1991.
+
+\bibitem{Hartmann2008}
+M.~Hartmann and D.~Schreiber.
+\newblock Proactively adapting interfaces to individual users for mobile
+  devices.
+\newblock In W.~Nejdl, J.~Kay, P.~Pu, and E.~Herder, editors, {\em Adaptive
+  Hypermedia and Adaptive Web-Based Systems}, pages 300--303, Berlin,
+  Heidelberg, 2008. Springer Berlin Heidelberg.
+
+\bibitem{Iman2017}
+Z.~Iman, S.~Sanner, M.~R. Bouadjenek, and L.~Xie.
+\newblock A longitudinal study of topic classification on twitter.
+\newblock In {\em ICWSM}, pages 552--555, 2017.
+
+\bibitem{Inibhunu2016}
+C.~Inibhunu, S.~Langevin, S.~Ralph, N.~Kronefeld, H.~Soh, G.~A. Jamieson,
+  S.~Sanner, S.~W. Kortschot, C.~Carrasco, and M.~White.
+\newblock Adapting level of detail in user interfaces for cybersecurity
+  operations.
+\newblock In {\em 2016 Resilience Week (RWS)}, pages 13--16, Aug 2016.
+
+\bibitem{Jacomy2014}
+M.~Jacomy, T.~Venturini, S.~Heymann, and M.~Bastian.
+\newblock Forceatlas2, a continuous graph layout algorithm for handy network
+  visualization designed for the gephi software.
+\newblock {\em PLOS ONE}, 9(6):1--12, 06 2014.
+
+\bibitem{Klimt2004}
+B.~Klimt and Y.~Yang.
+\newblock Introducing the enron corpus.
+\newblock In {\em CEAS}, 2004.
+
+\bibitem{Liu2014}
+S.~Liu, W.~Cui, Y.~Wu, and M.~Liu.
+\newblock A survey on information visualization: recent advances and
+  challenges.
+\newblock {\em The Visual Computer}, 30(12):1373--1393, Dec 2014.
+
+\bibitem{Mezhoudi2013}
+N.~Mezhoudi.
+\newblock User interface adaptation based on user feedback and machine
+  learning.
+\newblock In {\em Proceedings of the Companion Publication of the 2013
+  International Conference on Intelligent User Interfaces Companion}, IUI '13
+  Companion, pages 25--28, New York, NY, USA, 2013. ACM.
+
+\bibitem{Sankaranarayanan2009}
+J.~Sankaranarayanan, H.~Samet, B.~E. Teitler, M.~D. Lieberman, and J.~Sperling.
+\newblock Twitterstand: News in tweets.
+\newblock In {\em Proceedings of the 17th ACM SIGSPATIAL International
+  Conference on Advances in Geographic Information Systems}, GIS '09, pages
+  42--51, New York, NY, USA, 2009. ACM.
+
+\bibitem{Schrier2008}
+E.~Schrier, M.~Dontcheva, C.~Jacobs, G.~Wade, and D.~Salesin.
+\newblock Adaptive layout for dynamically aggregated documents.
+\newblock In {\em Proceedings of the 13th International Conference on
+  Intelligent User Interfaces}, IUI '08, pages 99--108, New York, NY, USA,
+  2008. ACM.
+
+\bibitem{Shetty2004}
+J.~Shetty and J.~Adibi.
+\newblock The enron email dataset database schema and brief statistical report.
+\newblock Technical report, 2004.
+
+\bibitem{Shneiderman2013}
+B.~Shneiderman and C.~Dunne.
+\newblock Interactive network exploration to derive insights: Filtering,
+  clustering, grouping, and simplification.
+\newblock In W.~Didimo and M.~Patrignani, editors, {\em Graph Drawing}, pages
+  2--18, Berlin, Heidelberg, 2013. Springer Berlin Heidelberg.
+
+\bibitem{Smith2009}
+M.~A. Smith, B.~Shneiderman, N.~Milic-Frayling, E.~Mendes~Rodrigues, V.~Barash,
+  C.~Dunne, T.~Capone, A.~Perer, and E.~Gleave.
+\newblock Analyzing (social media) networks with nodexl.
+\newblock In {\em Proceedings of the Fourth International Conference on
+  Communities and Technologies}, C\&\#38;T '09, pages 255--264, New York, NY,
+  USA, 2009. ACM.
+
+\bibitem{Harold2017}
+H.~Soh, S.~Sanner, M.~White, and G.~Jamieson.
+\newblock Deep sequential recommendation for personalized adaptive user
+  interfaces.
+\newblock In {\em the 22nd {ACM} International Conference on Intelligent User
+  Interfaces {(IUI-17)}}, 2017.
+
+\bibitem{Sun2013}
+G.-D. Sun, Y.-C. Wu, R.-H. Liang, and S.-X. Liu.
+\newblock A survey of visual analytics techniques and applications:
+  State-of-the-art research and future challenges.
+\newblock {\em Journal of Computer Science and Technology}, 28(5):852--867, Sep
+  2013.
+
+\bibitem{Teitler2008}
+B.~E. Teitler, M.~D. Lieberman, D.~Panozzo, J.~Sankaranarayanan, H.~Samet, and
+  J.~Sperling.
+\newblock Newsstand: A new view on news.
+\newblock In {\em Proceedings of the 16th ACM SIGSPATIAL International
+  Conference on Advances in Geographic Information Systems}, GIS '08, pages
+  18:1--18:10, New York, NY, USA, 2008. ACM.
+
+\bibitem{Tsandilas2005}
+T.~Tsandilas and m.~c. schraefel.
+\newblock An empirical assessment of adaptation techniques.
+\newblock In {\em CHI '05 Extended Abstracts on Human Factors in Computing
+  Systems}, CHI EA '05, pages 2009--2012, New York, NY, USA, 2005. ACM.
+
+\bibitem{Kempen2000}
+G.~van Kempen and L.~van Vliet.
+\newblock Mean and variance of ratio estimators used in fluorescence ratio
+  imaging.
+\newblock {\em Cytometry}, 39(4):300--305, 2000.
+
+\bibitem{Landesberger2011}
+T.~von Landesberger, A.~Kuijper, T.~Schreck, J.~Kohlhammer, J.~van Wijk, J.-D.
+  Fekete, and D.~Fellner.
+\newblock Visual analysis of large graphs: State-of-the-art and future research
+  challenges.
+\newblock {\em Computer Graphics Forum}, 30(6):1719--1749, 2011.
+
+\bibitem{Wang2010}
+J.~Wang and J.~Zhu.
+\newblock On statistical analysis and optimization of information retrieval
+  effectiveness metrics.
+\newblock In {\em Proceedings of the 33rd International ACM SIGIR Conference on
+  Research and Development in Information Retrieval}, SIGIR '10, pages
+  226--233, 2010.
+
+\bibitem{Seiji2001}
+S.~Yamada and F.~Murase.
+\newblock Adaptive user interface of a web search engine by organizing page
+  information agents.
+\newblock {\em Transactions of the Japanese Society for Artificial
+  Intelligence}, 16(1):46--54, 2001.
+
+\bibitem{Yifan2015}
+H.~Yifan and S.~Lei.
+\newblock Visualizing large graphs.
+\newblock {\em Wiley Interdisciplinary Reviews: Computational Statistics},
+  7(2):115--136, 2015.
+
+\bibitem{Zobel2006}
+J.~Zobel and A.~Moffat.
+\newblock Inverted files for text search engines.
+\newblock {\em ACM Comput. Surv.}, 38(2), July 2006.
+
+\end{thebibliography}

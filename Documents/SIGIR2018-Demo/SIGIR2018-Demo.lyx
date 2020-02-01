@@ -1,0 +1,2890 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass acmart
+\begin_preamble
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
+
+
+%\makeatletter
+%\renewcommand\@formatdoi[1]{\ignorespaces}
+%\makeatother
+
+
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{amstext}
+\usepackage{graphicx}
+\usepackage{booktabs} % For formal tables
+
+
+
+\usepackage{subfigure}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\newcommand\varlist{,\makebox[0.8em][c]{.\hfil.\hfil.},} 
+
+% DOI
+\acmDOI{10.475/123_4}
+
+% ISBN
+\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+\acmConference[WOODSTOCK'97]{ACM Woodstock conference}{July 1997}{El
+  Paso, Texas USA} 
+\acmYear{1997}
+\copyrightyear{2016}
+
+\acmPrice{15.00}
+
+\fancyhead{}
+\settopmatter{printacmref=false, printfolios=false}
+
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Ind}{\mathrm{\#}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\Sim}{\mathrm{Sim}}
+\newcommand{\ExpOneCall}{\text{Exp-}1\text{-Call@}k}
+\newcommand{\PLAR}{\text{PLAR}}
+
+\newcommand{\heq}{\hspace{-.5mm} = \hspace{-.5mm}}
+\newcommand{\seq}{\hspace{-1mm} = \hspace{-1mm}}
+
+
+
+\newcommand{\ExpNCall}[1]{\text{Exp-}#1\text{-Call@}k}
+\newcommand{\TlessK}{T_{\!\!\:k\text{-}1}}
+\def\argmax{\operatornamewithlimits{\!arg \;\! max\,}}
+\end_preamble
+\options sigconf,anonymous=false,authordraft=false
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+title{VTF: A Filter Selection-Based Search Tool for Social Network Visualization
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+title{VTF: A Visual Filter Selection-Based Search Tool for Social Network}
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{Viz-TSF: A Visual Twitter Search Tool Based on the Filtering of Geo-Tempor
+ally Coherent Content}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Mohamed Reda Bouadjenek}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+orcid{1234-5678-9012}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+affiliation{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+institution{The University of Toronto}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+streetaddress{Department of Mechanical and
+\backslash
+
+\backslash
+ Industrial Engineering}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+city{Toronto} 
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+state{Ontario} 
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+postcode{M5S 3G8}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+country{Canada}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+email{mrb@mie.utoronto.ca}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Scott Sanner}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+affiliation{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+institution{The University of Toronto}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+streetaddress{Department of Mechanical and
+\backslash
+
+\backslash
+ Industrial Engineering}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+city{Toronto} 
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+state{Ontario} 
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+postcode{M5S 3G8}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+country{Canada}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+email{ssanner@mie.utoronto.ca }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+subfour}[1]{
+\backslash
+vspace*{3mm}{
+\backslash
+noindent
+\backslash
+bf #1}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+subsubfour}[1]{
+\backslash
+vspace*{1mm}{
+\backslash
+noindent
+\backslash
+bf #1}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Geo-temporal visualization of Twitter search results is difficult 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Many applications such as real-time monitoring of social network activities
+ or urban traffic congestion reports involve high information and cognitive
+ load tasks.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%In this context, it is common to have large-scale information visualization
+ interfaces to concurrently display system status, alerts, and events.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ since displaying simultaneously all tweets that match a given query, would
+ result in a saturated and unreadable display.
+ Thus, the development of new intuitive visual interfaces is required to
+ help focus the user's attention by filtering information relevant to their
+ current query.
+ In this work, we propose a Visual Tweet Search Filter (Viz-TSF) tool to
+ search Twitter data through spatial, temporal, and content-based filters
+ to help focus the user's exploration of search results with geo-temporally
+ coherent content.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%is central to a variety of AUIs and well-suited to an Information Retrieval
+ (IR) perspective where we argue that a good overall objective for filter
+ selection is F1-Score; given the absence of known Boolean relevance labels
+ for interface elements, we instead propose optimization of a surrogate
+ metric of expected F1-Score denoted as EF1.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ We leverage a fast greedy optimization algorithm to optimize an approximation
+ of expected F1-score metric to generate filters and demonstrate its application
+ to search 2 years of Twitter content to better understand tweets that match
+ a given search query – in this demonstration paper, we describe a search
+ scenario of queries related to natural disasters that occurred in the US
+ during this period.
+ Our demo shows that Viz-TSF is capable of extracting coherent filters for
+ a wide range of queries (related to natural disasters in this paper), thus
+ aiding the user in searching and querying content in social network data
+ and opens up new opportunities for applications of visual information explorati
+on interfaces for Information Retrieval.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% contribute two fast greedy approximate optimization algorithms for EF1
+ to perform filter selection and we also define an optimal Mixed Integer
+ Linear Programming (MILP) formulation for EF1 intended to benchmark the
+ performance of the greedy approximations on moderately sized datasets.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%We experiment on three different AUI scenarios and associated datasets
+ under a variety of settings where we vary the amount of data, noise, and
+ relevant vs.
+ irrelevant class imbalance in the ground truth data.
+  We show that EF1 is a good surrogate for optimizing F1-Score and the proposed
+ greedy algorithms are a good approximation of the optimal MILP solution,
+ yet much more scalable.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%In summary, we hope this work helps better connect IR and AUI research,
+ bringing a general and formal IR perspective to this important research
+ area while opening new research directions for the application of IR methodolog
+y to AUIs.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%the community to realize the potential of the information retrieval approach
+ to address AUIs problems.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+noindent
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%{
+\backslash
+bf Keywords:} Adaptive UIs; Search Algorithms; Optimization for IR.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent {
+\backslash
+bf Keywords:}
+\end_layout
+
+\end_inset
+
+ Adaptive UIs; Visual Search Interfaces; Optimization for IR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Traditional search engines such as Google or Bing display search results
+ in a vertical list of textual summaries.
+ However, this display mode is certainly not adapted for search results
+ over Twitter content, since tweets are highly geo-localized and temporal.
+ Moreover, given the massive volume of available information in Twitter,
+ displaying all relevant tweets for a given query prevents the visual extraction
+ of relevant information as it would result in a saturated and unreadable
+ display 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2014"
+
+\end_inset
+
+.
+ Thus, adaptive user interfaces (AUIs) are necessary to filter information
+ to provide localized and relevant tweets for each query.
+ Such AUIs allow the user to efficiently explore the content of the resulted
+ tweets, to identify their critical properties (the author, the timestamp,
+ the geolocation, etc.), and to eventually fulfill their information need.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%The key difference is that while information retrieval is ubiquitous in
+ the lives of most humans in the form of web search, it has gone virtually
+ unrecognize as an appropriate model for the filtering problem in AUIs 
+\backslash
+textcolor{red}{[REFERENCE IS NEEDED]}.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Instead, machine learning methods have been widely used to address this
+ problem.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+subfigure[Global display showing anomalies.]{
+\backslash
+includegraphics[width=4.25cm]{imgs/twitter_example}
+\backslash
+label{Fig:GlobalDisplay}}
+\backslash
+subfigure[Filtered and focused display.]{
+\backslash
+includegraphics[width=4.25cm]{imgs/twitter_example_filter}
+\backslash
+label{Fig:FilteredDisplay}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subfigure[Global display showing search results.]{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename imgs/map.png
+	width 7cm
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:GlobalDisplay"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subfigure[Filtered and focused search interface.]{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename imgs/filtered_map.png
+	width 7cm
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:FilteredDisplay"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) An unfiltered user search interface with geolocated tweets that match
+ a query related to natural disaster.
+ (b) A filtered version of the interface showing three filtered subsets
+ of data identified to have high coverage of relevant content related to
+ the query: a bounding box near New York state limited to data in Feb 2015
+ and having keyword 
+\begin_inset Quotes eld
+\end_inset
+
+Blizzard
+\begin_inset Quotes erd
+\end_inset
+
+ and other time and keyword restricted bounding boxes centered on Florida
+ and Washington state.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:UseCase"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+begin{table*}[t]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+caption{Comparison between conventional Web Search and Filtering for AUIs.}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+label{tbl:Comparaison2IR}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+centering{}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+begin{tabular}{|c|>{
+\backslash
+centering}p{6cm}|>{
+\backslash
+centering}p{6cm}|}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%  & 
+\backslash
+textbf{Web Search} & 
+\backslash
+textbf{Filtering for AUIs}
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+textbf{Information Need} & Realized by query  & Selection of an event or
+ alert
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+textbf{Form of Results} & Ranked list of documents & Filter settings (bounding
+ box in visual display, time ranges, property
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% filters) that select a subset of information elements to display
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+textbf{Relevance Scoring} & Comparison of query and document content (and
+ other relevant information)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% to generate a relevance score, e.g., via TF-IDF or BM25 & Third party applicatio
+n-specific tool (e.g., a machine learning approach)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% that predicts the probability that each information element is relevant
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% to the selected alert
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+textbf{Test Data for Benchmarking} & A set of queries; human-labeled judgments
+ of document relevance to
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% each query for a test corpus (i.e., ground truth relevance) & A set of alerts
+ or events; human-labeled judgments of information element relevance
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% to a selected alert (i.e., ground truth relevance)
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+textbf{Evaluation} & Ranking metrics (P@k, AP, etc.) over documents given
+ ground truth
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% relevance  & Boolean metrics (e.g., F1-score) and Ranking metrics (P@k,
+ AP, etc.)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% over information elements selected by the filter given ground truth
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% relevance 
+\backslash
+tabularnewline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+end{table*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this work, we propose a Visual Tweet Search Filter (Viz-TSF)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://130.220.208.198:8080/AUI4IRSearch/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ tool to search Twitter data through spatial, temporal, and content-based
+ filters to help focus the user's exploration of search results with geo-tempora
+lly coherent content.
+ To make the task of AUI filtering more concrete, let's introduce an example
+ filtering search scenario for AUIs.
+ Consider the case of searching events related to natural disasters that
+ are discussed on Twitter.
+ Typically, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:GlobalDisplay"
+
+\end_inset
+
+, there would be some visual display of all tweets that match the query
+ along with highly scored Tweets (red nodes in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:GlobalDisplay"
+
+\end_inset
+
+).
+ We denote all displayed tweets 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%(such as user IP address, Tweet content, Tweet time, geographical coordinates,
+ recent activity details) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ as an information tweet that could be optionally shown or not.
+ Displaying all tweets simultaneously would result in a saturated and an
+ unreadable display for any reasonably sized query.
+ To ease the investigation and search task, users could restrict the tweets
+ displayed through a variety of filter settings to get a clear overview
+ of individual events as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:FilteredDisplay"
+
+\end_inset
+
+ – by panning and zooming in the graph display, by restricting upper and
+ lower bounds on a time filter, and/or by selecting properties (e.g., in a
+ drop-down selection or fielded keyword search in fields such as Tweet content).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+textcolor{red}{Such filter settings are expected to help a monitoring agent
+ to efficiently investigate the cause and implications of the triggered
+ alarm, to identify common properties of the elements involved in that alert,
+ and to initiate appropriate corrective actions in a timely manner.}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While the user would typically find it hard to manually set these filters
+ to optimally reveal information about specific relevant events related
+ to his/her query, an AUI that is aware of the probability that each tweet
+ is relevant to the query could automatically suggest filter settings that
+ might display the relevant tweet set with the least amount of irrelevant
+ clutter.
+ Thus, the user could use these filter settings to carry out his search
+ and investigation by identifying common properties of the tweets related
+ to the query that are in the same cluster.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+We assume the prediction of information element relevance to an alert to
+ be provided by a third-party since this prediction is highly specific to
+ each particular application setting and not the focus of this work (see
+ Related Work in Section 6 for further discussion).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%In this work, we intend to
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%focus on the broader problem of AUI filtering in a range of visual
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%display applications assuming this relevance predictor is given.
+ However,
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%in addition to scoring information elements of direct causal interest
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%to the alert, it is likely that the AUI will also contain other related
+ material requiring
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%the concurrent display of information.
+  For example, such a material could be messages exchanged, the time at
+ which these messages were exchanged, etc.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%For example, such a rule could
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%be 
+\backslash
+textquotedblleft if a connection is shown, the IP addresses of
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%the two connected machines must also be shown
+\backslash
+textquotedblright ,
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%which would trigger additional (soft) constraints for the filter optimization.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Quotes grd
+\end_inset
+
+retrieved” tweets are not individually selected, but rather chosen through
+ a filter setting (that the user can further modify), the problem is clearly
+ an optimization problem of how to restrict filter settings to show the
+ user the most relevant tweets to his/her query.
+ While this diverges from the standard information retrieval setting where
+ ranked documents are chosen individually 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Baeza-Yates2010"
+
+\end_inset
+
+, these additional constraints do not change the overall information retrieval
+ objective to select relevant information given the user
+\begin_inset Quotes ers
+\end_inset
+
+s information need.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Furthermore, standard information retrieval evaluation benchmarking
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%methodology (e.g., the Cranfield paradigm) and metrics such as precision@k
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%or average precision are also relevant here (assuming that visual
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%saliency can serve as a surrogate method for achieving a visual rank
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%ordering of selected information elements).
+  Unlike information retrieval
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%where Boolean metrics such as F-Score are not often used since ranked
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%lists are usually limited to the top-10, graphical displays can present
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%substantially more information of varying sizes that make precision-recall
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%trade-off metrics like F-Score also relevant for evaluation.
+\backslash
+textcolor{red}{ [THIS SENCTENCE IS UNCLEAR]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%With the aim of assisting network monitoring agents in carrying out their
+ daily tasks, we present in this paper a new visual search paradigm for
+ AUIs.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% VISUAL SEARCH RESULTS -- VISUAL SEARCH FILTER
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% VISUAL PRESENTATION OF SEARCH RESULTS -- Reda says terminology may be
+ confused
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To the best of our knowledge, Viz-TSF is the first tool to address an informatio
+n retrieval problem (with search parameters indicated by spatial windows,
+ time periods, and keywords) to optimizing the results display through filter
+ selection.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% The contributions of this paper are summarized as follows: 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%  
+\backslash
+begin{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+item We propose a new theory of IR for adaptive visual user interfaces.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+item We propose new expected metrics for optimization based on conventional
+ IR metrics, i.e., precision, recall, and F1-Score.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% We argue that F1-Score and hence expected F1-Score is a good metric for
+ this domain.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+item We propose new filter setting search algorithms based on greedy strategies
+ and optimal solutions.
+ These algorithms are based on the optimization of new proposed metrics.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% %
+\backslash
+item  We propose new MILP-based search method, which can also used about
+ justification of new search algorithm.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+item We present a thorough evaluation on three different datasets to show
+ that the greedy algorithms we propose are a good approximation of the optimal
+ method, and perform well in the presence of noise (i.e., corruption of the
+ ground truth labels).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% %can even perform better with a noisy classifier 
+\backslash
+textendash{} up to 42
+\backslash
+% improvement for a classifier with an accuracy of 60
+\backslash
+%.
+ On the other hand, 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% We experimentally demonstrate that the expected F1-Score metric is a good
+ surrogate of F1-Score.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% %specifically with a highly accurate classifier 
+\backslash
+textendash{} for a classifier with 90
+\backslash
+% accuracy, the RMSE is roughly 0.0111).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+V
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lowercase{iz}
+\end_layout
+
+\end_inset
+
+-TSF architecture and features
+\end_layout
+
+\begin_layout Standard
+The main components of the architecture of Viz-TSF are: 
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Crawler and Indexer.
+
+\emph default
+ To find and organize tweets for further retrieval.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Query Analyzer
+\emph default
+.
+ To understand the user's information need.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Filter setting builder
+\emph default
+.
+ To compute the different filters.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Ranking Function
+\emph default
+.
+ To rank the tweets based on their relevance probability.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+AUI
+\emph default
+.
+ To present the information to the user in an accessible and interactive
+ form using filters.
+\end_layout
+
+\begin_layout Standard
+While the two first components are common to many IR systems, we briefly
+ describe in the following the remaining components which are at the heart
+ of Viz-TSF.
+\end_layout
+
+\begin_layout Subsection
+Filter setting builder
+\end_layout
+
+\begin_layout Standard
+The filter setting builder component of Viz-TSF relies on three sub-filters
+ to select a subset of relevant tweets in a data visualization interface:
+ keywords sub-filter, time sub-filter, and space (location) sub-filter.
+ A global filter that is generated by 
+\emph on
+conjoining
+\emph default
+ these three sub-filters, is used to select the subset of relevant tweets.
+ Each sub-filter is constructed following a greedy top-down approach while
+ seeking to optimize an approximation of expected F1-score metric.
+ For efficiency, the algorithm implemented in this module uses binary partitioni
+ng search, where the algorithm operates by selecting between two distinct
+ alternatives set of tweets in each iteration.
+ Details of this algorithm are further provided in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bouadjenek2018b"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In practice, a single filter chosen by the previously algorithm will narrow
+ the user on a single 
+\begin_inset Quotes eld
+\end_inset
+
+event
+\begin_inset Quotes erd
+\end_inset
+
+.
+ However, there are multiple events and so the user should have a choice
+ of multiple filters.
+ Hence, after the first filter is produced, all selected tweets by the filter
+ have their scores zeroed out.
+ The filtering algorithm is then run again, where it will inherently focus
+ on a different content set.
+ This procedure is repeated until the desired number of filters is reached.
+ The user should then be able to choose among the multiple filters produced.
+ 
+\end_layout
+
+\begin_layout Subsection
+Ranking function
+\end_layout
+
+\begin_layout Standard
+The filter setting builder component of Viz-TSF relies on the optimization
+ of an approximation of expected F1-score metric.
+ This expected value is computed based on the conditional probability 
+\begin_inset Formula $p(R|t,q)$
+\end_inset
+
+, i.e., the probability that a tweet 
+\begin_inset Formula $t$
+\end_inset
+
+ is relevant to the query 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Therefore, the ranking function component of Viz-TSF uses a language model
+ ranking approach, which assumes that a query 
+\begin_inset Formula $q$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+generated
+\begin_inset Quotes erd
+\end_inset
+
+ by a probabilistic model based on an document 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Hence, given a query 
+\begin_inset Formula $q$
+\end_inset
+
+ and a document 
+\begin_inset Formula $d$
+\end_inset
+
+, the language model estimates the conditional probability 
+\begin_inset Formula $p(d|q)$
+\end_inset
+
+, i.e., the probability that 
+\begin_inset Formula $d$
+\end_inset
+
+ generates the observed 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ This ranking component is based on the bayesian smoothing language using
+ dirichlet priors, which is described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zhai2001"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+subfour{
+\end_layout
+
+\end_inset
+
+Keywords greedy algorithm:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The idea behind the keywords-based greedy top-down algorithm is the following:
+ given a set of tweets and an evaluation measure, the algorithm aims to
+ select a set of keywords to form a negation query in order to exclude a
+ subset of elements containing these keywords for the purpose of maximizing
+ the evaluation measure.
+\end_layout
+
+\begin_layout Plain Layout
+Formally, given a keyword query representation 
+\begin_inset Formula $Q_{k}$
+\end_inset
+
+, the algorithm aims to select an optimal subset of 
+\begin_inset Formula $k$
+\end_inset
+
+ terms
+\begin_inset Formula $T_{k}^{*}\subset E$
+\end_inset
+
+ (where 
+\begin_inset Formula $|T_{k}^{*}|=k$
+\end_inset
+
+ and 
+\begin_inset Formula $E$
+\end_inset
+
+ is the initial set of elements) to build a negation keyword query 
+\begin_inset Formula $Q_{k}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Q_{k}=\{\neg t_{1}^{*},\dots\neg t_{k}^{*}\}$
+\end_inset
+
+, in order to optimize a given evaluation measure, e.g.
+ expected precision, expected recall, expected F1-score.
+ This is achieved by building 
+\begin_inset Formula $T_{k}^{*}$
+\end_inset
+
+ in a greedy manner by choosing the next optimal term 
+\begin_inset Formula $t_{k}^{*}$
+\end_inset
+
+ given the previous set of optimal term selections 
+\begin_inset Formula $T_{k-1}^{*}=\{t_{1}^{*},\ldots,t_{k-1}^{*}\}$
+\end_inset
+
+ (assuming 
+\begin_inset Formula $T_{0}^{*}=\emptyset$
+\end_inset
+
+) using the following selection criterion: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+t_{k}^{*}=\argmax_{t_{k}\notin T_{k-1}^{*}}\hspace{-0.3mm}[EF1(E^{*}\textrm{ that satisfies }Q_{k}=\{\neg t_{1}^{*},\dots\neg t_{k}^{*}\})]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+assuming we use expected F1-score to assess 
+\begin_inset Formula $E^{*}$
+\end_inset
+
+, which is a subset of the initial element set 
+\begin_inset Formula $E$
+\end_inset
+
+ that satisfy the negation keyword query 
+\begin_inset Formula $Q_{k}$
+\end_inset
+
+.
+ In order to reduce the keyword search space, we propose to use the top
+ 100 terms ranked using mutual information.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+AUI
+\end_layout
+
+\begin_layout Standard
+As shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MainInterface"
+
+\end_inset
+
+, our designed solution to address the above discussed requirements is a
+ three-layout interface consisting of: (i) an interactive map, which presents
+ the search results and with which the user can interact by zooming in,
+ by clicking on filters or tweets to get an information summary, (ii) a
+ querying panel to specify a query using a set of keywords and a time window,
+ as well as two tuning parameters (the number of filters produced and the
+ value of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ for the F-Measure that is optimized), and (iii) a list of the filters produced
+ with respect to a given query, which can be used to (un)hide some filters
+ for more clarity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imgs/main.png
+	width 18cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Main interface of Viz-TSF.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MainInterface"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, note that Viz-TSF is built on the top of the Lucene IR system
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://lucene.apache.org/core/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "McCandless2010"
+
+\end_inset
+
+ for the indexing, query processing and retrieval part, and on the Google
+ Map API for data visualization.
+\end_layout
+
+\begin_layout Section
+What will be demonstrated?
+\end_layout
+
+\begin_layout Standard
+This demonstration will be illustrated using Twitter data crawled using
+ the Twitter Streaming API for two years spanning 2013 and 2014 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Iman2017"
+
+\end_inset
+
+.
+ This dataset contains more than 2.5 TB of compressed data, which contains
+ a total of 829, 026, 458 English tweets.
+\end_layout
+
+\begin_layout Standard
+In this demonstration, a user can mainly perform the following typical search
+ scenario:
+\end_layout
+
+\begin_layout Itemize
+For example, a user searches for information on weather-related natural
+ disaster events (flood, hurricane, typhoon, drought, storm).
+ Using the querying panel, the user enters a set of keywords related to
+ his/her need, selects a search time window (e.g., January 2013 to June 2014),
+ selects the number of filters to be returned, and set a value for 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ A low value of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ constrains the algorithm to focus on the optimization of the precision,
+ and thus, obtaining filters with small clusters, whereas a high value of
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ constrains the algorithm to focus on the optimization of the recall, and
+ thus, obtaining filters with big clusters.
+ The value of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is to be set by the user empirically (default 1).
+ 
+\end_layout
+
+\begin_layout Itemize
+As shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:main2"
+
+\end_inset
+
+, a list of filters is suggested to the user and displayed on the main map
+ along with their tweets (red nodes stand for highly relevant tweets, and
+ blue nodes for tweets with a low relevance).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/main2.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Results showing all the filters that match the query.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:main2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Next, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:main3"
+
+\end_inset
+
+, using the side panel, the user may deselect some filters that he/she thinks
+ are meaningless in order to focus on a subset of filters that are of interest.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/main3.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sub-set of the filters that match the query.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:main3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Then, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:main4"
+
+\end_inset
+
+, the user may zoom in a specific filter for investigation by looking for
+ its top terms, its associated tweets, its time window, etc.
+ In the case of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:main4"
+
+\end_inset
+
+, the user investigates a filter that contains tweets related to some flood
+ disasters that happened in the north-east coast of the US during December
+ 2013 to February 2014.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/main4.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Investigating filter 1.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:main4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Similarly, the user may investigate a second filter by looking at its content.
+ For example, in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:main5"
+
+\end_inset
+
+, the filter investigated is related to a series of storms and hurricanes
+ that happened in the south-east coast of the US (mainly around Florida)
+ during April 2013 to June 2013.
+ Clearly, the two investigated filters are of two different events related
+ to two different natural disasters that happened during two different periods.
+ Thus, this suggests that in this search case, Viz-TSF succeeded in finding
+ different filters that focus on different events related to the initial
+ search query.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/main5.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Investigating filter 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:main5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Finally, the user may decide the re-run his/her query based on a specific
+ local geographical area.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:main6"
+
+\end_inset
+
+, the query is re-executed on the US east coast, where new local filters
+ are produced, which may be investigated by the user.
+ For example, the bottom filter shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:main6"
+
+\end_inset
+
+ with a time window from June to July 2013 contains a set of tweets that
+ warn people about the importance of preparing houses for the new upcoming
+ hurricane season.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/main6.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtering east US coast.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:main6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In summary, the content of this demonstration aims to present to the users
+ a new way to browse search results of geo-temporally content via filter
+ selection, specifically on tweets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Conclusion: provide a quick way to visually browse through a large set of
+ content to get a visual interactive summary view of localized events and
+ occurrences related to information need.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusion and future work
+\end_layout
+
+\begin_layout Standard
+Overall, we aim for this work to bring a formal IR perspective to the important
+ research area of AUIs while opening new research directions for the application
+ of optimization techniques for filter selection in AUIs.
+ As information retrieval has transformed our web experience, we believe
+ there is a similar opportunity to transform the present nascent state of
+ AUIs through optimization and information retrieval principles to make
+ them more ubiquitous in our daily lives.
+\end_layout
+
+\begin_layout Standard
+In this paper we have introduced Viz-TSF, a tool to search Twitter content
+ through spatial, temporal, and content-based filters to help focus the
+ user's exploration of search results with geo-temporally coherent content.
+ We leveraged a fast greedy optimization algorithm to optimize an approximation
+ of expected F1-score metric to generate filters and demonstrate its application
+ to search 2 years of Twitter content to better understand tweets that match
+ a given search query.
+ The search scenario we have described of queries related to natural disasters
+ that occurred in the US during this period showed the advantage of using
+ Viz-TSF to mine large-scale data of social networks.
+\end_layout
+
+\begin_layout Standard
+Important areas of future work include consideration of the role of (pseudo-)rel
+evance and other explicit or implicit feedback methods to create a tighter
+ and more responsive user interaction loop.
+ Furthermore, in combination with user studies and consideration of human
+ factors, future work should also consider novel application-specific objectives
+, e.g., in specific visualization frameworks or based on a ranking theory
+ of results presentation (e.g., using size or color for visual ranking emphasis).
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "biblio"
+options "abbrv"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

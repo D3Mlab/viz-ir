@@ -1,0 +1,72 @@
+1535316985407	START: 	kmeans	pos2,pos3,pos8
+1535316988245	answer_update_nd_1: 	flood
+1535316990691	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535316990861	Query_Execution_Time	150
+1535316994491	slider_start_change: 	CONTEXT:query:flood	time_range (25-04-2013,31-12-2014)	slider_topK_range:600
+1535316995474	clicking_tweet:4377	CONTEXT:query:flood	time_range (25-04-2013,31-12-2014)	slider_topK_range:600	neg
+1535316996989	clicking_tweet:4610	CONTEXT:query:flood	time_range (25-04-2013,31-12-2014)	slider_topK_range:600	neg
+1535316998604	clicking_tweet:4621	CONTEXT:query:flood	time_range (25-04-2013,31-12-2014)	slider_topK_range:600	neg
+1535317000036	clicking_tweet:4593	CONTEXT:query:flood	time_range (25-04-2013,31-12-2014)	slider_topK_range:600	neg
+1535317002970	slider_end_change: 	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317004102	clicking_tweet:4621	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600	neg
+1535317005749	clicking_tweet:18949	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600	neg
+1535317007635	removing_filter:    tweets_size:75,pos_tweets_size:2	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317008088	removing_filter:    tweets_size:71,pos_tweets_size:1	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317008504	removing_filter:    tweets_size:91,pos_tweets_size:0	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317009331	ZoomLevel:5	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317010211	MouseDrag: New Center:(29.80969461680094, -90.5625)	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317011150	clicking_bbox:tweets_size:44,pos_tweets_size:12	CONTEXT:query:flood	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317015763	answer_update_nd_1: 	flood
+1535317020330	answer_update_location_1: 	Florida
+1535317026974	answer_update_date_1: 	2014-07-02
+1535317027110	answer_update_date_1: 	2014-07-23
+1535317028025	final_answer1	ND:	flood	date:	2014-07-23	location:	Florida
+1535317030123	answer_update_nd_2: 	drought
+1535317034507	new_query: 	CONTEXT:query:drought	time_range (25-04-2013,14-11-2013)	slider_topK_range:600
+1535317034666	Query_Execution_Time	149
+1535317038461	slider_end_change: 	CONTEXT:query:drought	time_range (01-01-2013,02-04-2014)	slider_topK_range:558
+1535317042460	slider_start_change: 	CONTEXT:query:drought	time_range (24-04-2013,02-04-2014)	slider_topK_range:558
+1535317043701	clicking_tweet:2751	CONTEXT:query:drought	time_range (24-04-2013,02-04-2014)	slider_topK_range:558	neg
+1535317045195	clicking_tweet:2769	CONTEXT:query:drought	time_range (24-04-2013,02-04-2014)	slider_topK_range:558	neg
+1535317047042	clicking_tweet:2843	CONTEXT:query:drought	time_range (24-04-2013,02-04-2014)	slider_topK_range:558	neg
+1535317047874	clicking_tweet:3097	CONTEXT:query:drought	time_range (24-04-2013,02-04-2014)	slider_topK_range:558	neg
+1535317049538	slider_end_change: 	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317051659	ZoomLevel:5	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317053123	MouseDrag: New Center:(37.4814217039537, -95.6162109375)	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317055128	clicking_bbox:tweets_size:72,pos_tweets_size:0	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317058658	clicking_bbox:tweets_size:72,pos_tweets_size:0	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317061003	clicking_bbox:tweets_size:72,pos_tweets_size:0	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317070914	clicking_bbox:tweets_size:72,pos_tweets_size:0	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317075803	clicking_tweet:3095	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558	neg
+1535317080299	clicking_tweet:2901	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558	neg
+1535317081331	clicking_tweet:2743	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558	neg
+1535317082243	clicking_tweet:3099	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558	neg
+1535317083731	clicking_tweet:3154	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558	neg
+1535317085207	clicking_bbox:tweets_size:72,pos_tweets_size:0	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317088271	clicking_bbox:tweets_size:72,pos_tweets_size:0	CONTEXT:query:drought	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317094336	answer_update_date_2: 	2014-02-01
+1535317097619	answer_update_location_2: 	Michigan
+1535317099275	answer_update_nd_2: 	drought
+1535317099682	final_answer2	ND:	drought	date:	2014-02-01	location:	Michigan
+1535317105956	new_query: 	CONTEXT:query:droughtblizzard	time_range (24-04-2013,21-06-2014)	slider_topK_range:558
+1535317105967	Query_Execution_Time	1
+1535317109733	new_query: 	CONTEXT:query:blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535317109915	Query_Execution_Time	167
+1535317113500	slider_start_change: 	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317114614	clicking_tweet:1331	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749	pos8
+1535317116268	ZoomLevel:5	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317117412	MouseDrag: New Center:(39.2386593474174, -91.08984375)	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317118580	ZoomLevel:6	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317119540	MouseDrag: New Center:(39.40863499752613, -76.6318359375)	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317124816	removing_filter:    tweets_size:165,pos_tweets_size:0	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317125038	adding_filter:     tweets_size:165,pos_tweets_size:0	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317126174	removing_filter:    tweets_size:165,pos_tweets_size:0	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317126810	removing_filter:    tweets_size:103,pos_tweets_size:0	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317127805	removing_filter:    tweets_size:95,pos_tweets_size:0	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749
+1535317135432	clicking_tweet:1294	CONTEXT:query:blizzard	time_range (24-09-2014,31-12-2014)	slider_topK_range:749	pos8
+1535317144393	answer_update_date_3: 	2014-11-01
+1535317144599	answer_update_date_3: 	2014-11-10
+1535317150590	answer_update_location_3: 	Massachusetts
+1535317152843	answer_update_nd_3: 	blizzard
+1535317153363	final_answer3	ND:	blizzard	date:	2014-11-10	location:	Massachusetts
+1535317153365	answers_kmeans	ND1:	flood	date1:	2014-07-23	location1:	Florida	ND2:	drought	date2:	2014-02-01	location2:	Michigan	ND3:	blizzard	date3:	2014-11-10	location3:	Massachusetts

@@ -1,0 +1,305 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[unicode=true,
+ bookmarks=false,
+ breaklinks=false,pdfborder={0 0 1},backref=section,colorlinks=true]
+ {hyperref}
+\hypersetup{
+ allcolors=blue}
+\usepackage{breakurl}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+
+%% Language and font encodings
+\usepackage[english]{babel}
+
+
+%% Sets page size and margins
+
+
+\linespread{1.2}
+
+
+%% Useful packages
+\usepackage{blkarray}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{indentfirst}
+
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\title{Linear Optimization of filtering for AUI}
+\author{Yihao Du}
+
+\makeatother
+
+\begin{document}
+\maketitle
+
+\section{Problem definition}
+
+In this problem, the goal is to develop an efficient algorithm for
+optimize filter setting for the retrieval set associated with maximum
+set-score.
+
+The scenario of global element set $E$ includes $m$ unique elements.
+Each of the elements in this global set is associated with its score
+$S$, which is used for further estimation of set-score. We intend
+to develop a algorithm ($f$) of optimize filter setting for the optimal
+retrieval set ($L$). 
+\begin{equation}
+\begin{aligned} & \underset{f}{\text{maximize}} &  & \emph{L(f(E))}\end{aligned}
+\end{equation}
+
+It is easy to observe two significant parts in this problem: How to
+efficiently filter unnecessary elements ($f$)? How to evaluate different
+sets ($L$)?
+
+\section{Set Evaluation Metrics}
+
+In information retrieval, a Retrieval Set (RS) is usually evaluated
+using three main metrics: precision, recall and F-score, which are
+defined as follows:
+
+\begin{equation}
+\emph{\ensuremath{P(RS)}}=\dfrac{{\displaystyle \sum_{i\in RS}S(i)}}{|RS|}=\dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{\sum_{i=0}^{m}I(i)}
+\end{equation}
+
+\begin{equation}
+\emph{\ensuremath{R(RS)}}=\dfrac{{\displaystyle \sum_{i\in RS}S(i)}}{|RE|}=\dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}S(i)}}=\dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{C}
+\end{equation}
+
+\begin{equation}
+\emph{\ensuremath{F(RS)}}=\dfrac{2\times Precision\times Recall}{Precision+Recall}=\dfrac{2\times{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}+{\displaystyle \sum_{i=0}^{m}S(i)}}=\dfrac{2\times{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}+C}
+\end{equation}
+
+\noindent where, $S(i)$ is a binary score indication function defined
+as: 
+
+\begin{equation}
+S(i)=\begin{cases}
+1, & \text{if element \ensuremath{i} is relevant}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+Similarly, $I(i)$ is a binary variable that indicates whether an
+element $i$ is selected in retrieval set, and is formally defined
+as:
+
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{iff \ensuremath{i\in RS}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+Finally, $\left|RE\right|$ is the size of the relevant element set.
+The denominator in \emph{Recall} is score sum of global element set
+$E$, which only depends on score of data. Therefore, it is a constant
+$C$ in our problem.
+
+In practice, a probabilistic score is used to approximate $S(i)$
+because of unavailability of real label. Therefore, this relaxation
+of the score $S(i)$ into a continuous value results in \emph{expected}
+values for the metrics above.
+
+\section{Search Algorithm Validation - Metrics Optimization}
+
+In order to validate search algorithm, we are able to compare its
+result with the one obtained by metrics optimization. The objective
+function in this optimization problem is formulated based on different
+metrics (Precision, Recall and F-score). The constraints are defined
+based on different fields (time, keyword and position). 
+
+\subsection{Objective functions}
+
+\subsubsection{Precision}
+
+The optimization problem to maximize precision is formulated as follows:
+
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & \dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}}\\
+s.t & I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+Note this is a Mixed-Integer Linear Fractional Programming (MILFP)
+problem, so Charnes-Cooper transformation is used to transform the
+problem into a Mixed-Integer Nonlinear Programming (MINLP) as follows:
+
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot u\cdot I(i)}\\
+s.t & {\displaystyle \sum_{i=0}^{m}u\cdot I(i)}=1\\
+ & u>0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\noindent where $u$ is defined as follows:
+
+\begin{equation}
+u=\dfrac{1}{{\displaystyle \sum_{i=0}^{m}I(i)}}
+\end{equation}
+
+Next, Glover's linearization scheme is used to convert the MINLP into
+an equivalent Mixed-Integer Linear Programming (MILP) problem that
+can be directly optimized. Hence, a new variables $y(i)=u\cdot I(i)$
+is introduced again and using this, an equivalent MILP is given:
+
+\begin{equation}
+\begin{array}{ll}
+\underset{y}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot y(i)}\\
+s.t & {\displaystyle \sum_{i=0}^{m}y(i)}=1\\
+ & y(i)\leqslant u,\forall i\in RS\\
+ & y(i)\leqslant M\cdot I(i),\forall i\in RS\\
+ & y(i)\geqslant u-M\cdot(1-I(i)),\forall i\in RS\\
+ & u>0,y(i)\geq0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+
+\subsubsection{Recall}
+
+Maximization of Recall can be formulated as the following optimization
+problem:
+
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & \dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{C}\\
+s.t & I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+This problem is reformulated with Glover's linearization as follows:
+
+\begin{equation}
+\begin{array}{ll}
+\underset{y}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot y(i)}\\
+s.t & y(i)\leqslant\dfrac{1}{C},\forall i\in RS\\
+ & y(i)\leqslant M\cdot I(i),\forall i\in RS\\
+ & y(i)\geqslant u-M\cdot(1-I(i)),\forall i\in RS\\
+ & y(i)\geq0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+
+\subsubsection{F-score}
+
+Maximization of F-score can be formulated as the following optimization
+problem:
+
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & \dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}+C}\\
+s.t & I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+—
+
+Note this is a Mixed-Integer Linear Fractional Programming (MILFP)
+problem, so Charnes-Cooper transformation is used to transform the
+problem into a Mixed-Integer Nonlinear Programming (MINLP) as follows:
+
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot u\cdot I(i)}\\
+s.t & {\displaystyle \sum_{i=0}^{m}u\cdot I(i)}\leq1\\
+ & u>0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\noindent where $u$ is defined as follows:
+
+\begin{equation}
+u=\dfrac{1}{{\displaystyle \sum_{i=0}^{m}I(i)}+C}
+\end{equation}
+
+—
+
+With Charnes-Cooper transformation and Glover's linearization method,
+this optimization problem can be transformed into the following problem.
+
+\begin{equation}
+\begin{array}{ll}
+\underset{y}{\text{maximize}} & \sum_{i=0}^{m}S(i)\cdot y(i)\\
+s.t & \sum_{i=0}^{m}y(i)+uC=1\\
+ & y(i)\leqslant u,\forall i\in RS\\
+ & y(i)\leqslant M\cdot I(i),\forall i\in RS\\
+ & y(i)\geqslant u-M\cdot(1-I(i)),\forall i\in RS\\
+ & u>0,y(i)\geq0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+
+\subsection{Constraints}
+
+\subsubsection{Time}
+
+Time filter setting is a two - element tuple $(ts,te)$, which indicates
+start ($ts$) and end ($te$) of time-line. For element $i$ with
+its time $t(i)$, the time constraint for $I(i)$ can be formulated
+as follows:
+
+\begin{comment}
+\%\textbackslash{}begin\{equation\} 
+
+\%(ts \textbackslash{}leqslant t(i)) \textbackslash{}land (t(i) \textbackslash{}leqslant
+te) \textbackslash{}implies (I(i) = 1) 
+
+\%\textbackslash{}end\{equation\} 
+\end{comment}
+
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{if \ensuremath{(ts\leqslant t(i))\land(t(i)\leqslant te)}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+
+\subsubsection{Keyword}
+
+Keyword filter setting is a set of unigram ($K$), which filters the
+element does not have these words. For element $i$ with its whole
+unigram set $W(i)$, the keyword constraint for $I(i)$ can be formulated
+as follows: 
+
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{if \ensuremath{K\cap W(i)\neq\emptyset}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\textcolor{red}{The implementation method is still unclear in keyword
+field.}
+
+\subsubsection{Position}
+
+Position filter setting is a four - element tuple (xmin, ymin, xmax,
+ymax), which filters the element out of a bounding box created based
+on tuple. For element $i$ with its position ($x(i),y(i)$), the position
+constraint for $I(i)$ can be formulated as follows:
+
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{if \ensuremath{(xmin\leqslant x(i))\land(x(i)\leqslant xmin)\land(ymin\leqslant y(i))\land(y(i)\leqslant ymax)}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\end{document}

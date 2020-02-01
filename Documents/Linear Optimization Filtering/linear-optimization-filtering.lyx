@@ -1,0 +1,721 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+
+
+%% Language and font encodings
+\usepackage[english]{babel}
+
+
+%% Sets page size and margins
+
+
+\linespread{1.2}
+
+
+%% Useful packages
+\usepackage{blkarray}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{indentfirst}
+
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\title{Linear Optimization of filtering for AUI}
+\author{Yihao Du}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8x
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle false
+\pdf_quoted_options "allcolors=blue"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem definition
+\end_layout
+
+\begin_layout Standard
+In this problem, the goal is to develop an efficient algorithm for optimize
+ filter setting for the retrieval set associated with maximum set-score.
+\end_layout
+
+\begin_layout Standard
+The scenario of global element set 
+\begin_inset Formula $E$
+\end_inset
+
+ includes 
+\begin_inset Formula $m$
+\end_inset
+
+ unique elements.
+ Each of the elements in this global set is associated with its score 
+\begin_inset Formula $S$
+\end_inset
+
+, which is used for further estimation of set-score.
+ We intend to develop a algorithm (
+\begin_inset Formula $f$
+\end_inset
+
+) of optimize filter setting for the optimal retrieval set (
+\begin_inset Formula $L$
+\end_inset
+
+).
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned} & \underset{f}{\text{maximize}} &  & \emph{L(f(E))}\end{aligned}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is easy to observe two significant parts in this problem: How to efficiently
+ filter unnecessary elements (
+\begin_inset Formula $f$
+\end_inset
+
+)? How to evaluate different sets (
+\begin_inset Formula $L$
+\end_inset
+
+)?
+\end_layout
+
+\begin_layout Section
+Set Evaluation Metrics
+\end_layout
+
+\begin_layout Standard
+In information retrieval, a Retrieval Set (RS) is usually evaluated using
+ three main metrics: precision, recall and F-score, which are defined as
+ follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\emph{\ensuremath{P(RS)}}=\dfrac{{\displaystyle \sum_{i\in RS}S(i)}}{|RS|}=\dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{\sum_{i=0}^{m}I(i)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\emph{\ensuremath{R(RS)}}=\dfrac{{\displaystyle \sum_{i\in RS}S(i)}}{|RE|}=\dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}S(i)}}=\dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{C}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\emph{\ensuremath{F(RS)}}=\dfrac{2\times Precision\times Recall}{Precision+Recall}=\dfrac{2\times{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}+{\displaystyle \sum_{i=0}^{m}S(i)}}=\dfrac{2\times{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}+C}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where, 
+\begin_inset Formula $S(i)$
+\end_inset
+
+ is a binary score indication function defined as: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S(i)=\begin{cases}
+1, & \text{if element \ensuremath{i} is relevant}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+Similarly, 
+\begin_inset Formula $I(i)$
+\end_inset
+
+ is a binary variable that indicates whether an element 
+\begin_inset Formula $i$
+\end_inset
+
+ is selected in retrieval set, and is formally defined as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{iff \ensuremath{i\in RS}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+Finally, 
+\begin_inset Formula $\left|RE\right|$
+\end_inset
+
+ is the size of the relevant element set.
+ The denominator in 
+\emph on
+Recall
+\emph default
+ is score sum of global element set 
+\begin_inset Formula $E$
+\end_inset
+
+, which only depends on score of data.
+ Therefore, it is a constant 
+\begin_inset Formula $C$
+\end_inset
+
+ in our problem.
+\end_layout
+
+\begin_layout Standard
+In practice, a probabilistic score is used to approximate 
+\begin_inset Formula $S(i)$
+\end_inset
+
+ because of unavailability of real label.
+ Therefore, this relaxation of the score 
+\begin_inset Formula $S(i)$
+\end_inset
+
+ into a continuous value results in 
+\emph on
+expected
+\emph default
+ values for the metrics above.
+\end_layout
+
+\begin_layout Section
+Search Algorithm Validation - Metrics Optimization
+\end_layout
+
+\begin_layout Standard
+In order to validate search algorithm, we are able to compare its result
+ with the one obtained by metrics optimization.
+ The objective function in this optimization problem is formulated based
+ on different metrics (Precision, Recall and F-score).
+ The constraints are defined based on different fields (time, keyword and
+ position).
+ 
+\end_layout
+
+\begin_layout Subsection
+Objective functions
+\end_layout
+
+\begin_layout Subsubsection
+Precision
+\end_layout
+
+\begin_layout Standard
+The optimization problem to maximize precision is formulated as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & \dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}}\\
+s.t & I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note this is a Mixed-Integer Linear Fractional Programming (MILFP) problem,
+ so Charnes-Cooper transformation is used to transform the problem into
+ a Mixed-Integer Nonlinear Programming (MINLP) as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot u\cdot I(i)}\\
+s.t & {\displaystyle \sum_{i=0}^{m}u\cdot I(i)}=1\\
+ & u>0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $u$
+\end_inset
+
+ is defined as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u=\dfrac{1}{{\displaystyle \sum_{i=0}^{m}I(i)}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, Glover's linearization scheme is used to convert the MINLP into an
+ equivalent Mixed-Integer Linear Programming (MILP) problem that can be
+ directly optimized.
+ Hence, a new variables 
+\begin_inset Formula $y(i)=u\cdot I(i)$
+\end_inset
+
+ is introduced again and using this, an equivalent MILP is given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{y}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot y(i)}\\
+s.t & {\displaystyle \sum_{i=0}^{m}y(i)}=1\\
+ & y(i)\leqslant u,\forall i\in RS\\
+ & y(i)\leqslant M\cdot I(i),\forall i\in RS\\
+ & y(i)\geqslant u-M\cdot(1-I(i)),\forall i\in RS\\
+ & u>0,y(i)\geq0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Recall
+\end_layout
+
+\begin_layout Standard
+Maximization of Recall can be formulated as the following optimization problem:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & \dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{C}\\
+s.t & I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This problem is reformulated with Glover's linearization as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{y}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot y(i)}\\
+s.t & y(i)\leqslant\dfrac{1}{C},\forall i\in RS\\
+ & y(i)\leqslant M\cdot I(i),\forall i\in RS\\
+ & y(i)\geqslant u-M\cdot(1-I(i)),\forall i\in RS\\
+ & y(i)\geq0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+F-score
+\end_layout
+
+\begin_layout Standard
+Maximization of F-score can be formulated as the following optimization
+ problem:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & \dfrac{{\displaystyle \sum_{i=0}^{m}S(i)\cdot I(i)}}{{\displaystyle \sum_{i=0}^{m}I(i)}+C}\\
+s.t & I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+Note this is a Mixed-Integer Linear Fractional Programming (MILFP) problem,
+ so Charnes-Cooper transformation is used to transform the problem into
+ a Mixed-Integer Nonlinear Programming (MINLP) as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{I}{\text{maximize}} & {\displaystyle \sum_{i=0}^{m}S(i)\cdot u\cdot I(i)}\\
+s.t & {\displaystyle \sum_{i=0}^{m}u\cdot I(i)}\leq1\\
+ & u>0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $u$
+\end_inset
+
+ is defined as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u=\dfrac{1}{{\displaystyle \sum_{i=0}^{m}I(i)}+C}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+With Charnes-Cooper transformation and Glover's linearization method, this
+ optimization problem can be transformed into the following problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\underset{y}{\text{maximize}} & \sum_{i=0}^{m}S(i)\cdot y(i)\\
+s.t & \sum_{i=0}^{m}y(i)+uC=1\\
+ & y(i)\leqslant u,\forall i\in RS\\
+ & y(i)\leqslant M\cdot I(i),\forall i\in RS\\
+ & y(i)\geqslant u-M\cdot(1-I(i)),\forall i\in RS\\
+ & u>0,y(i)\geq0,I(i)\in\{0,1\},\forall i\in RS
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Constraints
+\end_layout
+
+\begin_layout Subsubsection
+Time
+\end_layout
+
+\begin_layout Standard
+Time filter setting is a two - element tuple 
+\begin_inset Formula $(ts,te)$
+\end_inset
+
+, which indicates start (
+\begin_inset Formula $ts$
+\end_inset
+
+) and end (
+\begin_inset Formula $te$
+\end_inset
+
+) of time-line.
+ For element 
+\begin_inset Formula $i$
+\end_inset
+
+ with its time 
+\begin_inset Formula $t(i)$
+\end_inset
+
+, the time constraint for 
+\begin_inset Formula $I(i)$
+\end_inset
+
+ can be formulated as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+begin{equation} 
+\end_layout
+
+\begin_layout Plain Layout
+%(ts 
+\backslash
+leqslant t(i)) 
+\backslash
+land (t(i) 
+\backslash
+leqslant te) 
+\backslash
+implies (I(i) = 1) 
+\end_layout
+
+\begin_layout Plain Layout
+%
+\backslash
+end{equation} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{if \ensuremath{(ts\leqslant t(i))\land(t(i)\leqslant te)}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Keyword
+\end_layout
+
+\begin_layout Standard
+Keyword filter setting is a set of unigram (
+\begin_inset Formula $K$
+\end_inset
+
+), which filters the element does not have these words.
+ For element 
+\begin_inset Formula $i$
+\end_inset
+
+ with its whole unigram set 
+\begin_inset Formula $W(i)$
+\end_inset
+
+, the keyword constraint for 
+\begin_inset Formula $I(i)$
+\end_inset
+
+ can be formulated as follows: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{if \ensuremath{K\cap W(i)\neq\emptyset}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+The implementation method is still unclear in keyword field.
+\end_layout
+
+\begin_layout Subsubsection
+Position
+\end_layout
+
+\begin_layout Standard
+Position filter setting is a four - element tuple (xmin, ymin, xmax, ymax),
+ which filters the element out of a bounding box created based on tuple.
+ For element 
+\begin_inset Formula $i$
+\end_inset
+
+ with its position (
+\begin_inset Formula $x(i),y(i)$
+\end_inset
+
+), the position constraint for 
+\begin_inset Formula $I(i)$
+\end_inset
+
+ can be formulated as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I(i)=\begin{cases}
+1, & \text{if \ensuremath{(xmin\leqslant x(i))\land(x(i)\leqslant xmin)\land(ymin\leqslant y(i))\land(y(i)\leqslant ymax)}}\\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

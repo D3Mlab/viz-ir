@@ -1,0 +1,48 @@
+1535316773689	START: 	baseline	pos1,pos7,pos6
+1535316777979	answer_update_nd_1: 	flood
+1535316780777	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535316780802	Query_Execution_Time	11
+1535316784913	slider_start_change: 	CONTEXT:query:flood	time_range (23-08-2013,31-12-2014)	slider_topK_range:685
+1535316786942	slider_end_change: 	CONTEXT:query:flood	time_range (23-08-2013,25-01-2014)	slider_topK_range:685
+1535316787770	clicking_tweet:82	CONTEXT:query:flood	time_range (23-08-2013,25-01-2014)	slider_topK_range:685	pos1
+1535316790832	answer_update_location_1: 	Colorado
+1535316796052	answer_update_date_1: 	2013-09-09
+1535316804561	answer_update_nd_1: 	flood
+1535316804976	final_answer1	ND:	flood	date:	2013-09-09	location:	Colorado
+1535316809681	new_query: 	CONTEXT:query:blizzard	time_range (23-08-2013,25-01-2014)	slider_topK_range:685
+1535316809710	Query_Execution_Time	13
+1535316814570	slider_start_change: 	CONTEXT:query:blizzard	time_range (03-12-2013,31-12-2014)	slider_topK_range:890
+1535316818297	slider_end_change: 	CONTEXT:query:blizzard	time_range (03-12-2013,22-02-2014)	slider_topK_range:890
+1535316819482	clicking_tweet:1121	CONTEXT:query:blizzard	time_range (03-12-2013,22-02-2014)	slider_topK_range:890	pos7
+1535316826365	answer_update_date_2: 	2014-02-08
+1535316829321	answer_update_nd_2: 	blizzard
+1535316831854	ZoomLevel:5	CONTEXT:query:blizzard	time_range (03-12-2013,22-02-2014)	slider_topK_range:890
+1535316832344	ZoomLevel:6	CONTEXT:query:blizzard	time_range (03-12-2013,22-02-2014)	slider_topK_range:890
+1535316833745	MouseDrag: New Center:(41.76109191905533, -77.7744140625)	CONTEXT:query:blizzard	time_range (03-12-2013,22-02-2014)	slider_topK_range:890
+1535316840841	answer_update_location_2: 	New York
+1535316841524	final_answer2	ND:	blizzard	date:	2014-02-08	location:	New York
+1535316845673	answer_update_nd_3: 	tornado
+1535316849898	new_query: 	CONTEXT:query:tornado	time_range (03-12-2013,22-02-2014)	slider_topK_range:890
+1535316849927	Query_Execution_Time	14
+1535316854510	slider_start_change: 	CONTEXT:query:tornado	time_range (24-05-2013,31-12-2014)	slider_topK_range:1083
+1535316857250	slider_end_change: 	CONTEXT:query:tornado	time_range (24-05-2013,28-12-2014)	slider_topK_range:1083
+1535316858542	slider_end_change: 	CONTEXT:query:tornado	time_range (24-05-2013,19-12-2014)	slider_topK_range:1083
+1535316862178	slider_end_change: 	CONTEXT:query:tornado	time_range (24-05-2013,28-12-2013)	slider_topK_range:1083
+1535316865937	slider_end_change: 	CONTEXT:query:tornado	time_range (24-05-2013,15-01-2014)	slider_topK_range:1083
+1535316868441	slider_start_change: 	CONTEXT:query:tornado	time_range (29-09-2013,15-01-2014)	slider_topK_range:1083
+1535316869373	clicking_tweet:6462	CONTEXT:query:tornado	time_range (29-09-2013,15-01-2014)	slider_topK_range:1083	neg
+1535316871466	ZoomLevel:5	CONTEXT:query:tornado	time_range (29-09-2013,15-01-2014)	slider_topK_range:1083
+1535316872794	clicking_tweet:6075	CONTEXT:query:tornado	time_range (29-09-2013,15-01-2014)	slider_topK_range:1083	neg
+1535316876073	clicking_tweet:6320	CONTEXT:query:tornado	time_range (29-09-2013,15-01-2014)	slider_topK_range:1083	neg
+1535316877808	clicking_tweet:6419	CONTEXT:query:tornado	time_range (29-09-2013,15-01-2014)	slider_topK_range:1083	neg
+1535316879904	clicking_tweet:6448	CONTEXT:query:tornado	time_range (29-09-2013,15-01-2014)	slider_topK_range:1083	neg
+1535316884572	slider_end_change: 	CONTEXT:query:tornado	time_range (29-09-2013,11-10-2014)	slider_topK_range:1083
+1535316888114	slider_start_change: 	CONTEXT:query:tornado	time_range (21-04-2014,11-10-2014)	slider_topK_range:1083
+1535316889506	MouseDrag: New Center:(35.9333552774916, -95.484375)	CONTEXT:query:tornado	time_range (21-04-2014,11-10-2014)	slider_topK_range:1083
+1535316890357	clicking_tweet:6645	CONTEXT:query:tornado	time_range (21-04-2014,11-10-2014)	slider_topK_range:1083	neg
+1535316904410	answer_update_location_3: 	Florida
+1535316906673	answer_update_nd_3: 	tornado
+1535316909341	answer_update_date_3: 	2014-05-01
+1535316909477	answer_update_date_3: 	2014-05-15
+1535316910753	final_answer3	ND:	tornado	date:	2014-05-15	location:	Florida
+1535316910755	answers_baseline	ND1:	flood	date1:	2013-09-09	location1:	Colorado	ND2:	blizzard	date2:	2014-02-08	location2:	New York	ND3:	tornado	date3:	2014-05-15	location3:	Florida

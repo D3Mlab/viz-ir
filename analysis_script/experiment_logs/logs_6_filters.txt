@@ -1,0 +1,85 @@
+1534792364378	START: 	filters	pos1,pos7,pos6
+1534792372393	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534792375518	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534792377639	Query_Execution_Time	5220
+1534792380742	Query_Execution_Time	5164
+1534792387425	clicking_tweet:11354	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10551	neg
+1534792395169	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10551
+1534792400403	Query_Execution_Time	5209
+1534792403590	removing_filter:    tweets_size:87,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678
+1534792404468	removing_filter:    tweets_size:10,pos_tweets_size:10	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678
+1534792405800	removing_filter:    tweets_size:34,pos_tweets_size:34	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678
+1534792407186	clicking_tweet:82	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678	pos1
+1534792412019	clicking_tweet:32	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678	pos1
+1534792413906	clicking_tweet:79	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678	pos1
+1534792418123	clicking_tweet:37	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678	pos1
+1534792440792	slider_start_change: 	CONTEXT:query:flood	time_range (07-09-2013,31-12-2014)	slider_topK_range:10678
+1534792444560	slider_end_change: 	CONTEXT:query:flood	time_range (07-09-2013,19-09-2013)	slider_topK_range:10678
+1534792446941	slider_start_change: 	CONTEXT:query:flood	time_range (28-08-2013,19-09-2013)	slider_topK_range:10678
+1534792453658	slider_end_change: 	CONTEXT:query:flood	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678
+1534792454993	clicking_tweet:47	CONTEXT:query:flood	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678	pos1
+1534792466930	slider_end_change: 	CONTEXT:query:flood	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678
+1534792470855	answer_update_nd_1: 	flood
+1534792479141	answer_update_date_1: 	2013-08-08
+1534792481691	answer_update_date_1: 	2013-09-08
+1534792483249	ZoomLevel:5	CONTEXT:query:flood	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678
+1534792484914	MouseDrag: New Center:(38.06151373599814, -93.61357310414314)	CONTEXT:query:flood	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678
+1534792485306	ZoomLevel:6	CONTEXT:query:flood	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678
+1534792489071	answer_update_location_1: 	Colorado
+1534792489901	final_answer1	ND:	flood	date:	2013-09-08	location:	Colorado
+1534792492452	ZoomLevel:5	CONTEXT:query:flood	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678
+1534792500756	new_query: 	CONTEXT:query:snow storm	time_range (28-08-2013,08-09-2013)	slider_topK_range:10678
+1534792505558	Query_Execution_Time	4781
+1534792515009	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274
+1534792520198	Query_Execution_Time	5172
+1534792525483	clicking_tweet:11715	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:10551	neg
+1534792535290	new_query: 	CONTEXT:query:Tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10551
+1534792539987	Query_Execution_Time	4667
+1534792541944	clicking_tweet:923	CONTEXT:query:Tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10149	pos6
+1534792546913	answer_update_nd_2: 	hurricane
+1534792549573	clicking_tweet:948	CONTEXT:query:Tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10149	pos6
+1534792553364	clicking_tweet:943	CONTEXT:query:Tropical storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10149	pos6
+1534792567976	slider_end_change: 	CONTEXT:query:Tropical storm	time_range (01-01-2013,27-06-2014)	slider_topK_range:10149
+1534792569870	clicking_tweet:969	CONTEXT:query:Tropical storm	time_range (01-01-2013,27-06-2014)	slider_topK_range:10149	pos6
+1534792573979	clicking_tweet:993	CONTEXT:query:Tropical storm	time_range (01-01-2013,27-06-2014)	slider_topK_range:10149	pos6
+1534792576067	clicking_tweet:970	CONTEXT:query:Tropical storm	time_range (01-01-2013,27-06-2014)	slider_topK_range:10149	pos6
+1534792582504	slider_end_change: 	CONTEXT:query:Tropical storm	time_range (01-01-2013,03-07-2014)	slider_topK_range:10149
+1534792590138	answer_update_date_2: 	2014-06-02
+1534792590613	answer_update_date_2: 	2014-06-26
+1534792595133	ZoomLevel:5	CONTEXT:query:Tropical storm	time_range (01-01-2013,03-07-2014)	slider_topK_range:10149
+1534792595691	ZoomLevel:6	CONTEXT:query:Tropical storm	time_range (01-01-2013,03-07-2014)	slider_topK_range:10149
+1534792595814	ZoomLevel:7	CONTEXT:query:Tropical storm	time_range (01-01-2013,03-07-2014)	slider_topK_range:10149
+1534792596902	ZoomLevel:6	CONTEXT:query:Tropical storm	time_range (01-01-2013,03-07-2014)	slider_topK_range:10149
+1534792610113	answer_update_location_2: 	North Carolina
+1534792611793	final_answer2	ND:	hurricane	date:	2014-06-26	location:	North Carolina
+1534792622787	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,03-07-2014)	slider_topK_range:10149
+1534792627818	Query_Execution_Time	5013
+1534792632983	removing_filter:    tweets_size:34,pos_tweets_size:34	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678
+1534792633857	removing_filter:    tweets_size:10,pos_tweets_size:10	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678
+1534792634652	removing_filter:    tweets_size:87,pos_tweets_size:0	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678
+1534792635614	clicking_tweet:68	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678	pos1
+1534792638181	clicking_tweet:35	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:10678	pos1
+1534792650880	slider_end_change: 	CONTEXT:query:flood	time_range (01-01-2013,08-09-2013)	slider_topK_range:10678
+1534792652822	clicking_tweet:47	CONTEXT:query:flood	time_range (01-01-2013,08-09-2013)	slider_topK_range:10678	pos1
+1534792658208	slider_end_change: 	CONTEXT:query:flood	time_range (01-01-2013,07-09-2013)	slider_topK_range:10678
+1534792659749	clicking_tweet:44	CONTEXT:query:flood	time_range (01-01-2013,07-09-2013)	slider_topK_range:10678	pos1
+1534792671793	answer_update_nd_3: 	flood
+1534792686087	answer_update_date_3: 	2013-09-07
+1534792710232	new_query: 	CONTEXT:query:drought	time_range (01-01-2013,07-09-2013)	slider_topK_range:10678
+1534792715413	Query_Execution_Time	5164
+1534792723214	new_query: 	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10551
+1534792727924	Query_Execution_Time	4705
+1534792730586	removing_filter:    tweets_size:26,pos_tweets_size:26	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274
+1534792731356	removing_filter:    tweets_size:12,pos_tweets_size:12	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274
+1534792732436	removing_filter:    tweets_size:3,pos_tweets_size:3	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274
+1534792734124	clicking_tweet:1191	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274	pos7
+1534792740420	answer_update_nd_3: 	blizzard
+1534792742950	clicking_tweet:1032	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274	pos7
+1534792744536	ZoomLevel:5	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274
+1534792748175	clicking_tweet:1069	CONTEXT:query:snow storm	time_range (01-01-2013,31-12-2014)	slider_topK_range:10274	pos7
+1534792771400	slider_end_change: 	CONTEXT:query:snow storm	time_range (01-01-2013,09-02-2014)	slider_topK_range:10274
+1534792773054	clicking_tweet:1191	CONTEXT:query:snow storm	time_range (01-01-2013,09-02-2014)	slider_topK_range:10274	pos7
+1534792786954	answer_update_date_3: 	2014-02-07
+1534792794961	answer_update_location_3: 	New York
+1534792796287	final_answer3	ND:	blizzard	date:	2014-02-07	location:	New York
+1534792796295	answers_filters	ND1:	flood	date1:	2013-09-08	location1:	Colorado	ND2:	hurricane	date2:	2014-06-26	location2:	North Carolina	ND3:	blizzard	date3:	2014-02-07	location3:	New York

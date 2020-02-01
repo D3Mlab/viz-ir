@@ -1,0 +1,130 @@
+1535055115436	START: 	kmeans	pos2,pos3,pos8
+1535055122718	new_query: 	CONTEXT:query:snow storm blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535055123403	Query_Execution_Time	661
+1535055132197	slider_start_change: 	CONTEXT:query:snow storm blizzard	time_range (20-08-2013,31-12-2014)	slider_topK_range:1071
+1535055140804	slider_start_change: 	CONTEXT:query:snow storm blizzard	time_range (31-08-2014,31-12-2014)	slider_topK_range:1071
+1535055143007	slider_end_change: 	CONTEXT:query:snow storm blizzard	time_range (31-08-2014,23-11-2014)	slider_topK_range:1071
+1535055149228	slider_start_change: 	CONTEXT:query:snow storm blizzard	time_range (10-08-2014,23-11-2014)	slider_topK_range:1071
+1535055149948	removing_filter:    tweets_size:129,pos_tweets_size:98	CONTEXT:query:snow storm blizzard	time_range (10-08-2014,23-11-2014)	slider_topK_range:1071
+1535055153382	adding_filter:     tweets_size:129,pos_tweets_size:98	CONTEXT:query:snow storm blizzard	time_range (10-08-2014,23-11-2014)	slider_topK_range:1071
+1535055161460	slider_end_change: 	CONTEXT:query:snow storm blizzard	time_range (10-08-2014,12-11-2014)	slider_topK_range:1071
+1535055172700	slider_start_change: 	CONTEXT:query:snow storm blizzard	time_range (11-11-2014,12-11-2014)	slider_topK_range:1071
+1535055175092	answer_update_nd_1: 	blizzard
+1535055183619	answer_update_date_1: 	2014-11-30
+1535055183792	answer_update_date_1: 	2014-11-29
+1535055185347	answer_update_date_1: 	2014-11-30
+1535055185487	answer_update_date_1: 	
+1535055185619	answer_update_date_1: 	2014-11-01
+1535055185736	answer_update_date_1: 	2014-11-02
+1535055185872	answer_update_date_1: 	2014-11-03
+1535055186001	answer_update_date_1: 	2014-11-04
+1535055186132	answer_update_date_1: 	2014-11-05
+1535055186295	answer_update_date_1: 	2014-11-06
+1535055186559	answer_update_date_1: 	2014-11-07
+1535055188326	answer_update_date_1: 	2014-11-08
+1535055188529	answer_update_date_1: 	2014-11-09
+1535055188703	answer_update_date_1: 	2014-11-10
+1535055188951	answer_update_date_1: 	2014-11-11
+1535055201884	answer_update_location_1: 	New York
+1535055223099	slider_end_change: 	CONTEXT:query:snow storm blizzard	time_range (11-11-2014,12-11-2014)	slider_topK_range:1071
+1535055226127	answer_update_date_1: 	2014-11-12
+1535055226920	final_answer1	ND:	blizzard	date:	2014-11-12	location:	New York
+1535055236941	new_query: 	CONTEXT:query:drought	time_range (11-11-2014,12-11-2014)	slider_topK_range:1071
+1535055237116	Query_Execution_Time	157
+1535055240630	slider_start_change: 	CONTEXT:query:drought	time_range (15-04-2013,31-12-2014)	slider_topK_range:558
+1535055244549	slider_end_change: 	CONTEXT:query:drought	time_range (15-04-2013,27-09-2013)	slider_topK_range:558
+1535055247567	slider_start_change: 	CONTEXT:query:drought	time_range (13-06-2013,27-09-2013)	slider_topK_range:558
+1535055249784	slider_end_change: 	CONTEXT:query:drought	time_range (13-06-2013,30-11-2013)	slider_topK_range:558
+1535055252420	slider_start_change: 	CONTEXT:query:drought	time_range (06-03-2013,30-11-2013)	slider_topK_range:558
+1535055255829	slider_end_change: 	CONTEXT:query:drought	time_range (06-03-2013,15-05-2014)	slider_topK_range:558
+1535055258382	slider_start_change: 	CONTEXT:query:drought	time_range (14-03-2013,15-05-2014)	slider_topK_range:558
+1535055264077	slider_start_change: 	CONTEXT:query:drought	time_range (15-05-2014,31-12-2014)	slider_topK_range:558
+1535055266159	slider_end_change: 	CONTEXT:query:drought	time_range (20-12-2014,31-12-2014)	slider_topK_range:558
+1535055272517	new_query: 	CONTEXT:query:earthquake	time_range (20-12-2014,31-12-2014)	slider_topK_range:558
+1535055273039	Query_Execution_Time	502
+1535055277854	slider_start_change: 	CONTEXT:query:earthquake	time_range (14-12-2013,31-12-2014)	slider_topK_range:1147
+1535055282797	slider_end_change: 	CONTEXT:query:earthquake	time_range (14-12-2013,19-04-2014)	slider_topK_range:1147
+1535055284978	slider_start_change: 	CONTEXT:query:earthquake	time_range (19-12-2013,19-04-2014)	slider_topK_range:1147
+1535055288237	slider_start_change: 	CONTEXT:query:earthquake	time_range (08-03-2014,19-04-2014)	slider_topK_range:1147
+1535055290541	slider_end_change: 	CONTEXT:query:earthquake	time_range (08-03-2014,20-03-2014)	slider_topK_range:1147
+1535055297778	removing_filter:    tweets_size:247,pos_tweets_size:48	CONTEXT:query:earthquake	time_range (08-03-2014,20-03-2014)	slider_topK_range:1147
+1535055300878	removing_filter:    tweets_size:126,pos_tweets_size:0	CONTEXT:query:earthquake	time_range (08-03-2014,20-03-2014)	slider_topK_range:1147
+1535055325617	slider_start_change: 	CONTEXT:query:earthquake	time_range (17-03-2014,20-03-2014)	slider_topK_range:1147
+1535055327390	answer_update_nd_2: 	earthquake
+1535055333265	answer_update_date_2: 	2014-03-31
+1535055333712	answer_update_date_2: 	2014-03-01
+1535055333945	answer_update_date_2: 	2014-03-02
+1535055334193	answer_update_date_2: 	2014-03-01
+1535055334328	answer_update_date_2: 	2014-03-31
+1535055334456	answer_update_date_2: 	2014-03-30
+1535055334568	answer_update_date_2: 	2014-03-29
+1535055334693	answer_update_date_2: 	2014-03-28
+1535055334824	answer_update_date_2: 	2014-03-27
+1535055334944	answer_update_date_2: 	2014-03-26
+1535055335080	answer_update_date_2: 	2014-03-25
+1535055335209	answer_update_date_2: 	2014-03-24
+1535055335344	answer_update_date_2: 	2014-03-23
+1535055335472	answer_update_date_2: 	2014-03-22
+1535055335607	answer_update_date_2: 	2014-03-21
+1535055335745	answer_update_date_2: 	2014-03-20
+1535055335880	answer_update_date_2: 	2014-03-19
+1535055336016	answer_update_date_2: 	2014-03-18
+1535055336320	answer_update_date_2: 	2014-03-17
+1535055338821	answer_update_location_2: 	California
+1535055341445	final_answer2	ND:	earthquake	date:	2014-03-17	location:	California
+1535055348910	new_query: 	CONTEXT:query:flood	time_range (17-03-2014,20-03-2014)	slider_topK_range:1147
+1535055349084	Query_Execution_Time	156
+1535055354795	slider_start_change: 	CONTEXT:query:flood	time_range (29-01-2014,31-12-2014)	slider_topK_range:600
+1535055359302	slider_end_change: 	CONTEXT:query:flood	time_range (29-01-2014,17-04-2014)	slider_topK_range:600
+1535055361838	slider_start_change: 	CONTEXT:query:flood	time_range (30-12-2013,17-04-2014)	slider_topK_range:600
+1535055363365	slider_end_change: 	CONTEXT:query:flood	time_range (30-12-2013,17-01-2014)	slider_topK_range:600
+1535055369014	new_query: 	CONTEXT:query:tropical storm hurricane	time_range (30-12-2013,17-01-2014)	slider_topK_range:600
+1535055369975	Query_Execution_Time	949
+1535055374346	slider_start_change: 	CONTEXT:query:tropical storm hurricane	time_range (18-10-2013,31-12-2014)	slider_topK_range:1347
+1535055377735	slider_end_change: 	CONTEXT:query:tropical storm hurricane	time_range (18-10-2013,08-09-2014)	slider_topK_range:1347
+1535055380118	slider_start_change: 	CONTEXT:query:tropical storm hurricane	time_range (19-12-2013,08-09-2014)	slider_topK_range:1347
+1535055382346	slider_end_change: 	CONTEXT:query:tropical storm hurricane	time_range (19-12-2013,01-08-2014)	slider_topK_range:1347
+1535055384661	slider_start_change: 	CONTEXT:query:tropical storm hurricane	time_range (06-10-2013,01-08-2014)	slider_topK_range:1347
+1535055387726	slider_end_change: 	CONTEXT:query:tropical storm hurricane	time_range (06-10-2013,02-11-2013)	slider_topK_range:1347
+1535055394774	new_query: 	CONTEXT:query:tornado	time_range (06-10-2013,02-11-2013)	slider_topK_range:1347
+1535055395217	Query_Execution_Time	423
+1535055397855	slider_start_change: 	CONTEXT:query:tornado	time_range (06-08-2013,31-12-2014)	slider_topK_range:1083
+1535055400007	slider_end_change: 	CONTEXT:query:tornado	time_range (06-08-2013,20-02-2014)	slider_topK_range:1083
+1535055401830	slider_start_change: 	CONTEXT:query:tornado	time_range (11-02-2014,20-02-2014)	slider_topK_range:1083
+1535055402662	slider_end_change: 	CONTEXT:query:tornado	time_range (11-02-2014,23-05-2014)	slider_topK_range:1083
+1535055405043	slider_start_change: 	CONTEXT:query:tornado	time_range (28-07-2013,23-05-2014)	slider_topK_range:1083
+1535055407662	slider_end_change: 	CONTEXT:query:tornado	time_range (28-07-2013,05-01-2014)	slider_topK_range:1083
+1535055410121	slider_start_change: 	CONTEXT:query:tornado	time_range (03-11-2013,05-01-2014)	slider_topK_range:1083
+1535055412054	slider_end_change: 	CONTEXT:query:tornado	time_range (03-11-2013,28-11-2013)	slider_topK_range:1083
+1535055416718	slider_start_change: 	CONTEXT:query:tornado	time_range (22-08-2013,28-11-2013)	slider_topK_range:1083
+1535055429750	slider_end_change: 	CONTEXT:query:tornado	time_range (22-08-2013,04-12-2014)	slider_topK_range:1083
+1535055434664	slider_start_change: 	CONTEXT:query:tornado	time_range (30-01-2013,04-12-2014)	slider_topK_range:1083
+1535055440310	slider_end_change: 	CONTEXT:query:tornado	time_range (30-01-2013,29-04-2013)	slider_topK_range:1083
+1535055445294	slider_start_change: 	CONTEXT:query:tornado	time_range (29-04-2013,24-05-2013)	slider_topK_range:1083
+1535055448014	slider_end_change: 	CONTEXT:query:tornado	time_range (19-05-2013,24-05-2013)	slider_topK_range:1083
+1535055452367	new_query: 	CONTEXT:query:tropical storm hurricane	time_range (19-05-2013,24-05-2013)	slider_topK_range:1083
+1535055453576	Query_Execution_Time	1186
+1535055458024	slider_start_change: 	CONTEXT:query:tropical storm hurricane	time_range (15-05-2013,31-12-2014)	slider_topK_range:1347
+1535055464991	slider_end_change: 	CONTEXT:query:tropical storm hurricane	time_range (15-05-2013,06-06-2013)	slider_topK_range:1347
+1535055469622	slider_start_change: 	CONTEXT:query:tropical storm hurricane	time_range (06-06-2013,22-06-2013)	slider_topK_range:1347
+1535055486503	slider_end_change: 	CONTEXT:query:tropical storm hurricane	time_range (08-06-2013,22-06-2013)	slider_topK_range:1347
+1535055488215	answer_update_nd_3: 	hurricane
+1535055493442	answer_update_date_3: 	2013-06-30
+1535055493577	answer_update_date_3: 	2013-06-29
+1535055493711	answer_update_date_3: 	2013-06-28
+1535055493839	answer_update_date_3: 	2013-06-27
+1535055494072	answer_update_date_3: 	2013-06-28
+1535055494215	answer_update_date_3: 	2013-06-29
+1535055494506	answer_update_date_3: 	2013-06-30
+1535055494633	answer_update_date_3: 	
+1535055494753	answer_update_date_3: 	2013-06-01
+1535055494887	answer_update_date_3: 	2013-06-02
+1535055495025	answer_update_date_3: 	2013-06-03
+1535055495161	answer_update_date_3: 	2013-06-04
+1535055495287	answer_update_date_3: 	2013-06-05
+1535055495430	answer_update_date_3: 	2013-06-06
+1535055495561	answer_update_date_3: 	2013-06-07
+1535055495953	answer_update_date_3: 	2013-06-08
+1535055500903	answer_update_location_3: 	Florida
+1535055501801	final_answer3	ND:	hurricane	date:	2013-06-08	location:	Florida
+1535055501801	answers_kmeans	ND1:	blizzard	date1:	2014-11-12	location1:	New York	ND2:	earthquake	date2:	2014-03-17	location2:	California	ND3:	hurricane	date3:	2013-06-08	location3:	Florida

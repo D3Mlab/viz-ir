@@ -1,0 +1,52 @@
+1534894274904	START: 	kmeans	pos2,pos3,pos8
+1534894279459	answer_update_nd_1: 	blizzard
+1534894285497	new_query: 	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534894286337	Query_Execution_Time	817
+1534894288694	clicking_tweet:5587	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326	neg
+1534894289998	clicking_tweet:205	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326	pos2
+1534894297049	answer_update_nd_1: 	drought
+1534894300609	answer_update_nd_1: 	hurricane
+1534894313842	answer_update_date_1: 	2013-06-05
+1534894336360	ZoomLevel:5	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326
+1534894337587	ZoomLevel:6	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326
+1534894345353	answer_update_location_1: 	Florida
+1534894347591	clicking_tweet:4933	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326	neg
+1534894348795	ZoomLevel:7	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326
+1534894350352	ZoomLevel:6	CONTEXT:query:storm hurricane	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326
+1534894359362	new_query: 	CONTEXT:query:storm snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:1326
+1534894359449	Query_Execution_Time	74
+1534894362628	clicking_tweet:122	CONTEXT:query:storm snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:355	pos2
+1534894383585	answer_update_nd_1: 	blizzard
+1534894400242	clicking_tweet:106	CONTEXT:query:storm snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:355	pos2
+1534894410098	answer_update_nd_1: 	hurricane
+1534894417842	answer_update_date_1: 	2013-06-04
+1534894424250	answer_update_location_1: 	Florida
+1534894424916	final_answer1	ND:	hurricane	date:	2013-06-04	location:	Florida
+1534894432194	clicking_tweet:5433	CONTEXT:query:storm snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:355	neg
+1534894438747	new_query: 	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:355
+1534894438794	Query_Execution_Time	31
+1534894442478	clicking_tweet:1298	CONTEXT:query:snow	time_range (01-01-2013,31-12-2014)	slider_topK_range:144	pos8
+1534894446330	answer_update_nd_2: 	blizzard
+1534894456110	answer_update_date_2: 	2014-11-01
+1534894456357	answer_update_date_2: 	2014-11-10
+1534894464114	answer_update_location_2: 	New York
+1534894464944	final_answer2	ND:	blizzard	date:	2014-11-10	location:	New York
+1534894475115	new_query: 	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:144
+1534894475908	Query_Execution_Time	780
+1534894477814	clicking_bbox:tweets_size:207,pos_tweets_size:42	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147
+1534894479139	clicking_tweet:322	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147	pos3
+1534894479914	clicking_tweet:3267	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147	neg
+1534894484926	clicking_bbox:tweets_size:207,pos_tweets_size:42	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147
+1534894485903	MouseDrag: New Center:(39, -99)	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147
+1534894486711	clicking_bbox:tweets_size:207,pos_tweets_size:42	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147
+1534894487601	clicking_tweet:4140	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147	neg
+1534894493881	clicking_tweet:343	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147	pos3
+1534894498018	answer_update_nd_3: 	earthquake
+1534894503806	answer_update_date_3: 	2014-03-01
+1534894503998	answer_update_date_3: 	2014-03-11
+1534894504007	answer_update_date_3: 	2014-03-14
+1534894508364	ZoomLevel:5	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147
+1534894523876	ZoomLevel:6	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1147
+1534894529514	answer_update_location_3: 	California
+1534894530484	final_answer3	ND:	earthquake	date:	2014-03-14	location:	California
+1534894530488	answers_kmeans	ND1:	hurricane	date1:	2013-06-04	location1:	Florida	ND2:	blizzard	date2:	2014-11-10	location2:	New York	ND3:	earthquake	date3:	2014-03-14	location3:	California

@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: CIKM2018.aux
+The style file: abbrv.bst
+Database file #1: biblio.bib
+Warning--empty institution in Shetty2004
+You've used 38 entries,
+            2118 wiz_defined-function locations,
+            782 strings with 11982 characters,
+and the built_in function-call counts, 16263 in all, are:
+= -- 1640
+> -- 791
+< -- 20
++ -- 312
+- -- 268
+* -- 1179
+:= -- 2563
+add.period$ -- 128
+call.type$ -- 38
+change.case$ -- 245
+chr.to.int$ -- 0
+cite$ -- 39
+duplicate$ -- 639
+empty$ -- 1224
+format.name$ -- 268
+if$ -- 3528
+int.to.chr$ -- 0
+int.to.str$ -- 38
+missing$ -- 38
+newline$ -- 193
+num.names$ -- 82
+pop$ -- 242
+preamble$ -- 1
+purify$ -- 205
+quote$ -- 0
+skip$ -- 498
+stack$ -- 0
+substring$ -- 1056
+swap$ -- 207
+text.length$ -- 20
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 150
+warning$ -- 1
+while$ -- 153
+width$ -- 40
+write$ -- 457
+(There was 1 warning)

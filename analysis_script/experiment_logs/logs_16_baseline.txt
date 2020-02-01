@@ -1,0 +1,63 @@
+1535032962943	START: 	baseline	pos1,pos7,pos6
+1535032968135	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535032968164	Query_Execution_Time	11
+1535032974886	slider_start_change: 	CONTEXT:query:flood	time_range (05-09-2013,31-12-2014)	slider_topK_range:685
+1535032978997	slider_end_change: 	CONTEXT:query:flood	time_range (05-09-2013,13-09-2013)	slider_topK_range:685
+1535032980246	ZoomLevel:5	CONTEXT:query:flood	time_range (05-09-2013,13-09-2013)	slider_topK_range:685
+1535032981062	ZoomLevel:6	CONTEXT:query:flood	time_range (05-09-2013,13-09-2013)	slider_topK_range:685
+1535032982789	clicking_tweet:44	CONTEXT:query:flood	time_range (05-09-2013,13-09-2013)	slider_topK_range:685	pos1
+1535032997933	answer_update_nd_1: 	flood
+1535033003507	answer_update_location_1: 	Delaware
+1535033009797	answer_update_location_1: 	Colorado
+1535033011850	clicking_tweet:44	CONTEXT:query:flood	time_range (05-09-2013,13-09-2013)	slider_topK_range:685	pos1
+1535033019213	slider_start_change: 	CONTEXT:query:flood	time_range (06-09-2013,13-09-2013)	slider_topK_range:685
+1535033026749	slider_end_change: 	CONTEXT:query:flood	time_range (06-09-2013,09-09-2013)	slider_topK_range:685
+1535033039586	answer_update_date_1: 	2013-09-07
+1535033046611	final_answer1	ND:	flood	date:	2013-09-07	location:	Colorado
+1535033054125	new_query: 	CONTEXT:query:earthquake	time_range (06-09-2013,09-09-2013)	slider_topK_range:685
+1535033054147	Query_Execution_Time	12
+1535033074727	new_query: 	CONTEXT:query:blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062
+1535033074755	Query_Execution_Time	14
+1535033082039	slider_start_change: 	CONTEXT:query:blizzard	time_range (05-02-2014,31-12-2014)	slider_topK_range:890
+1535033088398	slider_end_change: 	CONTEXT:query:blizzard	time_range (05-02-2014,11-02-2014)	slider_topK_range:890
+1535033090069	slider_start_change: 	CONTEXT:query:blizzard	time_range (07-02-2014,11-02-2014)	slider_topK_range:890
+1535033091814	ZoomLevel:5	CONTEXT:query:blizzard	time_range (07-02-2014,11-02-2014)	slider_topK_range:890
+1535033093319	MouseDrag: New Center:(42.526795115515405, -82.388671875)	CONTEXT:query:blizzard	time_range (07-02-2014,11-02-2014)	slider_topK_range:890
+1535033094455	ZoomLevel:6	CONTEXT:query:blizzard	time_range (07-02-2014,11-02-2014)	slider_topK_range:890
+1535033096141	clicking_tweet:1112	CONTEXT:query:blizzard	time_range (07-02-2014,11-02-2014)	slider_topK_range:890	pos7
+1535033100886	answer_update_nd_2: 	blizzard
+1535033106462	answer_update_location_2: 	New York
+1535033114759	answer_update_date_2: 	2014-02-07
+1535033125286	slider_end_change: 	CONTEXT:query:blizzard	time_range (07-02-2014,08-02-2014)	slider_topK_range:890
+1535033138332	final_answer2	ND:	blizzard	date:	2014-02-07	location:	New York
+1535033144206	new_query: 	CONTEXT:query:tornado	time_range (07-02-2014,08-02-2014)	slider_topK_range:890
+1535033144270	Query_Execution_Time	47
+1535033154199	slider_start_change: 	CONTEXT:query:tornado	time_range (19-03-2014,31-12-2014)	slider_topK_range:1083
+1535033170358	slider_end_change: 	CONTEXT:query:tornado	time_range (01-01-2013,19-03-2014)	slider_topK_range:1083
+1535033182980	slider_start_change: 	CONTEXT:query:tornado	time_range (01-01-2013,21-05-2013)	slider_topK_range:1083
+1535033188198	slider_end_change: 	CONTEXT:query:tornado	time_range (20-05-2013,21-05-2013)	slider_topK_range:1083
+1535033189927	ZoomLevel:5	CONTEXT:query:tornado	time_range (20-05-2013,21-05-2013)	slider_topK_range:1083
+1535033190479	ZoomLevel:6	CONTEXT:query:tornado	time_range (20-05-2013,21-05-2013)	slider_topK_range:1083
+1535033191711	MouseDrag: New Center:(35.4674063838369, -99.3515625)	CONTEXT:query:tornado	time_range (20-05-2013,21-05-2013)	slider_topK_range:1083
+1535033192729	clicking_tweet:6715	CONTEXT:query:tornado	time_range (20-05-2013,21-05-2013)	slider_topK_range:1083	neg
+1535033196085	clicking_tweet:6218	CONTEXT:query:tornado	time_range (20-05-2013,21-05-2013)	slider_topK_range:1083	neg
+1535033214487	new_query: 	CONTEXT:query:hurricane	time_range (20-05-2013,21-05-2013)	slider_topK_range:1083
+1535033214519	Query_Execution_Time	15
+1535033223646	slider_start_change: 	CONTEXT:query:hurricane	time_range (27-06-2014,31-12-2014)	slider_topK_range:1138
+1535033226759	slider_end_change: 	CONTEXT:query:hurricane	time_range (27-06-2014,04-07-2014)	slider_topK_range:1138
+1535033229871	slider_start_change: 	CONTEXT:query:hurricane	time_range (27-06-2014,04-07-2014)	slider_topK_range:1138
+1535033232167	slider_end_change: 	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138
+1535033234043	MouseDrag: New Center:(38.93166319223413, -99)	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138
+1535033235464	ZoomLevel:5	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138
+1535033236353	ZoomLevel:6	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138
+1535033237776	ZoomLevel:7	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138
+1535033240704	clicking_tweet:906	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138	pos6
+1535033250959	answer_update_nd_3: 	hurricane
+1535033254999	MouseDrag: New Center:(34.724638652691624, -79.059814453125)	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138
+1535033263207	answer_update_location_3: 	North Carolina
+1535033266887	clicking_tweet:950	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138	pos6
+1535033272809	clicking_tweet:920	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138	pos6
+1535033276829	clicking_tweet:927	CONTEXT:query:hurricane	time_range (27-06-2014,30-06-2014)	slider_topK_range:1138	pos6
+1535033294391	answer_update_date_3: 	2014-06-28
+1535033305446	final_answer3	ND:	hurricane	date:	2014-06-28	location:	North Carolina
+1535033305450	answers_baseline	ND1:	flood	date1:	2013-09-07	location1:	Colorado	ND2:	blizzard	date2:	2014-02-07	location2:	New York	ND3:	hurricane	date3:	2014-06-28	location3:	North Carolina

@@ -1,0 +1,184 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[sigconf,anonymous=false,authordraft=false]{acmart}
+\usepackage[latin9]{inputenc}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newlength{\lyxlabelwidth}      % auxiliary length 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
+
+
+%\makeatletter
+%\renewcommand\@formatdoi[1]{\ignorespaces}
+%\makeatother
+
+
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{amstext}
+\usepackage{graphicx}
+\usepackage{booktabs} % For formal tables
+
+
+\usepackage{subfiles}
+
+\usepackage{subfigure}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand\varlist{,\makebox[0.8em][c]{.\hfil.\hfil.},} 
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\acmDOI{10.475/123_4}
+
+% ISBN
+\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+\acmConference[WOODSTOCK'97]{ACM Woodstock conference}{July 1997}{El
+  Paso, Texas USA} 
+\acmYear{1997}
+\copyrightyear{2016}
+
+\acmPrice{15.00}
+
+\fancyhead{}
+\settopmatter{printacmref=false, printfolios=false}
+
+\makeatother
+
+\begin{document}
+\title{An Information Retrieval Perspective of Filter Selection for Adaptive User Interfaces } 
+
+
+
+\author{Mohamed Reda Bouadjenek}
+%\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{The University of Toronto}
+  \streetaddress{Department of Mechanical and\\ Industrial Engineering}
+  \city{Toronto} 
+  \state{Ontario} 
+   \postcode{M5S 3G8}
+  \country{Canada}
+}
+\email{mrb@mie.utoronto.ca}
+
+
+
+\author{Yihao Du}
+\affiliation{%
+  \institution{The University of Toronto}
+ \streetaddress{Department of Mechanical and\\ Industrial Engineering}
+  \city{Toronto} 
+  \state{Ontario} 
+   \postcode{M5S 3G8}
+  \country{Canada}
+ }
+\email{duyihao@mie.utoronto.ca }
+
+\author{Scott Sanner}
+\affiliation{%
+  \institution{The University of Toronto}
+  \streetaddress{Department of Mechanical and\\ Industrial Engineering}
+  \city{Toronto} 
+  \state{Ontario} 
+   \postcode{M5S 3G8}
+  \country{Canada}
+}
+\email{ssanner@mie.utoronto.ca }
+
+
+
+\newcommand{\subfour}[1]{\vspace*{3mm}{\noindent\bf #1}}  
+\newcommand{\subsubfour}[1]{\vspace*{1mm}{\noindent\bf #1}} 
+\newtheorem{problem}{\textbf{Problem}}
+
+\begin{abstract}
+Many applications such as real-time monitoring of social network activities or urban traffic congestion reports involve high information and cognitive load tasks.  In this context, it is common to have large-scale information visualization interfaces to concurrently display system status, alerts, and events.  However, displaying all information elements simultaneously would result in a saturated and unreadable display. Thus, the development of novel adaptive user interfaces (AUIs) are required to help focus the user's attention by filtering information relevant to their current task.  
+In this work, we argue that this information-filtering task is central to a variety of AUIs and well-suited to an Information Retrieval (IR) perspective where we argue that a good overall objective for filter selection is F1-Score; given the absence of known Boolean relevance labels for interface elements, we instead propose optimization of a surrogate metric of expected F1-Score denoted as EF1.  
+We contribute two fast greedy approximate optimization algorithms for EF1 to perform filter selection and we also define an optimal Mixed Integer Linear Programming (MILP) formulation for EF1 intended to benchmark the performance of the greedy approximations on moderately sized datasets.
+We experiment on three different AUI scenarios and associated datasets under a variety of settings where we vary the amount of data, noise, and relevant vs. irrelevant class imbalance in the ground truth data.  We show that EF1 is a good surrogate for optimizing F1-Score and the proposed greedy algorithms are a good approximation of the optimal MILP solution, yet much more scalable.
+In summary, we hope this work helps better connect IR and AUI research, bringing a general and formal IR perspective to this important research area while opening new research directions for the application of IR methodology to AUIs.
+%the community to realize the potential of the information retrieval approach to address AUIs problems.
+
+\noindent
+{\bf Keywords:} Adaptive UIs; Search Algorithms; Optimization for IR.
+
+
+
+\end{abstract}
+
+
+
+
+%\keywords{Adaptive User Interfaces; Search Algorithms;  mathematical optimization for IR.}
+\maketitle
+
+
+
+\section{Introduction}
+\subfile{Introduction}
+
+
+\section{Framework and background}
+\label{sec:Framework}
+\subfile{Framework}
+
+
+\section{Filter Setting building Algorithms}
+\label{sec:Algorithms}
+\subfile{Algorithms}
+
+%\subsection{Optimization search}
+%\subfile{Optimal}
+
+\section{Experimental setup}
+\label{sec:setup}
+\subfile{Setup}
+
+
+\section{Experimental evaluation}
+\label{sec:Evaluation}
+\subfile{Experiments}
+
+
+\section{Related work}
+\label{sec:RelatedWork}
+\subfile{RelatedWork}
+
+\section{Conclusions and Future work}
+\label{sec:Conclusions}
+\subfile{Conclusions}
+
+
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+
+\end{document}

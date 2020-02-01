@@ -1,0 +1,76 @@
+1534962753285	START: 	baseline	pos1,pos7,pos6
+1534962759221	new_query: 	CONTEXT:query:flood, drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1534962759278	Query_Execution_Time	32
+1534962766269	slider_start_change: 	CONTEXT:query:flood, drought	time_range (12-08-2013,31-12-2014)	slider_topK_range:1233
+1534962770196	slider_end_change: 	CONTEXT:query:flood, drought	time_range (12-08-2013,26-09-2013)	slider_topK_range:1233
+1534962775028	slider_start_change: 	CONTEXT:query:flood, drought	time_range (08-09-2013,26-09-2013)	slider_topK_range:1233
+1534962776124	slider_start_change: 	CONTEXT:query:flood, drought	time_range (06-09-2013,26-09-2013)	slider_topK_range:1233
+1534962778829	slider_end_change: 	CONTEXT:query:flood, drought	time_range (06-09-2013,09-09-2013)	slider_topK_range:1233
+1534962779930	clicking_tweet:91	CONTEXT:query:flood, drought	time_range (06-09-2013,09-09-2013)	slider_topK_range:1233	pos1
+1534962784781	answer_update_nd_1: 	flood
+1534962793400	answer_update_date_1: 	2013-09-09
+1534962803989	answer_update_location_1: 	Colorado
+1534962804900	final_answer1	ND:	flood	date:	2013-09-09	location:	Colorado
+1534962818829	new_query: 	CONTEXT:query:earthquake	time_range (06-09-2013,09-09-2013)	slider_topK_range:1233
+1534962818918	Query_Execution_Time	60
+1534962828095	slider_start_change: 	CONTEXT:query:earthquake	time_range (30-08-2013,31-12-2014)	slider_topK_range:1062
+1534962831989	slider_end_change: 	CONTEXT:query:earthquake	time_range (30-08-2013,26-07-2014)	slider_topK_range:1062
+1534962832949	clicking_tweet:3647	CONTEXT:query:earthquake	time_range (30-08-2013,26-07-2014)	slider_topK_range:1062	neg
+1534962834855	clicking_tweet:4121	CONTEXT:query:earthquake	time_range (30-08-2013,26-07-2014)	slider_topK_range:1062	neg
+1534962838638	clicking_tweet:3712	CONTEXT:query:earthquake	time_range (30-08-2013,26-07-2014)	slider_topK_range:1062	neg
+1534962849565	new_query: 	CONTEXT:query:tropical storm, tornado	time_range (30-08-2013,26-07-2014)	slider_topK_range:1062
+1534962849737	Query_Execution_Time	138
+1534962858511	slider_start_change: 	CONTEXT:query:tropical storm, tornado	time_range (21-05-2014,31-12-2014)	slider_topK_range:1217
+1534962861973	slider_end_change: 	CONTEXT:query:tropical storm, tornado	time_range (21-05-2014,05-07-2014)	slider_topK_range:1217
+1534962862919	clicking_tweet:1001	CONTEXT:query:tropical storm, tornado	time_range (21-05-2014,05-07-2014)	slider_topK_range:1217	pos6
+1534962868333	slider_start_change: 	CONTEXT:query:tropical storm, tornado	time_range (18-06-2014,05-07-2014)	slider_topK_range:1217
+1534962869634	clicking_tweet:932	CONTEXT:query:tropical storm, tornado	time_range (18-06-2014,05-07-2014)	slider_topK_range:1217	pos6
+1534962873744	clicking_tweet:1001	CONTEXT:query:tropical storm, tornado	time_range (18-06-2014,05-07-2014)	slider_topK_range:1217	pos6
+1534962875776	clicking_tweet:939	CONTEXT:query:tropical storm, tornado	time_range (18-06-2014,05-07-2014)	slider_topK_range:1217	pos6
+1534962888485	answer_update_nd_2: 	hurricane
+1534962894305	answer_update_date_2: 	2014-06-02
+1534962894376	answer_update_date_2: 	2014-06-28
+1534962897533	answer_update_location_2: 	South Carolina
+1534962898350	final_answer2	ND:	hurricane	date:	2014-06-28	location:	South Carolina
+1534962905166	new_query: 	CONTEXT:query:drought	time_range (18-06-2014,05-07-2014)	slider_topK_range:1217
+1534962905236	Query_Execution_Time	34
+1534962911392	slider_start_change: 	CONTEXT:query:drought	time_range (07-08-2013,31-12-2014)	slider_topK_range:558
+1534962916116	slider_end_change: 	CONTEXT:query:drought	time_range (07-08-2013,24-08-2014)	slider_topK_range:558
+1534962918617	slider_start_change: 	CONTEXT:query:drought	time_range (26-02-2014,24-08-2014)	slider_topK_range:558
+1534962919615	clicking_tweet:2995	CONTEXT:query:drought	time_range (26-02-2014,24-08-2014)	slider_topK_range:558	neg
+1534962922598	MouseDrag: New Center:(39, -99)	CONTEXT:query:drought	time_range (26-02-2014,24-08-2014)	slider_topK_range:558
+1534962923466	clicking_tweet:3157	CONTEXT:query:drought	time_range (26-02-2014,24-08-2014)	slider_topK_range:558	neg
+1534962937438	new_query: 	CONTEXT:query:snow storm	time_range (26-02-2014,24-08-2014)	slider_topK_range:558
+1534962937646	Query_Execution_Time	192
+1534962943105	slider_start_change: 	CONTEXT:query:snow storm	time_range (08-04-2014,31-12-2014)	slider_topK_range:302
+1534962944423	clicking_tweet:935	CONTEXT:query:snow storm	time_range (08-04-2014,31-12-2014)	slider_topK_range:302	pos6
+1534962948751	slider_end_change: 	CONTEXT:query:snow storm	time_range (08-04-2014,07-07-2014)	slider_topK_range:302
+1534962953278	new_query: 	CONTEXT:query:tornado	time_range (08-04-2014,07-07-2014)	slider_topK_range:302
+1534962953347	Query_Execution_Time	36
+1534962973474	new_query: 	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1083
+1534962973514	Query_Execution_Time	12
+1534962978259	slider_start_change: 	CONTEXT:query:earthquake	time_range (21-05-2013,31-12-2014)	slider_topK_range:1062
+1534962982566	slider_end_change: 	CONTEXT:query:earthquake	time_range (21-05-2013,16-08-2013)	slider_topK_range:1062
+1534962985174	slider_start_change: 	CONTEXT:query:earthquake	time_range (08-06-2013,16-08-2013)	slider_topK_range:1062
+1534962986736	clicking_tweet:4130	CONTEXT:query:earthquake	time_range (08-06-2013,16-08-2013)	slider_topK_range:1062	neg
+1534962990155	clicking_tweet:4228	CONTEXT:query:earthquake	time_range (08-06-2013,16-08-2013)	slider_topK_range:1062	neg
+1534962997454	slider_end_change: 	CONTEXT:query:earthquake	time_range (08-06-2013,02-12-2013)	slider_topK_range:1062
+1534962999126	slider_start_change: 	CONTEXT:query:earthquake	time_range (14-09-2013,02-12-2013)	slider_topK_range:1062
+1534962999898	clicking_tweet:3665	CONTEXT:query:earthquake	time_range (14-09-2013,02-12-2013)	slider_topK_range:1062	neg
+1534963003242	clicking_tweet:4015	CONTEXT:query:earthquake	time_range (14-09-2013,02-12-2013)	slider_topK_range:1062	neg
+1534963005434	clicking_tweet:3385	CONTEXT:query:earthquake	time_range (14-09-2013,02-12-2013)	slider_topK_range:1062	neg
+1534963017991	new_query: 	CONTEXT:query:blizzard	time_range (14-09-2013,02-12-2013)	slider_topK_range:1062
+1534963018035	Query_Execution_Time	26
+1534963024409	slider_start_change: 	CONTEXT:query:blizzard	time_range (12-01-2014,31-12-2014)	slider_topK_range:890
+1534963028903	slider_end_change: 	CONTEXT:query:blizzard	time_range (12-01-2014,09-02-2014)	slider_topK_range:890
+1534963032447	slider_start_change: 	CONTEXT:query:blizzard	time_range (03-02-2014,09-02-2014)	slider_topK_range:890
+1534963033748	clicking_tweet:1219	CONTEXT:query:blizzard	time_range (03-02-2014,09-02-2014)	slider_topK_range:890	pos7
+1534963037928	clicking_tweet:1008	CONTEXT:query:blizzard	time_range (03-02-2014,09-02-2014)	slider_topK_range:890	pos7
+1534963047135	slider_start_change: 	CONTEXT:query:blizzard	time_range (01-02-2014,09-02-2014)	slider_topK_range:890
+1534963049103	slider_end_change: 	CONTEXT:query:blizzard	time_range (01-02-2014,08-02-2014)	slider_topK_range:890
+1534963050885	clicking_tweet:1196	CONTEXT:query:blizzard	time_range (01-02-2014,08-02-2014)	slider_topK_range:890	pos7
+1534963056792	answer_update_nd_3: 	blizzard
+1534963061300	answer_update_date_3: 	2014-02-08
+1534963067503	answer_update_location_3: 	New York
+1534963069558	final_answer3	ND:	blizzard	date:	2014-02-08	location:	New York
+1534963069559	answers_baseline	ND1:	flood	date1:	2013-09-09	location1:	Colorado	ND2:	hurricane	date2:	2014-06-28	location2:	South Carolina	ND3:	blizzard	date3:	2014-02-08	location3:	New York

@@ -1,0 +1,126 @@
+1535045150398	START: 	baseline	pos1,pos7,pos6
+1535045155400	answer_update_nd_1: 	flood
+1535045159305	new_query: 	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:1
+1535045159351	Query_Execution_Time	10
+1535045163432	clicking_tweet:57	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685	pos1
+1535045165374	clicking_tweet:53	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685	pos1
+1535045167494	clicking_tweet:5	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685	pos1
+1535045169243	clicking_tweet:37	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685	pos1
+1535045170188	clicking_tweet:85	CONTEXT:query:flood	time_range (01-01-2013,31-12-2014)	slider_topK_range:685	pos1
+1535045173021	slider_start_change: 	CONTEXT:query:flood	time_range (24-05-2013,31-12-2014)	slider_topK_range:685
+1535045189509	slider_end_change: 	CONTEXT:query:flood	time_range (24-05-2013,07-09-2013)	slider_topK_range:685
+1535045197941	slider_end_change: 	CONTEXT:query:flood	time_range (24-05-2013,06-09-2013)	slider_topK_range:685
+1535045205813	slider_end_change: 	CONTEXT:query:flood	time_range (24-05-2013,07-09-2013)	slider_topK_range:685
+1535045207842	clicking_tweet:64	CONTEXT:query:flood	time_range (24-05-2013,07-09-2013)	slider_topK_range:685	pos1
+1535045210285	clicking_tweet:27	CONTEXT:query:flood	time_range (24-05-2013,07-09-2013)	slider_topK_range:685	pos1
+1535045212341	answer_update_nd_1: 	flood
+1535045220850	answer_update_date_1: 	2013-09-07
+1535045224582	answer_update_location_1: 	Colorado
+1535045225147	final_answer1	ND:	flood	date:	2013-09-07	location:	Colorado
+1535045240767	new_query: 	CONTEXT:query:drought	time_range (24-05-2013,07-09-2013)	slider_topK_range:685
+1535045240790	Query_Execution_Time	8
+1535045244073	clicking_tweet:3210	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045244967	clicking_tweet:3237	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045246444	clicking_tweet:2780	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045247076	clicking_tweet:3097	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045249292	clicking_tweet:2985	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045249988	clicking_tweet:17961	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045251621	clicking_tweet:2007	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045253160	clicking_tweet:3080	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045253636	clicking_tweet:2950	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045255756	clicking_tweet:3114	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045256501	clicking_tweet:3162	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045256949	clicking_tweet:2944	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045258236	clicking_tweet:2766	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045300285	clicking_tweet:2944	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045301564	clicking_tweet:2804	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045303093	clicking_tweet:17961	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045303558	clicking_tweet:2870	CONTEXT:query:drought	time_range (01-01-2013,31-12-2014)	slider_topK_range:558	neg
+1535045312415	new_query: 	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:558
+1535045312449	Query_Execution_Time	13
+1535045314706	clicking_tweet:3431	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045315289	clicking_tweet:4231	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045316061	clicking_tweet:3411	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045316606	clicking_tweet:4074	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045317809	clicking_tweet:3590	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045319047	clicking_tweet:4009	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045319519	clicking_tweet:3584	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045320489	clicking_tweet:3969	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045321288	clicking_tweet:3293	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045323557	clicking_tweet:3521	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045324097	clicking_tweet:1957	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045358687	clicking_tweet:4155	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045359416	clicking_tweet:3447	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045360447	clicking_tweet:3581	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045361135	clicking_tweet:4065	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045361592	clicking_tweet:4020	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045362041	clicking_tweet:3966	CONTEXT:query:earthquake	time_range (01-01-2013,31-12-2014)	slider_topK_range:1062	neg
+1535045368627	slider_start_change: 	CONTEXT:query:earthquake	time_range (24-03-2014,31-12-2014)	slider_topK_range:1062
+1535045369468	clicking_tweet:3747	CONTEXT:query:earthquake	time_range (24-03-2014,31-12-2014)	slider_topK_range:1062	neg
+1535045370298	clicking_tweet:3818	CONTEXT:query:earthquake	time_range (24-03-2014,31-12-2014)	slider_topK_range:1062	neg
+1535045372927	clicking_tweet:4026	CONTEXT:query:earthquake	time_range (24-03-2014,31-12-2014)	slider_topK_range:1062	neg
+1535045373841	clicking_tweet:3818	CONTEXT:query:earthquake	time_range (24-03-2014,31-12-2014)	slider_topK_range:1062	neg
+1535045396383	slider_end_change: 	CONTEXT:query:earthquake	time_range (24-03-2014,29-03-2014)	slider_topK_range:1062
+1535045398185	clicking_tweet:3819	CONTEXT:query:earthquake	time_range (24-03-2014,29-03-2014)	slider_topK_range:1062	neg
+1535045403183	answer_update_nd_2: 	earthquake
+1535045433486	answer_update_date_2: 	0002-02-14
+1535045433611	answer_update_date_2: 	0020-02-14
+1535045433874	answer_update_date_2: 	0201-02-14
+1535045434106	answer_update_date_2: 	2014-02-14
+1535045437210	answer_update_date_2: 	
+1535045437315	answer_update_date_2: 	2014-03-14
+1535045437607	answer_update_date_2: 	2014-03-02
+1535045437809	answer_update_date_2: 	2014-03-29
+1535045445751	answer_update_location_2: 	California
+1535045446508	final_answer2	ND:	earthquake	date:	2014-03-29	location:	California
+1535045461751	new_query: 	CONTEXT:query:tornado	time_range (24-03-2014,29-03-2014)	slider_topK_range:1062
+1535045461783	Query_Execution_Time	14
+1535045466762	slider_start_change: 	CONTEXT:query:tornado	time_range (12-11-2013,31-12-2014)	slider_topK_range:1083
+1535045475288	slider_end_change: 	CONTEXT:query:tornado	time_range (13-02-2013,12-11-2013)	slider_topK_range:1083
+1535045484927	slider_end_change: 	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083
+1535045486123	clicking_tweet:6088	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045487013	clicking_tweet:6298	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045489206	clicking_tweet:1833	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045489756	clicking_tweet:6364	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045490613	clicking_tweet:6087	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045491565	clicking_tweet:6447	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045493189	clicking_tweet:6560	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045493941	clicking_tweet:6582	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045498806	clicking_tweet:5972	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045499294	clicking_tweet:5997	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045500310	clicking_tweet:3918	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045502382	clicking_tweet:6650	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045504174	clicking_tweet:1823	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045505813	clicking_tweet:5816	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045506709	clicking_tweet:6489	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045507573	clicking_tweet:5793	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045508197	clicking_tweet:6088	CONTEXT:query:tornado	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083	neg
+1535045519298	new_query: 	CONTEXT:query:blizzard	time_range (12-11-2013,06-11-2014)	slider_topK_range:1083
+1535045519326	Query_Execution_Time	17
+1535045521167	clicking_tweet:1228	CONTEXT:query:blizzard	time_range (01-01-2013,31-12-2014)	slider_topK_range:890	pos7
+1535045530160	slider_start_change: 	CONTEXT:query:blizzard	time_range (17-02-2014,31-12-2014)	slider_topK_range:890
+1535045536464	slider_end_change: 	CONTEXT:query:blizzard	time_range (04-02-2014,17-02-2014)	slider_topK_range:890
+1535045553904	slider_start_change: 	CONTEXT:query:blizzard	time_range (18-01-2014,04-02-2014)	slider_topK_range:890
+1535045560889	slider_start_change: 	CONTEXT:query:blizzard	time_range (04-02-2014,06-02-2014)	slider_topK_range:890
+1535045562220	clicking_tweet:1170	CONTEXT:query:blizzard	time_range (04-02-2014,06-02-2014)	slider_topK_range:890	pos7
+1535045563838	clicking_tweet:1219	CONTEXT:query:blizzard	time_range (04-02-2014,06-02-2014)	slider_topK_range:890	pos7
+1535045566406	clicking_tweet:1173	CONTEXT:query:blizzard	time_range (04-02-2014,06-02-2014)	slider_topK_range:890	pos7
+1535045570372	clicking_tweet:1173	CONTEXT:query:blizzard	time_range (04-02-2014,06-02-2014)	slider_topK_range:890	pos7
+1535045574592	slider_start_change: 	CONTEXT:query:blizzard	time_range (04-02-2014,08-02-2014)	slider_topK_range:890
+1535045577868	slider_end_change: 	CONTEXT:query:blizzard	time_range (14-01-2014,08-02-2014)	slider_topK_range:890
+1535045582056	slider_start_change: 	CONTEXT:query:blizzard	time_range (14-01-2014,07-02-2014)	slider_topK_range:890
+1535045583818	ZoomLevel:5	CONTEXT:query:blizzard	time_range (14-01-2014,07-02-2014)	slider_topK_range:890
+1535045584892	clicking_tweet:1008	CONTEXT:query:blizzard	time_range (14-01-2014,07-02-2014)	slider_topK_range:890	pos7
+1535045589583	clicking_tweet:1077	CONTEXT:query:blizzard	time_range (14-01-2014,07-02-2014)	slider_topK_range:890	pos7
+1535045590782	clicking_tweet:1219	CONTEXT:query:blizzard	time_range (14-01-2014,07-02-2014)	slider_topK_range:890	pos7
+1535045594100	slider_start_change: 	CONTEXT:query:blizzard	time_range (14-01-2014,08-02-2014)	slider_topK_range:890
+1535045595392	clicking_tweet:1022	CONTEXT:query:blizzard	time_range (14-01-2014,08-02-2014)	slider_topK_range:890	pos7
+1535045598449	clicking_tweet:1240	CONTEXT:query:blizzard	time_range (14-01-2014,08-02-2014)	slider_topK_range:890	pos7
+1535045618057	slider_end_change: 	CONTEXT:query:blizzard	time_range (02-02-2014,08-02-2014)	slider_topK_range:890
+1535045620273	answer_update_nd_3: 	blizzard
+1535045625252	answer_update_date_3: 	2014-02-09
+1535045628323	answer_update_date_3: 	
+1535045628565	answer_update_date_3: 	2014-02-08
+1535045634041	answer_update_location_3: 	New York
+1535045634953	final_answer3	ND:	blizzard	date:	2014-02-08	location:	New York
+1535045634953	answers_baseline	ND1:	flood	date1:	2013-09-07	location1:	Colorado	ND2:	earthquake	date2:	2014-03-29	location2:	California	ND3:	blizzard	date3:	2014-02-08	location3:	New York
