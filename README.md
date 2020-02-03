@@ -9,7 +9,7 @@ The tool described in the [CHIIR 2019 paper](https://personal-sites.deakin.edu.a
 
 
 
-## Published work related to this project
+## Published papers related to this project
 
 * Relevance-driven Clustering for Visual Information Retrieval on Twitter. Mohamed Reda Bouadjenek and Scott Sanner. CHIIR '19: Proceedings of the 2019 Conference on Human Information Interaction and Retrieval, March 10–14, 2019, Glasgow, United Kingdom.
 
