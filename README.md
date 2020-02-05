@@ -9,12 +9,12 @@ Visual Twitter Information Retrieval (Viz-TIR) is a visualization tool based on 
 
 
 
-## Published papers related to this project
+# Published papers related to this project
 
 * [Relevance-driven Clustering for Visual Information Retrieval on Twitter](https://personal-sites.deakin.edu.au/~mohamedb/papers/p349-bouadjenek.pdf) . Mohamed Reda Bouadjenek and Scott Sanner. CHIIR '19: Proceedings of the 2019 Conference on Human Information Interaction and Retrieval, March 10–14, 2019, Glasgow, United Kingdom.
 
 
-# Contacts #
+# Contacts 
 For more information about this project, please contact:
 * Scott Sanner: ssanner@gmail.com
 * Mohamed Reda Bouadjenek: rbouadjenek@gmail.com
