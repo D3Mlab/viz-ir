@@ -3,13 +3,18 @@ Search results of spatio-temporal data are often displayed on a map, but when th
 
 # Viz-TIR
 
-The tool described in the [CHIIR 2019 paper](https://personal-sites.deakin.edu.au/~mohamedb/papers/p349-bouadjenek.pdf) can be accessed [here](http://206.12.91.26:8080/VizTIR/).
+Visual Twitter Information Retrieval (Viz-TIR) is a visualization tool based on a fast greedy algorithm that optimizes an approximation of an expected F1-Score metric to generate clusters. The tool which is described in the [CHIIR 2019 paper](https://personal-sites.deakin.edu.au/~mohamedb/papers/p349-bouadjenek.pdf) can be accessed [here](http://206.12.91.26:8080/VizTIR/).
 
 
 
 
 
-# Contacts #
+# Published papers related to this project
+
+* [Relevance-driven Clustering for Visual Information Retrieval on Twitter](https://personal-sites.deakin.edu.au/~mohamedb/papers/p349-bouadjenek.pdf) . Mohamed Reda Bouadjenek and Scott Sanner. CHIIR '19: Proceedings of the 2019 Conference on Human Information Interaction and Retrieval, March 10–14, 2019, Glasgow, United Kingdom.
+
+
+# Contacts 
 For more information about this project, please contact:
 * Scott Sanner: ssanner@gmail.com
 * Mohamed Reda Bouadjenek: rbouadjenek@gmail.com
