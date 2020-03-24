@@ -3,7 +3,7 @@ Search results of spatio-temporal data are often displayed on a map, but when th
 
 # Viz-TIR
 
-Visual Twitter Information Retrieval (Viz-TIR) is a visualization tool based on a fast greedy algorithm that optimizes an approximation of an expected F1-Score metric to generate clusters. The tool which is described in the [CHIIR 2019 paper](https://personal-sites.deakin.edu.au/~mohamedb/papers/p349-bouadjenek.pdf) can be accessed [here](http://206.12.91.26:8080/VizTIR/) or [here](http://203.101.224.176:8080/VizTIR/).
+Visual Twitter Information Retrieval (Viz-TIR) is a visualization tool based on a fast greedy algorithm that optimizes an approximation of an expected F1-Score metric to generate clusters. The tool which is described in the [CHIIR 2019 paper](https://personal-sites.deakin.edu.au/~mohamedb/papers/p349-bouadjenek.pdf) can be accessed [here](http://203.101.224.176:8080/VizTIR/).
 
 
 
