@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: scatter_plot_EF1.vs.F1.eps
-%%Creator: gnuplot 5.0 patchlevel 5
-%%CreationDate: Wed Jan 24 12:32:42 2018
+%%Creator: gnuplot 5.2 patchlevel 8
+%%CreationDate: Thu Apr  9 20:25:00 2020
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 191
 %%EndComments
@@ -48,7 +48,7 @@ gnudict begin
   } if
 } def
 %
-% Gnuplot Prolog Version 5.1 (Oct 2015)
+% Gnuplot Prolog Version 5.2 (Dec 2017)
 %
 %/SuppressPDFMark true def
 %
@@ -305,7 +305,7 @@ gnudict begin
   ColR ColG ColB setrgbcolor} def
 /BoxColFill {gsave Rec PolyFill} def
 /PolyFill {gsave Density fill grestore grestore} def
-/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+/h {rlineto rlineto rlineto closepath gsave fill grestore stroke} bind def
 %
 % PostScript Level 1 Pattern Fill routine for rectangles
 % Usage: x y w h s a XX PatternFill
@@ -472,15 +472,27 @@ currentdict end definefont
 /otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis
 /yacute/thorn/ydieresis
 ] def
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
 /MFshow {
    { dup 5 get 3 ge
      { 5 get 3 eq {gsave} {grestore} ifelse }
      {dup dup 0 get findfont exch 1 get scalefont setfont
      [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
-     get exch 4 get {textshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
      {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
-     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
-     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
      textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
      pop aload pop M} ifelse }ifelse }ifelse }
      ifelse }
@@ -510,42 +522,39 @@ systemdict /pdfmark known not {
 SDict begin [
   /Title (scatter_plot_EF1.vs.F1.eps)
   /Subject (gnuplot plot)
-  /Creator (gnuplot 5.0 patchlevel 5)
-  /Author (rbouadjenek)
+  /Creator (gnuplot 5.2 patchlevel 8)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Wed Jan 24 12:32:42 2018)
+  /CreationDate (Thu Apr  9 20:25:00 2020)
   /DOCINFO pdfmark
 end
 } ifelse
 %
-% Support for boxed text - Ethan A Merritt May 2005
+% Support for boxed text - Ethan A Merritt Sep 2016
 %
 /InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
            userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
 	   /Boxing true def } def
-/ExtendTextBox { Boxing
-    { gsave dup false charpath pathbbox
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
       dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
       dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
       dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
       dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
-      grestore } if } def
+      grestore } if }
+    {} ifelse} def
 /PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
                TBx1 TBxmargin sub TBy2 TBymargin add L
 	       TBx2 TBxmargin add TBy2 TBymargin add L
 	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
 /DrawTextBox { PopTextBox stroke /Boxing false def} def
-/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
 0 0 0 0 InitTextBox
 /TBxmargin 20 def
 /TBymargin 20 def
 /Boxing false def
 /textshow { ExtendTextBox Gshow } def
 %
-% redundant definitions for compatibility with prologue.ps older than 5.0.2
-/LTB {BL [] LCb DL} def
-/LTb {PL [] LCb DL} def
 end
 %%EndProlog
 %%Page: 1 1
@@ -578,6 +587,8 @@ stroke
 1032 768 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0)]
 ] -80.0 MRshow
+/Courier findfont 240 scalefont setfont
+/vshift -80 def
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -598,6 +609,7 @@ stroke
 1032 1065 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.2)]
 ] -80.0 MRshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -618,6 +630,7 @@ stroke
 1032 1512 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.5)]
 ] -80.0 MRshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -638,6 +651,7 @@ stroke
 1032 1958 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.8)]
 ] -80.0 MRshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -658,6 +672,7 @@ stroke
 1032 2255 M
 [ [(Courier) 240.0 0.0 true true 0 ( 1)]
 ] -80.0 MRshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -678,6 +693,7 @@ stroke
 1176 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -699,6 +715,7 @@ stroke
 1665 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.3)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -720,6 +737,7 @@ stroke
 2155 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.6)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -733,23 +751,34 @@ LCb setrgbcolor
 -1631 0 V
 Z stroke
 1.000 UP
-0.00 0.00 0.00 C 1258 2091 M
+0.00 0.00 0.00 C
+1258 2091 M
 [ [(Courier) 240.0 0.0 true true 0 (RMSE=0.0633)]
 ] -80.0 MLshow
+/Courier findfont 240 scalefont setfont
+0.00 0.00 0.00 C
+1584 902 M
+[ [(Courier) 240.0 0.0 true true 0 (R)]
+[(Courier) 192.0 120.0 true true 0 (2)]
+[(Courier) 240.0 0.0 true true 0 (=0.98)]
+] -104.0 MLshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
 LCb setrgbcolor
-192 1511 M
+228 1511 M
 currentpoint gsave translate -270 rotate 0 0 moveto
 [ [(Courier) 240.0 0.0 true true 0 (EF1-Score)]
 ] -80.0 MCshow
 grestore
+/Courier findfont 240 scalefont setfont
 LTb
 LCb setrgbcolor
 1991 168 M
 [ [(Courier) 240.0 0.0 true true 0 (F1-Score)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 LTb
 LCb setrgbcolor
 1991 2695 M
@@ -757,11 +786,14 @@ LCb setrgbcolor
 [(Symbol) 320.0 0.0 true true 0 (l)]
 [(Courier) 320.0 0.0 true true 0 (=0.6)]
 ] -106.7 MCshow
+/Courier findfont 240 scalefont setfont
+LTb
 % Begin plot #1
 0.650 UP
 1.000 UL
 LTb
-0.90 0.12 0.06 C 1176 1346 CircleF
+0.90 0.12 0.06 C
+1176 1346 CircleF
 1201 1376 CircleF
 1192 1346 CircleF
 1190 1320 CircleF
@@ -1305,7 +1337,8 @@ LTb
 % Begin plot #2
 7.000 UL
 LTb
-0.90 0.12 0.06 C 1176 1276 M
+0.90 0.12 0.06 C
+1176 1276 M
 16 7 V
 17 7 V
 16 7 V
@@ -1410,7 +1443,8 @@ LTb
 stroke
 1.000 UL
 LTb
-0.00 0.00 0.00 C 1176 768 M
+0.00 0.00 0.00 C
+1176 768 M
 16 15 V
 17 15 V
 16 15 V
@@ -1628,6 +1662,7 @@ stroke
 2952 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -1649,6 +1684,7 @@ stroke
 3449 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.3)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -1670,6 +1706,7 @@ stroke
 3945 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.6)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -1683,9 +1720,18 @@ LCb setrgbcolor
 -1655 0 V
 Z stroke
 1.000 UP
-0.00 0.00 0.00 C 3035 2091 M
+0.00 0.00 0.00 C
+3035 2091 M
 [ [(Courier) 240.0 0.0 true true 0 (RMSE=0.0358)]
 ] -80.0 MLshow
+/Courier findfont 240 scalefont setfont
+0.00 0.00 0.00 C
+3366 902 M
+[ [(Courier) 240.0 0.0 true true 0 (R)]
+[(Courier) 192.0 120.0 true true 0 (2)]
+[(Courier) 240.0 0.0 true true 0 (=0.975)]
+] -104.0 MLshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -1693,17 +1739,21 @@ LCb setrgbcolor
 3779 168 M
 [ [(Courier) 240.0 0.0 true true 0 (F1-Score)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 LTb
 LCb setrgbcolor
 3779 2695 M
 [ [(Symbol) 320.0 0.0 true true 0 (l)]
 [(Courier) 320.0 0.0 true true 0 (=0.7)]
 ] -106.7 MCshow
+/Courier findfont 240 scalefont setfont
+LTb
 % Begin plot #1
 0.650 UP
 1.000 UL
 LTb
-0.90 0.62 0.00 C 2952 1246 CircleF
+0.90 0.62 0.00 C
+2952 1246 CircleF
 3018 1267 CircleF
 2980 1238 CircleF
 2969 1218 CircleF
@@ -2247,7 +2297,8 @@ LTb
 % Begin plot #2
 7.000 UL
 LTb
-0.90 0.62 0.00 C 2952 1164 M
+0.90 0.62 0.00 C
+2952 1164 M
 17 8 V
 16 8 V
 17 7 V
@@ -2352,7 +2403,8 @@ LTb
 stroke
 1.000 UL
 LTb
-0.00 0.00 0.00 C 2952 768 M
+0.00 0.00 0.00 C
+2952 768 M
 17 15 V
 16 15 V
 17 15 V
@@ -2570,6 +2622,7 @@ stroke
 4752 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -2591,6 +2644,7 @@ stroke
 5249 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.3)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -2612,6 +2666,7 @@ stroke
 5745 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.6)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -2625,9 +2680,18 @@ LCb setrgbcolor
 -1655 0 V
 Z stroke
 1.000 UP
-0.00 0.00 0.00 C 4835 2091 M
+0.00 0.00 0.00 C
+4835 2091 M
 [ [(Courier) 240.0 0.0 true true 0 (RMSE=0.0183)]
 ] -80.0 MLshow
+/Courier findfont 240 scalefont setfont
+0.00 0.00 0.00 C
+5166 902 M
+[ [(Courier) 240.0 0.0 true true 0 (R)]
+[(Courier) 192.0 120.0 true true 0 (2)]
+[(Courier) 240.0 0.0 true true 0 (=0.937)]
+] -104.0 MLshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -2635,17 +2699,21 @@ LCb setrgbcolor
 5579 168 M
 [ [(Courier) 240.0 0.0 true true 0 (F1-Score)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 LTb
 LCb setrgbcolor
 5579 2695 M
 [ [(Symbol) 320.0 0.0 true true 0 (l)]
 [(Courier) 320.0 0.0 true true 0 (=0.8)]
 ] -106.7 MCshow
+/Courier findfont 240 scalefont setfont
+LTb
 % Begin plot #1
 0.650 UP
 1.000 UL
 LTb
-0.00 0.45 0.70 C 4752 1124 CircleF
+0.00 0.45 0.70 C
+4752 1124 CircleF
 4918 1137 CircleF
 4918 1120 CircleF
 4918 1097 CircleF
@@ -3189,7 +3257,8 @@ LTb
 % Begin plot #2
 7.000 UL
 LTb
-0.00 0.45 0.70 C 4752 1034 M
+0.00 0.45 0.70 C
+4752 1034 M
 17 9 V
 16 9 V
 17 9 V
@@ -3294,7 +3363,8 @@ LTb
 stroke
 1.000 UL
 LTb
-0.00 0.00 0.00 C 4752 768 M
+0.00 0.00 0.00 C
+4752 768 M
 17 15 V
 16 15 V
 17 15 V
@@ -3512,6 +3582,7 @@ stroke
 6552 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -3533,6 +3604,7 @@ stroke
 7048 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.3)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -3554,6 +3626,7 @@ stroke
 7544 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.6)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -3567,9 +3640,18 @@ LCb setrgbcolor
 -1654 0 V
 Z stroke
 1.000 UP
-0.00 0.00 0.00 C 6635 2091 M
+0.00 0.00 0.00 C
+6635 2091 M
 [ [(Courier) 240.0 0.0 true true 0 (RMSE=0.0166)]
 ] -80.0 MLshow
+/Courier findfont 240 scalefont setfont
+0.00 0.00 0.00 C
+6966 902 M
+[ [(Courier) 240.0 0.0 true true 0 (R)]
+[(Courier) 192.0 120.0 true true 0 (2)]
+[(Courier) 240.0 0.0 true true 0 (=0.899)]
+] -104.0 MLshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -3577,17 +3659,21 @@ LCb setrgbcolor
 7379 168 M
 [ [(Courier) 240.0 0.0 true true 0 (F1-Score)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 LTb
 LCb setrgbcolor
 7379 2695 M
 [ [(Symbol) 320.0 0.0 true true 0 (l)]
 [(Courier) 320.0 0.0 true true 0 (=0.9)]
 ] -106.7 MCshow
+/Courier findfont 240 scalefont setfont
+LTb
 % Begin plot #1
 0.650 UP
 1.000 UL
 LTb
-0.00 0.62 0.45 C 6552 970 CircleF
+0.00 0.62 0.45 C
+6552 970 CircleF
 6717 1029 CircleF
 6717 1015 CircleF
 6717 989 CircleF
@@ -4131,7 +4217,8 @@ LTb
 % Begin plot #2
 7.000 UL
 LTb
-0.00 0.62 0.45 C 6552 897 M
+0.00 0.62 0.45 C
+6552 897 M
 17 11 V
 16 10 V
 17 11 V
@@ -4236,7 +4323,8 @@ LTb
 stroke
 1.000 UL
 LTb
-0.00 0.00 0.00 C 6552 768 M
+0.00 0.00 0.00 C
+6552 768 M
 17 15 V
 16 15 V
 17 15 V
@@ -4454,6 +4542,7 @@ stroke
 8352 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -4475,6 +4564,7 @@ stroke
 8848 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.3)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -4496,6 +4586,7 @@ stroke
 9344 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 0.6)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -4516,6 +4607,7 @@ stroke
 10006 528 M
 [ [(Courier) 240.0 0.0 true true 0 ( 1)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -4529,9 +4621,18 @@ LCb setrgbcolor
 -1654 0 V
 Z stroke
 1.000 UP
-0.00 0.00 0.00 C 8435 2091 M
+0.00 0.00 0.00 C
+8435 2091 M
 [ [(Courier) 240.0 0.0 true true 0 (RMSE=0.0000)]
 ] -80.0 MLshow
+/Courier findfont 240 scalefont setfont
+0.00 0.00 0.00 C
+8766 902 M
+[ [(Courier) 240.0 0.0 true true 0 (R)]
+[(Courier) 192.0 120.0 true true 0 (2)]
+[(Courier) 240.0 0.0 true true 0 (=1.0)]
+] -104.0 MLshow
+/Courier findfont 240 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
@@ -4539,17 +4640,21 @@ LCb setrgbcolor
 9179 168 M
 [ [(Courier) 240.0 0.0 true true 0 (F1-Score)]
 ] -80.0 MCshow
+/Courier findfont 240 scalefont setfont
 LTb
 LCb setrgbcolor
 9179 2695 M
 [ [(Symbol) 320.0 0.0 true true 0 (l)]
 [(Courier) 320.0 0.0 true true 0 (=1.0)]
 ] -106.7 MCshow
+/Courier findfont 240 scalefont setfont
+LTb
 % Begin plot #1
 0.650 UP
 1.000 UL
 LTb
-0.58 0.00 0.83 C 8352 768 CircleF
+0.58 0.00 0.83 C
+8352 768 CircleF
 8517 917 CircleF
 8517 917 CircleF
 8517 917 CircleF
@@ -5091,7 +5196,8 @@ LTb
 % Begin plot #2
 1.000 UL
 LTb
-0.00 0.00 0.00 C 8352 768 M
+0.00 0.00 0.00 C
+8352 768 M
 17 15 V
 16 15 V
 17 15 V
@@ -5213,7 +5319,5 @@ stroke
 grestore
 end
 showpage
-%%Trailer
-%%DocumentFonts: Symbol Courier
-                                                                                                                                                                                                                                           %%Trailer
+                                                                                                                                                                                                                                                                                     %%Trailer
 %%DocumentFonts: Symbol Courier

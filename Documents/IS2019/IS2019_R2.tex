@@ -80,7 +80,7 @@
 \ead{duyihao@mie.utoronto.ca} 
 
 
-\address[deakin]{School of Information Technology, Deakin University, Australia}
+\address[deakin]{School of Information Technology, Deakin University, Waurn Ponds Campus, Geelong, VIC 3216, Australia}
 
 \address[UofT]{Department of Mechanical and Industrial Engineering, The University of Toronto, Canada}
 
@@ -1334,7 +1334,8 @@ In all search approaches, the user could use a time slider bar to restrict the r
 %Once each user had familiarized themselves with the interface, they were asked to find three other natural disasters using a different display algorithm (baseline, $k$-means, EF1 relevance-driven clustering using the BPS greedy algorithm) for each of three trials containing three natural disasters each. 
 
 \textcolor{red}{
-Before starting the experiment, basic instructions were given to each participant among which not make a break, not to use their phone, and not to use social media such that to still focused on the task and perform a fair evaluation. We have collected basic information related to each participant including the English level, the education degree and the extent to which they are aware of natural disasters. The purpose of that entrance survey was to make sure that there is no bias among the participants.
+Designing an Interactive IR evaluation approach is a challenging task for successfully evaluating exploratory search interfaces. This field has been widely explored and many suggestions have been provided for constructing simulated scenarios and tasks in order to engage participants in the search in a way that is as close as possible to actual information searching and IR processes~\cite{borlund2003iir,Kelly2009}.
+Specifically, before starting the experiment, basic instructions were given to each participant among which not make a break, not to use their phone, and not to use social media such that to still focused on the task and perform a fair evaluation. We have collected basic information related to each participant including the English level, the education degree and the extent to which they are aware of natural disasters. The purpose of that entrance survey was to make sure that there is no bias among the participants.
 Before starting the formal experiment, each participant was shown a training video describing the visual search interface, how to use it and how to interact with the clusters.  Then, each user was tested on his ability to find each of three natural disasters from Table~\ref{tbl:events} 
 %(disjoint from the disasters used in the three experimental trials) 
 using both the {\bf Baseline} non-clustering interface as well as the {\bf $\mathbf{K}$-means} clustering interface in two training trials. 
@@ -1515,10 +1516,9 @@ that both corroborate these preference findings, we remark that all of the exper
 %This is probably due to the fact that they are used to work with a conventional search approach, and that they couldn't digest this new search clustering paradigm. 
 
 
-\section{Concluding Remarks and Future Work}
-\label{sec:Conclusions}
-
-
+\section{Discussion}
+\label{sec:Discussion}
+\textcolor{red}{In this section, we discuss the main limitations of this research and the possible future work that we intend to investigate. }
 %Overall, we aim for this work to bring a formal IR perspective to the important research area of AUIs while opening new research directions for the application of IR methodology.  As information
 %retrieval has transformed our web experience, we believe there is
 %a similar opportunity to transform the present nascent state of AUIs
@@ -1529,23 +1529,56 @@ that both corroborate these preference findings, we remark that all of the exper
 
 %In this article, we have expanded on the information filtering paradigm of Belkin and Croft \citep{Belkin1992}, by  
 
-In this article, we have noted that while unsupervised clustering methods have often been used to aggregate data in visual search interfaces, approaches like $K$-means do not make effective use of query relevance signals during this aggregation task and do not necessarily optimize for purposes of visual presentation in the user interface.  To address these deficiencies, we introduced a cluster definition intended for spatial, temporal, and content coherence for visual presentation that does not require specification of complex distance metrics like $K$-means.  We have further introduced a novel formulation of relevance-driven clustering for visual search as an optimization problem given a probabilistic measure of relevance for search results.  We have motivated and derived expected F1-Score as an objective criteria for relevance-driven cluster optimization.% and we have experimentally demonstrated that the proposed expected F1-Score metric is a good surrogate of the ground truth F1-Score.
+  %We have also proposed a method for optimization of expected F1-score using a MILP approach that has critically allowed us to benchmark the greedy algorithms on moderate-sized datasets. 
+\subsection{Summary of results}
 
-We introduced novel relevance-driven clustering approximate optimization algorithms for expected F1-Score based on two different greedy strategies (\textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}}).  %We have also proposed a method for optimization of expected F1-score using a MILP approach that has critically allowed us to benchmark the greedy algorithms on moderate-sized datasets. 
+
+\textcolor{red}{The aim of this research was to investigate relevance-driven clustering, which led to the development of novel optimization algorithms for expected F1-Score based on two different greedy strategies (\textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}}). }
+%
 The offline evaluations we performed 
 %on a Twitter dataset 
 show that the binary partitioning search (\textcolor{red}{{\bf RadiCAl-BPS}}) algorithm we have proposed is relatively efficient, performs comparably to or exceeds $K$-means performance when the relevance signal is moderately reliable, and provides a good approximation of the \emph{optimal} MILP solution in small instances where comparison is possible.
 %Somewhat surprisingly, we remark that greedy methods like BPS may even do better than exact expected F1-score optimization in high noise cases for relevance estimation due to the more restricted search space of BPS, which effectively prevents ``overfitting'' to this noise. 
 
-The user study we carried out on 24 users confirmed the outcome of the offline evaluation and has demonstrated that our novel relevance-driven clustering based on  BPS (\textcolor{red}{{\bf RadiCAl-BPS}}) is highly effective for our search scenario.  Specifically we confirmed quantitatively that users achieved generally faster search task completion, higher recall, and lower error using relevance-driven clustering compared to $K$-means and a non-aggregation baseline.  Users also indicated that the \textcolor{red}{{\bf RadiCAl-BPS}} approach yielded lower perceived workload on the NASA-TLX survey and higher usability on the SUS survey.  And finally, to corroborate all of these findings, users ultimately indicated a strong first preference for the relevance and interface-driven clustering approach that comprises the novel contribution of this article.   All the algorithms described throughout this paper have been integrated into a tool called Visual Twitter Information Retrieval (Viz-TIR)~\cite{Bouadjenek2019}.
+The user study we carried out on 24 users confirmed the outcome of the offline evaluation and has demonstrated that our novel relevance-driven clustering based on  BPS (\textcolor{red}{{\bf RadiCAl-BPS}}) is highly effective for our search scenario.  Specifically we confirmed quantitatively that users achieved generally faster search task completion, higher recall, and lower error using relevance-driven clustering compared to $K$-means and a non-aggregation baseline.  Users also indicated that the \textcolor{red}{{\bf RadiCAl-BPS}} approach yielded lower perceived workload on the NASA-TLX survey and higher usability on the SUS survey.  And finally, to corroborate all of these findings, users ultimately indicated a strong first preference for the relevance and interface-driven clustering approach that comprises the novel contribution of this article.   All the algorithms described throughout this paper have been integrated into a tool called Visual Twitter Information Retrieval (Viz-TIR)~\cite{Bouadjenek2019}\footnote{\url{https://github.com/D3Mlab/viz-ir}}.
 
- Overall, we believe this work underscores the importance of relevance-driven clustering optimization methods specifically targeted for presentation in interactive visual search interfaces.  However, there is still much more work to be done to fully explore the space of optimization objectives and algorithms for interactive visual search.  Interesting areas of future work include the following:
+\subsection{Limitations}
+\textcolor{red}{Even though the work described in this article have shown promising research perspectives, it suffers from multiple limitations at both the algorithmic and methodological levels. This includes:}
+\begin{itemize}
+\item \textcolor{red}{\emph{The limitation of a pure relevance-driven clustering approach.} The relevance-driven clustering approach we described in this paper has shown a very promising results presentation perspective by generating pure clusters around true events in terms of time, location and content. However, the algorithm may not generate clusters or alternatively generate only one big cluster in the case of a uniform distribution of the relevance in the search results. This issue should be addressed in future work by defining a new objective function to optimize that is also density-driven. }
+
+\item \textcolor{red}{\emph{Adding more dimensions to the algorithm may not be trivial.} 
+Although we mentioned previously that we don't limit this work to the three display attributes we used, incorporating more attributes may not be trivial and may involve some complex accommodations and adjustments in terms of programming. However, we believe that this should be feasible as long as it involves continuous or discrete cluster attributes. }
+
+%\item Are there any theoretical implication w.r.t. to multi-objective optimization (Deb, 2014)? 
+
+%\item Or any practical implications w.r.t. reranking in IR (Ghorab, 2012)?
+
+\item \textcolor{red}{\emph{The expensiveness of user studies.}
+Carrying out user studies is a time-consuming and expensive process since it involves human beings. Although we had a decent number of participants in our user study who were able to compare and assess three different algorithms, we believe that such a study and its conclusions should be reinforced with more participants as well as more algorithms to be compared.}
+
+\item \textcolor{red}{\emph{The lack of context regarding natural disasters in the US for some participants.} Even though instructions and suggestions were given to the participants regarding the possible natural disasters to search, some participants mentioned the difficulty to come up with the right queries, mostly because of unfamiliarity with the US context.}
+
+\end{itemize}
+
+\subsection{Future Work}
+Overall, we believe this work underscores the importance of relevance-driven clustering optimization methods specifically targeted for presentation in interactive visual search interfaces.  
+However, there is still much more work to be done to fully explore the space of optimization objectives and algorithms for interactive visual search.  Interesting areas of future work include the following:
 \begin{itemize}
 %\item Consideration of the role of pseudo-relevance feedback~\cite{Manning2008} (Chapter 9) in a visual search and clustering setting.
 \item \emph{Augmenting the relevance-focused F1-Score with additional cluster criteria to enhance word-level, spatial, and temporal coherence.}  While we argued and empirically demonstrated that our expected F1-Score cluster optimization objective does lead to coherently interpretable clusters, there is certainly the possibility to explore more complex objectives that may further enhance coherency for end users.  For example, research could explore novel application-specific objectives that take into account physical constraints of the display device as well as user cognitive constraints and preferences for cluster display that could be used to augment (or even replace) the existing F1-Score relevance-based objective.
 \item \emph{Considering a ranking perspective of cluster relevance and optimization as opposed to a Boolean perspective.}  In this initial work, we did not want to address ranking aspects of visual clustering that might entail showing each result in a cluster as a different size since this would require consideration of psychovisual aspects of human information processing that are beyond the scope of the present article.  Nonetheless, such an extension is certainly possible in future work and would better leverage additional degrees of freedom in the search results display to distinguish results by their level of relevance.  A key challenge in such an extension would involve developing new optimization algorithms that could deal with the increased complexity of a ranking-style evaluation metric of cluster relevance.
 \item \emph{Considering a topic modeling perspective in place of a clustering perspective.}  While clustering attempts to aggregate similar documents with the assumption that each document belongs to one cluster, topic modeling methods such as (probabilistic) LSA~\cite{deerwester1990,hofmann1999} or LDA~\cite{blei_lda} assume that a document is composed of multiple topics and try to estimate the degree or probability of relevance that a document has to each topic.  While topic modeling provides a more granular view of document content, such approaches pose a number of significant challenges for use with visual search interfaces.  Specifically, this would require highly effective spatio-temporal extensions of topic models, novel methods to visually display topics as opposed to clusters, extensions to topic modeling that explicitly consider relevance-based optimization criteria, and novel computational methods to effectively optimize within this extended framework.  Nonetheless, the benefits of a more granular topic modeling perspective may certainly motivate extensions of this work to \emph{relevance-driven topic modeling} for visual search interfaces.
 \end{itemize}
+
+\section{Conclusion}
+\label{sec:Conclusions}
+In this article, we have noted that while unsupervised clustering methods have often been used to aggregate data in visual search interfaces, approaches like $K$-means do not make effective use of query relevance signals during this aggregation task and do not necessarily optimize for purposes of visual presentation in the user interface.  To address these deficiencies, we introduced a cluster definition intended for spatial, temporal, and content coherence for visual presentation that does not require specification of complex distance metrics like $K$-means.  We have further introduced a novel formulation of relevance-driven clustering for visual search as an optimization problem given a probabilistic measure of relevance for search results.  We have motivated and derived expected F1-Score as an objective criteria for relevance-driven cluster optimization. % and we have experimentally demonstrated that the proposed expected F1-Score metric is a good surrogate of the ground truth F1-Score.
+%
+We introduced novel relevance-driven clustering approximate optimization algorithms for expected F1-Score based on two different greedy strategies (\textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}}).
+
+
+
 In sum, we hope that this article provides a first stepping stone to a wide range of exciting future work on the topic of relevance- and interface-driven clustering to help create the next generation of enhanced visual information retrieval systems.
 
 
