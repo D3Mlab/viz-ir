@@ -4602,6 +4602,7 @@ set size 0.45,0.54
 set origin 0,0
 set ylabel "EF1-Score" font "Courier,24"
 set label 1 at 0.05, 0.89  "RMSE=0.0633" tc "black"
+set label 2 at 0.25, 0.09  "R^2=0.98" tc "black"
 #set output "scatter_plot_EF1.vs.F1_lambda_0.6.eps"
 plot "AUI4IR_results/scatter_plot_lambda_0.6.txt" using 1:2 notitle '{/Symbol l}=0.6'  with points lw 1  ps 0.65 pt 7 lc 7,\
  f4(x) notitle lw 7  lc 7,\
@@ -4615,6 +4616,7 @@ set title "{/Symbol l}=0.7"
 set size 0.34,0.54
 set origin 0.36,0
 set label 1 at 0.05, 0.89  "RMSE=0.0358" tc "black"
+set label 2 at 0.25, 0.09  "R^2=0.975" tc "black"
 #set output "scatter_plot_EF1.vs.F1_lambda_0.7.eps"
 plot "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2 notitle '{/Symbol l}=0.7'  with points lw 1  ps 0.65 pt 7 lc 4,\
   f3(x) notitle lw 7  lc 4,\
@@ -4624,6 +4626,7 @@ set title "{/Symbol l}=0.8"
 set size 0.34,0.54
 set origin 0.61,0
 set label 1 at 0.05, 0.89  "RMSE=0.0183" tc "black"
+set label 2 at 0.25, 0.09  "R^2=0.937" tc "black"
 #set output "scatter_plot_EF1.vs.F1_lambda_0.8.eps"
 plot  "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2 notitle '{/Symbol l}=0.8'  with points lw 1  ps 0.65 pt 7 lc 6,\
   f2(x) notitle lw 7  lc 6,\
@@ -4633,6 +4636,7 @@ set title "{/Symbol l}=0.9"
 set size 0.34,0.54
 set origin 0.86,0
 set label 1 at 0.05, 0.89  "RMSE=0.0166" tc "black"
+set label 2 at 0.25, 0.09  "R^2=0.899" tc "black"
 #set output "scatter_plot_EF1.vs.F1_lambda_0.9.eps"
 plot  "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2 notitle '{/Symbol l}=0.9'  with points lw 1  ps 0.65 pt 7 lc 2,\
  f1(x) notitle lw 7  lc 2,\
@@ -4644,6 +4648,7 @@ set title "{/Symbol l}=1.0"
 set size 0.34,0.54
 set origin 1.11,0
 set label 1 at 0.05, 0.89  "RMSE=0.0000" tc "black"
+set label 2 at 0.25, 0.09  "R^2=1.0" tc "black"
 #set output "scatter_plot_EF1.vs.F1_lambda_1.0.eps"
 plot "AUI4IR_results/scatter_plot_lambda_1.0.txt" using 1:2 notitle '{/Symbol l}=1.0'  with points lw 1  ps 0.65 pt 7 lc 1,\
  x notitle lc 'black'
