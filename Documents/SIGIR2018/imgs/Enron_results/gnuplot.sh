@@ -4553,13 +4553,14 @@ plot 'AUI4IR_results/scatter_plot_lambda_0.9.txt' using (1):3 lc 1 lw 3  notitle
 
 
 
+
 clear
 reset
 set encoding iso_8859_1
 set grid
 
 
-set size 1.4,0.56
+set size 1.4,0.65
 
 #set yrang [0:1]
 
@@ -4571,6 +4572,7 @@ set ytics (0,0.2, 0.5,0.8,1.0)
 #set xtics nomirror rotate by -45
 set xlabel "F1-Score" font "Courier,24"
 
+set xtics (0,0.2,0.4,0.6,0.8,1.0)  rotate by 90 right font "Courier,18"
 
 
 f1(x) = m11*x + b1
@@ -4598,7 +4600,7 @@ set output "scatter_plot_EF1.vs.F1.eps"
 set multiplot layout 1,5
 
 set title "{/Symbol l}=0.6"  font "Courier,32" 
-set size 0.45,0.54
+set size 0.45,0.6
 set origin 0,0
 set ylabel "EF1-Score" font "Courier,24"
 set label 1 at 0.05, 0.89  "RMSE=0.0633" tc "black"
@@ -4613,7 +4615,7 @@ set format y ""
 
 
 set title "{/Symbol l}=0.7"
-set size 0.34,0.54
+set size 0.34,0.6
 set origin 0.36,0
 set label 1 at 0.05, 0.89  "RMSE=0.0358" tc "black"
 set label 2 at 0.25, 0.09  "R^2=0.975" tc "black"
@@ -4623,7 +4625,7 @@ plot "AUI4IR_results/scatter_plot_lambda_0.7.txt" using 1:2 notitle '{/Symbol l}
  x notitle lc 'black'
 
 set title "{/Symbol l}=0.8"
-set size 0.34,0.54
+set size 0.34,0.6
 set origin 0.61,0
 set label 1 at 0.05, 0.89  "RMSE=0.0183" tc "black"
 set label 2 at 0.25, 0.09  "R^2=0.937" tc "black"
@@ -4633,7 +4635,7 @@ plot  "AUI4IR_results/scatter_plot_lambda_0.8.txt" using 1:2 notitle '{/Symbol l
  x notitle lc 'black'
 
 set title "{/Symbol l}=0.9"
-set size 0.34,0.54
+set size 0.34,0.6
 set origin 0.86,0
 set label 1 at 0.05, 0.89  "RMSE=0.0166" tc "black"
 set label 2 at 0.25, 0.09  "R^2=0.899" tc "black"
@@ -4643,9 +4645,8 @@ plot  "AUI4IR_results/scatter_plot_lambda_0.9.txt" using 1:2 notitle '{/Symbol l
  x notitle lc 'black'
 
 
-set xtics (0,0.3,0.6,1.0)
 set title "{/Symbol l}=1.0"
-set size 0.34,0.54
+set size 0.34,0.6
 set origin 1.11,0
 set label 1 at 0.05, 0.89  "RMSE=0.0000" tc "black"
 set label 2 at 0.25, 0.09  "R^2=1.0" tc "black"
@@ -4655,7 +4656,6 @@ plot "AUI4IR_results/scatter_plot_lambda_1.0.txt" using 1:2 notitle '{/Symbol l}
 
 
 unset multiplot
-
 
 
 
