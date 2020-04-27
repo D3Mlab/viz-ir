@@ -1,6 +1,6 @@
 ## SUMMARY & USAGE LICENSE
 
-This twitter dataset  was collected by the D3M Research Group at the University of Toronto.
+This twitter dataset  was collected by the [D3M Research Group](https://d3m.mie.utoronto.ca/) at the University of Toronto.
 
 The dataset consisted initialy into a corpus  of  approximately  1  billion tweets crawled from the Twitter streaming API during 2013 and 2014 in which we selected a subset of tweets with the following restrictions:
 
