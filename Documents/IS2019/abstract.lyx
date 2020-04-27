@@ -257,13 +257,13 @@ Search results of spatio-temporal data are often displayed on a map, but
 \begin_layout Plain Layout
 
 After comparatively benchmarking algorithmic variants of our proposed approach
- -- RadiCAl -- in offline experiments, we undertake a user study with 24
- subjects to evaluate whether RadiCAl improves human performance on visual
+ -- RadiCAL -- in offline experiments, we undertake a user study with 24
+ subjects to evaluate whether RadiCAL improves human performance on visual
  search tasks in comparison to $K$-means clustering and a filtered search
  baseline.
   Our results show that (a) our binary partitioning search (BPS) variant
- of RadiCAl is fast, near-optimal, and extracts higher-relevance clusters
- than $K$-means, and (b) clusters optimized via RadiCAl result in faster
+ of RadiCAL is fast, near-optimal, and extracts higher-relevance clusters
+ than $K$-means, and (b) clusters optimized via RadiCAL result in faster
  search task completion with higher accuracy while requiring a minimum workload
  leading to high effectiveness, efficiency, and user satisfaction among
  alternatives.

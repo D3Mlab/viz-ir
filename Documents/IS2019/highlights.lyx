@@ -373,10 +373,10 @@ item Through a series of transformations, we demonstrate that the globally
  computationally expensive to solve.
   To improve the algorithmic efficiency of optimization, we present two
  algorithms: Greedy and Binary Partitioning Search (BPS).
-  Referring to our Relevance-driven Clustering Algorithm as RadiCAl, this
- leads to three variants: RadiCAl-MILP, RadiCAl-Greedy, and RadiCAl-BPS.
-  We quantitatively evaluate and compare all RadiCAl variants and K-means
- on a search-driven tweet clustering task and demonstrate that RadiCAl-BPS
+  Referring to our Relevance-driven Clustering Algorithm as RadiCAL, this
+ leads to three variants: RadiCAL-MILP, RadiCAL-Greedy, and RadiCAL-BPS.
+  We quantitatively evaluate and compare all RadiCAL variants and K-means
+ on a search-driven tweet clustering task and demonstrate that RadiCAL-BPS
  provides the best overall tradeoffs in terms of performance and efficiency.
 \end_layout
 
@@ -495,11 +495,9 @@ textendash{} for a classifier with 90
 
 \begin_layout Plain Layout
 
-
-\backslash
-item Returning to our end-user visual search task motivation, we conclude
- the experimental evaluation of this work with a user study to evaluate
- whether this new relevance-driven clustering method improves human performance
+Returning to our end-user visual search task motivation, we conclude the
+ experimental evaluation of this work with a user study to evaluate whether
+ this new relevance-driven clustering method improves human performance
  in comparison to $K$-means clustering and a multiple filter search baseline.
  Our results show that clusters derived in our relevance- and interface-driven
  optimization framework result in faster search task completion with higher
