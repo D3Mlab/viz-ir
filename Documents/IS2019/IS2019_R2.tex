@@ -1530,7 +1530,7 @@ that both corroborate these preference findings, we remark that all of the exper
 
 \section{Discussion}
 \label{sec:Discussion}
-\textcolor{red}{In this section, we discuss the main limitations of this research and the possible future work that we intend to investigate. }
+\textcolor{red}{In this section, we discuss a summary of our key contributions and results, the main limitations of this research, and possible directions for future work. }
 %Overall, we aim for this work to bring a formal IR perspective to the important research area of AUIs while opening new research directions for the application of IR methodology.  As information
 %retrieval has transformed our web experience, we believe there is
 %a similar opportunity to transform the present nascent state of AUIs
@@ -1542,34 +1542,45 @@ that both corroborate these preference findings, we remark that all of the exper
 %In this article, we have expanded on the information filtering paradigm of Belkin and Croft \citep{Belkin1992}, by  
 
   %We have also proposed a method for optimization of expected F1-score using a MILP approach that has critically allowed us to benchmark the greedy algorithms on moderate-sized datasets. 
-\subsection{Summary of results}
+\subsection{Summary}
 
+In this article, we began by observing that unsupervised clustering methods have often been used to aggregate data in visual search interfaces, but approaches like $K$-means do not make effective use of query relevance signals during this aggregation task and do not necessarily optimize for purposes of visual presentation in the user interface.  To address these deficiencies, %we introduced a cluster definition intended for spatial, temporal, and content coherence for visual presentation that does not require specification of complex distance metrics like $K$-means.  We have further introduced a novel formulation of relevance-driven clustering for visual search as an optimization problem given a probabilistic measure of relevance for search results.  We have motivated and derived expected F1-Score as an objective criteria for relevance-driven cluster optimization. % and we have experimentally demonstrated that the proposed expected F1-Score metric is a good surrogate of the ground truth F1-Score.
+%
+we introduced novel and efficient relevance-driven clustering approximate optimization algorithms for expected F1-Score based on two different greedy strategies (\textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}}).
 
-\textcolor{red}{The aim of this research was to investigate relevance-driven clustering, which led to the development of novel optimization algorithms for expected F1-Score based on two different greedy strategies (\textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}}). }
+%\textcolor{red}{The aim of this research was to investigate relevance-driven clustering, which led to the development of novel optimization algorithms for expected F1-Score based on two different greedy strategies (\textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}}). }
 %
 The offline evaluations we performed 
 %on a Twitter dataset 
 show that the binary partitioning search (\textcolor{red}{{\bf RadiCAl-BPS}}) algorithm we have proposed is relatively efficient, performs comparably to or exceeds $K$-means performance when the relevance signal is moderately reliable, and provides a good approximation of the \emph{optimal} MILP solution in small instances where comparison is possible.
 %Somewhat surprisingly, we remark that greedy methods like BPS may even do better than exact expected F1-score optimization in high noise cases for relevance estimation due to the more restricted search space of BPS, which effectively prevents ``overfitting'' to this noise. 
 
-The user study we carried out on 24 users confirmed the outcome of the offline evaluation and has demonstrated that our novel relevance-driven clustering based on  BPS (\textcolor{red}{{\bf RadiCAl-BPS}}) is highly effective for our search scenario.  Specifically we confirmed quantitatively that users achieved generally faster search task completion, higher recall, and lower error using relevance-driven clustering compared to $K$-means and a non-aggregation baseline.  Users also indicated that the \textcolor{red}{{\bf RadiCAl-BPS}} approach yielded lower perceived workload on the NASA-TLX survey and higher usability on the SUS survey.  And finally, to corroborate all of these findings, users ultimately indicated a strong first preference for the relevance and interface-driven clustering approach that comprises the novel contribution of this article.   All the algorithms described throughout this paper have been integrated into a tool called Visual Twitter Information Retrieval (Viz-TIR)~\cite{Bouadjenek2019}\footnote{\url{https://github.com/D3Mlab/viz-ir}}.
+The user study we carried out on 24 users confirmed the outcome of the offline evaluation and has demonstrated that our novel relevance-driven clustering based on  BPS (\textcolor{red}{{\bf RadiCAl-BPS}}) is highly effective for our search scenario.  Specifically we confirmed quantitatively that users achieved generally faster search task completion, higher recall, and lower error using relevance-driven clustering compared to $K$-means and a non-aggregation baseline.  Users also indicated that the \textcolor{red}{{\bf RadiCAl-BPS}} approach yielded lower perceived workload on the NASA-TLX survey and higher usability on the SUS survey.  And finally, to corroborate all of these findings, users ultimately indicated a strong first preference for the relevance and interface-driven clustering approach that comprises the novel contribution of this article.   All the algorithms described throughout this paper have been integrated into a tool called Visual Twitter Information Retrieval (Viz-TIR)~\cite{Bouadjenek2019}.\footnote{\url{https://github.com/D3Mlab/viz-ir}}
 
 \subsection{Limitations}
-\textcolor{red}{Even though the work described in this article have shown promising research perspectives, it suffers from multiple limitations at both the algorithmic and methodological levels. This includes:}
-\begin{itemize}
-\item \textcolor{red}{\emph{The limitation of a pure relevance-driven clustering approach.} The relevance-driven clustering approach we described in this paper has shown a very promising results presentation perspective by generating pure clusters around true events in terms of time, location and content. However, the algorithm may not generate clusters or alternatively generate only one big cluster in the case of a uniform distribution of the relevance in the search results. This issue should be addressed in future work by defining a new objective function to optimize that is also density-driven. }
 
-\item \textcolor{red}{\emph{Adding more dimensions to the algorithm may not be trivial.} 
-Although we mentioned previously that we don't limit this work to the three display attributes we used, incorporating more attributes may not be trivial and may involve some complex accommodations and adjustments in terms of programming. However, we believe that this should be feasible as long as it involves continuous or discrete cluster attributes. }
+\textcolor{red}{While we believe this work has made a number of significant contributions to both visual search interfaces as well as the novel area of relevance-driven clustering, it is critical to acknowledge the following potential limitations of the present work:}
+\begin{itemize}
+
+\item \textcolor{red}{\emph{The limitation of a pure relevance-driven clustering approach for visual search interfaces.} While we believe that clustering algorithms for visual search interfaces should include relevance as part of their clustering criteria, it is likely that there are additional qualities of a ``good'' cluster for end users in visual search interfaces (e.g., dense clusters) that could be folded into an enhanced clustering objective.  Introducing such additional criteria in the objectives inherently raise multiobjective optimization concerns regarding optimal trade-offs among all objective criteria~\cite{Deb2014}.}
+
+\item \textcolor{red}{\emph{Unintended study participant variation due to lack of context regarding natural disasters in the US.}  We chose US natural disasters due to the prevalence of tweet content on this topic.  However, we remark that we ran our study with University students residing in Toronto, Canada.  Even though instructions and suggestions were given to the participants regarding the possible natural disasters to search, some participants mentioned the difficulty to come up with the right queries, mostly because of their unfamiliarity with the US context.}
+
+\item \textcolor{red}{\emph{The limited number of users.}
+We ran our user study with the maximum number of users that we could run under time and budget constraints.  For this reason, we could not compare a large number of algorithms and furthermore we were unable to draw conclusions in our user study with a high degree of statistical significance. Hence, we believe that our user study and its conclusions should be reinforced with more participants as well as more clustering algorithms to be compared.}
+%The relevance-driven clustering approach we described in this paper has shown a very promising results presentation perspective by generating pure clusters around true events in terms of time, location and content. However, the algorithm may not generate clusters or alternatively generate only one big cluster in the case of a uniform distribution of the relevance in the search results. This issue should be addressed in future work by defining a new objective function to optimize that is also density-driven. }
+
+\item \textcolor{red}{\emph{Limitation of use cases to low noise queries.}  One key limitation of our relevance-driven clustering algorithm was evidenced in our offline study of Section~\ref{sec:OfflineEval} when we noted that high noise in the relevance score led to $K$-Means clustering outperforming the RadiCAl variants since in this case, ignoring the relevance signal was advantageous.  
+For this reason, we chose natural disasters in our dataset curation that are concrete events whose associated queries tend to have relatively low noise in their relevance scores. 
+However, visual search use cases where queries are difficult to formulate and relevance harder to predict (e.g., searches for public sentiment on political topics) may prove difficult for the relevance-driven clustering techniques proposed here and require alternatives or enhancements to work well.}
+
+\item \textcolor{red}{\emph{Adding more clustering dimensions to the algorithm may not be trivial.}
+Although we mentioned previously that we are not limited to the three display attributes of space, time, and keyword content, it is not immediately clear how our efficient greedy approximation algorithms will perform for additional meta-data dimensions.  In particular, such dimensions may violate the property that the clustering objective changes relatively monotonically as each cluster dimension bound is adjusted, which was an assumption underlying the application of the highly efficient BPS approach.}
+%In particular, we remarked previously that the BPS algorithm performed well when the cluster objective changed monotonic incorporating more attributes may not be trivial and may involve some complex accommodations and adjustments in terms of programming. However, we believe that this should be feasible as long as it involves continuous or discrete cluster attributes. }
 
 %\item Are there any theoretical implication w.r.t. to multi-objective optimization (Deb, 2014)? 
 
 %\item Or any practical implications w.r.t. reranking in IR (Ghorab, 2012)?
-
-\item \textcolor{red}{\emph{The expensiveness of user studies.}
-Carrying out user studies is a time-consuming and expensive process since it involves human beings. Although we had a decent number of participants in our user study who were able to compare and assess three different algorithms, we believe that such a study and its conclusions should be reinforced with more participants as well as more algorithms to be compared.}
-
-\item \textcolor{red}{\emph{The lack of context regarding natural disasters in the US for some participants.} Even though instructions and suggestions were given to the participants regarding the possible natural disasters to search, some participants mentioned the difficulty to come up with the right queries, mostly because of unfamiliarity with the US context.}
 
 \end{itemize}
 
@@ -1586,15 +1597,13 @@ However, there is still much more work to be done to fully explore the space of 
 \item \emph{Considering a topic modeling perspective in place of a clustering perspective.}  While clustering attempts to aggregate similar documents with the assumption that each document belongs to one cluster, topic modeling methods such as (probabilistic) LSA~\cite{deerwester1990,hofmann1999} or LDA~\cite{blei_lda} assume that a document is composed of multiple topics and try to estimate the degree or probability of relevance that a document has to each topic.  While topic modeling provides a more granular view of document content, such approaches pose a number of significant challenges for use with visual search interfaces.  Specifically, this would require highly effective spatio-temporal extensions of topic models, novel methods to visually display topics as opposed to clusters, extensions to topic modeling that explicitly consider relevance-based optimization criteria, and novel computational methods to effectively optimize within this extended framework.  Nonetheless, the benefits of a more granular topic modeling perspective may certainly motivate extensions of this work to \emph{relevance-driven topic modeling} for visual search interfaces.
 \end{itemize}
 
-\section{Conclusion}
-\label{sec:Conclusions}
-In this article, we have noted that while unsupervised clustering methods have often been used to aggregate data in visual search interfaces, approaches like $K$-means do not make effective use of query relevance signals during this aggregation task and do not necessarily optimize for purposes of visual presentation in the user interface.  To address these deficiencies, we introduced a cluster definition intended for spatial, temporal, and content coherence for visual presentation that does not require specification of complex distance metrics like $K$-means.  We have further introduced a novel formulation of relevance-driven clustering for visual search as an optimization problem given a probabilistic measure of relevance for search results.  We have motivated and derived expected F1-Score as an objective criteria for relevance-driven cluster optimization. % and we have experimentally demonstrated that the proposed expected F1-Score metric is a good surrogate of the ground truth F1-Score.
-%
-We introduced novel relevance-driven clustering approximate optimization algorithms for expected F1-Score based on two different greedy strategies (\textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}}).
-
-
-
 In sum, we hope that this article provides a first stepping stone to a wide range of exciting future work on the topic of relevance- and interface-driven clustering to help create the next generation of enhanced visual information retrieval systems.
+
+%\section{Conclusion}
+%\label{sec:Conclusions}
+
+
+
 
 
 % Important areas of future work include enhanced indexing strategies and scalability in filter selection algorithms along with the 
@@ -1614,7 +1623,7 @@ In sum, we hope that this article provides a first stepping stone to a wide rang
 \section*{Acknowledgements}
 
 We thank two anonymous reviewers for their questions and comments, which helped to improve and clarify the article presentation and also provided numerous suggestions for our future work discussion. 
-\textcolor{red}{Experiments presented in this paper were carried out using the NECTAR Research Cloud platform, supported by a scientific interest group hosted by several Australian Universities (see \url{https://nectar.org.au/research-cloud/}).All algorithms described in this paper, the material used,  as well as the tool we developed for the user study can be accessed here: \url{https://github.com/D3Mlab/viz-ir}.}
+\textcolor{red}{Experiments presented in this paper were carried out using the NECTAR Research Cloud platform, supported by a scientific interest group hosted by several Australian Universities (see \url{https://nectar.org.au/research-cloud/}). All algorithms described in this paper, the material used,  as well as the tool we developed for the user study can be accessed here: \url{https://github.com/D3Mlab/viz-ir}.}
 
 %\section*{References}
 
