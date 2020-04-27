@@ -251,7 +251,7 @@ Search results of spatio-temporal data are often displayed on a map, but
   %While a globally optimal solution to this novel clustering optimization
  problem is NP-Hard, we develop fast greedy algorithms that can approximately
  optimize this objective for real-time search.
-  
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -267,6 +267,10 @@ After comparatively benchmarking algorithmic variants of our proposed approach
  search task completion with higher accuracy while requiring a minimum workload
  leading to high effectiveness, efficiency, and user satisfaction among
  alternatives.
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout

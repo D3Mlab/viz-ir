@@ -1113,7 +1113,7 @@
 {\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
-\f0\fs24 \cf0 RadiCAl-BPS}</string>
+\f0\fs24 \cf0 RadiCAL-BPS}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -1728,7 +1728,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2020-02-05 14:20:01 +0000</string>
+	<string>2020-04-27 08:33:47 +0000</string>
 	<key>Modifier</key>
 	<string>Mohamed Reda Bouadjenek</string>
 	<key>NotesVisible</key>
@@ -1806,7 +1806,7 @@
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{0, 0}, {1440, 853}}</string>
+		<string>{{53, 24}, {1387, 853}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
@@ -1816,7 +1816,7 @@
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{-157, -342.00000000000006}, {826.85181899571251, 714.81478641062722}}</string>
+		<string>{{-132, -312}, {777.77774687166698, 654.62960361698629}}</string>
 		<key>Zoom</key>
 		<real>1.0800000429153442</real>
 		<key>ZoomValues</key>

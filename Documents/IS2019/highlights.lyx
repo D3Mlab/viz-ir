@@ -287,6 +287,10 @@ begin{enumerate}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
 item To better satisfy end-user task needs for clustering in visual search
@@ -296,7 +300,7 @@ emph{relevance-driven clustering objective} that extends standard information
  retrieval metrics to clustering.
   Specifically, in light of relevance uncertainty, we derive 
 \backslash
-emph{expected metrics for precision and recall of clusters}, but ultimately
+emph{expected metrics for precision and recall of clusters, but ultimately
  argue that a good cluster must balance both and thus focus on a derivation
  of 
 \backslash
@@ -305,8 +309,8 @@ emph{expected F1-score (EF1)} of cluster relevance as our key objective.
  clusters in terms of space, time, and content for presentation in a visual
  search interface and that (b)~optimizing it does not require the specification
  of complex ad-hoc distance metrics required by other unsupervised clustering
- algorithms such as $K$-means.% and argue that since expected precision and
- recall have %pathological 
+ algorithms such as $K$-means.}% and argue that since expected precision
+ and recall have %pathological 
 \end_layout
 
 \begin_layout Plain Layout
@@ -497,24 +501,6 @@ item Returning to our end-user visual search task motivation, we conclude
  the experimental evaluation of this work with a user study to evaluate
  whether this new relevance-driven clustering method improves human performance
  in comparison to $K$-means clustering and a multiple filter search baseline.
-\backslash
-footnote{
-\end_layout
-
-\begin_layout Plain Layout
-
-While there are a large number of unsupervised clustering algorithms in
- the literature, 
-\end_layout
-
-\begin_layout Plain Layout
-
-we had limited user interaction time in our user study and thus could only
- choose one clustering algorithm for comparison in addition to the non-aggregati
-on baseline.
-   We chose $K$-means since it is arguably the most commonly used clustering
- algorithm -- not only in general, but also specifically in our coverage
- of related work on clustering in information retrieval and visual search.}
  Our results show that clusters derived in our relevance- and interface-driven
  optimization framework result in faster search task completion with higher
  accuracy while requiring a minimum workload leading to high effectiveness,
