@@ -82,7 +82,7 @@
 
 \address[deakin]{School of Information Technology, Deakin University, Waurn Ponds Campus, Geelong, VIC 3216, Australia}
 
-\address[UofT]{Department of Mechanical and Industrial Engineering, The University of Toronto, Canada}
+\address[UofT]{Department of Mechanical and Industrial Engineering, The University of Toronto, ON, Canada}
 
 \cortext[cor1]{This work has been primarily completed while the author was at the University of Toronto.} 
 
@@ -90,9 +90,7 @@
 
 \begin{abstract}
 Search results of spatio-temporal data are often displayed on a map, but when the number of matching search results is large, it can be time-consuming to individually examine all results, even when using methods such as filtered search to narrow the content focus.  This suggests the need to aggregate results via a clustering method.  However, standard unsupervised clustering algorithms like $K$-means (i) ignore relevance scores that can help with the extraction of highly relevant clusters, and (ii) do not necessarily optimize search results for purposes of visual presentation.  In this article, we address both deficiencies by framing the clustering problem for search-driven user interfaces in a novel optimization framework that (i) aims to maximize the relevance of aggregated content according to cluster-based extensions of standard information retrieval metrics and (ii) defines clusters via constraints that naturally reflect interface-driven desiderata of spatial, temporal, and keyword coherence that do not require complex ad-hoc distance metric specifications as in $K$-means.  %While a globally optimal solution to this novel clustering optimization problem is NP-Hard, we develop fast greedy algorithms that can approximately optimize this objective for real-time search.  
-After comparatively benchmarking the new algorithm we propose in offline experiments, we undertake a user study with 24 subjects to evaluate whether this new relevance-driven clustering method improves human performance on visual search tasks in comparison to $K$-means clustering and a filtered search baseline.  Our results show that (a) our greedy optimization approach is fast, near-optimal, and extracts higher-relevance clusters than $K$-means, and (b) these higher-relevance clusters that have been optimized w.r.t. user interface display constraints result in faster search task completion \textcolor{red}{with a high accuracy while requiring a minimum workload for optimal effectiveness and efficiency, and full satisfaction.}
-
-
+\textcolor{red}{After comparatively benchmarking algorithmic variants of our proposed approach -- RadiCAl -- in offline experiments, we undertake a user study with 24 subjects to evaluate whether RadiCAl improves human performance on visual search tasks in comparison to $K$-means clustering and a filtered search baseline.  Our results show that (a) our binary partitioning search (BPS) variant of RadiCAl is fast}, near-optimal, and extracts higher-relevance clusters than $K$-means, and (b) clusters optimized via RadiCAl result in \textcolor{red}{faster search task completion with higher accuracy while requiring a minimum workload leading to high effectiveness, efficiency, and user satisfaction among alternatives.}
 
 %lower perceived workload, higher perceived usability, and overall stronger user preference vs. comparison methods.
 
@@ -126,16 +124,16 @@ Such approaches leverage the \emph{cluster hypothesis} of Information Retrieval 
 \label{Fig:UseCase}
 \end{figure*}
 
-For an example visual search use case, consider the task of searching a multiyear Twitter corpus for content related to natural disasters.\footnote{While this example involves visual Twitter search, the methods defined in this article are not specific to this application but are generally intended for any search-driven visual user interface where content naturally clusters along spatial, temporal, and keyword content dimensions.  Visual Twitter search is chosen here due to the availability of high volume spatio-temporal data and it's general familiarity to our test subjects.}
+For an example visual search use case, consider the task of searching a multiyear Twitter corpus for content related to natural disasters.\footnote{While this example involves visual Twitter search, the methods defined in this article are not specific to this application but are generally intended for \textcolor{red}{any user task involving a query-driven visual search interface with a large volume of matching search results and content that naturally clusters along spatial, temporal, and keyword content dimensions}.  Visual Twitter search is chosen here due to the availability of high volume spatio-temporal data and it's general familiarity to our test subjects.}
 % tornado, blizzard, earthquake
-\textcolor{red}{A conventional IR list ranking approach based only on the textual content of the tweets would flood the user with many elements that are matching his query, thus, preventing him/her from carrying out an efficient investigation.  Moreover, such an approach won't fully take advantage of the spatio-temporal information associated with the tweets.} 
+\textcolor{red}{A conventional IR list ranking approach based only on the textual content of the tweets would flood the user with an extremely long list of tweets --- such simple ranked listings fail to effectively impart the spatial-temporal distribution of search results.}  %While one could then cluster the results (perhaps including temporal or spatial dimensions) in attempt to reduce search effort, simple ranked listings fail to effectively impart the spatial-temporal distribution of search results.
 %
-\textcolor{red}{On the other hand, as shown in Figure~\ref{Fig:GlobalDisplay}, a typical spatial-temporal-content  visualization approach that would provide all matching tweets in a map-based display  will also take the user a large amount of time to sift through.}
+\textcolor{red}{However, as shown in Figure~\ref{Fig:GlobalDisplay}, a typical spatial-temporal-content visualization approach that would provide all matching tweets in a map-based display  will similarly take the user a large amount of time to sift through; while content is now spatially distributed, there is still too much matching content to sift through.}
 %We denote all displayed content (in this case individual tweets)
 %(such as user IP address, Tweet content, Tweet time, geographical coordinates, recent activity details) 
 %as an information element that could
 %be optionally shown or not.  
-\textcolor{red}{ Nonetheless,} filtering and faceted search~\cite{Tunkelang2009, hearst02faceted,hearst09book,Hearst2006} can be used here to help the user manually narrow the large set of tweets using filter settings defined for each tweet aspect (location, posting time, keywords). Although such navigation systems are commonly used and hence comprise a baseline in our user study, a large amount of effort is still required on behalf of the user to manually read through results and adjust filters appropriately.
+\textcolor{red}{ To help reduce this visual information overload,} filtering and faceted search~\cite{Tunkelang2009, hearst02faceted,hearst09book,Hearst2006} can be used here to help the user manually narrow the large set of tweets using filter settings defined for each tweet aspect (location, posting time, keywords). Although such navigation systems are commonly used and hence comprise a baseline in our user study, a large amount of effort is still required on behalf of the user to manually read through results and adjust filters appropriately.
 %, and both existing and future content must have metadata applied for each facet.
 % Scott Note: our method requires metadata as well.
 
@@ -143,9 +141,11 @@ To deal with this latter problem and ease the task of browsing search results, a
 Most existing work on aggregation for visual search that has sought to exploit the cluster hypothesis has focused on $K$-means and related unsupervised clustering methods~\cite{Ahlberg1995,Liu2014,Sankaranarayanan2009,Teitler2008,Bennamane2012,Shneiderman2013,Yifan2015,Smith2009} that do not necessarily guarantee that clusters of matching search results are highly relevant. 
 %
 Moreover, the use of clustering algorithms such as $K$-means requires the design of a complex distance metric; for example, consider that space is often measured by Euclidean distance while keyword content is often measured by cosine distance and both of these distances need to be combined into a \emph{single} distance metric for $K$-means.  Such ad-hoc metric specifications do not necessarily guarantee the coherence of clusters from a visual, temporal and keyword content perspective.
-% here iam
-On the other hand, as shown in Figure~\ref{Fig:BPS_FilteredDisplay}, a clustering algorithm that is actively aware of the relevance probability of each tweet to the search query could automatically generate highly relevant clusters covering a large fraction of \emph{relevant} content while explicitly optimizing for interface-driven desiderata of spatial, temporal, and keyword coherence \emph{without} requiring any ad-hoc specification of a complex distance metric that requires trading off distances in each dimension.  To this end, our contributions in this article can be viewed as (a) avoiding the distance-tuning complications of unsupervised methods like K-means, while (b) automatically extracting filter settings per cluster by optimizing relevance-driven criteria that reduce the need for manual tuning.
-
+% Note: I think reviewer #2 is commenting on redundancy of this content with the end of the paragraph as well as enumerated contributions, hence I've streamelined this discussion.  -Scott
+\textcolor{red}{In contrast, as demonstrated in  Figure~\ref{Fig:BPS_FilteredDisplay}, we will contribute a clustering algorithm that is actively aware of the relevance probability of each tweet to the search query and thus can automatically} generate highly relevant clusters covering a large fraction of \emph{relevant} content while explicitly optimizing for interface-driven desiderata of spatial, temporal, and keyword coherence \emph{without} requiring any ad-hoc specification of a complex distance metric that requires trading off distances in each dimension.  
+%\textcolor{red}{We address these deficiencies of existing approaches by introducing a novel clustering algorithm that optimizes specifically for information retrieval relevance objectives and avoids the distance-tuning complications of unsupervised methods like K-means.}
+%, while automatically extracting filter settings per cluster by optimizing relevance-driven criteria that reduce the need for manual tuning via custom-designed algorithms.}
+%Furthermore, we remark that a third key area of technical contribution (c) can be viewed as the optimization and algorithmic techniques needed to effectively and efficient optimize clusters in this novel relevance-driven clustering paradigm.}
 
 
 %\textcolor{red}{In short, by optimizing clusters to maximize the relevance of selected content, we are effectively specifying an automatic setting of facets (selected time and spatial ranges and keyword content in each dimension) that redefines clustering for information retrieval in terms of automatically ...}
@@ -154,35 +154,39 @@ On the other hand, as shown in Figure~\ref{Fig:BPS_FilteredDisplay}, a clusterin
 In this article, we realize the vision discussed above and demonstrated in the example of Figure~\ref{Fig:BPS_FilteredDisplay} 
 %To the best of our knowledge, this work is the first to 
 by addressing clustering for visual search in a novel relevance- and interface-driven optimization framework.
-Specifically, we make the following key novel contributions:
+\textcolor{red}{Specifically, we make key novel contributions that span both the user-focused design of a novel visual-search driven interface as well as numerous technical innovations required to realize this design.  We also contribute quantitative and qualitative evaluations of both our technical contributions and their overall benefit to end users in a visual search task for Twitter.}
+
+\textcolor{red}{We summarize these numerous contributions as well as an outline of the article as follows:}
 \begin{enumerate}
-\item We present a novel relevance-driven clustering objective that extends standard information retrieval metrics to clusters. 
-\item We define \emph{expected} metrics for precision, recall, and F1-score of cluster relevance.  We argue that since expected precision and recall have %pathological 
-\textcolor{red}{trivial} solutions, expected F1-score (EF1) is a more appropriate metric to optimize for  relevance-driven clustering.
-\item We provide a unified definition of clusters in terms of presentation-specific cluster attributes (spatial, temporal, and keyword content) that avoids the need for the specification of complex ad-hoc distance metrics required by other unsupervised clustering algorithms such as $K$-means.  
+\item \textcolor{red}{To better satisfy end-user task needs for clustering in visual search interfaces, we present a novel \emph{relevance-driven clustering objective} that extends standard information retrieval metrics to clustering.  Specifically, in light of relevance uncertainty, we derive \emph{expected metrics for precision and recall of clusters}, but ultimately argue that a good cluster must balance both and thus focus on a derivation of \emph{expected F1-score (EF1)} of cluster relevance as our key objective.  Two key features of EF1 are that (a)~it automatically extracts coherent clusters in terms of space, time, and content for presentation in a visual search interface and that (b)~optimizing it does not require the specification of complex ad-hoc distance metrics required by other unsupervised clustering algorithms such as $K$-means.}% and argue that since expected precision and recall have %pathological 
+%\textcolor{red}{trivial} solutions, expected F1-score (EF1) is a more appropriate metric to optimize for  relevance-driven clustering.
+%\item We provide a unified definition of clusters in terms of presentation-specific cluster attributes (spatial, temporal, and keyword content) that avoids the need for the specification of complex ad-hoc distance metrics required by other unsupervised clustering algorithms such as $K$-means.  
 % NOTE: Should be some sort of property like monotonicity of result counts that somehow can be exploited in filter design.
 %\item We argue for the formulation of filtering as the optimization of an expected F1-Score (EF1) objective subject to parameterized filter constraints.
 %that can be maximized via mixed integer linear programming or efficient, approximately-optimal greedy algorithms.
 % In this work, we argue that information-filtering task is central to a variety of VSIs and well-suited to an Information Retrieval (IR) perspective where we argue that a good overall objective for filter selection is F1-Score; given the absence of known Boolean relevance labels for interface elements, we instead propose optimization of a surrogate metric of expected F1-Score denoted as EF1.  
-\item Because the global solution to our relevance-driven clustering optimization problem is NP-hard, we contribute two  algorithms for scalable and efficient cluster optimization.  %Empirically, we show that the second of these proposed greedy approaches based on an efficient binary partitioning search (BPS) approach performs best.
+\item \textcolor{red}{Through a series of transformations, we demonstrate that the globally optimal solution to EF1 maximization of clusters can be cast as a Mixed Integer Linear Program (MILP), which is unfortunately NP-hard and thus computationally expensive to solve.  To improve the algorithmic efficiency of optimization, we present two algorithms: Greedy and Binary Partitioning Search (BPS).  Referring to our Relevance-driven Clustering Algorithm as RadiCAl, this leads to three variants: RadiCAl-MILP, RadiCAl-Greedy, and RadiCAl-BPS.  We quantitatively evaluate and compare all RadiCAl variants and K-means on a search-driven tweet clustering task and demonstrate that RadiCAl-BPS provides the best overall tradeoffs in terms of performance and efficiency.}
+%is NP-hard, we contribute two algorithms for scalable and efficient cluster optimization.  %Empirically, we show that the second of these proposed greedy approaches based on an efficient binary partitioning search (BPS) approach performs best.
 %\item To benchmark the performance of the greedy algorithms for EF1 optimization on moderately sized datasets, we compare to an \emph{optimal} Mixed Integer Linear Programming (MILP) formulation for EF1.
 %derived from an initial fractional MILP formulation.
 %\item We propose a new theory of IR for adaptive visual user interfaces. 
 %\item We propose a relevance-driven F1-Score optimization approach to filter selection for AUIs.
 %\item We propose two new filter setting search algorithms based on greedy strategies. These algorithms are based on the optimization of EF1-Score.\item \textcolor{red}{We define an optimal Mixed Integer Linear Programming formulation for EF1 intended to benchmark the performance of the greedy approximations on moderately sized datasets.}
-\item We present an offline comparative evaluation on a Twitter corpus to show that the greedy algorithms we propose are a good approximation of the optimal EF1 solution, better than $K$-means, and perform well in the presence of noise. %While this evaluation methodology allows us to literally run thousands of trials to understand how our greedy algorithm compares to other clustering methods including the optimal solution (in cases where it can be computed), a user study is needed to understand whether this relevance-driven clustering approach actually improves human performance on spatio-temporal visual search tasks.
+%\item We present an offline comparative evaluation on a Twitter corpus to show that the greedy algorithms we propose are a good approximation of the optimal EF1 solution, better than $K$-means, and perform well in the presence of noise. %While this evaluation methodology allows us to literally run thousands of trials to understand how our greedy algorithm compares to other clustering methods including the optimal solution (in cases where it can be computed), a user study is needed to understand whether this relevance-driven clustering approach actually improves human performance on spatio-temporal visual search tasks.
 %in very large scales, it is based on the strong assumption of knowing the ground truth, often assumed in information retrieval benchmarks. We discuss the advantages and limitations of this evaluation approach in more detail in Section~\ref{sec:OfflineEval}.}
 % (i.e., corruption of the ground truth labels).
 %can even perform better with a noisy classifier \textendash{} up to 42\% improvement for a classifier with an accuracy of 60\%. On the other hand, 
 %We also experimentally demonstrate that the EF1 metric is a good surrogate of F1-Score (if true relevance labels were known).
 %specifically with a highly accurate classifier \textendash{} for a classifier with 90\% accuracy, the RMSE is roughly 0.0111).
-\item We perform a user study with 24 subjects to evaluate whether this new relevance-driven clustering method improves human performance in comparison to $K$-means clustering and a multiple filter search baseline.\footnote{
+\item \textcolor{red}{Returning to our end-user visual search task motivation, we conclude the experimental evaluation of this work with a user study} to evaluate whether this new relevance-driven clustering method improves human performance in comparison to $K$-means clustering and a multiple filter search baseline.\footnote{
 While there are a large number of unsupervised clustering algorithms in the literature, 
-we had limited user interaction time in our user study and thus could only choose one clustering algorithm for comparison in addition to the non-aggregation baseline.   We chose $K$-means since it is arguably the most commonly used clustering algorithm -- not only in general, but also specifically in our coverage of related work on clustering in information retrieval and visual search.} Our results show that clusters derived in our relevance- and interface-driven optimization framework result in \textcolor{red}{faster search task completion with a high accuracy while requiring a minimum workload for optimal effectiveness and efficiency and full satisfaction.}
+we had limited user interaction time in our user study and thus could only choose one clustering algorithm for comparison in addition to the non-aggregation baseline.   We chose $K$-means since it is arguably the most commonly used clustering algorithm -- not only in general, but also specifically in our coverage of related work on clustering in information retrieval and visual search.} Our results show that clusters derived in our relevance- and interface-driven optimization framework result in \textcolor{red}{faster search task completion with higher accuracy while requiring a minimum workload leading to high effectiveness, efficiency, and user satisfaction among alternatives.}
 These results coincide with our offline evaluation that also demonstrate the superiority of our relevance-driven clustering approach over competing methods.
 \end{enumerate}
 
-In summary, this work introduces a novel formulation of relevance-driven clustering for visual search as an optimization problem given a probabilistic measure of relevance for search results. All the algorithms described throughout this paper have been integrated into a tool called Visual Twitter Information Retrieval (Viz-TIR)~\cite{Bouadjenek2019}. Although the main relevance-driven clustering algorithm presented in this paper is briefly described in~\cite{Bouadjenek2019}, in this paper, we provide it's detailed description plus a second greedy algorithm and an \textit{optimal} Mixed Integer Linear Program (MILP) formulation intended to benchmark the performance on moderately sized datasets.  We further provide extensive offline and human user evaluation results and analysis that substantially expand on the results presented in~\cite{Bouadjenek2019}. 
+%In summary, this work introduces a novel formulation of relevance-driven clustering for visual search as an optimization problem given a probabilistic measure of relevance for search results. 
+\textcolor{red}{As a final remark, all the algorithms described throughout this paper have been integrated into a tool called Visual Twitter Information Retrieval (Viz-TIR)~\cite{Bouadjenek2019}. Although RadiCAl-BPS presented here is briefly described in~\cite{Bouadjenek2019}, in this article, we provide its detailed description
+along with its simpler RadiCAl-Greedy variant and the derivation of the \emph{optimal} RadiCAl-MILP solution; we also comparatively benchmark all RadiCAl variants and K-Means. We further provide extensive offline and human user evaluation results and analysis that substantially expands on the results presented in~\cite{Bouadjenek2019}.}
 
 
 \section{Related work}
@@ -205,7 +209,7 @@ for different applications including crime discovery~\cite{Eftelioglu2014}, Twit
 Most proposed techniques are based on clustering methods such as $K$-means~\cite{kmeans_original},  BIRCH~\cite{Zhang1996},  OPTICS~\cite{Ankerst1999}, or DBSCAN~\cite{Ester1996}. DBSCAN is a widely used method for finding arbitrarily shaped clusters of spatial points based on the density of points, which has been extended to temporal data in ST-DBSCAN~\cite{Birant2007}.  % by defining new distances metrics between points. 
 More recently, Choi and Chung~\cite{CHOI20171} proposed a modified version of the $K$--means clustering algorithm for spatio-textual as opposed to spatio-temporal data.
 
-\textcolor{red}{We note that the clustering methods described here are not complying with the work goals we have stated in the introduction as they: (i) ignore relevance signals (beyond the initial search), (ii) ignore the combination of spatial, temporal, and keyword constraints, and/or (iii) ignore definitions of clusters that pertain to their presentation in a visual display medium, all of which are key jointly intertwined contributions of the clustering approach proposed in this work.} 
+\textcolor{red}{We note that all of these clustering methods fail to jointly address our goals for visual search clustering as stated in the introduction.  Namely, these methods (i) ignore relevance signals (beyond the initial search), (ii) ignore the \emph{joint combination} of spatial, temporal, and keyword constraints, and/or (iii) ignore definitions of clusters that pertain to their presentation in a visual display medium, all of which are key jointly intertwined contributions of the clustering approach proposed in this work.} 
 %on how they can be displayed, which makes them inapplicable for our relevance- and interface- visual search application without further extension.
 
 
@@ -219,7 +223,9 @@ Clustering of search results themselves has been investigated for more effective
 On the other hand, collection clustering has been used for effective information presentation and for exploratory browsing~\cite{kotlerman18,McKeown2002,Hatzivassiloglou2000}, for improving search results~\cite{Liu2004,Altingovde2007}, and for speeding up search~\cite{Salton1971,Qumsiyeh2015,Dimond2015}.
 In yet another vein, Scatter-Gather, which consists of repetitively clustering and selecting clusters, has been proposed as an alternative user interface to explore elements without using explicit queries~\cite{Cutting1992,Pirolli2007}.
 
-\textcolor{red}{What differentiates the relevance-driven clustering approach we propose in this article from the clustering approaches in \emph{all} of these above-cited works is the following: (i) We explicitly use the relevance signal during cluster optimization to ensure high relevance of extracted clusters, and (ii) we specifically formulate clusters in terms of spatial, temporal, and content constraints to ensure coherence and succinct presentation in a visual search display.}
+\textcolor{red}{When considering our search-based clustering needs in this article, all of these methods (i) do not explicitly use the relevance signal during cluster optimization to ensure high relevance of extracted clusters, and (ii) do not specifically formulate clusters in terms of spatial, temporal, and content constraints to ensure coherence and succinct presentation in a visual search display.  Both of these requirements are addressed in our proposed contributions.}
+
+%What differentiates the relevance-driven clustering approach we propose in this article from the clustering approaches in \emph{all} of these above-cited works is the following: (i) We explicitly use the relevance signal during cluster optimization to ensure high relevance of extracted clusters, and (ii) we specifically formulate clusters in terms of spatial, temporal, and content constraints to ensure coherence and succinct presentation in a visual search display.}
 
 
 
@@ -333,22 +339,27 @@ However, L2R cannot be applied in our cluster optimization problem because we do
 
 
 
-\section{Framework and background}
+\section{Framework and notation}
 \label{sec:Framework}
 In this section, we first define the problem we address and  then the mathematical notation we use.  
 
 \subsection{Problem definition}
-In this article, we adopt the conventional IR setting for both querying and retrieving information elements (e.g., documents or tweets)~\cite{Baeza-Yates2010} in a visual search interface capable of displaying clusters as shown in Figures~\ref{Fig:KMeans_FilteredDisplay} and~\ref{Fig:BPS_FilteredDisplay}.  
-Assuming a given corpus of information elements, the retrieval process can be initiated as follows: The user first specifies an information need via a Boolean ``or'' query consisting of a list of keywords.  
+%\textcolor{red}{Our overall objective in this section is to define the ``ingredients'' of our visual search clustering problem along with key criteria that we desire in our solution.}  
+\textcolor{red}{To define the ``ingredients'' we have for the visual search clustering problem, we begin by adopting the standard information retrieval (IR) setting} for both querying and retrieving information elements (e.g., documents or tweets)~\cite{Baeza-Yates2010}, but in a visual search interface capable of displaying clusters as shown in Figures~\ref{Fig:KMeans_FilteredDisplay} and~\ref{Fig:BPS_FilteredDisplay}.  
+\textcolor{red}{Specifically, assuming a given corpus of text-based information elements with both time stamp and 2D spatial location meta-data, the retrieval process can be initiated as follows: The user first specifies a Boolean ``or'' query consisting of a list of keywords.  
 %Then, the query is processed using the index structure previously built, such that each document that contains a query term is retrieved. 
-For each retrieved document, a score is computed indicating the probability of relevance to the query.
-\textcolor{red}{To organize the results display and ease the navigation task, we aim to undertake a clustering approach. While we believe that conventional clustering approaches are not suitable enough for this task for the many reasons we discussed above -- no relevance considered, the need to design a complex distance function, the need for intensive algorithm tuning, etc., we propose to investigate a new clustering strategy based on relevance, with clusters defined by filters corresponding to a bounding box on latitude and longitude, a time interval, and keyword restrictions. In this paper, we adopt an IR interpretation of \emph{relevance}, which refers to how well a document or a cluster meets the user's information need -- which we define as the information that satisfies a conscious or unconscious need of the user, formally expressed using a query or a set of keywords~\cite{Baeza-Yates2010}.}
+For each retrieved document, a score is then computed indicating the probability of relevance to the user's information need as specified via their query.}\footnote{\textcolor{red}{In this paper, we adopt an IR interpretation of \emph{relevance}, which refers to how well a document or a cluster meets the user's \emph{information need}.  An information need is defined as the information that satisfies a conscious or unconscious need of the user and is formally expressed by the user's keyword-based query~\cite{Baeza-Yates2010}.  In this paper we will specifically use a \emph{language model} definition of probabilistic relevance w.r.t.\ a user's Boolean ``or'' query~\cite{Zhai2001}.}}
+
+%Here, we assume that the visual search system is capable of displaying clusters, where each cluster is defined in terms of a single bounding box over 2D spatial coordinates, a single time interval, and keywords specifying content that should be included or excluded from the cluster.  While keywords may be naturally included or excluded, and temporal and spatial dimensions can be compared (to themselves), 
+
+%\textcolor{red}{To organize the results display and ease the navigation task, we aim to undertake a clustering approach. While we believe that conventional clustering approaches are not suitable enough for this task for the many reasons we discussed above -- no relevance considered, the need to design a complex distance function, the need for intensive algorithm tuning, etc., we propose to investigate a new clustering strategy based on relevance, with clusters defined by filters corresponding to a bounding box on latitude and longitude, a time interval, and keyword restrictions. }
 %Our key research question in this article is then: how to \emph{efficiently} extract high-relevance, coherent clusters that address the user's information need?}
 %Our solution approach will be to cast this clustering problem as an optimization problem in information retrieval.}
 %take a novel perspective on the definition of a cluster as a setting of space, time, and keyword facets and we define the objective of cluster extraction to maximize the expected F1-Score of the information elements meeting the facet criteria of each cluster.}
 %a novel optimization process for extracting these clusters accord. 
 
-\textcolor{red}{To expand on the above description, we assume the search results have three display attributes that can be used to define \emph{coherent} clusters in terms of spatial, temporal, and topical (i.e., content). We define a \emph{coherent cluster} as a group of elements that are topically similar to each other and that are contiguous in time and space. Specifically, we consider the following attributes to define a cluster:}
+\textcolor{red}{Our next task is to visually cluster the search results according to the following criteria.  As motivated in the introduction, a key desiderata is that we do \emph{not} want our clustering solution to require the specification of a \emph{joint} distance metric between two information elements in terms of text content, time, and space.}
+\textcolor{red}{Instead, we only assume the search results have three display attributes that can be used to define \emph{coherent} clusters in terms of spatial, temporal, and topical criteria.  We define a \emph{coherent cluster} as a group of elements that are topically similar to each other (i.e., similar text content) and that are similar in both their time and space dimensions.  We remark that coherency in the spatial dimension forms a key requirement for clusters that can be easily (i.e., compactly) visualized. Specifically, we consider the following attribute constraints to define a cluster:}
 
 %of an AUI to ease the task of monitoring alerts in large-scale displayed networks. The new interface is expected to filter irrelevant information to provide localized context for each event or alert (defined loosely as a relevant related content localized in time, space, and/or keyword usage). \textcolor{red}{Hence, we argue that the problem we are addressing in this article is an optimization problem of filter selection.  Furthermore, we assume that selection of information elements to display in a visual interface is obtained via settings of three filters that jointly express a global filter. These three sub-filters are:}
 %%
@@ -362,13 +373,16 @@ Explicitly included and excluded keywords can be used to label the cluster.
 %\item \textcolor{red}{{\bf Relevance Score: a relevance score indicates the }}
 \end{itemize}
 
-\textcolor{red}{In clear, given a query and a probabilistic measure of relevance for each search result w.r.t.\ this query (e.g., from a language model~\cite{Zhai2001}), %the problem we address in this article is how to efficiently optimize content filtering in a visual information display (VID) for
-our key research question in this article is then: how to \emph{efficiently} extract high-relevance coherent clusters defined according to the above constraints with the principles of Boolean information retrieval? -- by \emph{efficiently} we mean in polynomial time while maximizing the relevance of the extracted clusters.
-}
+We note that this clustering work is not limited to these three display attributes -- any continuous or discrete cluster attributes that naturally constrain the search results can be accommodated by our framework.  Nonetheless, we believe time, space, and content constitute three of the most common information display attributes in practice and hence are the ones we focus on in this work.
 
+\textcolor{red}{Given the above ingredients, cluster specification constraints, and desiderata for our search-based visual clustering problem, we now have three research questions to answer in this article: (1) How can we formulate an optimization objective to extract clusters that satisfy all criteria above?  (2) How can we efficiently optimize this objective for use in real-time visual search on large corpora?  (3) How we can we evaluate the effectiveness of these visual search clustering algorithms compared to commonly used alternatives through both offline evaluations and user studies?}
+
+%our key research problem to solve is the following: how to \emph{efficiently} extract high-relevance coherent clusters defined according to the above constraints with the principles of Boolean information retrieval? -- by \emph{efficiently} we mean in polynomial time while maximizing the relevance of the extracted clusters.
+%}
+% NOTE to Reda: not sure we want to say polynomial time here -- variants of these algorithms may need to repeatedly iterate and it is hard to bound the number of iterations.
 
 %In general, we remark that the choice of which clustering parameters to use is up to the interactive search interface designer according to the display and (meta-)data available.  
-We note that this clustering work is not limited to these three display attributes -- any continuous or discrete cluster attributes that naturally constrain the search results can be accommodated by our framework.  Nonetheless, we believe time, space, and content constitute three of the most common information display attributes in practice and hence are the ones we focus on in this work.
+
 %one or multiple filter selection settings to maximize retrieval of relevant content?  
 %\textcolor{red}{Even though in practice, not all data have such information associated, we can imagine throw away the sub-filters associated with the missing information, e.g., location information which is certainly not available in all datasets.} 
 %best set of elements that is assessed using one of the metrics described above, i.e., expected precision, expected recall, or expected F1-score
@@ -421,8 +435,7 @@ Following this, we describe two efficient greedy algorithms to (approximately) o
 
 \subsection{Motivating and Deriving Expected F1-Score (EF1)}
 
-Existing multidimensional clustering methods such as K-means commonly used in search visualization largely ignore relevance signals.  In contrast, our objective in this article is to take an ``information retrieval first'' approach, i.e., to reconceive information retrieval if the goal was to present results as visual clusters as opposed to the more usual ranked list.  Because clusters are the manner by which we return search results and clusters correspond to a Boolean selection of information elements, we will argue in this section that (expected) F1-Score of clusters is the only standard Boolean relevance criteria that does not have a %pathological 
-\textcolor{red}{trivial} solution and is hence the information retrieval objective we should optimize.
+Existing multidimensional clustering methods such as K-means commonly used in search visualization largely ignore relevance signals.  In contrast, our objective in this article is to take an ``information retrieval first'' approach, i.e., to reconceive information retrieval if the goal was to present results as visual clusters as opposed to the more usual ranked list.  Because clusters are the manner by which we return search results and clusters correspond to a Boolean selection of information elements, we will argue in this section that (expected) F1-Score of clusters is the only standard Boolean relevance criteria \textcolor{red}{that balances all of our cluster desiderata} and is hence the information retrieval objective we should optimize.
 
 To proceed with the formal derivation, we adopt the Boolean relevance framework in information retrieval~\cite{Baeza-Yates2010} and thus assume that an information element $j$ has a ground truth relevance assessment $B_q(j)$ w.r.t. $q$ available at \emph{evaluation time}.  
 %%However, unlike previous document-based methods for estimating relevance at retrieval-time, we do not rely on text associated with information elements and instead rely on a third-party to supply an estimated probability (score) of relevance $S(j)$. 
@@ -430,12 +443,17 @@ To proceed with the formal derivation, we adopt the Boolean relevance framework 
 %In practice, IR models are based on probabilistic scores to measure relevance of the elements, such as TF-IDF and cosine similarity.  
 %In practice, we are able to employ third-party technique to provide probabilistic scores to measure relevance of the document in IR system, such as TF-IDF and cosine similarity. Consequently,
 Because clustering implies a Boolean retrieval model (clusters either contain or do not contain elements) and we have a probabilistic estimate of relevance $S_q(j)$, we propose to evaluate
-\emph{expected} variants of standard precision, recall, and F1-score of these clusters.
+\emph{expected} variants of standard precision, recall, and F1-score of these clusters.\footnote{\textcolor{red}{We remark that since all existing clustering algorithms for information retrieval reviewed in Section~\ref{sec:RelatedWork}  are unsupervised and thus focus on minimizing co-similarity of all retrieved documents within a cluster, we believe that our alternative Boolean relevance-based definitions of optimal clusters are a novel and distinct contribution to clustering in 
+information retrieval.}}$^{\textrm{,}}$\footnote{\textcolor{red}{We note that we are not the first to consider probabilistic or expected variants of Boolean metrics.
+One notable work by Goutte and Gaussier~\cite{Goutte2005}
+%Nonetheless, we note that existing methods (e.g., \cite{Goutte2005,SAVOY1997,Yilmaz2008,Voorhees2014}) that 
+proposes a probabilistic re-interpretation of Boolean metrics assuming the availability of ground truth relevance since their primary purpose is to compute a Bayesian posterior estimate of Precision and Recall at evaluation time.  However, in our case, we are not using the expectation for experimental evaluation purposes but rather for computing Boolean metrics under probabilistic uncertainty over the relevance of each document that occurs in the \emph{absence of ground truth} at search retrieval time.  Hence, we have a very different use and definition for our variants of these expected Boolean metrics.}}
 %Boolean retrieval evaluation metrics based on the relaxation of Boolean labels to probabilistic scores resulting in expected metrics, i.e., \emph{expected precision} (EP), \emph{expected recall} (ER) and \emph{expected F1-Score} (EF1).
 
-However, as standard for both precision and recall, we note that precision and recall alone can be trivially optimized through  %pathological 
-\textcolor{red}{trivial} solutions.  That is, the cluster that selects all information elements (i.e., all time, all space, no excluded keywords) would trivially maximize (expected) recall.  Similarly, the cluster that selects the highest probability singleton information element would maximize expected precision.  \emph{This leaves expected F1-score as the only of these three objectives commonly used in Boolean information retrieval that does not have a %pathological
-\textcolor{red}{trivial} solution.}  %\textcolor{red}{While we will focus on expected F1=Score for our cluster relevance objective XXXXX}
+However, as standard for both precision and recall, we note that precision and recall alone can be trivially optimized by  %pathological 
+\textcolor{red}{undesired} solutions.  That is, the cluster that selects all information elements (i.e., all time, all space, no excluded keywords) would trivially maximize (expected) recall.  Similarly, the cluster that selects the highest probability singleton information element would maximize expected precision.  \emph{This leaves expected F1-score as the only of these three objectives commonly used in Boolean information retrieval that does not have an %pathological
+\textcolor{red}{undesired} solution.}
+%\textcolor{red}{While we will focus on expected F1=Score for our cluster relevance objective XXXXX}
 %to balance expected precision and recall. % in a Boolean retrieval framework.
 
 To formally define expected F1-Score, we first begin with definitions of expected precision and recall.  Recalling our previous definitions, given a set of information elements $E_q$  that match a user query $q$ and a relevant set $RS_q$, %the global information element collection $GC$ with size $m$, 
@@ -483,12 +501,6 @@ We focus on F1-score in this paper, however expected F$_\beta$ scores that vary 
 To validate that EF1 provides a strong surrogate metric for F1 in the absence of ground truth relevance judgments, we show a scatterplot of ground truth F1 scores vs. EF1 scores for sets of 100 elements in Figure~\ref{fig:F1_vs_EF1}.  Specifically, for each element set, we set the $\{ 0,1 \}$ relevance indicator $B_q(j)$ for element $j$ uniformly randomly and then assign the relevance probability $S_q(j)$ according to a noisy corruption of the ground truth: $S_q(j) = \lambda B_q(j)+(1-\lambda) \textrm{rand}()$, where $\textrm{rand}()$ is a random noise value chosen with uniform distribution in the range $[0,1]$, and $\lambda$ is a weighting parameter ($0.5 \leq \lambda \leq 1$) that controls the signal-to-noise ratio in the final probability value; $\lambda=1.0$ represents no noise while $\lambda=0.6$ represents high noise.  Here we can see that maximizing EF1 score is strongly correlated with maximizing F1 score across a wide range of noise levels.  
 Specifically, while the EF1 and F1 scores are not perfectly calibrated along the diagonal, there is a clear linear correlation indicating that EF1 and F1 will both rank information elements in a similar order.
 We will further study the effect of a noisy classifier in Section~\ref{sec:OfflineEval}.   
-
-
-We remark that we are not the first to consider probabilistic or expected variants of Boolean metrics.
-One notable work by Goutte and Gaussier~\cite{Goutte2005}
-%Nonetheless, we note that existing methods (e.g., \cite{Goutte2005,SAVOY1997,Yilmaz2008,Voorhees2014}) that 
-proposes a probabilistic re-interpretation of Boolean metrics assuming the availability of ground truth relevance since their primary purpose is to compute a Bayesian posterior estimate of Precision and Recall at evaluation time.  However, in our case, we are not using the expectation for evaluation purposes but rather for computing Boolean metrics under probabilistic uncertainty over the relevance of each document that occurs in the \emph{absence of ground truth} at search retrieval time.
 
 Finally, we address the key question of whether the EF1 objective should include additional coherence criteria.  In short, we argue that coherence corresponds to ``tight'' constraint settings in all dimensions (spatial, temporal, keyword); while Precision and Recall arguably lead to incoherent clusters (respectively, too small or too large), F1-Score balances these two to return moderately sized clusters.  If an F1-Score cluster shrinks unnecessarily, it's Recall component would decrease and make it suboptimal, while if it expands unnecessarily, it's Precision component will decrease and also make it suboptimal.  Hence, optimizing clusters for EF1 does correspond to some \emph{locally optimal} notion of temporal, semantic, and spatial coherence when considering expansions or contractions of the selected cluster.
 These claims of coherence for relevance-driven clustering based on EF1 are directly evidenced when we observe that the relevance-driven clusters of Figure~\ref{Fig:BPS_FilteredDisplay} are much more ``tight'' in terms of time span (a few days to a month), spatial extent (well localized), and top keyword content (words are coherent) than K-means shown in Figure~\ref{Fig:KMeans_FilteredDisplay} which has non-localized spatial extent, unnecessarily large time spans of 11 months or more, and incoherent top keywords in a single cluster (``Blizzard'', ``Earthquake'', and ``Tornado'' together in the right-most cluster).
@@ -748,7 +760,7 @@ The aim of this algorithm is to return coordinates $[(x_{min},y_{min}),(x_{max},
 
 
 
-\subsubsection{Relevance-driven clustering algorithm}
+\subsubsection{Overall Relevance-driven Clustering (RadiCAl) algorithm}
 \label{sec:relclustering}
 
 To obtain a cluster $E_q^*$ combining the above (i) keyword, (ii) time, and (iii) spatial constraints, we propose a greedy round-robin algorithm, which at each iteration applies the selection pruning algorithms for (i), (ii), and (iii) in order.  Iterations terminate when no selection algorithm can unilaterally improve EF1 and the final cluster is returned.
@@ -957,7 +969,7 @@ The scenario we have chosen to evaluate our algorithms is related to the detecti
 We started with a corpus of approximately 1 billion tweets crawled from the Twitter streaming API during 2013 and 2014~\cite{Iman2017} with the following restrictions: (1)~the dataset was restricted to users located within the US, (2) non-English tweets were filtered out, (3) we extracted tweets related to the 12 actual natural disasters 
  described in Table~\ref{tbl:events}
 %(a storm, a hurricane,  a drought, two floods, two earthquakes, two tornadoes,  and three blizzards) 
--- which are temporally and geographically disjoint -- to use as ground truth clusters, and (4) we removed tweets related to other known natural disasters, which was necessary to create unambiguous correct answers for purposes of our user study. \textcolor{red}{The final dataset\footnote{\url{https://github.com/D3Mlab/viz-ir/tree/master/twitter_dataset}} consists of 1,744 positive examples (tweets related to the 12 natural disasters we selected) as well as 34,411 negative examples (other tweets).}
+-- which are temporally and geographically disjoint -- to use as ground truth clusters, and (4) we removed tweets related to other known natural disasters, which was necessary to create unambiguous correct answers for purposes of our user study. \textcolor{red}{The final dataset\footnote{\url{https://github.com/D3Mlab/viz-ir/tree/master/twitter_dataset}} consists of 1,744 positive examples (tweets related to the 12 natural disasters we selected) as well as 34,411 negative examples (other tweets).}  \textcolor{red}{We remark that the tasks of identifying each of the 12 natural disasters in the dataset were chosen to be of comparable difficulty --- or, at the very least, there was no explicit intent to curate easy vs. difficult tasks since algorithm order and assignment of natural disasters to algorithm trials are necessarily randomized in the user study.}
 % for use in our human subject experiments. 
 
 %a storm, a hurricane,  a drought, two floods, two earthquakes, two tornadoes,  and three blizzards. 
@@ -970,9 +982,9 @@ We started with a corpus of approximately 1 billion tweets crawled from the Twit
 
 
 \subsection{Baselines description}
-Experiments use the following two baseline clustering algorithms:
+Our experiments use the following two baseline clustering algorithms:
 
-\subfour{Optimal solution:} To benchmark the performance of \textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}} on small datasets, we use an exact Mixed Integer Linear Progamming (MILP) optimization-based formulation to maximize EF1. In brief, the formulation of EF1 in~\eqref{eq:EF1} can be transformed into a \emph{fractional} MILP formulation with constraints corresponding to each of the cluster attribute selection criteria (space, time, and content). The parameters of these constraints are then chosen to optimize the EF1 objective.  While there are no direct solvers for fractional MILPs, we can transform the problem into a pure MILP formulation using the Charnes-Cooper method \cite{Charnes1962} and Glover linearization method \cite{Glover1975} for which we have optimal (albeit slow) solvers. A detailed description of this optimal solution is given in~\ref{sec:milpform} \textcolor{red}{ to which we refer experimentally as {\bf RadiCAl-MILP}}.
+\subfour{Optimal solution:} To benchmark the performance of \textcolor{red}{{\bf RadiCAl-Greedy}} and \textcolor{red}{{\bf RadiCAl-BPS}} on small datasets, we use an exact Mixed Integer Linear Progamming (MILP) optimization-based formulation to maximize EF1. In brief, the formulation of EF1 in~\eqref{eq:EF1} can be transformed into a \emph{fractional} MILP formulation with constraints corresponding to each of the cluster attribute selection criteria (space, time, and content). The parameters of these constraints are then chosen to optimize the EF1 objective.  While there are no direct solvers for fractional MILPs, we can transform the problem into a pure MILP formulation using the Charnes-Cooper method \cite{Charnes1962} and Glover linearization method \cite{Glover1975} for which we have optimal (albeit slow) solvers. A detailed description of this optimal solution is given in~\ref{sec:milpform}, \textcolor{red}{referred to as {\bf RadiCAl-MILP}}.
 
 % with big-M constraints.  
 %Lastly, we add three constraints to the optimization to select elements through three clustering parameters, i.e., time, position and keywords. %We refer the reader to [ADD ANONYMOUS CITATION?] for more details o this method.
@@ -981,7 +993,10 @@ Experiments use the following two baseline clustering algorithms:
 
 
  
-\subfour{$K$-means clustering:} We use the $X$-means~\cite{Pelleg2000} variant of $K$-means as a baseline method to {\bf cluster matching search results}. $X$-means is a simple extension of $K$-means~\cite{kmeans_original} that   automatically determines the number of clusters. Starting with only one cluster, the $X$-means wrapper applies after each run of $K$-means, making local decisions about which subset of the current centroids should split themselves in order to better fit the data.  In order to provide $X$-means with spatial, temporal, and content coherence, the distance metric we have used for $X$-means is a linear combination of the following: (i) the Euclidean distance of time, (ii) the Euclidean distance of location, and (iii) the cosine distance of the textual content. This distance metric is formally defined as follows:
+\subfour{$K$-means clustering:} We use the $X$-means~\cite{Pelleg2000} variant of $K$-means as a baseline method to {\bf cluster matching search results}. $X$-means is a simple extension of $K$-means~\cite{kmeans_original} that   automatically determines the number of clusters. Starting with only one cluster, the $X$-means wrapper applies after each run of $K$-means, making local decisions about which subset of the current centroids should split themselves in order to better fit the data.  In order to provide $X$-means with spatial, temporal, and content coherence, the distance metric we have used for $X$-means is a linear combination of the following: (i) the Euclidean distance of time, (ii) the Euclidean distance of location, and (iii) the cosine distance of the textual content. This distance metric 
+%required by $K$-means and $X$-means 
+is formally defined as follows:
+%\footnote{\textcolor{red}{If one finds this scalarized definition of a $K$-means distance metric across multiple dimensions to be unnatural, we remark this is why we have prohibited this approach in the paepr.}}
 %\begin{equation}
 %\begin{array}{ll}
 %d(i,j)= & \alpha\times\textrm{[time distance]} +\\
@@ -1001,11 +1016,11 @@ Once clusters are extracted by $X$-means, we use the EF1 metric to extract the t
 \section{Study 1: Offline evaluation}
 \label{sec:OfflineEval}
 
-While our online user study will allow us to evaluate whether our relevance-driven approach to clustering enhances user performance in a visual search task (compared to K-means clustering and a multiple filter search baseline), we first wish to understand how our greedy algorithm compares to other clustering methods (including the optimal MILP solution) as we vary properties of the data and relevance score noise.  Because this evaluation requires literally thousands of trials \textcolor{red}{(and thousands of  participants)} that would be unrealistic for a user study, we opt to perform these evaluations through offline methods.
+While our online user study will allow us to evaluate whether our relevance-driven approach to clustering enhances user performance in a visual search task (compared to K-means clustering and a multiple filter search baseline), we first wish to understand how our greedy algorithm compares to other clustering methods (including the optimal MILP solution) as we vary properties of the data and relevance score noise.  Because this evaluation requires thousands of independent trials \textcolor{red}{for each possible experimental configuration of data size size, noise level, and label balance level that would have prohibitive time and resource requirements for a user study}, we opt to perform these evaluations through offline methods.
+\textcolor{red}{To perform this offline study, we remark that we optimize clusters via EF1 that is based on the probabilistic relevance scores of the elements obtained at query time ($S_q(j)$), whereas we experimentally evaluate the \emph{actual} quality of the clusters generated using F1 based on the known ground truth ($B_q(j)$), which is standard procedure in an offline evaluation of conventional IR tasks.}
 
 Our main objective in this section is to benchmark and intuitively understand the performance of \textcolor{red}{{\bf RadiCAl-Greedy}}, \textcolor{red}{{\bf RadiCAl-BPS}}, and {\bf $\mathbf{K}$-means} algorithms w.r.t.\ clusters obtained via the \textcolor{red}{{\bf RadiCAl-MILP}} solution (optimizing EF1 using a MILP) through an \emph{offline} empirical evaluation.  As an additional control, we also include an evaluation of the {\bf Initial} maximal cluster of all information elements $E$ that is the initial starting condition for \textcolor{red}{{\bf RadiCAl-Greedy}}, \textcolor{red}{{\bf RadiCAl-BPS}},  \textcolor{red}{{\bf RadiCAl-MILP}, and  {\bf $\mathbf{K}$-means}}.  By definition, {\bf Initial} is a trivial recall-maximizing (but low precision) baseline that all algorithms should ideally improve on. 
 %-- if it outperforms a method as it does for {\bf $\mathbf{K}$-means} in Figure~\ref{fig:F1_vs_Data_Twitter}(right), it indicates. 
-\textcolor{red}{We recall and emphasize a critical point here that is the fact that clusters are built by optimizing EF1 that is based on the relevance scores of the elements obtained at query time ($S_q(j)$), whereas we evaluate the quality of the clusters generated using F1 that is based on the ground truth ($B_q(j)$), a standard procedure in any conventional IR task.}
 
 Because we aim to evaluate the impact of noisy relevance evaluations on cluster quality w.r.t.\ actual ground truth F1-score (\emph{not} the estimated EF1), it is critical to explicitly control noise levels, which we achieve through a noisy corruption of ground truth.
 % in terms of predicted relevance noise level.
@@ -1284,8 +1299,6 @@ In conclusion, the evaluations have shown that the \textcolor{red}{{\bf RadiCAl-
 \label{sec:UserStudy}
 To complement and validate the results of the offline evaluation, we ran a user study with 24 subjects to measure the performance and preference of users with different clustering algorithms for a visual search interface.  In the following, we first briefly describe the way we estimate the relevance probability of each tweet in the visual search interface of the user study, then we describe the full user study methodology, and finally we end with an analysis of user performance.
 
-
-
 \subsection{Relevance Scoring}
 The underlying search and relevance scoring tool we developed for this user study was built on top of the Lucene IR System\footnote{http://lucene.apache.org/}.
 % Not clear to me what "conventional" means -- not critical, I think.  -Scott
@@ -1295,7 +1308,7 @@ As we previously defined in our relevance-driven clustering approach, terms (a.k
 \begin{equation}
   S_q(j) = p(q|j) = \prod_{i=1}^n p(q_i|j) \,.
 \end{equation}
-Here, $p(q_i|j)$ is a unigram language model based on the tweet content $j$ calculated according to a Bayesian smoothing language model using Dirichlet priors as described in~\cite{Zhai2001} (Section~3). The relevance score provides the probability of relevance for each tweet that is subsequently used to compute and optimize the \textit{expected} F1-Score cluster extraction for our relevance-driven clustering.
+Here, $p(q_i|j)$ is a unigram language model based on the tweet content $j$ calculated according to a Bayesian smoothing language model using Dirichlet priors as described in Section~3 of~\cite{Zhai2001}. The relevance score provides the probability of relevance for each tweet that is subsequently used to compute and optimize the \textit{expected} F1-Score cluster extraction for our relevance-driven clustering.
 
 
 \begin{figure}[t]
@@ -1310,6 +1323,9 @@ Here, $p(q_i|j)$ is a unigram language model based on the tweet content $j$ calc
 \subsection{Research Hypotheses and Evaluation Methodology}
 \label{sec:methodology}
 
+\textcolor{red}{
+Designing a user study for Interactive IR (IIR) is a complex and challenging task, but fortunately one for which there is excellent guidance in the literature~\cite{borlund2003iir,Kelly2009}.  
+Beyond standard randomization protocols that we describe in the following methodology, a key recommendation for IIR evaluation is to construct simulated scenarios and tasks in order to engage participants in the search in a way that is as close as possible to actual information searching and IR processes; this guiding principle is a cornerstone of the interactive visual search task that we have designed in this study. We further remark that we have intentionally designed independent trials with non-dynamic information needs to avoid more complex IIR evaluation considerations, cf.~\cite{borlund2003iir}.}
 
 The main goal of this user study was to comparatively evaluate human performance and visual search interface preference using three different search interfaces for identifying facts about natural disaster data in the previously described Twitter dataset.  The primary two hypotheses that we aimed to evaluate with human subjects were the following: ({\bf H1}) a clustering-based interface leads to better search performance and is more preferred than a non-clustering {\bf Baseline} interface, and ({\bf H2}) the relevance- and interface-driven clustering of \textcolor{red}{{\bf RadiCAl-BPS}} leads to better search performance and is more preferred by users than {\bf $\mathbf{K}$-means}.  
 
@@ -1333,14 +1349,10 @@ The clustering search approaches ({\bf $\mathbf{K}$-means} and \textcolor{red}{{
 In all search approaches, the user could use a time slider bar to restrict the results to tweets matching the query in a specific time window. 
 %Once each user had familiarized themselves with the interface, they were asked to find three other natural disasters using a different display algorithm (baseline, $k$-means, EF1 relevance-driven clustering using the BPS greedy algorithm) for each of three trials containing three natural disasters each. 
 
-\textcolor{red}{
-Designing an Interactive IR evaluation approach is a challenging task for successfully evaluating exploratory search interfaces. This field has been widely explored and many suggestions have been provided for constructing simulated scenarios and tasks in order to engage participants in the search in a way that is as close as possible to actual information searching and IR processes~\cite{borlund2003iir,Kelly2009}.
-Specifically, before starting the experiment, basic instructions were given to each participant among which not make a break, not to use their phone, and not to use social media such that to still focused on the task and perform a fair evaluation. We have collected basic information related to each participant including the English level, the education degree and the extent to which they are aware of natural disasters. The purpose of that entrance survey was to make sure that there is no bias among the participants.
-Before starting the formal experiment, each participant was shown a training video describing the visual search interface, how to use it and how to interact with the clusters.  Then, each user was tested on his ability to find each of three natural disasters from Table~\ref{tbl:events} 
+\textcolor{red}{Before starting the experiment, each user was provided with simple instructions to turn off all personal devices for the duration of the experiment and then shown a training video describing the visual search interface and how to interact with the clusters (i.e., how they could change their search queries, pan/zoom, use the time slider, and enter their answers).}  Then, each user was tested on their ability to find each of three natural disasters from Table~\ref{tbl:events} 
 %(disjoint from the disasters used in the three experimental trials) 
-using both the {\bf Baseline} non-clustering interface as well as the {\bf $\mathbf{K}$-means} clustering interface in two training trials. 
-It was important to make sure that each user understood the global task before starting the formal experiment, thus the need for a training phase.
-In each of the two training trials and the three experimental trials, the user was asked to enter information related to each natural disaster they identified, including the type of the natural disaster (e.g., earthquake, hurricane, flood, etc.) selected from a drop-down list, its location (US state) selected from a drop-down list, and the date (day) on which they think the disaster first occurred selected from a calendar chooser; the area where this information is entered can be seen on the left-hand bar in Figure~\ref{fig:ScreenShot}.}
+using both the {\bf Baseline} non-clustering interface as well as the {\bf $\mathbf{K}$-means} clustering interface in two training trials.
+In each of the two training trials and the three experimental trials, the user was asked to enter information related to each natural disaster they identified, including the type of the natural disaster (e.g., earthquake, hurricane, flood, etc.) selected from a drop-down list, its location (US state) selected from a drop-down list, and the date (day) on which they think the disaster first occurred selected from a calendar chooser; the area where this information is entered can be seen on the left-hand bar in Figure~\ref{fig:ScreenShot}.
 It is important to reiterate that \emph{none} of the three experimental trials reused data from a previous trial.
 %Once users chose correctly in the two training trials, they were allowed to proceed to the three experimental trials.
 %by correctly identifying the time (day), location (US state), and type (earthquake, hurricane, etc.) of the natural disaster, 
@@ -1562,6 +1574,9 @@ Carrying out user studies is a time-consuming and expensive process since it inv
 \end{itemize}
 
 \subsection{Future Work}
+
+% Methods which more directly assess and rank the relevance of data points to clusters by measuring their impact on relevance, Shapley value, etc. 
+
 Overall, we believe this work underscores the importance of relevance-driven clustering optimization methods specifically targeted for presentation in interactive visual search interfaces.  
 However, there is still much more work to be done to fully explore the space of optimization objectives and algorithms for interactive visual search.  Interesting areas of future work include the following:
 \begin{itemize}
@@ -1598,7 +1613,8 @@ In sum, we hope that this article provides a first stepping stone to a wide rang
 
 \section*{Acknowledgements}
 
-We thank two anonymous reviewers for their questions and comments, which helped to improve and clarify the article presentation and also provided numerous suggestions for our future work discussion. \textcolor{red}{All algorithms described in this paper, the material used,  as well as the tool we developed for the user study can be accessed here: \url{https://github.com/D3Mlab/viz-ir}.}
+We thank two anonymous reviewers for their questions and comments, which helped to improve and clarify the article presentation and also provided numerous suggestions for our future work discussion. 
+\textcolor{red}{Experiments presented in this paper were carried out using the NECTAR Research Cloud platform, supported by a scientific interest group hosted by several Australian Universities (see \url{https://nectar.org.au/research-cloud/}).All algorithms described in this paper, the material used,  as well as the tool we developed for the user study can be accessed here: \url{https://github.com/D3Mlab/viz-ir}.}
 
 %\section*{References}
 

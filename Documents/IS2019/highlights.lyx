@@ -1,0 +1,564 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass elsarticle
+\begin_preamble
+
+\usepackage[margin=1in]{geometry}
+\end_preamble
+\options review
+\use_default_options false
+\begin_modules
+theorems-ams
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frontmatter}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{Relevance- and Interface-driven Clustering for Visual Information
+ Retrieval} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author[deakin]{Mohamed Reda Bouadjenek
+\backslash
+corref{cor1}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ead{reda.bouadjenek@deakin.edu.au}   
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author[UofT]{Scott Sanner} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ead{ssanner@mie.utoronto.ca} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author[UofT]{Yihao Du} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ead{duyihao@mie.utoronto.ca} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+address[deakin]{School of Information Technology, Deakin University, Australia}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+address[UofT]{Department of Mechanical and Industrial Engineering, The Universit
+y of Toronto, Canada}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cortext[cor1]{This work has been primarily completed while the author was
+ at the University of Toronto.}  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{assumption}{
+\backslash
+textbf{Assumption}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{keyword}
+\end_layout
+
+\begin_layout Plain Layout
+
+Visual Information Retrieval; Relevance-driven Clustering; Visual Search
+ User Study; Clustering via Filter Optimization.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{keyword}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frontmatter}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Highlights
+\end_layout
+
+\begin_layout Standard
+In this paper, we propose:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item To better satisfy end-user task needs for clustering in visual search
+ interfaces, we present a novel 
+\backslash
+emph{relevance-driven clustering objective} that extends standard information
+ retrieval metrics to clustering.
+  Specifically, in light of relevance uncertainty, we derive 
+\backslash
+emph{expected metrics for precision and recall of clusters}, but ultimately
+ argue that a good cluster must balance both and thus focus on a derivation
+ of 
+\backslash
+emph{expected F1-score (EF1)} of cluster relevance as our key objective.
+  Two key features of EF1 are that (a)~it automatically extracts coherent
+ clusters in terms of space, time, and content for presentation in a visual
+ search interface and that (b)~optimizing it does not require the specification
+ of complex ad-hoc distance metrics required by other unsupervised clustering
+ algorithms such as $K$-means.% and argue that since expected precision and
+ recall have %pathological 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+textcolor{red}{trivial} solutions, expected F1-score (EF1) is a more appropriate
+ metric to optimize for  relevance-driven clustering.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+item We provide a unified definition of clusters in terms of presentation-specif
+ic cluster attributes (spatial, temporal, and keyword content) that avoids
+ the need for the specification of complex ad-hoc distance metrics required
+ by other unsupervised clustering algorithms such as $K$-means.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+% NOTE: Should be some sort of property like monotonicity of result counts
+ that somehow can be exploited in filter design.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+item We argue for the formulation of filtering as the optimization of an
+ expected F1-Score (EF1) objective subject to parameterized filter constraints.
+\end_layout
+
+\begin_layout Plain Layout
+
+%that can be maximized via mixed integer linear programming or efficient,
+ approximately-optimal greedy algorithms.
+\end_layout
+
+\begin_layout Plain Layout
+
+% In this work, we argue that information-filtering task is central to a
+ variety of VSIs and well-suited to an Information Retrieval (IR) perspective
+ where we argue that a good overall objective for filter selection is F1-Score;
+ given the absence of known Boolean relevance labels for interface elements,
+ we instead propose optimization of a surrogate metric of expected F1-Score
+ denoted as EF1.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item Through a series of transformations, we demonstrate that the globally
+ optimal solution to EF1 maximization of clusters can be cast as a Mixed
+ Integer Linear Program (MILP), which is unfortunately NP-hard and thus
+ computationally expensive to solve.
+  To improve the algorithmic efficiency of optimization, we present two
+ algorithms: Greedy and Binary Partitioning Search (BPS).
+  Referring to our Relevance-driven Clustering Algorithm as RadiCAl, this
+ leads to three variants: RadiCAl-MILP, RadiCAl-Greedy, and RadiCAl-BPS.
+  We quantitatively evaluate and compare all RadiCAl variants and K-means
+ on a search-driven tweet clustering task and demonstrate that RadiCAl-BPS
+ provides the best overall tradeoffs in terms of performance and efficiency.
+\end_layout
+
+\begin_layout Plain Layout
+
+%is NP-hard, we contribute two algorithms for scalable and efficient cluster
+ optimization.
+  %Empirically, we show that the second of these proposed greedy approaches
+ based on an efficient binary partitioning search (BPS) approach performs
+ best.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+item To benchmark the performance of the greedy algorithms for EF1 optimization
+ on moderately sized datasets, we compare to an 
+\backslash
+emph{optimal} Mixed Integer Linear Programming (MILP) formulation for EF1.
+\end_layout
+
+\begin_layout Plain Layout
+
+%derived from an initial fractional MILP formulation.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+item We propose a new theory of IR for adaptive visual user interfaces.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+item We propose a relevance-driven F1-Score optimization approach to filter
+ selection for AUIs.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+item We propose two new filter setting search algorithms based on greedy
+ strategies.
+ These algorithms are based on the optimization of EF1-Score.
+\backslash
+item 
+\backslash
+textcolor{red}{We define an optimal Mixed Integer Linear Programming formulation
+ for EF1 intended to benchmark the performance of the greedy approximations
+ on moderately sized datasets.}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+item We present an offline comparative evaluation on a Twitter corpus to
+ show that the greedy algorithms we propose are a good approximation of
+ the optimal EF1 solution, better than $K$-means, and perform well in the
+ presence of noise.
+ %While this evaluation methodology allows us to literally run thousands
+ of trials to understand how our greedy algorithm compares to other clustering
+ methods including the optimal solution (in cases where it can be computed),
+ a user study is needed to understand whether this relevance-driven clustering
+ approach actually improves human performance on spatio-temporal visual
+ search tasks.
+\end_layout
+
+\begin_layout Plain Layout
+
+%in very large scales, it is based on the strong assumption of knowing the
+ ground truth, often assumed in information retrieval benchmarks.
+ We discuss the advantages and limitations of this evaluation approach in
+ more detail in Section~
+\backslash
+ref{sec:OfflineEval}.}
+\end_layout
+
+\begin_layout Plain Layout
+
+% (i.e., corruption of the ground truth labels).
+\end_layout
+
+\begin_layout Plain Layout
+
+%can even perform better with a noisy classifier 
+\backslash
+textendash{} up to 42
+\backslash
+% improvement for a classifier with an accuracy of 60
+\backslash
+%.
+ On the other hand, 
+\end_layout
+
+\begin_layout Plain Layout
+
+%We also experimentally demonstrate that the EF1 metric is a good surrogate
+ of F1-Score (if true relevance labels were known).
+\end_layout
+
+\begin_layout Plain Layout
+
+%specifically with a highly accurate classifier 
+\backslash
+textendash{} for a classifier with 90
+\backslash
+% accuracy, the RMSE is roughly 0.0111).
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+item Returning to our end-user visual search task motivation, we conclude
+ the experimental evaluation of this work with a user study to evaluate
+ whether this new relevance-driven clustering method improves human performance
+ in comparison to $K$-means clustering and a multiple filter search baseline.
+\backslash
+footnote{
+\end_layout
+
+\begin_layout Plain Layout
+
+While there are a large number of unsupervised clustering algorithms in
+ the literature, 
+\end_layout
+
+\begin_layout Plain Layout
+
+we had limited user interaction time in our user study and thus could only
+ choose one clustering algorithm for comparison in addition to the non-aggregati
+on baseline.
+   We chose $K$-means since it is arguably the most commonly used clustering
+ algorithm -- not only in general, but also specifically in our coverage
+ of related work on clustering in information retrieval and visual search.}
+ Our results show that clusters derived in our relevance- and interface-driven
+ optimization framework result in faster search task completion with higher
+ accuracy while requiring a minimum workload leading to high effectiveness,
+ efficiency, and user satisfaction among alternatives.
+\end_layout
+
+\begin_layout Plain Layout
+
+These results coincide with our offline evaluation that also demonstrate
+ the superiority of our relevance-driven clustering approach over competing
+ methods.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\end_layout
+
+\end_body
+\end_document

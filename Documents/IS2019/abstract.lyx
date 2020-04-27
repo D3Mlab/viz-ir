@@ -1,0 +1,346 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass elsarticle
+\begin_preamble
+
+\usepackage[margin=1in]{geometry}
+\end_preamble
+\options review
+\use_default_options false
+\begin_modules
+theorems-ams
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frontmatter}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{Relevance- and Interface-driven Clustering for Visual Information
+ Retrieval} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author[deakin]{Mohamed Reda Bouadjenek
+\backslash
+corref{cor1}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ead{reda.bouadjenek@deakin.edu.au}   
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author[UofT]{Scott Sanner} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ead{ssanner@mie.utoronto.ca} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author[UofT]{Yihao Du} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ead{duyihao@mie.utoronto.ca} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+address[deakin]{School of Information Technology, Deakin University, Australia}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+address[UofT]{Department of Mechanical and Industrial Engineering, The Universit
+y of Toronto, Canada} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cortext[cor1]{This work has been primarily completed while the author was
+ at the University of Toronto.} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{assumption}{
+\backslash
+textbf{Assumption}}  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{abstract}
+\end_layout
+
+\begin_layout Plain Layout
+
+Search results of spatio-temporal data are often displayed on a map, but
+ when the number of matching search results is large, it can be time-consuming
+ to individually examine all results, even when using methods such as filtered
+ search to narrow the content focus.
+  This suggests the need to aggregate results via a clustering method.
+  However, standard unsupervised clustering algorithms like $K$-means (i)
+ ignore relevance scores that can help with the extraction of highly relevant
+ clusters, and (ii) do not necessarily optimize search results for purposes
+ of visual presentation.
+  In this article, we address both deficiencies by framing the clustering
+ problem for search-driven user interfaces in a novel optimization framework
+ that (i) aims to maximize the relevance of aggregated content according
+ to cluster-based extensions of standard information retrieval metrics and
+ (ii) defines clusters via constraints that naturally reflect interface-driven
+ desiderata of spatial, temporal, and keyword coherence that do not require
+ complex ad-hoc distance metric specifications as in $K$-means.
+  %While a globally optimal solution to this novel clustering optimization
+ problem is NP-Hard, we develop fast greedy algorithms that can approximately
+ optimize this objective for real-time search.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+After comparatively benchmarking algorithmic variants of our proposed approach
+ -- RadiCAl -- in offline experiments, we undertake a user study with 24
+ subjects to evaluate whether RadiCAl improves human performance on visual
+ search tasks in comparison to $K$-means clustering and a filtered search
+ baseline.
+  Our results show that (a) our binary partitioning search (BPS) variant
+ of RadiCAl is fast, near-optimal, and extracts higher-relevance clusters
+ than $K$-means, and (b) clusters optimized via RadiCAl result in faster
+ search task completion with higher accuracy while requiring a minimum workload
+ leading to high effectiveness, efficiency, and user satisfaction among
+ alternatives.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{abstract}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{keyword}
+\end_layout
+
+\begin_layout Plain Layout
+
+Visual Information Retrieval; Relevance-driven Clustering; Visual Search
+ User Study; Clustering via Filter Optimization.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{keyword}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frontmatter}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\end_layout
+
+\end_body
+\end_document
