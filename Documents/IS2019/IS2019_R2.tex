@@ -1668,7 +1668,7 @@ In order to obtain the EF1-optimal cluster, we let binary variables $\emph{I\tex
 %Note that our goal is to optimize the element set in terms of \emph{filters settings}. This means elements in the interface sharing the same property needs to be simultaneously added to the selected set. This is a unique property of our filter-based UI problem, which is different from the independent retrieval of each document in standard IR system.
 
 \subsection{Transformation to a MILP} \hfill \\
-While there are no direct solvers for fractional MILPs, we can transform~\eqref{eq:frac_milp} into a pure MILP form for which we have efficient and optimal solvers.  To do this, we use the Charnes-Cooper method \cite{Charnes1962} and Glover linearization method \cite{Glover1975} with big-M constraints, where auxiliary variables \emph{w(j)} and \emph{u} are  introduced\footnote{https://optimization.mccormick.northwestern.edu/index.php/Mixed-integer\_linear\_fractional\_programming\_(MILFP)}. Here, $w(j)$ is defined as $w(j)=I_q(j)\times u$ with $u$ defined as follows:
+While there are no direct solvers for fractional MILPs, we can transform~\eqref{eq:frac_milp} into a pure MILP form for which we have efficient and optimal solvers.  To do this, we use the Charnes-Cooper method \cite{Charnes1962} and Glover linearization method \cite{Glover1975} with big-M constraints, where auxiliary variables \emph{w(j)} and \emph{u} are  introduced\footnote{\url{https://optimization.mccormick.northwestern.edu/index.php/Mixed-integer_linear_fractional_programming_(MILFP)}}. Here, $w(j)$ is defined as $w(j)=I_q(j)\times u$ with $u$ defined as follows:
 \begin{equation}
 u = \dfrac{1}{\sum_{j=1}^m I_q(j) + C}
 \end{equation}
